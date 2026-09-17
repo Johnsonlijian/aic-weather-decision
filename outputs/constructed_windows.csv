@@ -1,0 +1,3 @@
+case,source_type,slots,below_start_limit_slots,duration,admissible_start_windows
+contiguous,constructed_not_observed,8,6,3,4
+fragmented,constructed_not_observed,8,6,3,0

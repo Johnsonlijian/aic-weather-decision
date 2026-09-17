@@ -1,0 +1,532 @@
+{
+  "limit": 12.0,
+  "package_blocks": 60,
+  "block_hours": 12,
+  "deadline_slack": 1.5,
+  "param_grid": [
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.35,
+    0.5,
+    0.7
+  ],
+  "block_base_rate": 0.2597763381880083,
+  "lead_strata": [
+    12,
+    18
+  ],
+  "availability": {
+    "rows": 281997,
+    "min_margin_hours": 6.0,
+    "violations": 0,
+    "rule": "run must be at least 4.0 h old at the epoch"
+  },
+  "leakage_check": {
+    "blocks": 6137,
+    "verdicts_changed": 0,
+    "leakage": false,
+    "note": "verdicts must not depend on the observed weather"
+  },
+  "tuned_parameters": {
+    "base": {
+      "operating_limit": null,
+      "tuned_threshold": 15.0,
+      "calibrated": 0.5,
+      "calibrated_by_lead": 0.5,
+      "no_weather": null,
+      "calibrated_static": 0.5,
+      "calibrated_rolling_free": 0.5
+    },
+    "slack_resources": {
+      "operating_limit": null,
+      "tuned_threshold": 13.0,
+      "calibrated": 0.5,
+      "calibrated_by_lead": 0.5,
+      "no_weather": null,
+      "calibrated_static": 0.35,
+      "calibrated_rolling_free": 0.5
+    },
+    "high_adjustment_cost": {
+      "operating_limit": null,
+      "tuned_threshold": 15.0,
+      "calibrated": 0.7,
+      "calibrated_by_lead": 0.7,
+      "no_weather": null,
+      "calibrated_static": 0.35,
+      "calibrated_rolling_free": 0.5
+    },
+    "weak_weather_impact": {
+      "operating_limit": null,
+      "tuned_threshold": 21.0,
+      "calibrated": 0.7,
+      "calibrated_by_lead": 0.7,
+      "no_weather": null,
+      "calibrated_static": 0.7,
+      "calibrated_rolling_free": 0.7
+    }
+  },
+  "test": {
+    "base": {
+      "cost": {
+        "calibrated": 2.7932,
+        "calibrated_by_lead": 2.7246,
+        "calibrated_rolling_free": 2.6645,
+        "calibrated_static": 3.8815,
+        "no_weather": 4.124,
+        "operating_limit": 2.6342,
+        "tuned_threshold": 3.1907
+      },
+      "completed": {
+        "calibrated": 10.0,
+        "calibrated_by_lead": 10.0,
+        "calibrated_rolling_free": 10.0,
+        "calibrated_static": 10.0,
+        "no_weather": 10.0,
+        "operating_limit": 10.0,
+        "tuned_threshold": 10.0
+      },
+      "deadline_misses": {
+        "calibrated": 0.09,
+        "calibrated_by_lead": 0.12,
+        "calibrated_rolling_free": 0.09,
+        "calibrated_static": 0.05,
+        "no_weather": 0.0,
+        "operating_limit": 0.31,
+        "tuned_threshold": 0.01
+      },
+      "idle_blocks": {
+        "calibrated": 49.0,
+        "calibrated_by_lead": 49.1,
+        "calibrated_rolling_free": 49.0,
+        "calibrated_static": 47.7,
+        "no_weather": 47.5,
+        "operating_limit": 49.7,
+        "tuned_threshold": 48.4
+      },
+      "mismatch_blocks": {
+        "calibrated": 1.28,
+        "calibrated_by_lead": 1.18,
+        "calibrated_rolling_free": 1.28,
+        "calibrated_static": 2.31,
+        "no_weather": 2.54,
+        "operating_limit": 0.8,
+        "tuned_threshold": 1.72
+      },
+      "cancellations": {
+        "calibrated": 0.26,
+        "calibrated_by_lead": 0.31,
+        "calibrated_rolling_free": 0.0,
+        "calibrated_static": 0.0,
+        "no_weather": 0.0,
+        "operating_limit": 0.48,
+        "tuned_threshold": 0.14
+      },
+      "makespan": {
+        "calibrated": 13.6,
+        "calibrated_by_lead": 13.6,
+        "calibrated_rolling_free": 13.6,
+        "calibrated_static": 13.7,
+        "no_weather": 13.5,
+        "operating_limit": 14.5,
+        "tuned_threshold": 13.3
+      },
+      "packages": 765
+    },
+    "high_adjustment_cost": {
+      "cost": {
+        "calibrated": 5.0512,
+        "calibrated_by_lead": 5.0736,
+        "calibrated_rolling_free": 3.307,
+        "calibrated_static": 4.7318,
+        "no_weather": 5.394,
+        "operating_limit": 6.6323,
+        "tuned_threshold": 5.079
+      },
+      "completed": {
+        "calibrated": 10.0,
+        "calibrated_by_lead": 10.0,
+        "calibrated_rolling_free": 10.0,
+        "calibrated_static": 10.0,
+        "no_weather": 10.0,
+        "operating_limit": 10.0,
+        "tuned_threshold": 10.0
+      },
+      "deadline_misses": {
+        "calibrated": 0.01,
+        "calibrated_by_lead": 0.01,
+        "calibrated_rolling_free": 0.09,
+        "calibrated_static": 0.24,
+        "no_weather": 0.0,
+        "operating_limit": 0.31,
+        "tuned_threshold": 0.01
+      },
+      "idle_blocks": {
+        "calibrated": 48.3,
+        "calibrated_by_lead": 48.3,
+        "calibrated_rolling_free": 49.0,
+        "calibrated_static": 48.0,
+        "no_weather": 47.5,
+        "operating_limit": 49.7,
+        "tuned_threshold": 48.4
+      },
+      "mismatch_blocks": {
+        "calibrated": 1.78,
+        "calibrated_by_lead": 1.78,
+        "calibrated_rolling_free": 1.28,
+        "calibrated_static": 1.98,
+        "no_weather": 2.54,
+        "operating_limit": 0.8,
+        "tuned_threshold": 1.72
+      },
+      "cancellations": {
+        "calibrated": 0.12,
+        "calibrated_by_lead": 0.12,
+        "calibrated_rolling_free": 0.0,
+        "calibrated_static": 0.0,
+        "no_weather": 0.0,
+        "operating_limit": 0.48,
+        "tuned_threshold": 0.14
+      },
+      "makespan": {
+        "calibrated": 13.4,
+        "calibrated_by_lead": 13.4,
+        "calibrated_rolling_free": 13.6,
+        "calibrated_static": 14.4,
+        "no_weather": 13.5,
+        "operating_limit": 14.5,
+        "tuned_threshold": 13.3
+      },
+      "packages": 765
+    },
+    "slack_resources": {
+      "cost": {
+        "calibrated": 2.851,
+        "calibrated_by_lead": 2.7565,
+        "calibrated_rolling_free": 2.7222,
+        "calibrated_static": 3.6593,
+        "no_weather": 4.2494,
+        "operating_limit": 2.4703,
+        "tuned_threshold": 2.7371
+      },
+      "completed": {
+        "calibrated": 10.0,
+        "calibrated_by_lead": 10.0,
+        "calibrated_rolling_free": 10.0,
+        "calibrated_static": 10.0,
+        "no_weather": 10.0,
+        "operating_limit": 10.0,
+        "tuned_threshold": 10.0
+      },
+      "deadline_misses": {
+        "calibrated": 0.09,
+        "calibrated_by_lead": 0.12,
+        "calibrated_rolling_free": 0.09,
+        "calibrated_static": 0.24,
+        "no_weather": 0.0,
+        "operating_limit": 0.31,
+        "tuned_threshold": 0.14
+      },
+      "idle_blocks": {
+        "calibrated": 109.0,
+        "calibrated_by_lead": 109.1,
+        "calibrated_rolling_free": 109.0,
+        "calibrated_static": 108.0,
+        "no_weather": 107.5,
+        "operating_limit": 109.7,
+        "tuned_threshold": 109.2
+      },
+      "mismatch_blocks": {
+        "calibrated": 1.28,
+        "calibrated_by_lead": 1.18,
+        "calibrated_rolling_free": 1.28,
+        "calibrated_static": 1.98,
+        "no_weather": 2.54,
+        "operating_limit": 0.8,
+        "tuned_threshold": 1.16
+      },
+      "cancellations": {
+        "calibrated": 0.26,
+        "calibrated_by_lead": 0.31,
+        "calibrated_rolling_free": 0.0,
+        "calibrated_static": 0.0,
+        "no_weather": 0.0,
+        "operating_limit": 0.48,
+        "tuned_threshold": 0.32
+      },
+      "makespan": {
+        "calibrated": 13.6,
+        "calibrated_by_lead": 13.6,
+        "calibrated_rolling_free": 13.6,
+        "calibrated_static": 14.4,
+        "no_weather": 13.5,
+        "operating_limit": 14.5,
+        "tuned_threshold": 13.7
+      },
+      "packages": 765
+    },
+    "weak_weather_impact": {
+      "cost": {
+        "calibrated": 1.1404,
+        "calibrated_by_lead": 1.1422,
+        "calibrated_rolling_free": 1.0803,
+        "calibrated_static": 1.102,
+        "no_weather": 1.1016,
+        "operating_limit": 1.6822,
+        "tuned_threshold": 1.1075
+      },
+      "completed": {
+        "calibrated": 10.0,
+        "calibrated_by_lead": 10.0,
+        "calibrated_rolling_free": 10.0,
+        "calibrated_static": 10.0,
+        "no_weather": 10.0,
+        "operating_limit": 10.0,
+        "tuned_threshold": 10.0
+      },
+      "deadline_misses": {
+        "calibrated": 0.01,
+        "calibrated_by_lead": 0.01,
+        "calibrated_rolling_free": 0.01,
+        "calibrated_static": 0.01,
+        "no_weather": 0.0,
+        "operating_limit": 0.31,
+        "tuned_threshold": 0.0
+      },
+      "idle_blocks": {
+        "calibrated": 48.3,
+        "calibrated_by_lead": 48.3,
+        "calibrated_rolling_free": 48.3,
+        "calibrated_static": 47.6,
+        "no_weather": 47.5,
+        "operating_limit": 49.7,
+        "tuned_threshold": 47.7
+      },
+      "mismatch_blocks": {
+        "calibrated": 1.78,
+        "calibrated_by_lead": 1.78,
+        "calibrated_rolling_free": 1.78,
+        "calibrated_static": 2.43,
+        "no_weather": 2.54,
+        "operating_limit": 0.8,
+        "tuned_threshold": 2.32
+      },
+      "cancellations": {
+        "calibrated": 0.12,
+        "calibrated_by_lead": 0.12,
+        "calibrated_rolling_free": 0.0,
+        "calibrated_static": 0.0,
+        "no_weather": 0.0,
+        "operating_limit": 0.48,
+        "tuned_threshold": 0.03
+      },
+      "makespan": {
+        "calibrated": 13.4,
+        "calibrated_by_lead": 13.4,
+        "calibrated_rolling_free": 13.4,
+        "calibrated_static": 13.6,
+        "no_weather": 13.5,
+        "operating_limit": 14.5,
+        "tuned_threshold": 13.4
+      },
+      "packages": 765
+    }
+  },
+  "line1_weather_input": {
+    "base|operating_limit_minus_calibrated": {
+      "mean": -0.15899346405228756,
+      "ci_low": -0.32483071895424837,
+      "ci_high": 0.002464705882352941,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0275
+    },
+    "base|tuned_threshold_minus_calibrated": {
+      "mean": 0.39750326797385616,
+      "ci_low": 0.26604607843137257,
+      "ci_high": 0.540866339869281,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 1.0
+    },
+    "base|no_weather_minus_calibrated": {
+      "mean": 1.3307973856209152,
+      "ci_low": 1.005755882352941,
+      "ci_high": 1.6784800653594774,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 1.0
+    },
+    "base|calibrated_by_lead_minus_calibrated": {
+      "mean": -0.06861437908496733,
+      "ci_low": -0.12905261437908497,
+      "ci_high": -0.013523529411764745,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.009
+    },
+    "high_adjustment_cost|operating_limit_minus_calibrated": {
+      "mean": 1.5810457516339869,
+      "ci_low": 1.164843137254902,
+      "ci_high": 1.9976307189542482,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 1.0
+    },
+    "high_adjustment_cost|tuned_threshold_minus_calibrated": {
+      "mean": 0.027738562091503303,
+      "ci_low": -0.006807516339869255,
+      "ci_high": 0.06598921568627446,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.9325
+    },
+    "high_adjustment_cost|no_weather_minus_calibrated": {
+      "mean": 0.34273202614379084,
+      "ci_low": 0.1903454248366013,
+      "ci_high": 0.5168535947712417,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 1.0
+    },
+    "high_adjustment_cost|calibrated_by_lead_minus_calibrated": {
+      "mean": 0.022405228758169936,
+      "ci_low": 0.0,
+      "ci_high": 0.052209150326797384,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.9565
+    },
+    "slack_resources|operating_limit_minus_calibrated": {
+      "mean": -0.38070588235294117,
+      "ci_low": -0.5065274509803921,
+      "ci_high": -0.25728104575163396,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0
+    },
+    "slack_resources|tuned_threshold_minus_calibrated": {
+      "mean": -0.11388235294117648,
+      "ci_low": -0.1750222222222222,
+      "ci_high": -0.05953300653594785,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0
+    },
+    "slack_resources|no_weather_minus_calibrated": {
+      "mean": 1.3984705882352941,
+      "ci_low": 1.0758624183006535,
+      "ci_high": 1.7396568627450981,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 1.0
+    },
+    "slack_resources|calibrated_by_lead_minus_calibrated": {
+      "mean": -0.09447058823529413,
+      "ci_low": -0.14989901960784313,
+      "ci_high": -0.04449444444444447,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0
+    },
+    "weak_weather_impact|operating_limit_minus_calibrated": {
+      "mean": 0.5418300653594771,
+      "ci_low": 0.415640522875817,
+      "ci_high": 0.6819529411764704,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 1.0
+    },
+    "weak_weather_impact|tuned_threshold_minus_calibrated": {
+      "mean": -0.03288888888888888,
+      "ci_low": -0.04486470588235293,
+      "ci_high": -0.02196013071895424,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0
+    },
+    "weak_weather_impact|no_weather_minus_calibrated": {
+      "mean": -0.038823529411764694,
+      "ci_low": -0.05197647058823528,
+      "ci_high": -0.026796732026143785,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0
+    },
+    "weak_weather_impact|calibrated_by_lead_minus_calibrated": {
+      "mean": 0.0018300653594771237,
+      "ci_low": 0.0,
+      "ci_high": 0.004133333333333319,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.951
+    }
+  },
+  "line2_planning_method": {
+    "base|calibrated_static_minus_rolling_commit": {
+      "mean": 1.088248366013072,
+      "ci_low": 0.8228986928104577,
+      "ci_high": 1.3891290849673203,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 1.0
+    },
+    "base|calibrated_rolling_free_minus_rolling_commit": {
+      "mean": -0.1287581699346405,
+      "ci_low": -0.15294117647058822,
+      "ci_high": -0.1065359477124183,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0
+    },
+    "high_adjustment_cost|calibrated_static_minus_rolling_commit": {
+      "mean": -0.31946405228758173,
+      "ci_low": -0.5565705882352942,
+      "ci_high": -0.09995326797385626,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0025
+    },
+    "high_adjustment_cost|calibrated_rolling_free_minus_rolling_commit": {
+      "mean": -1.7442745098039214,
+      "ci_low": -2.16234477124183,
+      "ci_high": -1.3493911764705886,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0
+    },
+    "slack_resources|calibrated_static_minus_rolling_commit": {
+      "mean": 0.8083529411764707,
+      "ci_low": 0.5742640522875818,
+      "ci_high": 1.0670643790849672,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 1.0
+    },
+    "slack_resources|calibrated_rolling_free_minus_rolling_commit": {
+      "mean": -0.1287581699346405,
+      "ci_low": -0.15098039215686274,
+      "ci_high": -0.10718954248366015,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0
+    },
+    "weak_weather_impact|calibrated_static_minus_rolling_commit": {
+      "mean": -0.038457516339869276,
+      "ci_low": -0.050222875816993445,
+      "ci_high": -0.027709803921568636,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0
+    },
+    "weak_weather_impact|calibrated_rolling_free_minus_rolling_commit": {
+      "mean": -0.06013071895424837,
+      "ci_low": -0.07647058823529412,
+      "ci_high": -0.045098039215686274,
+      "units": 765,
+      "draws": 2000,
+      "share_draws_positive": 0.0
+    }
+  }
+}

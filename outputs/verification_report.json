@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "source_type": "constructed_verification_only",
+  "enumerated_weather_paths": 6561,
+  "duration_variants_per_path": 4,
+  "vector_reference_comparisons": 26244,
+  "comparison_failures": 0,
+  "real_weather_rows_downloaded": 120600,
+  "gfs_offline_alignment_pilot_rows": 124,
+  "weather_pilot_status": "offline_alignment_only; operational_publication_latency_not_established",
+  "real_project_files_imported": 0,
+  "dslib_construction_metadata_candidates": 163,
+  "full_online_policy_implemented": false,
+  "event_executor_tests": 7,
+  "total_unit_tests": 42,
+  "submission_ready": false,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "platform": "Windows",
+  "toy_scheduler_status": "optimal",
+  "toy_makespan": 13,
+  "calibration_contract_boundary_tests": 1
+}

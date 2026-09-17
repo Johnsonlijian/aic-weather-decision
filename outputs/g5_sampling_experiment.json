@@ -1,0 +1,125 @@
+{
+  "limit": 12.0,
+  "paired_epochs": 283668,
+  "stations": 45,
+  "tune_rows": 38291,
+  "evaluate_rows": 245377,
+  "event_rate": 0.25329610671630215,
+  "tune_before": "2022-01-01",
+  "note": "controlled mechanism experiment inside the fitting period; both samplings share issue times, stations, windows and labels",
+  "sampling_effect_on_the_forecast": {
+    "mean_6h": 9.379886784421778,
+    "mean_3h": 9.984763813496382,
+    "mean_difference": 0.6048770290746055,
+    "median_difference": 0.0,
+    "share_where_denser_is_higher": 0.4945534921104954,
+    "share_identical": 0.5054465078895046,
+    "max_increase": 16.89040756225586
+  },
+  "detector": {
+    "6-hourly": {
+      "miss_rate": 0.2831375605411123,
+      "false_alarm_rate": 0.11409430826755297,
+      "claim_rate": 0.26677312915097934
+    },
+    "3-hourly": {
+      "miss_rate": 0.21154595557534933,
+      "false_alarm_rate": 0.1431667107300676,
+      "claim_rate": 0.3066154800682488
+    }
+  },
+  "skill": {
+    "6-hourly": {
+      "brier": 0.10632291784417819,
+      "skill_vs_climatology": 0.4602822000793553,
+      "skill_vs_its_own_raw_threshold": 0.33527317030547
+    },
+    "3-hourly": {
+      "brier": 0.10126841465784989,
+      "skill_vs_climatology": 0.485939935915904,
+      "skill_vs_its_own_raw_threshold": 0.3835233754217716
+    }
+  },
+  "best_tuned_threshold": {
+    "6-hourly": {
+      "threshold_maximising_tss": 10.305411338806152,
+      "tune_tss": 0.6623548837989242,
+      "evaluate_miss_rate": 0.13898970388946869,
+      "evaluate_false_alarm_rate": 0.2277594409917319,
+      "evaluate_tss": 0.6332508551187994,
+      "by_cost_ratio": {
+        "r0.05": {
+          "threshold": 8.200124740600586,
+          "expense": 0.03869250174221708
+        },
+        "r0.1": {
+          "threshold": 9.101158905029298,
+          "expense": 0.06750510439038704
+        },
+        "r0.2": {
+          "threshold": 10.305411338806152,
+          "expense": 0.11505234801957805
+        },
+        "r0.4": {
+          "threshold": 11.800101041793823,
+          "expense": 0.18359340932524237
+        }
+      }
+    },
+    "3-hourly": {
+      "threshold_maximising_tss": 11.020235061645508,
+      "tune_tss": 0.6948728477091999,
+      "evaluate_miss_rate": 0.13612361563264225,
+      "evaluate_false_alarm_rate": 0.21425338617271414,
+      "evaluate_tss": 0.6496229981946435,
+      "by_cost_ratio": {
+        "r0.05": {
+          "threshold": 8.924880981445312,
+          "expense": 0.03695537886598989
+        },
+        "r0.1": {
+          "threshold": 9.600287437438965,
+          "expense": 0.06455658028258557
+        },
+        "r0.2": {
+          "threshold": 11.020235061645508,
+          "expense": 0.11245797283363967
+        },
+        "r0.4": {
+          "threshold": 12.312990665435791,
+          "expense": 0.1801228313982158
+        }
+      }
+    }
+  },
+  "paired_cost_by_ratio": {
+    "r0.05": {
+      "6-hourly_threshold": 8.200124740600586,
+      "3-hourly_threshold": 8.924880981445312,
+      "expense_6h": 0.03869250174221708,
+      "expense_3h": 0.03695537886598989,
+      "difference_3h_minus_6h": -0.0017371228762271887
+    },
+    "r0.1": {
+      "6-hourly_threshold": 9.101158905029298,
+      "3-hourly_threshold": 9.600287437438965,
+      "expense_6h": 0.06750510439038704,
+      "expense_3h": 0.06455658028258557,
+      "difference_3h_minus_6h": -0.00294852410780147
+    },
+    "r0.2": {
+      "6-hourly_threshold": 10.305411338806152,
+      "3-hourly_threshold": 11.020235061645508,
+      "expense_6h": 0.11505234801957805,
+      "expense_3h": 0.11245797283363967,
+      "difference_3h_minus_6h": -0.002594375185938372
+    },
+    "r0.4": {
+      "6-hourly_threshold": 11.800101041793823,
+      "3-hourly_threshold": 12.312990665435791,
+      "expense_6h": 0.18359340932524237,
+      "expense_3h": 0.1801228313982158,
+      "difference_3h_minus_6h": -0.003470577927026569
+    }
+  }
+}

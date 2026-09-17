@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-09-15T06:01:38.743016+00:00",
+  "manifest_records": 19824,
+  "manifest_records_rejected": 0,
+  "unique_station_rows": 59472,
+  "rows_per_station_year": {
+    "240_2021": 3394,
+    "240_2022": 4378,
+    "240_2023": 4379,
+    "240_2024": 4390,
+    "240_2025": 3283,
+    "260_2021": 3394,
+    "260_2022": 4378,
+    "260_2023": 4379,
+    "260_2024": 4390,
+    "260_2025": 3283,
+    "344_2021": 3394,
+    "344_2022": 4378,
+    "344_2023": 4379,
+    "344_2024": 4390,
+    "344_2025": 3283
+  },
+  "columns": [
+    "station_id",
+    "valid_time",
+    "issue_time",
+    "issue_date",
+    "issue_cycle",
+    "lead_hours",
+    "GUST_ms",
+    "grid_longitude",
+    "grid_latitude",
+    "message_sha256",
+    "byte_start",
+    "byte_end",
+    "index_sha256",
+    "index_last_modified"
+  ],
+  "note": "Rebuilt from the JSONL manifest after the comma-in-Last-Modified CSV defect. No data was re-downloaded and no value was altered."
+}

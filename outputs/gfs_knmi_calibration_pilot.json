@@ -1,0 +1,106 @@
+{
+  "analysis_status": "PILOT_ONLY_NO_OPERATIONAL_BACKTEST",
+  "created_at": "2026-09-15T03:21:15.996882+00:00",
+  "input": "R:\\IMUT_WORKPOOL\\01_PROJECTS\\NAS_DRIVE\\IMUT\\2026-AiC-Weather-Decision\\AiC_Weather_Decision_Project_v1\\outputs\\gfs_knmi_pilot.csv",
+  "input_sha256": "c3b2940c2c72f64251a6ace66e23772d19add03edc63e5e4efe3124d307e6f10",
+  "input_bytes": 23772,
+  "rows": 124,
+  "station_id": [
+    "260"
+  ],
+  "lead_hours": [
+    6.0
+  ],
+  "split_definition": {
+    "train": [
+      "2025-01-01",
+      "2025-01-17"
+    ],
+    "validation": [
+      "2025-01-17",
+      "2025-01-24"
+    ],
+    "test": [
+      "2025-01-24",
+      "2025-02-02"
+    ]
+  },
+  "predeclared_model": "one-feature logistic regression using GUST_ms",
+  "target_semantics": "KNMI FX preceding-hour maximum; GFS GUST instantaneous valid-time forecast",
+  "event_relation": "strict exceedance: FX > threshold; equality is admissible in the window contract",
+  "boundary_correction": "2026-09-15: aligned the event inequality with the operation contract; no pilot observation equals either threshold, so cohort labels and scores are unchanged",
+  "results": [
+    {
+      "threshold_ms": 11.1,
+      "status": "PILOT_FIT_NO_OPERATIONAL_CLAIM",
+      "split_counts": {
+        "train": {
+          "rows": 63,
+          "positive_observations": 7
+        },
+        "validation": {
+          "rows": 28,
+          "positive_observations": 0
+        },
+        "test": {
+          "rows": 33,
+          "positive_observations": 4
+        }
+      },
+      "model": "logistic_regression_on_GUST_ms",
+      "train_coefficient": 0.559115008647242,
+      "train_intercept": -9.385810304598415,
+      "scores": {
+        "train": {
+          "rows": 63,
+          "positive_observations": 7,
+          "brier": 0.027686290032931538,
+          "log_loss": 0.09825662152542741,
+          "mean_probability": 0.11111112469590555
+        },
+        "validation": {
+          "rows": 28,
+          "positive_observations": 0,
+          "brier": 0.006765756635725218,
+          "log_loss": 0.023635388764256453,
+          "mean_probability": 0.018803258029092773
+        },
+        "test": {
+          "rows": 33,
+          "positive_observations": 4,
+          "brier": 0.049683903926335454,
+          "log_loss": 0.16565431807472178,
+          "mean_probability": 0.14206094872494482
+        }
+      }
+    },
+    {
+      "threshold_ms": 20.0,
+      "status": "NOT_ESTIMABLE_TRAINING_ONE_CLASS",
+      "split_counts": {
+        "train": {
+          "rows": 63,
+          "positive_observations": 0
+        },
+        "validation": {
+          "rows": 28,
+          "positive_observations": 0
+        },
+        "test": {
+          "rows": 33,
+          "positive_observations": 0
+        }
+      },
+      "model": "logistic_regression_on_GUST_ms"
+    }
+  ],
+  "availability_status": "offline historical archive; GFS publication latency not established",
+  "interpretation": "Scores are pilot diagnostics only; no forecast skill, calibrated probability, or scheduling-value claim is released.",
+  "required_before_main_result": [
+    "operational publication latency audit",
+    "multiple leads and issue times",
+    "predeclared model selection and hyperparameters",
+    "frozen validation/test partitions held out from all choices",
+    "cross-network scheduling experiment with common weather scenarios"
+  ]
+}

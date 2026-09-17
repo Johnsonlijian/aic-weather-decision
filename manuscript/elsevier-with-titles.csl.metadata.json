@@ -1,0 +1,14 @@
+{
+  "url": "https://raw.githubusercontent.com/citation-style-language/styles/master/elsevier-with-titles.csl",
+  "http_status": 200,
+  "retrieved_at": "2026-09-15T03:01:34.489221+00:00",
+  "sha256": "392ae4204ad19d6538437492889c899bede1f5935ef58c3ab0beebb247d16dd4",
+  "bytes": 5260,
+  "headers": {
+    "Content-Length": "5260",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"93ee24a683e58729cb8a23770dabf74541f75adec40da7e82871a43ebb8beda9\"",
+    "Accept-Ranges": "bytes",
+    "Date": "Tue, 15 Sep 2026 03:01:34 GMT"
+  }
+}

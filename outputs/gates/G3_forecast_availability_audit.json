@@ -1,0 +1,1076 @@
+{
+  "purpose": "bound the earliest moment an archived forecast run could have been available to a planner",
+  "created_at": "2026-09-15T05:22:39.017193+00:00",
+  "probe_dates": [
+    "2021-06-15",
+    "2022-03-15",
+    "2023-08-15",
+    "2024-05-15",
+    "2025-02-15"
+  ],
+  "cycles": [
+    "00",
+    "06",
+    "12",
+    "18"
+  ],
+  "leads": [
+    6,
+    12,
+    24,
+    48,
+    72
+  ],
+  "objects_probed": 100,
+  "objects_ok": 100,
+  "objects_unavailable": 0,
+  "publication_latency_hours": {
+    "min": 3.5225,
+    "p05": 3.566486111111111,
+    "median": 3.702638888888889,
+    "p95": 3.917875,
+    "max": 3.9697222222222224
+  },
+  "by_lead": {
+    "6": {
+      "n": 20,
+      "min": 3.5225,
+      "median": 3.6118055555555557,
+      "max": 3.8005555555555555
+    },
+    "12": {
+      "n": 20,
+      "min": 3.5436111111111113,
+      "median": 3.6394444444444445,
+      "max": 3.786111111111111
+    },
+    "24": {
+      "n": 20,
+      "min": 3.5975,
+      "median": 3.689861111111111,
+      "max": 3.7488888888888887
+    },
+    "48": {
+      "n": 20,
+      "min": 3.7030555555555558,
+      "median": 3.790972222222222,
+      "max": 3.863611111111111
+    },
+    "72": {
+      "n": 20,
+      "min": 3.8091666666666666,
+      "median": 3.9005555555555556,
+      "max": 3.9697222222222224
+    }
+  },
+  "adopted_decision_rule": {
+    "rule": "a decision epoch may consume a run only if epoch - issue_time >= min_latency_hours",
+    "min_latency_hours": 2.0,
+    "upper_bound_used": 4.0,
+    "rationale": "the observed maximum object latency is the empirical upper bound for the archive; the study declares a 4 h publication latency, which leaves the observed margin as slack rather than as an assumption in the planner's favour"
+  },
+  "status": "EMPIRICAL_BOUND_ESTABLISHED_FOR_THE_ARCHIVE",
+  "limitation": "Last-Modified is the object's publication time in a public cloud archive. It bounds when the data existed; it is not a record of what an operational user received.",
+  "observations": [
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "00",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2021-06-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 03:42:08 GMT",
+      "publication_latency_hours": 3.7022222222222223,
+      "index_sha256": "b384af4af9b3fda5a6c21a47c02b8967e3d90ca68433a5a3ad72bfff3f889624"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "00",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2021-06-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 03:38:53 GMT",
+      "publication_latency_hours": 3.6480555555555556,
+      "index_sha256": "791f09f264345d528a88c4727948e1445826cbdf3c1edbbbd653bb7c255c9ee1"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "00",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2021-06-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 03:42:38 GMT",
+      "publication_latency_hours": 3.7105555555555556,
+      "index_sha256": "af8c84c646aedebc490f2503d35c3180d5ad65f7425a740b7aefc05f5c377eb6"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "00",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2021-06-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 03:48:32 GMT",
+      "publication_latency_hours": 3.8088888888888888,
+      "index_sha256": "dd15d0ad3756d0522f1d43c4907bcc0f6208b6dc4874f4ac9dd1d8a0512dd7ca"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "00",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2021-06-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 03:54:59 GMT",
+      "publication_latency_hours": 3.9163888888888887,
+      "index_sha256": "e595d45d3cd99466dd58843382c9dd4db1c600a75152876d37299044c12873f0"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "06",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2021-06-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 09:38:48 GMT",
+      "publication_latency_hours": 3.6466666666666665,
+      "index_sha256": "e1b55e5bfcb7bb17e9a7bc51c40b18e28b477875cbe412e1ef8845636d54a592"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "06",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2021-06-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 09:39:09 GMT",
+      "publication_latency_hours": 3.6525,
+      "index_sha256": "b84b29dd20b56fc1f94cf7b0ec1a122bbe638982669b6c94bc02ff90159ff1eb"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "06",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2021-06-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 09:40:53 GMT",
+      "publication_latency_hours": 3.681388888888889,
+      "index_sha256": "49d277ebbd9a66993c7e71bb8b473f2b75bf7d997ebf11598ef0654dff1373a2"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "06",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2021-06-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 09:47:19 GMT",
+      "publication_latency_hours": 3.788611111111111,
+      "index_sha256": "d53a9298e4a1652b2289999622c26db3a002408c3b01abf758e0a08eb8dc2552"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "06",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2021-06-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 09:53:32 GMT",
+      "publication_latency_hours": 3.8922222222222222,
+      "index_sha256": "3ddaa52ec5e94b118976553f55ffb2e4761e813e51f1dc9908a6b9fe0aeff24b"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "12",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2021-06-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 15:39:37 GMT",
+      "publication_latency_hours": 3.660277777777778,
+      "index_sha256": "d5414b9e16f92a9b21721735b599c8fcade4f7cbc6e4259c0ed9a7d667322399"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "12",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2021-06-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 15:38:14 GMT",
+      "publication_latency_hours": 3.6372222222222224,
+      "index_sha256": "17771b56abe6fca8430ad98041fcd8d2714b880b3854e78e7447a6c89ffdd8c6"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "12",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2021-06-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 15:41:30 GMT",
+      "publication_latency_hours": 3.691666666666667,
+      "index_sha256": "e0b165a9bacea2a2ffb1c63e5c5f5fedad13fbbefee2c0bd92ae078c983e2a12"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "12",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2021-06-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 15:47:34 GMT",
+      "publication_latency_hours": 3.792777777777778,
+      "index_sha256": "2217558c66842f69bef28361e795759fb2432863c07ff0938e1c88039bf1a0bf"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "12",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2021-06-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 15:54:57 GMT",
+      "publication_latency_hours": 3.9158333333333335,
+      "index_sha256": "5d4bbe1bb9baf0c70b2b44656effe4100b9db2d6062a8696697d9a3edd09de34"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "18",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2021-06-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 21:48:02 GMT",
+      "publication_latency_hours": 3.8005555555555555,
+      "index_sha256": "f0be726b242951d139e343e6cbeaeb8378134690e4494360c9a0a22f6de87809"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "18",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2021-06-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 21:47:10 GMT",
+      "publication_latency_hours": 3.786111111111111,
+      "index_sha256": "8bf89c9762b993dea86ac8c2f61f42a52bf6592ea83cf54a211df41e8033db80"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "18",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2021-06-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 21:44:56 GMT",
+      "publication_latency_hours": 3.7488888888888887,
+      "index_sha256": "680a811c366156421f97ec286ddbc9a9fda88baf321d03334ea0bd28fb71d4c8"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "18",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2021-06-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 21:50:23 GMT",
+      "publication_latency_hours": 3.839722222222222,
+      "index_sha256": "f2853bd5dbcc77fdf1f3b63de557115fad7d0456b04035019563c50c62ce7dae"
+    },
+    {
+      "issue_date": "2021-06-15",
+      "cycle": "18",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2021-06-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Jun 2021 21:56:39 GMT",
+      "publication_latency_hours": 3.944166666666667,
+      "index_sha256": "96fec556d0fbeaa80a6df927a9b70086b48484abb91c51fbc6cc6772b624b42d"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "00",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2022-03-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 03:41:37 GMT",
+      "publication_latency_hours": 3.693611111111111,
+      "index_sha256": "9d9b27a6067bbf25ec5674ba541b3b0169549bab9b7bb7256e383c52b2251fe0"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "00",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2022-03-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 03:42:51 GMT",
+      "publication_latency_hours": 3.714166666666667,
+      "index_sha256": "8401f89773683a4329d69e0e2869e0c9dbf48948d02aaa3696def44f61d3efde"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "00",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2022-03-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 03:44:29 GMT",
+      "publication_latency_hours": 3.741388888888889,
+      "index_sha256": "ea94843f763b6bed8694e09e59b77fa5428e9252aa6697bc46c5370c8c3b92c9"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "00",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2022-03-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 03:50:59 GMT",
+      "publication_latency_hours": 3.8497222222222223,
+      "index_sha256": "1a19f2b92872ff7ba34498cd53e2e424bfdd9ebdec7afd2ec1fbc78055296d0b"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "00",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2022-03-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 03:57:23 GMT",
+      "publication_latency_hours": 3.9563888888888887,
+      "index_sha256": "3dfa2bc362cd0b84f6c24d13705dcaa2024836e00d6a7ae6e8321d068012d027"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "06",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2022-03-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 09:40:06 GMT",
+      "publication_latency_hours": 3.6683333333333334,
+      "index_sha256": "72150cb6cb905809f0b5d44f1f731104f7378d758c016bffe20b190ccecca0aa"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "06",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2022-03-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 09:39:24 GMT",
+      "publication_latency_hours": 3.6566666666666667,
+      "index_sha256": "5f9b0fa0c8e892d5ac50f9c3beec515bda4b866e0c51816893be1739d338062e"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "06",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2022-03-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 09:41:39 GMT",
+      "publication_latency_hours": 3.694166666666667,
+      "index_sha256": "c5cac66a3570b5a12927076275e933dda61d8d9cca16c8f5646dc709e3c69917"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "06",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2022-03-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 09:48:19 GMT",
+      "publication_latency_hours": 3.805277777777778,
+      "index_sha256": "b3531d35b99cb16f9332bebcf6168b4126822df7d8789a73e790544e2f5c8f80"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "06",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2022-03-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 09:55:11 GMT",
+      "publication_latency_hours": 3.919722222222222,
+      "index_sha256": "8d900c337289141dd7c87eb09aa4cc31b8bece364f3ee55ae1a2a5cd1ec6a949"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "12",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2022-03-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 15:39:18 GMT",
+      "publication_latency_hours": 3.655,
+      "index_sha256": "c5eb68bf980d8182fce340af54a1497ec5a6684911b7b8d3a45bf3c859077645"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "12",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2022-03-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 15:40:00 GMT",
+      "publication_latency_hours": 3.6666666666666665,
+      "index_sha256": "cce9ae6edc503e0faf630170201c1135fd389f796e6dfd9eb44142650f42f696"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "12",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2022-03-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 15:42:29 GMT",
+      "publication_latency_hours": 3.7080555555555557,
+      "index_sha256": "452f22d84411376d377f2641ee3091ce97c62867d4eb6c8f7325aca87be4fc3b"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "12",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2022-03-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 15:49:12 GMT",
+      "publication_latency_hours": 3.82,
+      "index_sha256": "cd72f1ca61d35af9c364799d8e0cf86e3345fa84578b51bb6ce93a7ff010abcf"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "12",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2022-03-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 15:55:39 GMT",
+      "publication_latency_hours": 3.9275,
+      "index_sha256": "914b5732a086900b4ea51db0e190c05499741db537ec2767ceb099415365f381"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "18",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2022-03-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 21:40:10 GMT",
+      "publication_latency_hours": 3.6694444444444443,
+      "index_sha256": "83d00095d7bba8ece76fa683754e61cd8d265fcd8684fad1f8c169d749ca0ddf"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "18",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2022-03-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 21:43:08 GMT",
+      "publication_latency_hours": 3.718888888888889,
+      "index_sha256": "005bbc2dd17c2a55e6b6478b624bdf8fdade24bdbfa5d6f9f4d4e5b1e6196333"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "18",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2022-03-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 21:44:55 GMT",
+      "publication_latency_hours": 3.748611111111111,
+      "index_sha256": "3fa4f743b92d5e6a427dc7a2402591c98b4fe4c793609cc1e024f0e9eaa4fd88"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "18",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2022-03-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 21:51:49 GMT",
+      "publication_latency_hours": 3.863611111111111,
+      "index_sha256": "c1f0b223e9b25833fdff3c7919381283be52140573b3e06f58190a8ca219e7ae"
+    },
+    {
+      "issue_date": "2022-03-15",
+      "cycle": "18",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2022-03-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Mar 2022 21:58:11 GMT",
+      "publication_latency_hours": 3.9697222222222224,
+      "index_sha256": "6e4772f7c11197cd38300fc39291b2999cd99a01a216ef3f040f0d5698598c5e"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "00",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2023-08-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 03:36:07 GMT",
+      "publication_latency_hours": 3.6019444444444444,
+      "index_sha256": "07224aff435275c73f5f5e69125443d3cd1c90329f9163f6048354c42ca2120b"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "00",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2023-08-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 03:38:23 GMT",
+      "publication_latency_hours": 3.6397222222222223,
+      "index_sha256": "0dcf813366754242fa325f796c8d6cc7da70f89d21493c16f52c96231da56c5f"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "00",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2023-08-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 03:41:23 GMT",
+      "publication_latency_hours": 3.689722222222222,
+      "index_sha256": "9069ae7ecfc4794d2307e772ef0d5d6baa63a9b8c3d0f8867819884d523213c7"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "00",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2023-08-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 03:47:21 GMT",
+      "publication_latency_hours": 3.7891666666666666,
+      "index_sha256": "d3eda0ae2b82014f5701c1a8972c7552188af9b60ec00d59e2f955b50ee1f4b1"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "00",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2023-08-15T00:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 03:54:03 GMT",
+      "publication_latency_hours": 3.9008333333333334,
+      "index_sha256": "bd313e55c3cdc0284490d3ec4826fcb6507c3b6b006c098870fde4308fd9a723"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "06",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2023-08-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 09:33:28 GMT",
+      "publication_latency_hours": 3.557777777777778,
+      "index_sha256": "502a37bd848e35382fbddbef5981d83db5dfa8a03de208a13ba62b9442d2a463"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "06",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2023-08-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 09:35:29 GMT",
+      "publication_latency_hours": 3.591388888888889,
+      "index_sha256": "f51b91d0532f359ebeffc3ed643a46c9d74ebfea7f51daeeb63993e06a12e1b2"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "06",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2023-08-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 09:38:52 GMT",
+      "publication_latency_hours": 3.647777777777778,
+      "index_sha256": "41fae25bc60ba90d64183ea7771cccabd0bb047f467ca03c6b97a32fe550d0c8"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "06",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2023-08-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 09:44:59 GMT",
+      "publication_latency_hours": 3.749722222222222,
+      "index_sha256": "55ca3ec2411bc0da7faa1709b114d1265845725cc699bda39a9fd0f530eb8412"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "06",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2023-08-15T06:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 09:51:00 GMT",
+      "publication_latency_hours": 3.85,
+      "index_sha256": "084510387bee13db231ac264e32b973ba00eca83a49ac0d14420d6beb8a683bd"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "12",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2023-08-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 15:33:15 GMT",
+      "publication_latency_hours": 3.5541666666666667,
+      "index_sha256": "7d11808a5e2458c87297bc90a3e864e01657711ed1344b99d8bd1a7fe1b2d6c9"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "12",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2023-08-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 15:35:27 GMT",
+      "publication_latency_hours": 3.5908333333333333,
+      "index_sha256": "7021c3669a528d4fee01cbbf651456648e06a0f3832d7e20e09bcf47f4a18d44"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "12",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2023-08-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 15:38:16 GMT",
+      "publication_latency_hours": 3.637777777777778,
+      "index_sha256": "9cd208d7d48c7ecfab8093770ba7c8fc6fbcb7b2764ad6b10fcbba3f9dc42c6a"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "12",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2023-08-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 15:44:38 GMT",
+      "publication_latency_hours": 3.743888888888889,
+      "index_sha256": "f7d0e26844edcc0c00d84a544e6bdb3526eb2cdbc11dcbc5246484865e3bbbd5"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "12",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2023-08-15T12:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 15:50:39 GMT",
+      "publication_latency_hours": 3.8441666666666667,
+      "index_sha256": "dd43c4da4b27fd2c9565c98462a83c506d5002d2c99d4b60b9ce08eee941b73c"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "18",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2023-08-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 21:36:32 GMT",
+      "publication_latency_hours": 3.608888888888889,
+      "index_sha256": "03255b4c7997c14bb1399fb63f52fe99ea07d40362ceaaa7e824f933edb0b32a"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "18",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2023-08-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 21:38:21 GMT",
+      "publication_latency_hours": 3.6391666666666667,
+      "index_sha256": "e1d3e7f677b9578be6fc8b4212171e33a7b4e98e89ced8ab84dcd697c6cf845e"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "18",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2023-08-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 21:41:50 GMT",
+      "publication_latency_hours": 3.6972222222222224,
+      "index_sha256": "f95af7a083414570824eb968c74517f6e17389f8126563466b4443518b99fe91"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "18",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2023-08-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 21:48:07 GMT",
+      "publication_latency_hours": 3.8019444444444446,
+      "index_sha256": "93eb5353bb53091fe0530e2b850dc5fe346132a68eecc468f0f275d9dda0716d"
+    },
+    {
+      "issue_date": "2023-08-15",
+      "cycle": "18",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2023-08-15T18:00:00+00:00",
+      "index_last_modified": "Tue, 15 Aug 2023 21:54:11 GMT",
+      "publication_latency_hours": 3.9030555555555555,
+      "index_sha256": "1c8fdc05b357c236d07a16682102f98771b2c415945193eb9e0cb0bad894d5b9"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "00",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2024-05-15T00:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 03:35:09 GMT",
+      "publication_latency_hours": 3.5858333333333334,
+      "index_sha256": "8a273d5da259bf8d35b001ed1088737b9d4474d3250f7669096d819460d4b609"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "00",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2024-05-15T00:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 03:36:20 GMT",
+      "publication_latency_hours": 3.6055555555555556,
+      "index_sha256": "3640a711bd95319aebef1527881cf0347839d242715a7a45d514e5f2c61207ef"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "00",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2024-05-15T00:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 03:39:43 GMT",
+      "publication_latency_hours": 3.6619444444444444,
+      "index_sha256": "691296471af332de0b5927ae940ea84b5fd298bc24291d9dfbc8d37ebcd0599e"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "00",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2024-05-15T00:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 03:45:57 GMT",
+      "publication_latency_hours": 3.765833333333333,
+      "index_sha256": "5ab26db9bc8ee40dd909526f5722dcecf3d213f4caea041f6cc6b6f5427a19d8"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "00",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2024-05-15T00:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 03:52:38 GMT",
+      "publication_latency_hours": 3.877222222222222,
+      "index_sha256": "d520ed9f2d470c4287d8596a469ce700e7556ed58cabf818b7319f697023c6b9"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "06",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2024-05-15T06:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 09:31:21 GMT",
+      "publication_latency_hours": 3.5225,
+      "index_sha256": "d2a47aaffef2913980ddc9e36b192048d058a7b2367f8a8ef8cbbf23ac0b2f95"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "06",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2024-05-15T06:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 09:32:37 GMT",
+      "publication_latency_hours": 3.5436111111111113,
+      "index_sha256": "55c47037767da6b66d7a12bdb1031ae058c3df9c03f88dab34dbdf2b3a54c0e0"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "06",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2024-05-15T06:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 09:35:51 GMT",
+      "publication_latency_hours": 3.5975,
+      "index_sha256": "8aa196b2a0d853b350bbb0915b62f97b0e092c74a6aea305379f489de7134d5f"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "06",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2024-05-15T06:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 09:42:11 GMT",
+      "publication_latency_hours": 3.7030555555555558,
+      "index_sha256": "55624d8301b12760954f6d218dc24bbcba5a8c49ca68f58a56e6b619c621abe9"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "06",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2024-05-15T06:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 09:48:33 GMT",
+      "publication_latency_hours": 3.8091666666666666,
+      "index_sha256": "7afefbb02d0bdba22ac553b5b9fecb9a283e198976ab60ebbab8aced37a34392"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "12",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2024-05-15T12:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 15:32:27 GMT",
+      "publication_latency_hours": 3.5408333333333335,
+      "index_sha256": "88582c57d075b435f23a7f5b51106189c730c1c5874e1217c6d505fb7471b48f"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "12",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2024-05-15T12:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 15:34:04 GMT",
+      "publication_latency_hours": 3.5677777777777777,
+      "index_sha256": "39e41defc5401edf3769110c9e285f9ca975b5801bd84962e2dcf20fd6be2ec6"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "12",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2024-05-15T12:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 15:36:24 GMT",
+      "publication_latency_hours": 3.6066666666666665,
+      "index_sha256": "f19bb7d37a2c03ddf3d21c8e72478588a0eabb4db6e7a879845cb81c4c8912fe"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "12",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2024-05-15T12:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 15:44:23 GMT",
+      "publication_latency_hours": 3.7397222222222224,
+      "index_sha256": "7da2e66bb82ec4b299cbe416f8c9fe40e335edf4b655f25d4af7d6737f42a973"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "12",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2024-05-15T12:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 15:50:13 GMT",
+      "publication_latency_hours": 3.8369444444444443,
+      "index_sha256": "ae7018ea7b5451168c5127c545051c5ed33b934ce2d6bd28cfdcff0fd5f3f0f4"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "18",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2024-05-15T18:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 21:35:12 GMT",
+      "publication_latency_hours": 3.5866666666666664,
+      "index_sha256": "4130192340f0087f466c71f7b873e6c186fb7b02fd773921e3611063b138d9fe"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "18",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2024-05-15T18:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 21:36:55 GMT",
+      "publication_latency_hours": 3.6152777777777776,
+      "index_sha256": "8d37f06a3c6f19b3615c98321c4fa4d662330f9ddb13b6513cfe166a893e5701"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "18",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2024-05-15T18:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 21:40:09 GMT",
+      "publication_latency_hours": 3.6691666666666665,
+      "index_sha256": "127e6518ba5f739125ccb7d1cf24ffcc4e02113c202d8d1aa2a63adf63a5f90b"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "18",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2024-05-15T18:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 21:46:36 GMT",
+      "publication_latency_hours": 3.776666666666667,
+      "index_sha256": "4cc3cd134a9134da78713d62fd0d4df221fd3c9fe6a3c1875acdf4e1fec92290"
+    },
+    {
+      "issue_date": "2024-05-15",
+      "cycle": "18",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2024-05-15T18:00:00+00:00",
+      "index_last_modified": "Wed, 15 May 2024 21:52:51 GMT",
+      "publication_latency_hours": 3.8808333333333334,
+      "index_sha256": "05ea0b6c5993e3ffa439de1569242afa4f4d702fdcc1f0e475fa9940a1e887cc"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "00",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2025-02-15T00:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 03:36:53 GMT",
+      "publication_latency_hours": 3.6147222222222224,
+      "index_sha256": "2edd8e836af84d2f56851359f57a7d24c17ef3d04b6bdde8e790273267ef4d1a"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "00",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2025-02-15T00:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 03:38:26 GMT",
+      "publication_latency_hours": 3.6405555555555558,
+      "index_sha256": "df147f73dbd314181e5f6eaec8b70899c2301f86cdddafa1a34e111649876b13"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "00",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2025-02-15T00:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 03:41:24 GMT",
+      "publication_latency_hours": 3.69,
+      "index_sha256": "b58a8fe740477c733465b186a42296ed2b3fc3463d8abf04ee302af90a63354d"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "00",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2025-02-15T00:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 03:48:06 GMT",
+      "publication_latency_hours": 3.8016666666666667,
+      "index_sha256": "124ecb8b98684ecdc7bfc2ce83db3e91a8835545e726cd009f72f65aa8f77425"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "00",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2025-02-15T00:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 03:54:01 GMT",
+      "publication_latency_hours": 3.9002777777777777,
+      "index_sha256": "cf742939350b57f6ebf4423a497a683a77964bbf02534d3c7d12fd14b1c08eca"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "06",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2025-02-15T06:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 09:34:16 GMT",
+      "publication_latency_hours": 3.571111111111111,
+      "index_sha256": "6c78f1eb2cb420f60fc40760d52d2fda46d18244c831a2664ce4114ce5997aeb"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "06",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2025-02-15T06:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 09:35:37 GMT",
+      "publication_latency_hours": 3.593611111111111,
+      "index_sha256": "78b129f0691c8b48349acc26b55355584f273b31f98fe98468ca0b2a37ab5140"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "06",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2025-02-15T06:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 09:38:53 GMT",
+      "publication_latency_hours": 3.6480555555555556,
+      "index_sha256": "96ba8c15dc69e872c42b75f8d3ec51496c3dda7f5c249949a199df6a94c1af91"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "06",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2025-02-15T06:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 09:45:19 GMT",
+      "publication_latency_hours": 3.7552777777777777,
+      "index_sha256": "d5d14ecc4f7bf86edcf095a1a92f70037c03571933ba3807b62a1dd7562d23d0"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "06",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2025-02-15T06:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 09:51:27 GMT",
+      "publication_latency_hours": 3.8575,
+      "index_sha256": "763bdcd134434b94f2f96b6ce5a156d6f29466cced9976c5fc2346c89ffd0ee5"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "12",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2025-02-15T12:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 15:34:01 GMT",
+      "publication_latency_hours": 3.5669444444444443,
+      "index_sha256": "ed148dbaf5520e53b69defb8efd2fc39ad2d4197055a67549f41b9ceec8d261d"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "12",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2025-02-15T12:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 15:35:35 GMT",
+      "publication_latency_hours": 3.5930555555555554,
+      "index_sha256": "b7dc1e1a9f2021e9e208306a999a10c78b3e2309f576fd4a65e4e2262bbc524d"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "12",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2025-02-15T12:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 15:39:45 GMT",
+      "publication_latency_hours": 3.6625,
+      "index_sha256": "7756a51031ed4866345abe4b71d3316aa0224db611723592f74c60a194746374"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "12",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2025-02-15T12:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 15:45:12 GMT",
+      "publication_latency_hours": 3.7533333333333334,
+      "index_sha256": "7eb177d1af3fee9fd44a927d0faac1cc0e347fa5d09bea9d9454846ef8a690a5"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "12",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2025-02-15T12:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 15:51:24 GMT",
+      "publication_latency_hours": 3.8566666666666665,
+      "index_sha256": "4b7fde6bc2dac38d7fcd00e12e7a8eb610881bcb1fb35ca311aa90098fd4466b"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "18",
+      "lead_hours": 6,
+      "status": "ok",
+      "issue_time": "2025-02-15T18:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 21:37:30 GMT",
+      "publication_latency_hours": 3.625,
+      "index_sha256": "1414b4a9fbcda896d90ec21ea0e8feb663c88051683da915452226a410f28104"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "18",
+      "lead_hours": 12,
+      "status": "ok",
+      "issue_time": "2025-02-15T18:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 21:39:08 GMT",
+      "publication_latency_hours": 3.652222222222222,
+      "index_sha256": "fddd101be5787cf8750f16c628a4c6905058e846f8bbb9cfde562c7810a08208"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "18",
+      "lead_hours": 24,
+      "status": "ok",
+      "issue_time": "2025-02-15T18:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 21:42:41 GMT",
+      "publication_latency_hours": 3.711388888888889,
+      "index_sha256": "3f64dd046fae112403e6eedd4158ecd8c7e35c441da1df4516f650f7a37e0b72"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "18",
+      "lead_hours": 48,
+      "status": "ok",
+      "issue_time": "2025-02-15T18:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 21:48:42 GMT",
+      "publication_latency_hours": 3.8116666666666665,
+      "index_sha256": "94d20223654d08e9d1f3b2edd39f4d0c3847c0516a74c26d8d32586671a56d28"
+    },
+    {
+      "issue_date": "2025-02-15",
+      "cycle": "18",
+      "lead_hours": 72,
+      "status": "ok",
+      "issue_time": "2025-02-15T18:00:00+00:00",
+      "index_last_modified": "Sat, 15 Feb 2025 21:55:04 GMT",
+      "publication_latency_hours": 3.917777777777778,
+      "index_sha256": "086efa470c624ee06fb7a935286b8b61c7a74569a91bdd22e1c9024a411053d9"
+    }
+  ]
+}

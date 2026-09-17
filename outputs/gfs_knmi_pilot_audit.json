@@ -1,0 +1,41 @@
+{
+  "audit_status": "PASS_WITH_PILOT_LIMITS",
+  "created_at": "2026-09-15T02:05:13.349802+00:00",
+  "input": "R:\\IMUT_WORKPOOL\\01_PROJECTS\\NAS_DRIVE\\IMUT\\2026-AiC-Weather-Decision\\AiC_Weather_Decision_Project_v1\\outputs\\gfs_knmi_pilot.csv",
+  "input_sha256": "c3b2940c2c72f64251a6ace66e23772d19add03edc63e5e4efe3124d307e6f10",
+  "rows": 124,
+  "checks": {
+    "nonempty": true,
+    "unique_issue_station_lead": true,
+    "unique_valid_station": true,
+    "lead_matches_timestamps": true,
+    "pairing_rule_constant": true,
+    "observation_complete": true,
+    "nonnegative_wind": true,
+    "source_files_exist": true,
+    "single_station_declared": true
+  },
+  "split_counts": {
+    "train": 63,
+    "validation": 28,
+    "test": 33,
+    "overlap_issue_times": 0
+  },
+  "generic_profile": {
+    "dqs_reference": 81.3,
+    "source": "R:\\IMUT_WORKPOOL\\01_PROJECTS\\NAS_DRIVE\\IMUT\\2026-AiC-Weather-Decision\\AiC_Weather_Decision_Project_v1\\outputs\\gfs_knmi_pilot_data_profiler.json",
+    "interpretation": "secondary completeness/consistency signal; not proof of scientific validity, independence, representativeness, or submission readiness"
+  },
+  "scientific_unit": "one archived forecast issue time × one station × one six-hour lead",
+  "p0_findings": [],
+  "p1_findings": [
+    "GFS publication latency is not established; this is not an operational replay.",
+    "Only one station, one month, and one lead are included.",
+    "The 20 m/s observation event has zero cases and is not estimable."
+  ],
+  "p2_findings": [
+    "GUST and FX have different temporal support and require an explicit mapping in any downstream model.",
+    "The aligned table is a derived non-redistribution artifact; raw archives remain under data/raw."
+  ],
+  "claim_consequence": "Use only to validate ingestion, endpoint alignment, frozen split code, and calibration plumbing; do not report forecast skill or scheduling value."
+}

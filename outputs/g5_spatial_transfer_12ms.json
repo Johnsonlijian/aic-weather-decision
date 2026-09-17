@@ -1,0 +1,2724 @@
+{
+  "limit": 12.0,
+  "horizon": 12,
+  "stations_total": 45,
+  "rows": 281997,
+  "pooled": {
+    "test": {
+      "n": 47322,
+      "positives": 9518,
+      "brier": 0.0964891129784895,
+      "skill_vs_climatology": 0.39948889722841596,
+      "skill_vs_raw": 0.31563881829015583
+    }
+  },
+  "per_station": {
+    "209": {
+      "n": 1054,
+      "positives": 343,
+      "transfer": {
+        "n": 1054,
+        "positives": 343,
+        "brier": 0.1350190163345588,
+        "skill_vs_climatology": 0.38494714236376015,
+        "skill_vs_raw": 0.19142020899644907
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 343,
+        "brier": 0.12021567371829871,
+        "skill_vs_climatology": 0.45238088929714426
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 343,
+        "brier": 0.16698292220113853,
+        "skill_vs_climatology": 0.23934178855387844
+      }
+    },
+    "215": {
+      "n": 1045,
+      "positives": 230,
+      "transfer": {
+        "n": 1045,
+        "positives": 230,
+        "brier": 0.09895043716342161,
+        "skill_vs_climatology": 0.4235457394324593,
+        "skill_vs_raw": 0.27180840256496064
+      },
+      "site_specific": {
+        "n": 1045,
+        "positives": 230,
+        "brier": 0.09702711513823797,
+        "skill_vs_climatology": 0.43475041126255354
+      },
+      "raw_threshold": {
+        "n": 1045,
+        "positives": 230,
+        "brier": 0.13588516746411483,
+        "skill_vs_climatology": 0.2083755668178181
+      }
+    },
+    "225": {
+      "n": 1026,
+      "positives": 394,
+      "transfer": {
+        "n": 1026,
+        "positives": 394,
+        "brier": 0.16615297919225208,
+        "skill_vs_climatology": 0.2975918302858417,
+        "skill_vs_raw": 0.15607447202351166
+      },
+      "site_specific": {
+        "n": 1026,
+        "positives": 394,
+        "brier": 0.1251255720017976,
+        "skill_vs_climatology": 0.47103431764214687
+      },
+      "raw_threshold": {
+        "n": 1026,
+        "positives": 394,
+        "brier": 0.1968810916179337,
+        "skill_vs_climatology": 0.1676893915054939
+      }
+    },
+    "235": {
+      "n": 1054,
+      "positives": 245,
+      "transfer": {
+        "n": 1054,
+        "positives": 245,
+        "brier": 0.08803156058295394,
+        "skill_vs_climatology": 0.5065933293480342,
+        "skill_vs_raw": 0.3324801089609103
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 245,
+        "brier": 0.08751944208489996,
+        "skill_vs_climatology": 0.5094636940380479
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 245,
+        "brier": 0.1318785578747628,
+        "skill_vs_climatology": 0.26083600312807453
+      }
+    },
+    "240": {
+      "n": 1054,
+      "positives": 218,
+      "transfer": {
+        "n": 1054,
+        "positives": 218,
+        "brier": 0.10686405362723037,
+        "skill_vs_climatology": 0.348596489402637,
+        "skill_vs_raw": 0.2589821544532842
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 218,
+        "brier": 0.1002837558864618,
+        "skill_vs_climatology": 0.3887075361355704
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 218,
+        "brier": 0.1442125237191651,
+        "skill_vs_climatology": 0.12093411175979996
+      }
+    },
+    "242": {
+      "n": 1054,
+      "positives": 401,
+      "transfer": {
+        "n": 1054,
+        "positives": 401,
+        "brier": 0.1504129951916857,
+        "skill_vs_climatology": 0.3618701982930628,
+        "skill_vs_raw": 0.19931668216143072
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 401,
+        "brier": 0.12090746616387618,
+        "skill_vs_climatology": 0.48704792887265524
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 401,
+        "brier": 0.18785578747628084,
+        "skill_vs_climatology": 0.20301848747197881
+      }
+    },
+    "248": {
+      "n": 1054,
+      "positives": 197,
+      "transfer": {
+        "n": 1054,
+        "positives": 197,
+        "brier": 0.08063620200795032,
+        "skill_vs_climatology": 0.46940367478416534,
+        "skill_vs_raw": 0.336011274090784
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 197,
+        "brier": 0.0812249403427789,
+        "skill_vs_climatology": 0.4655297026823676
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 197,
+        "brier": 0.12144212523719165,
+        "skill_vs_climatology": 0.20089558073553715
+      }
+    },
+    "249": {
+      "n": 1054,
+      "positives": 201,
+      "transfer": {
+        "n": 1054,
+        "positives": 201,
+        "brier": 0.09464020480481532,
+        "skill_vs_climatology": 0.3867863626711331,
+        "skill_vs_raw": 0.3686659755425611
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 201,
+        "brier": 0.0952300279897859,
+        "skill_vs_climatology": 0.38296465052054496
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 201,
+        "brier": 0.14990512333965844,
+        "skill_vs_climatology": 0.028701743334908048
+      }
+    },
+    "251": {
+      "n": 1028,
+      "positives": 278,
+      "transfer": {
+        "n": 1028,
+        "positives": 278,
+        "brier": 0.11411479670999454,
+        "skill_vs_climatology": 0.4216081950773387,
+        "skill_vs_raw": 0.26220118856682784
+      },
+      "site_specific": {
+        "n": 1028,
+        "positives": 278,
+        "brier": 0.11324060884639672,
+        "skill_vs_climatology": 0.4260390236012924
+      },
+      "raw_threshold": {
+        "n": 1028,
+        "positives": 278,
+        "brier": 0.1546692607003891,
+        "skill_vs_climatology": 0.21605755395683446
+      }
+    },
+    "258": {
+      "n": 1034,
+      "positives": 332,
+      "transfer": {
+        "n": 1034,
+        "positives": 332,
+        "brier": 0.14503207712609664,
+        "skill_vs_climatology": 0.33468096552093407,
+        "skill_vs_raw": 0.21072016974534769
+      },
+      "site_specific": {
+        "n": 1034,
+        "positives": 332,
+        "brier": 0.12253124033037599,
+        "skill_vs_climatology": 0.4379011310770282
+      },
+      "raw_threshold": {
+        "n": 1034,
+        "positives": 332,
+        "brier": 0.18375241779497098,
+        "skill_vs_climatology": 0.15705557271822312
+      }
+    },
+    "260": {
+      "n": 1054,
+      "positives": 119,
+      "transfer": {
+        "n": 1054,
+        "positives": 119,
+        "brier": 0.07668687183172941,
+        "skill_vs_climatology": 0.2343264017632004,
+        "skill_vs_raw": 0.3968062469355015
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 119,
+        "brier": 0.07200970345328446,
+        "skill_vs_climatology": 0.2810251946118819
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 119,
+        "brier": 0.127134724857685,
+        "skill_vs_climatology": -0.2693659281894576
+      }
+    },
+    "267": {
+      "n": 1054,
+      "positives": 235,
+      "transfer": {
+        "n": 1054,
+        "positives": 235,
+        "brier": 0.10630084704517231,
+        "skill_vs_climatology": 0.38642708130810965,
+        "skill_vs_raw": 0.29974317008992735
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 235,
+        "brier": 0.1051941874549383,
+        "skill_vs_climatology": 0.39281476657735037
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 235,
+        "brier": 0.15180265654648956,
+        "skill_vs_climatology": 0.12378874081001723
+      }
+    },
+    "269": {
+      "n": 1054,
+      "positives": 160,
+      "transfer": {
+        "n": 1054,
+        "positives": 160,
+        "brier": 0.07735377402668062,
+        "skill_vs_climatology": 0.3992341636841168,
+        "skill_vs_raw": 0.3148665729065431
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 160,
+        "brier": 0.07624725985955984,
+        "skill_vs_climatology": 0.4078278737825588
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 160,
+        "brier": 0.11290322580645161,
+        "skill_vs_climatology": 0.12314038031319896
+      }
+    },
+    "270": {
+      "n": 1054,
+      "positives": 215,
+      "transfer": {
+        "n": 1054,
+        "positives": 215,
+        "brier": 0.10082383835626242,
+        "skill_vs_climatology": 0.379068020005069,
+        "skill_vs_raw": 0.3520224047103623
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 215,
+        "brier": 0.10017937143199071,
+        "skill_vs_climatology": 0.38303702306876186
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 215,
+        "brier": 0.1555977229601518,
+        "skill_vs_climatology": 0.04173850375585553
+      }
+    },
+    "273": {
+      "n": 1054,
+      "positives": 137,
+      "transfer": {
+        "n": 1054,
+        "positives": 137,
+        "brier": 0.07432932011711114,
+        "skill_vs_climatology": 0.3427183931479144,
+        "skill_vs_raw": 0.4064916408830671
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 137,
+        "brier": 0.07211439256043922,
+        "skill_vs_climatology": 0.3623046229320227
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 137,
+        "brier": 0.1252371916508539,
+        "skill_vs_climatology": -0.10745130503307387
+      }
+    },
+    "275": {
+      "n": 1054,
+      "positives": 131,
+      "transfer": {
+        "n": 1054,
+        "positives": 131,
+        "brier": 0.07860914371805441,
+        "skill_vs_climatology": 0.27776041035549415,
+        "skill_vs_raw": 0.36752643145931785
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 131,
+        "brier": 0.07713680030630868,
+        "skill_vs_climatology": 0.2912879041204567
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 131,
+        "brier": 0.12428842504743833,
+        "skill_vs_climatology": -0.14192849404117003
+      }
+    },
+    "277": {
+      "n": 1054,
+      "positives": 305,
+      "transfer": {
+        "n": 1054,
+        "positives": 305,
+        "brier": 0.1291685851812405,
+        "skill_vs_climatology": 0.3718599751572459,
+        "skill_vs_raw": 0.2758314426541092
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 305,
+        "brier": 0.12423660426290925,
+        "skill_vs_climatology": 0.39584393853516564
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 305,
+        "brier": 0.17836812144212524,
+        "skill_vs_climatology": 0.13260522226356453
+      }
+    },
+    "278": {
+      "n": 1054,
+      "positives": 70,
+      "transfer": {
+        "n": 1054,
+        "positives": 70,
+        "brier": 0.06575154613501068,
+        "skill_vs_climatology": -0.06045941675553901,
+        "skill_vs_raw": 0.4499830982039583
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 70,
+        "brier": 0.043803476659582403,
+        "skill_vs_climatology": 0.29352521665568165
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 70,
+        "brier": 0.11954459203036052,
+        "skill_vs_climatology": -0.928048780487805
+      }
+    },
+    "279": {
+      "n": 1054,
+      "positives": 135,
+      "transfer": {
+        "n": 1054,
+        "positives": 135,
+        "brier": 0.0741487544650499,
+        "skill_vs_climatology": 0.3360493473961603,
+        "skill_vs_raw": 0.43774973232976544
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 135,
+        "brier": 0.06943411009482545,
+        "skill_vs_climatology": 0.3782657167605441
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 135,
+        "brier": 0.1318785578747628,
+        "skill_vs_climatology": -0.18088098980373157
+      }
+    },
+    "280": {
+      "n": 1054,
+      "positives": 130,
+      "transfer": {
+        "n": 1054,
+        "positives": 130,
+        "brier": 0.07650564382154153,
+        "skill_vs_climatology": 0.2924463552143556,
+        "skill_vs_raw": 0.4240217958006801
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 130,
+        "brier": 0.07242088287561904,
+        "skill_vs_climatology": 0.33022379686437575
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 130,
+        "brier": 0.13282732447817835,
+        "skill_vs_climatology": -0.22843822843822803
+      }
+    },
+    "283": {
+      "n": 1054,
+      "positives": 80,
+      "transfer": {
+        "n": 1054,
+        "positives": 80,
+        "brier": 0.06903172469098987,
+        "skill_vs_climatology": 0.01580534565174896,
+        "skill_vs_raw": 0.45293655771200514
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 80,
+        "brier": 0.05117120657509701,
+        "skill_vs_climatology": 0.2704451729519959
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 80,
+        "brier": 0.12618595825426945,
+        "skill_vs_climatology": -0.7990503080082141
+      }
+    },
+    "285": {
+      "n": 1054,
+      "positives": 333,
+      "transfer": {
+        "n": 1054,
+        "positives": 333,
+        "brier": 0.1259240704121744,
+        "skill_vs_climatology": 0.4173463424339271,
+        "skill_vs_raw": 0.20045801075643488
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 333,
+        "brier": 0.11236690692704095,
+        "skill_vs_climatology": 0.48007565911642314
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 333,
+        "brier": 0.15749525616698293,
+        "skill_vs_climatology": 0.27126571786765963
+      }
+    },
+    "286": {
+      "n": 1054,
+      "positives": 166,
+      "transfer": {
+        "n": 1054,
+        "positives": 166,
+        "brier": 0.08470454132339429,
+        "skill_vs_climatology": 0.36163824060553096,
+        "skill_vs_raw": 0.3668185350719321
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 166,
+        "brier": 0.08551301974698215,
+        "skill_vs_climatology": 0.35554527674727
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 166,
+        "brier": 0.13377609108159394,
+        "skill_vs_climatology": -0.00818137414522968
+      }
+    },
+    "290": {
+      "n": 1054,
+      "positives": 112,
+      "transfer": {
+        "n": 1054,
+        "positives": 112,
+        "brier": 0.0716201568019654,
+        "skill_vs_climatology": 0.2458676627065116,
+        "skill_vs_raw": 0.43665936366215274
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 112,
+        "brier": 0.06412369310660841,
+        "skill_vs_climatology": 0.3248025036849693
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 112,
+        "brier": 0.127134724857685,
+        "skill_vs_climatology": -0.338679102214134
+      }
+    },
+    "308": {
+      "n": 1054,
+      "positives": 280,
+      "transfer": {
+        "n": 1054,
+        "positives": 280,
+        "brier": 0.1167369449932296,
+        "skill_vs_climatology": 0.40160142126200327,
+        "skill_vs_raw": 0.27194828388837866
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 280,
+        "brier": 0.11511913010667367,
+        "skill_vs_climatology": 0.4098944096456927
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 280,
+        "brier": 0.1603415559772296,
+        "skill_vs_climatology": 0.17808231819859732
+      }
+    },
+    "310": {
+      "n": 1054,
+      "positives": 327,
+      "transfer": {
+        "n": 1054,
+        "positives": 327,
+        "brier": 0.12512461875109346,
+        "skill_vs_climatology": 0.4152882443265662,
+        "skill_vs_raw": 0.17574157397717183
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 327,
+        "brier": 0.11198159932723309,
+        "skill_vs_climatology": 0.4767060375544738
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 327,
+        "brier": 0.15180265654648956,
+        "skill_vs_climatology": 0.2906208329652672
+      }
+    },
+    "312": {
+      "n": 1054,
+      "positives": 336,
+      "transfer": {
+        "n": 1054,
+        "positives": 336,
+        "brier": 0.12391843989513912,
+        "skill_vs_climatology": 0.42937152815961843,
+        "skill_vs_raw": 0.25365693914584786
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 336,
+        "brier": 0.11689695563202403,
+        "skill_vs_climatology": 0.4617045597770526
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 336,
+        "brier": 0.16603415559772297,
+        "skill_vs_climatology": 0.23543407613741874
+      }
+    },
+    "313": {
+      "n": 1049,
+      "positives": 340,
+      "transfer": {
+        "n": 1049,
+        "positives": 340,
+        "brier": 0.12696907954334258,
+        "skill_vs_climatology": 0.4204061142513329,
+        "skill_vs_raw": 0.28775099229429757
+      },
+      "site_specific": {
+        "n": 1049,
+        "positives": 340,
+        "brier": 0.11426901354687226,
+        "skill_vs_climatology": 0.4783799187920361
+      },
+      "raw_threshold": {
+        "n": 1049,
+        "positives": 340,
+        "brier": 0.1782650142993327,
+        "skill_vs_climatology": 0.1862482369534556
+      }
+    },
+    "315": {
+      "n": 1054,
+      "positives": 216,
+      "transfer": {
+        "n": 1054,
+        "positives": 216,
+        "brier": 0.09355842358274603,
+        "skill_vs_climatology": 0.4257958228760613,
+        "skill_vs_raw": 0.3512461943670111
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 216,
+        "brier": 0.09401228251148107,
+        "skill_vs_climatology": 0.42301031535332967
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 216,
+        "brier": 0.1442125237191651,
+        "skill_vs_climatology": 0.11491204808627231
+      }
+    },
+    "316": {
+      "n": 1044,
+      "positives": 305,
+      "transfer": {
+        "n": 1044,
+        "positives": 305,
+        "brier": 0.11118770612122968,
+        "skill_vs_climatology": 0.46233286603984747,
+        "skill_vs_raw": 0.24130741705513858
+      },
+      "site_specific": {
+        "n": 1044,
+        "positives": 305,
+        "brier": 0.10408217373704212,
+        "skill_vs_climatology": 0.49669288087909347
+      },
+      "raw_threshold": {
+        "n": 1044,
+        "positives": 305,
+        "brier": 0.14655172413793102,
+        "skill_vs_climatology": 0.29132411987843576
+      }
+    },
+    "319": {
+      "n": 1054,
+      "positives": 181,
+      "transfer": {
+        "n": 1054,
+        "positives": 181,
+        "brier": 0.08057041916665844,
+        "skill_vs_climatology": 0.43354681083868085,
+        "skill_vs_raw": 0.29817172064745456
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 181,
+        "brier": 0.08441222406083851,
+        "skill_vs_climatology": 0.4065368652910174
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 181,
+        "brier": 0.11480075901328274,
+        "skill_vs_climatology": 0.19288919266136328
+      }
+    },
+    "323": {
+      "n": 1054,
+      "positives": 190,
+      "transfer": {
+        "n": 1054,
+        "positives": 190,
+        "brier": 0.08939768313811318,
+        "skill_vs_climatology": 0.3950212197791171,
+        "skill_vs_raw": 0.38009764455545214
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 190,
+        "brier": 0.08981590629756069,
+        "skill_vs_climatology": 0.39219098830128574
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 190,
+        "brier": 0.1442125237191651,
+        "skill_vs_climatology": 0.024074074074074026
+      }
+    },
+    "324": {
+      "n": 1054,
+      "positives": 222,
+      "transfer": {
+        "n": 1054,
+        "positives": 222,
+        "brier": 0.0986288839882695,
+        "skill_vs_climatology": 0.4067892125524494,
+        "skill_vs_raw": 0.3420579511162275
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 222,
+        "brier": 0.09946698252629022,
+        "skill_vs_climatology": 0.40174840631401476
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 222,
+        "brier": 0.14990512333965844,
+        "skill_vs_climatology": 0.0983844421344422
+      }
+    },
+    "330": {
+      "n": 1054,
+      "positives": 391,
+      "transfer": {
+        "n": 1054,
+        "positives": 391,
+        "brier": 0.14628780399215732,
+        "skill_vs_climatology": 0.37309886449737717,
+        "skill_vs_raw": 0.22518921905661404
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 391,
+        "brier": 0.11192244494595047,
+        "skill_vs_climatology": 0.5203680285705312
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 391,
+        "brier": 0.1888045540796964,
+        "skill_vs_climatology": 0.19089776378778944
+      }
+    },
+    "340": {
+      "n": 1054,
+      "positives": 131,
+      "transfer": {
+        "n": 1054,
+        "positives": 131,
+        "brier": 0.0739084208432301,
+        "skill_vs_climatology": 0.3209493830317848,
+        "skill_vs_raw": 0.3614797084527498
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 131,
+        "brier": 0.07002111407144121,
+        "skill_vs_climatology": 0.3566649081588482
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 131,
+        "brier": 0.1157495256166983,
+        "skill_vs_climatology": -0.06347539139712022
+      }
+    },
+    "343": {
+      "n": 1054,
+      "positives": 255,
+      "transfer": {
+        "n": 1054,
+        "positives": 255,
+        "brier": 0.11532870689644051,
+        "skill_vs_climatology": 0.37117227048238677,
+        "skill_vs_raw": 0.26773218633223916
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 255,
+        "brier": 0.10856425512654169,
+        "skill_vs_climatology": 0.408055323820672
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 255,
+        "brier": 0.15749525616698293,
+        "skill_vs_climatology": 0.14125990821860657
+      }
+    },
+    "344": {
+      "n": 1054,
+      "positives": 201,
+      "transfer": {
+        "n": 1054,
+        "positives": 201,
+        "brier": 0.0857761133350793,
+        "skill_vs_climatology": 0.4442205343636275,
+        "skill_vs_raw": 0.3400874200352293
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 201,
+        "brier": 0.08158355262585251,
+        "skill_vs_climatology": 0.4713858961412073
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 201,
+        "brier": 0.12998102466793168,
+        "skill_vs_climatology": 0.15779834706887597
+      }
+    },
+    "348": {
+      "n": 1054,
+      "positives": 164,
+      "transfer": {
+        "n": 1054,
+        "positives": 164,
+        "brier": 0.08462949001031318,
+        "skill_vs_climatology": 0.35587657903331693,
+        "skill_vs_raw": 0.3673795569441838
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 164,
+        "brier": 0.08747760489506437,
+        "skill_vs_climatology": 0.33419929487801237
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 164,
+        "brier": 0.13377609108159394,
+        "skill_vs_climatology": -0.018183063853110415
+      }
+    },
+    "350": {
+      "n": 1054,
+      "positives": 113,
+      "transfer": {
+        "n": 1054,
+        "positives": 113,
+        "brier": 0.07241252048550219,
+        "skill_vs_climatology": 0.24346884214992404,
+        "skill_vs_raw": 0.43464595117244953
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 113,
+        "brier": 0.06656705620952613,
+        "skill_vs_climatology": 0.30453943915753423
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 113,
+        "brier": 0.12808349146110057,
+        "skill_vs_climatology": -0.3381546650616456
+      }
+    },
+    "356": {
+      "n": 1054,
+      "positives": 147,
+      "transfer": {
+        "n": 1054,
+        "positives": 147,
+        "brier": 0.0814182981093101,
+        "skill_vs_climatology": 0.32161127689848157,
+        "skill_vs_raw": 0.29078606440319965
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 147,
+        "brier": 0.08222834817579126,
+        "skill_vs_climatology": 0.3148618256939051
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 147,
+        "brier": 0.11480075901328274,
+        "skill_vs_climatology": 0.04346391257715865
+      }
+    },
+    "370": {
+      "n": 1054,
+      "positives": 127,
+      "transfer": {
+        "n": 1054,
+        "positives": 127,
+        "brier": 0.07427253589757536,
+        "skill_vs_climatology": 0.29914848092491375,
+        "skill_vs_raw": 0.3421575391929039
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 127,
+        "brier": 0.07446953043628798,
+        "skill_vs_climatology": 0.2972895983643852
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 127,
+        "brier": 0.11290322580645161,
+        "skill_vs_climatology": -0.065378963551886
+      }
+    },
+    "375": {
+      "n": 1044,
+      "positives": 126,
+      "transfer": {
+        "n": 1044,
+        "positives": 126,
+        "brier": 0.0675989206725162,
+        "skill_vs_climatology": 0.36301745338278857,
+        "skill_vs_raw": 0.3081051648813048
+      },
+      "site_specific": {
+        "n": 1044,
+        "positives": 126,
+        "brier": 0.06967931011926115,
+        "skill_vs_climatology": 0.34341400772774655
+      },
+      "raw_threshold": {
+        "n": 1044,
+        "positives": 126,
+        "brier": 0.09770114942528736,
+        "skill_vs_climatology": 0.07936507936507942
+      }
+    },
+    "377": {
+      "n": 1054,
+      "positives": 125,
+      "transfer": {
+        "n": 1054,
+        "positives": 125,
+        "brier": 0.07228860759458289,
+        "skill_vs_climatology": 0.30844718368530766,
+        "skill_vs_raw": 0.37031245946536895
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 125,
+        "brier": 0.06856752102471625,
+        "skill_vs_climatology": 0.3440451566269651
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 125,
+        "brier": 0.11480075901328274,
+        "skill_vs_climatology": -0.09824757804090423
+      }
+    },
+    "380": {
+      "n": 1054,
+      "positives": 148,
+      "transfer": {
+        "n": 1054,
+        "positives": 148,
+        "brier": 0.0665870473952406,
+        "skill_vs_climatology": 0.4483278418342349,
+        "skill_vs_raw": 0.350159741161263
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 148,
+        "brier": 0.07205096313318617,
+        "skill_vs_climatology": 0.403059425451445
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 148,
+        "brier": 0.10246679316888045,
+        "skill_vs_climatology": 0.1510649722570253
+      }
+    },
+    "391": {
+      "n": 1054,
+      "positives": 26,
+      "transfer": {
+        "n": 1054,
+        "positives": 26,
+        "brier": 0.06502648241765448,
+        "skill_vs_climatology": -1.7027446775475545,
+        "skill_vs_raw": 0.4427811994454649
+      },
+      "site_specific": {
+        "n": 1054,
+        "positives": 26,
+        "brier": 0.022652860187794933,
+        "skill_vs_climatology": 0.05846210609157454
+      },
+      "raw_threshold": {
+        "n": 1054,
+        "positives": 26,
+        "brier": 0.11669829222011385,
+        "skill_vs_climatology": -3.8504190362167012
+      }
+    }
+  },
+  "summary": {
+    "stations_evaluated": 45,
+    "transfer_median_skill": 0.3718599751572459,
+    "transfer_min_skill": -1.7027446775475545,
+    "transfer_negative_stations": 2,
+    "site_specific_median_skill": 0.39584393853516564,
+    "raw_threshold_median_skill": 0.12093411175979996
+  },
+  "value_transfer": {
+    "209": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.032542694497153704,
+        "calibrated": 0.08795066413662239,
+        "tuned_raw_transported": 0.09013282732447818,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.15702087286527516,
+        "rev_calibrated": 0.17862165963431792,
+        "rev_tuned_raw_transported": 0.14627285513361468,
+        "rev_fixed_limit": -0.8452883263009847
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.06508538899430741,
+        "calibrated": 0.15104364326375713,
+        "tuned_raw_transported": 0.14990512333965844,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.1793168880455408,
+        "rev_calibrated": 0.36286919831223624,
+        "rev_tuned_raw_transported": 0.3713080168776372,
+        "rev_fixed_limit": 0.1533052039381154
+      },
+      "r0.4": {
+        "climatology_expense": 0.325426944971537,
+        "perfect_expense": 0.13017077798861482,
+        "calibrated": 0.22390891840607213,
+        "tuned_raw_transported": 0.225426944971537,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.22390891840607213,
+        "rev_calibrated": 0.5199222546161321,
+        "rev_tuned_raw_transported": 0.512147716229349,
+        "rev_fixed_limit": 0.5199222546161321
+      }
+    },
+    "215": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.022009569377990434,
+        "calibrated": 0.05626794258373206,
+        "tuned_raw_transported": 0.05617224880382775,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.1075598086124402,
+        "rev_calibrated": 0.5607361963190185,
+        "rev_tuned_raw_transported": 0.5619631901840492,
+        "rev_fixed_limit": -0.09693251533742339
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.04401913875598087,
+        "calibrated": 0.10124401913875598,
+        "tuned_raw_transported": 0.104688995215311,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.12516746411483254,
+        "rev_calibrated": 0.6331288343558282,
+        "rev_tuned_raw_transported": 0.6110429447852762,
+        "rev_fixed_limit": 0.4797546012269939
+      },
+      "r0.4": {
+        "climatology_expense": 0.22009569377990432,
+        "perfect_expense": 0.08803827751196174,
+        "calibrated": 0.16229665071770336,
+        "tuned_raw_transported": 0.16459330143540668,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.16038277511961724,
+        "rev_calibrated": 0.43768115942028984,
+        "rev_tuned_raw_transported": 0.42028985507246397,
+        "rev_fixed_limit": 0.4521739130434782
+      }
+    },
+    "225": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.038401559454191034,
+        "calibrated": 0.10789473684210527,
+        "tuned_raw_transported": 0.1111111111111111,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.20077972709551656,
+        "rev_calibrated": -0.12816455696202525,
+        "rev_tuned_raw_transported": -0.18037974683544283,
+        "rev_fixed_limit": -1.6360759493670882
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.07680311890838207,
+        "calibrated": 0.18187134502923974,
+        "tuned_raw_transported": 0.18070175438596492,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.22319688109161792,
+        "rev_calibrated": 0.1471518987341775,
+        "rev_tuned_raw_transported": 0.1566455696202532,
+        "rev_fixed_limit": -0.1882911392405061
+      },
+      "r0.4": {
+        "climatology_expense": 0.3840155945419103,
+        "perfect_expense": 0.15360623781676414,
+        "calibrated": 0.2680311890838206,
+        "tuned_raw_transported": 0.2705653021442495,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.2680311890838206,
+        "rev_calibrated": 0.5033840947546533,
+        "rev_tuned_raw_transported": 0.49238578680203043,
+        "rev_fixed_limit": 0.5033840947546533
+      }
+    },
+    "235": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.023244781783681216,
+        "calibrated": 0.059582542694497156,
+        "tuned_raw_transported": 0.060056925996204935,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.07893738140417457,
+        "rev_calibrated": 0.5265760197775031,
+        "rev_tuned_raw_transported": 0.5203955500618048,
+        "rev_fixed_limit": 0.27441285537700877
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.04648956356736243,
+        "calibrated": 0.09753320683111956,
+        "tuned_raw_transported": 0.09563567362428843,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.10474383301707779,
+        "rev_calibrated": 0.6674907292954264,
+        "rev_tuned_raw_transported": 0.6798516687268233,
+        "rev_fixed_limit": 0.6205191594561188
+      },
+      "r0.4": {
+        "climatology_expense": 0.23244781783681215,
+        "perfect_expense": 0.09297912713472486,
+        "calibrated": 0.15635673624288426,
+        "tuned_raw_transported": 0.15332068311195446,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.15635673624288426,
+        "rev_calibrated": 0.5455782312925169,
+        "rev_tuned_raw_transported": 0.5673469387755102,
+        "rev_fixed_limit": 0.5455782312925169
+      }
+    },
+    "240": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.020683111954459203,
+        "calibrated": 0.06432637571157496,
+        "tuned_raw_transported": 0.0674573055028463,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.12087286527514232,
+        "rev_calibrated": 0.44976076555023925,
+        "rev_tuned_raw_transported": 0.410287081339713,
+        "rev_fixed_limit": -0.26315789473684215
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.041366223908918406,
+        "calibrated": 0.10455407969639469,
+        "tuned_raw_transported": 0.10512333965844403,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.13453510436432636,
+        "rev_calibrated": 0.6016746411483255,
+        "rev_tuned_raw_transported": 0.5980861244019139,
+        "rev_fixed_limit": 0.41267942583732076
+      },
+      "r0.4": {
+        "climatology_expense": 0.20683111954459202,
+        "perfect_expense": 0.08273244781783681,
+        "calibrated": 0.1599620493358634,
+        "tuned_raw_transported": 0.16470588235294117,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.1618595825426945,
+        "rev_calibrated": 0.37767584097859314,
+        "rev_tuned_raw_transported": 0.33944954128440363,
+        "rev_fixed_limit": 0.3623853211009173
+      }
+    },
+    "242": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.03804554079696395,
+        "calibrated": 0.09184060721062617,
+        "tuned_raw_transported": 0.09212523719165086,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.17903225806451611,
+        "rev_calibrated": 0.13169984686064345,
+        "rev_tuned_raw_transported": 0.1271056661562021,
+        "rev_fixed_limit": -1.275650842266462
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.0760910815939279,
+        "calibrated": 0.15844402277039848,
+        "tuned_raw_transported": 0.15844402277039848,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.20531309297912714,
+        "rev_calibrated": 0.3353751914241961,
+        "rev_tuned_raw_transported": 0.3353751914241961,
+        "rev_fixed_limit": -0.042879019908116364
+      },
+      "r0.4": {
+        "climatology_expense": 0.38045540796963945,
+        "perfect_expense": 0.1521821631878558,
+        "calibrated": 0.25787476280834914,
+        "tuned_raw_transported": 0.26413662239089186,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.25787476280834914,
+        "rev_calibrated": 0.5369908561928511,
+        "rev_tuned_raw_transported": 0.509559434746467,
+        "rev_fixed_limit": 0.5369908561928511
+      }
+    },
+    "248": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.01869070208728653,
+        "calibrated": 0.05740037950664137,
+        "tuned_raw_transported": 0.0555977229601518,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.06954459203036054,
+        "rev_calibrated": 0.5239206534422404,
+        "rev_tuned_raw_transported": 0.5460910151691949,
+        "rev_fixed_limit": 0.37456242707117854
+      },
+      "r0.2": {
+        "climatology_expense": 0.1869070208728653,
+        "perfect_expense": 0.03738140417457306,
+        "calibrated": 0.08747628083491463,
+        "tuned_raw_transported": 0.0855787476280835,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.09070208728652751,
+        "rev_calibrated": 0.66497461928934,
+        "rev_tuned_raw_transported": 0.6776649746192893,
+        "rev_fixed_limit": 0.6434010152284264
+      },
+      "r0.4": {
+        "climatology_expense": 0.1869070208728653,
+        "perfect_expense": 0.07476280834914611,
+        "calibrated": 0.13225806451612904,
+        "tuned_raw_transported": 0.13225806451612904,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.1330170777988615,
+        "rev_calibrated": 0.4873096446700508,
+        "rev_tuned_raw_transported": 0.4873096446700508,
+        "rev_fixed_limit": 0.4805414551607445
+      }
+    },
+    "249": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.019070208728652754,
+        "calibrated": 0.058444022770398486,
+        "tuned_raw_transported": 0.05578747628083491,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.08795066413662239,
+        "rev_calibrated": 0.5134818288393904,
+        "rev_tuned_raw_transported": 0.5463071512309496,
+        "rev_fixed_limit": 0.14888628370457216
+      },
+      "r0.2": {
+        "climatology_expense": 0.19070208728652752,
+        "perfect_expense": 0.03814041745730551,
+        "calibrated": 0.09791271347248577,
+        "tuned_raw_transported": 0.09791271347248579,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.10853889943074005,
+        "rev_calibrated": 0.6082089552238806,
+        "rev_tuned_raw_transported": 0.6082089552238805,
+        "rev_fixed_limit": 0.5385572139303482
+      },
+      "r0.4": {
+        "climatology_expense": 0.19070208728652752,
+        "perfect_expense": 0.07628083491461102,
+        "calibrated": 0.14971537001897534,
+        "tuned_raw_transported": 0.14876660341555978,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.14971537001897534,
+        "rev_calibrated": 0.35820895522388063,
+        "rev_tuned_raw_transported": 0.36650082918739635,
+        "rev_fixed_limit": 0.35820895522388063
+      }
+    },
+    "251": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.027042801556420235,
+        "calibrated": 0.07217898832684826,
+        "tuned_raw_transported": 0.07247081712062257,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.10943579766536965,
+        "rev_calibrated": 0.3813333333333333,
+        "rev_tuned_raw_transported": 0.3773333333333333,
+        "rev_fixed_limit": -0.12933333333333324
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.05408560311284047,
+        "calibrated": 0.11964980544747082,
+        "tuned_raw_transported": 0.11945525291828793,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.13521400778210116,
+        "rev_calibrated": 0.5506666666666666,
+        "rev_tuned_raw_transported": 0.552,
+        "rev_fixed_limit": 0.4440000000000001
+      },
+      "r0.4": {
+        "climatology_expense": 0.2704280155642023,
+        "perfect_expense": 0.10817120622568094,
+        "calibrated": 0.1867704280155642,
+        "tuned_raw_transported": 0.18793774319066148,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.1867704280155642,
+        "rev_calibrated": 0.5155875299760191,
+        "rev_tuned_raw_transported": 0.5083932853717026,
+        "rev_fixed_limit": 0.5155875299760191
+      }
+    },
+    "258": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.03210831721470019,
+        "calibrated": 0.0965183752417795,
+        "tuned_raw_transported": 0.09632495164410058,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.17427466150870408,
+        "rev_calibrated": 0.05128205128205128,
+        "rev_tuned_raw_transported": 0.05413105413105415,
+        "rev_fixed_limit": -1.0940170940170941
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.06421663442940038,
+        "calibrated": 0.15802707930367504,
+        "tuned_raw_transported": 0.15918762088974853,
+        "tuned_raw_transported_threshold": 10.216894721984863,
+        "fixed_limit": 0.19381044487427468,
+        "rev_calibrated": 0.3091168091168092,
+        "rev_tuned_raw_transported": 0.3005698005698008,
+        "rev_fixed_limit": 0.04558404558404554
+      },
+      "r0.4": {
+        "climatology_expense": 0.32108317214700194,
+        "perfect_expense": 0.12843326885880077,
+        "calibrated": 0.23346228239845263,
+        "tuned_raw_transported": 0.23617021276595745,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.23288201160541588,
+        "rev_calibrated": 0.4548192771084337,
+        "rev_tuned_raw_transported": 0.4407630522088353,
+        "rev_fixed_limit": 0.4578313253012047
+      }
+    },
+    "260": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.011290322580645162,
+        "calibrated": 0.0515180265654649,
+        "tuned_raw_transported": 0.0515180265654649,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.05967741935483871,
+        "rev_calibrated": 0.546524064171123,
+        "rev_tuned_raw_transported": 0.546524064171123,
+        "rev_fixed_limit": 0.4545454545454546
+      },
+      "r0.2": {
+        "climatology_expense": 0.11290322580645161,
+        "perfect_expense": 0.022580645161290325,
+        "calibrated": 0.07874762808349146,
+        "tuned_raw_transported": 0.07722960151802657,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.07476280834914611,
+        "rev_calibrated": 0.3781512605042016,
+        "rev_tuned_raw_transported": 0.3949579831932772,
+        "rev_fixed_limit": 0.42226890756302515
+      },
+      "r0.4": {
+        "climatology_expense": 0.11290322580645161,
+        "perfect_expense": 0.04516129032258065,
+        "calibrated": 0.10417457305502847,
+        "tuned_raw_transported": 0.10360531309297913,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.10493358633776091,
+        "rev_calibrated": 0.1288515406162463,
+        "rev_tuned_raw_transported": 0.13725490196078427,
+        "rev_fixed_limit": 0.11764705882352937
+      }
+    },
+    "267": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.022296015180265655,
+        "calibrated": 0.06631878557874762,
+        "tuned_raw_transported": 0.06603415559772297,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.11489563567362429,
+        "rev_calibrated": 0.4334554334554335,
+        "rev_tuned_raw_transported": 0.43711843711843706,
+        "rev_fixed_limit": -0.19169719169719165
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.04459203036053131,
+        "calibrated": 0.10986717267552182,
+        "tuned_raw_transported": 0.11214421252371917,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.1330170777988615,
+        "rev_calibrated": 0.57997557997558,
+        "rev_tuned_raw_transported": 0.5653235653235653,
+        "rev_fixed_limit": 0.431013431013431
+      },
+      "r0.4": {
+        "climatology_expense": 0.22296015180265655,
+        "perfect_expense": 0.08918406072106262,
+        "calibrated": 0.16774193548387095,
+        "tuned_raw_transported": 0.1681214421252372,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.16925996204933585,
+        "rev_calibrated": 0.4127659574468086,
+        "rev_tuned_raw_transported": 0.4099290780141844,
+        "rev_fixed_limit": 0.4014184397163121
+      }
+    },
+    "269": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.015180265654648957,
+        "calibrated": 0.054269449715370024,
+        "tuned_raw_transported": 0.05398481973434535,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.06214421252371917,
+        "rev_calibrated": 0.5391498881431767,
+        "rev_tuned_raw_transported": 0.5425055928411634,
+        "rev_fixed_limit": 0.4463087248322148
+      },
+      "r0.2": {
+        "climatology_expense": 0.15180265654648956,
+        "perfect_expense": 0.030360531309297913,
+        "calibrated": 0.08159392789373815,
+        "tuned_raw_transported": 0.07912713472485769,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.07969639468690702,
+        "rev_calibrated": 0.5781249999999999,
+        "rev_tuned_raw_transported": 0.5984375,
+        "rev_fixed_limit": 0.59375
+      },
+      "r0.4": {
+        "climatology_expense": 0.15180265654648956,
+        "perfect_expense": 0.06072106261859583,
+        "calibrated": 0.11404174573055029,
+        "tuned_raw_transported": 0.11157495256166984,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.11480075901328274,
+        "rev_calibrated": 0.4145833333333333,
+        "rev_tuned_raw_transported": 0.44166666666666654,
+        "rev_fixed_limit": 0.40624999999999994
+      }
+    },
+    "270": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.020398481973434537,
+        "calibrated": 0.06005692599620494,
+        "tuned_raw_transported": 0.05986717267552183,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.09592030360531309,
+        "rev_calibrated": 0.501787842669845,
+        "rev_tuned_raw_transported": 0.5041716328963051,
+        "rev_fixed_limit": 0.05125148986889164
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.040796963946869075,
+        "calibrated": 0.09582542694497154,
+        "tuned_raw_transported": 0.09734345351043644,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.11688804554079696,
+        "rev_calibrated": 0.6543504171632897,
+        "rev_tuned_raw_transported": 0.6448152562574494,
+        "rev_fixed_limit": 0.5220500595947557
+      },
+      "r0.4": {
+        "climatology_expense": 0.20398481973434535,
+        "perfect_expense": 0.08159392789373815,
+        "calibrated": 0.15787476280834914,
+        "tuned_raw_transported": 0.15597722960151805,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.1588235294117647,
+        "rev_calibrated": 0.37674418604651166,
+        "rev_tuned_raw_transported": 0.39224806201550366,
+        "rev_fixed_limit": 0.3689922480620156
+      }
+    },
+    "273": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.01299810246679317,
+        "calibrated": 0.04876660341555977,
+        "tuned_raw_transported": 0.04876660341555977,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.055882352941176466,
+        "rev_calibrated": 0.588876772082879,
+        "rev_tuned_raw_transported": 0.588876772082879,
+        "rev_fixed_limit": 0.5070883315158126
+      },
+      "r0.2": {
+        "climatology_expense": 0.12998102466793168,
+        "perfect_expense": 0.02599620493358634,
+        "calibrated": 0.07836812144212524,
+        "tuned_raw_transported": 0.07647058823529412,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.07381404174573056,
+        "rev_calibrated": 0.49635036496350365,
+        "rev_tuned_raw_transported": 0.5145985401459854,
+        "rev_fixed_limit": 0.5401459854014597
+      },
+      "r0.4": {
+        "climatology_expense": 0.12998102466793168,
+        "perfect_expense": 0.05199240986717268,
+        "calibrated": 0.10967741935483871,
+        "tuned_raw_transported": 0.10740037950664137,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.10967741935483871,
+        "rev_calibrated": 0.2603406326034063,
+        "rev_tuned_raw_transported": 0.28953771289537705,
+        "rev_fixed_limit": 0.2603406326034063
+      }
+    },
+    "275": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.012428842504743833,
+        "calibrated": 0.05588235294117647,
+        "tuned_raw_transported": 0.056356736242884245,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.06888045540796964,
+        "rev_calibrated": 0.5037919826652221,
+        "rev_tuned_raw_transported": 0.4983748645720477,
+        "rev_fixed_limit": 0.35536294691224274
+      },
+      "r0.2": {
+        "climatology_expense": 0.12428842504743833,
+        "perfect_expense": 0.024857685009487665,
+        "calibrated": 0.08159392789373814,
+        "tuned_raw_transported": 0.08064516129032258,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.08273244781783681,
+        "rev_calibrated": 0.42938931297709926,
+        "rev_tuned_raw_transported": 0.4389312977099237,
+        "rev_fixed_limit": 0.41793893129770987
+      },
+      "r0.4": {
+        "climatology_expense": 0.12428842504743833,
+        "perfect_expense": 0.04971537001897533,
+        "calibrated": 0.10967741935483871,
+        "tuned_raw_transported": 0.10417457305502846,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.11043643263757116,
+        "rev_calibrated": 0.1959287531806615,
+        "rev_tuned_raw_transported": 0.26972010178117045,
+        "rev_fixed_limit": 0.18575063613231538
+      }
+    },
+    "277": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.028937381404174574,
+        "calibrated": 0.07239089184060721,
+        "tuned_raw_transported": 0.0726755218216319,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.13330170777988615,
+        "rev_calibrated": 0.3885180240320428,
+        "rev_tuned_raw_transported": 0.3845126835781039,
+        "rev_fixed_limit": -0.46862483311081427
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.05787476280834915,
+        "calibrated": 0.12979127134724858,
+        "tuned_raw_transported": 0.13358633776091083,
+        "tuned_raw_transported_threshold": 10.216894721984863,
+        "fixed_limit": 0.15844402277039848,
+        "rev_calibrated": 0.4939919893190921,
+        "rev_tuned_raw_transported": 0.4672897196261681,
+        "rev_fixed_limit": 0.2923898531375167
+      },
+      "r0.4": {
+        "climatology_expense": 0.2893738140417457,
+        "perfect_expense": 0.1157495256166983,
+        "calibrated": 0.20834914611005695,
+        "tuned_raw_transported": 0.21233396584440228,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.20872865275142316,
+        "rev_calibrated": 0.4666666666666665,
+        "rev_tuned_raw_transported": 0.4437158469945355,
+        "rev_fixed_limit": 0.4644808743169398
+      }
+    },
+    "278": {
+      "r0.1": {
+        "climatology_expense": 0.06641366223908918,
+        "perfect_expense": 0.006641366223908918,
+        "calibrated": 0.04335863377609109,
+        "tuned_raw_transported": 0.043074003795066415,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.02998102466793169,
+        "rev_calibrated": 0.3857142857142855,
+        "rev_tuned_raw_transported": 0.39047619047619037,
+        "rev_fixed_limit": 0.6095238095238094
+      },
+      "r0.2": {
+        "climatology_expense": 0.06641366223908918,
+        "perfect_expense": 0.013282732447817837,
+        "calibrated": 0.06318785578747628,
+        "tuned_raw_transported": 0.05901328273244781,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.04573055028462998,
+        "rev_calibrated": 0.06071428571428562,
+        "rev_tuned_raw_transported": 0.13928571428571432,
+        "rev_fixed_limit": 0.38928571428571423
+      },
+      "r0.4": {
+        "climatology_expense": 0.06641366223908918,
+        "perfect_expense": 0.026565464895635674,
+        "calibrated": 0.07647058823529412,
+        "tuned_raw_transported": 0.0730550284629981,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.07722960151802657,
+        "rev_calibrated": -0.25238095238095276,
+        "rev_tuned_raw_transported": -0.16666666666666696,
+        "rev_fixed_limit": -0.2714285714285719
+      }
+    },
+    "279": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.012808349146110058,
+        "calibrated": 0.05009487666034156,
+        "tuned_raw_transported": 0.04971537001897534,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.06015180265654649,
+        "rev_calibrated": 0.5723612622415669,
+        "rev_tuned_raw_transported": 0.5767138193688792,
+        "rev_fixed_limit": 0.4570184983677912
+      },
+      "r0.2": {
+        "climatology_expense": 0.12808349146110057,
+        "perfect_expense": 0.025616698292220116,
+        "calibrated": 0.07722960151802656,
+        "tuned_raw_transported": 0.07419354838709678,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.07760910815939279,
+        "rev_calibrated": 0.49629629629629635,
+        "rev_tuned_raw_transported": 0.5259259259259258,
+        "rev_fixed_limit": 0.49259259259259264
+      },
+      "r0.4": {
+        "climatology_expense": 0.12808349146110057,
+        "perfect_expense": 0.05123339658444023,
+        "calibrated": 0.11309297912713472,
+        "tuned_raw_transported": 0.11214421252371917,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.11252371916508538,
+        "rev_calibrated": 0.19506172839506186,
+        "rev_tuned_raw_transported": 0.20740740740740732,
+        "rev_fixed_limit": 0.2024691358024692
+      }
+    },
+    "280": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.012333965844402278,
+        "calibrated": 0.04819734345351044,
+        "tuned_raw_transported": 0.04819734345351044,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.05294117647058824,
+        "rev_calibrated": 0.5909090909090908,
+        "rev_tuned_raw_transported": 0.5909090909090908,
+        "rev_fixed_limit": 0.5367965367965367
+      },
+      "r0.2": {
+        "climatology_expense": 0.12333965844402277,
+        "perfect_expense": 0.024667931688804556,
+        "calibrated": 0.07229601518026565,
+        "tuned_raw_transported": 0.07020872865275142,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.07172675521821632,
+        "rev_calibrated": 0.5173076923076924,
+        "rev_tuned_raw_transported": 0.5384615384615385,
+        "rev_fixed_limit": 0.523076923076923
+      },
+      "r0.4": {
+        "climatology_expense": 0.12333965844402277,
+        "perfect_expense": 0.04933586337760911,
+        "calibrated": 0.10967741935483871,
+        "tuned_raw_transported": 0.11005692599620494,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.1092979127134725,
+        "rev_calibrated": 0.18461538461538454,
+        "rev_tuned_raw_transported": 0.1794871794871794,
+        "rev_fixed_limit": 0.1897435897435895
+      }
+    },
+    "283": {
+      "r0.1": {
+        "climatology_expense": 0.07590132827324478,
+        "perfect_expense": 0.007590132827324478,
+        "calibrated": 0.049335863377609104,
+        "tuned_raw_transported": 0.049146110056926,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.03842504743833017,
+        "rev_calibrated": 0.3888888888888889,
+        "rev_tuned_raw_transported": 0.39166666666666655,
+        "rev_fixed_limit": 0.548611111111111
+      },
+      "r0.2": {
+        "climatology_expense": 0.07590132827324478,
+        "perfect_expense": 0.015180265654648957,
+        "calibrated": 0.06869070208728653,
+        "tuned_raw_transported": 0.06603415559772297,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.054079696394686905,
+        "rev_calibrated": 0.11874999999999988,
+        "rev_tuned_raw_transported": 0.16249999999999987,
+        "rev_fixed_limit": 0.359375
+      },
+      "r0.4": {
+        "climatology_expense": 0.07590132827324478,
+        "perfect_expense": 0.030360531309297913,
+        "calibrated": 0.08444022770398482,
+        "tuned_raw_transported": 0.07912713472485769,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.08538899430740038,
+        "rev_calibrated": -0.18750000000000014,
+        "rev_tuned_raw_transported": -0.07083333333333353,
+        "rev_fixed_limit": -0.20833333333333343
+      }
+    },
+    "285": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.03159392789373814,
+        "calibrated": 0.07808349146110058,
+        "tuned_raw_transported": 0.07760910815939279,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.14146110056925995,
+        "rev_calibrated": 0.32038834951456296,
+        "rev_tuned_raw_transported": 0.32732316227461866,
+        "rev_fixed_limit": -0.6061026352288484
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.06318785578747628,
+        "calibrated": 0.13529411764705881,
+        "tuned_raw_transported": 0.13567362428842505,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.16527514231499052,
+        "rev_calibrated": 0.4729542302357837,
+        "rev_tuned_raw_transported": 0.4701803051317614,
+        "rev_fixed_limit": 0.2538141470180305
+      },
+      "r0.4": {
+        "climatology_expense": 0.3159392789373814,
+        "perfect_expense": 0.12637571157495256,
+        "calibrated": 0.2129032258064516,
+        "tuned_raw_transported": 0.220303605313093,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.2129032258064516,
+        "rev_calibrated": 0.5435435435435435,
+        "rev_tuned_raw_transported": 0.5045045045045042,
+        "rev_fixed_limit": 0.5435435435435435
+      }
+    },
+    "286": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.015749525616698293,
+        "calibrated": 0.051328273244781786,
+        "tuned_raw_transported": 0.050664136622390894,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.06783681214421253,
+        "rev_calibrated": 0.5777027027027027,
+        "rev_tuned_raw_transported": 0.5855855855855856,
+        "rev_fixed_limit": 0.38175675675675674
+      },
+      "r0.2": {
+        "climatology_expense": 0.15749525616698293,
+        "perfect_expense": 0.03149905123339659,
+        "calibrated": 0.08462998102466794,
+        "tuned_raw_transported": 0.08216318785578748,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.0872865275142315,
+        "rev_calibrated": 0.5783132530120482,
+        "rev_tuned_raw_transported": 0.5978915662650602,
+        "rev_fixed_limit": 0.5572289156626506
+      },
+      "r0.4": {
+        "climatology_expense": 0.15749525616698293,
+        "perfect_expense": 0.06299810246679317,
+        "calibrated": 0.12732447817836812,
+        "tuned_raw_transported": 0.12960151802656544,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.12618595825426945,
+        "rev_calibrated": 0.319277108433735,
+        "rev_tuned_raw_transported": 0.29518072289156655,
+        "rev_fixed_limit": 0.3313253012048193
+      }
+    },
+    "290": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.010626185958254271,
+        "calibrated": 0.04335863377609109,
+        "tuned_raw_transported": 0.043168880455407975,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.050664136622390894,
+        "rev_calibrated": 0.6337579617834393,
+        "rev_tuned_raw_transported": 0.6358811040339702,
+        "rev_fixed_limit": 0.5520169851380042
+      },
+      "r0.2": {
+        "climatology_expense": 0.1062618595825427,
+        "perfect_expense": 0.021252371916508542,
+        "calibrated": 0.07077798861480075,
+        "tuned_raw_transported": 0.06944971537001897,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.06717267552182163,
+        "rev_calibrated": 0.41741071428571436,
+        "rev_tuned_raw_transported": 0.43303571428571436,
+        "rev_fixed_limit": 0.4598214285714286
+      },
+      "r0.4": {
+        "climatology_expense": 0.1062618595825427,
+        "perfect_expense": 0.042504743833017083,
+        "calibrated": 0.10018975332068311,
+        "tuned_raw_transported": 0.09639468690702088,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.10018975332068311,
+        "rev_calibrated": 0.09523809523809526,
+        "rev_tuned_raw_transported": 0.15476190476190463,
+        "rev_fixed_limit": 0.09523809523809526
+      }
+    },
+    "308": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.026565464895635674,
+        "calibrated": 0.07030360531309299,
+        "tuned_raw_transported": 0.07011385199240987,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.12305502846299811,
+        "rev_calibrated": 0.40439276485788106,
+        "rev_tuned_raw_transported": 0.40697674418604657,
+        "rev_fixed_limit": -0.313953488372093
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.05313092979127135,
+        "calibrated": 0.12106261859582543,
+        "tuned_raw_transported": 0.12277039848197344,
+        "tuned_raw_transported_threshold": 10.216894721984863,
+        "fixed_limit": 0.14554079696394687,
+        "rev_calibrated": 0.537467700258398,
+        "rev_tuned_raw_transported": 0.5258397932816538,
+        "rev_fixed_limit": 0.37080103359173133
+      },
+      "r0.4": {
+        "climatology_expense": 0.2656546489563567,
+        "perfect_expense": 0.1062618595825427,
+        "calibrated": 0.19240986717267555,
+        "tuned_raw_transported": 0.19449715370018977,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.1905123339658444,
+        "rev_calibrated": 0.4595238095238092,
+        "rev_tuned_raw_transported": 0.44642857142857123,
+        "rev_fixed_limit": 0.4714285714285713
+      }
+    },
+    "310": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.031024667931688805,
+        "calibrated": 0.06954459203036054,
+        "tuned_raw_transported": 0.06935483870967743,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.14108159392789374,
+        "rev_calibrated": 0.4415405777166437,
+        "rev_tuned_raw_transported": 0.4442916093535074,
+        "rev_fixed_limit": -0.5955983493810177
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.06204933586337761,
+        "calibrated": 0.1381404174573055,
+        "tuned_raw_transported": 0.14079696394686908,
+        "tuned_raw_transported_threshold": 10.216894721984863,
+        "fixed_limit": 0.1635673624288425,
+        "rev_calibrated": 0.4484181568088034,
+        "rev_tuned_raw_transported": 0.4291609353507565,
+        "rev_fixed_limit": 0.2640990371389271
+      },
+      "r0.4": {
+        "climatology_expense": 0.31024667931688804,
+        "perfect_expense": 0.12409867172675522,
+        "calibrated": 0.21043643263757117,
+        "tuned_raw_transported": 0.21347248576850097,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.20853889943074005,
+        "rev_calibrated": 0.5361875637104994,
+        "rev_tuned_raw_transported": 0.5198776758409784,
+        "rev_fixed_limit": 0.5463812436289499
+      }
+    },
+    "312": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.03187855787476281,
+        "calibrated": 0.07020872865275143,
+        "tuned_raw_transported": 0.06954459203036054,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.14108159392789374,
+        "rev_calibrated": 0.43732590529247906,
+        "rev_tuned_raw_transported": 0.4470752089136491,
+        "rev_fixed_limit": -0.6030640668523677
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.06375711574952563,
+        "calibrated": 0.13282732447817835,
+        "tuned_raw_transported": 0.1351043643263757,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.16641366223908918,
+        "rev_calibrated": 0.49303621169916456,
+        "rev_tuned_raw_transported": 0.4763231197771589,
+        "rev_fixed_limit": 0.24651810584958228
+      },
+      "r0.4": {
+        "climatology_expense": 0.3187855787476281,
+        "perfect_expense": 0.12751423149905125,
+        "calibrated": 0.21707779886148007,
+        "tuned_raw_transported": 0.21916508538899432,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.21707779886148007,
+        "rev_calibrated": 0.5317460317460319,
+        "rev_tuned_raw_transported": 0.5208333333333334,
+        "rev_fixed_limit": 0.5317460317460319
+      }
+    },
+    "313": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.032411820781696854,
+        "calibrated": 0.0659675881792183,
+        "tuned_raw_transported": 0.06320305052430887,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.15090562440419447,
+        "rev_calibrated": 0.5035260930888577,
+        "rev_tuned_raw_transported": 0.544428772919605,
+        "rev_fixed_limit": -0.7531734837799716
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.06482364156339371,
+        "calibrated": 0.12831267874165872,
+        "tuned_raw_transported": 0.14146806482364155,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.1759771210676835,
+        "rev_calibrated": 0.530324400564175,
+        "rev_tuned_raw_transported": 0.4330042313117068,
+        "rev_fixed_limit": 0.17771509167842034
+      },
+      "r0.4": {
+        "climatology_expense": 0.32411820781696854,
+        "perfect_expense": 0.12964728312678742,
+        "calibrated": 0.22612011439466156,
+        "tuned_raw_transported": 0.2274547187797903,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.22612011439466156,
+        "rev_calibrated": 0.5039215686274511,
+        "rev_tuned_raw_transported": 0.4970588235294117,
+        "rev_fixed_limit": 0.5039215686274511
+      }
+    },
+    "315": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.02049335863377609,
+        "calibrated": 0.05929791271347249,
+        "tuned_raw_transported": 0.05910815939278938,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.09943074003795066,
+        "rev_calibrated": 0.5119331742243436,
+        "rev_tuned_raw_transported": 0.5143198090692124,
+        "rev_fixed_limit": 0.007159904534606325
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.04098671726755218,
+        "calibrated": 0.10265654648956357,
+        "tuned_raw_transported": 0.10208728652751423,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.11821631878557876,
+        "rev_calibrated": 0.6121718377088305,
+        "rev_tuned_raw_transported": 0.6157517899761337,
+        "rev_fixed_limit": 0.5143198090692124
+      },
+      "r0.4": {
+        "climatology_expense": 0.2049335863377609,
+        "perfect_expense": 0.08197343453510436,
+        "calibrated": 0.15464895635673626,
+        "tuned_raw_transported": 0.15351043643263756,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.15578747628083492,
+        "rev_calibrated": 0.4089506172839505,
+        "rev_tuned_raw_transported": 0.4182098765432099,
+        "rev_fixed_limit": 0.3996913580246913
+      }
+    },
+    "316": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.029214559386973184,
+        "calibrated": 0.06772030651340996,
+        "tuned_raw_transported": 0.06609195402298851,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.12356321839080459,
+        "rev_calibrated": 0.45602165087956703,
+        "rev_tuned_raw_transported": 0.4790257104194858,
+        "rev_fixed_limit": -0.33288227334235426
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.05842911877394637,
+        "calibrated": 0.1231800766283525,
+        "tuned_raw_transported": 0.12624521072796935,
+        "tuned_raw_transported_threshold": 10.216894721984863,
+        "fixed_limit": 0.1475095785440613,
+        "rev_calibrated": 0.5426251691474966,
+        "rev_tuned_raw_transported": 0.5209742895805142,
+        "rev_fixed_limit": 0.3707713125845738
+      },
+      "r0.4": {
+        "climatology_expense": 0.2921455938697318,
+        "perfect_expense": 0.11685823754789273,
+        "calibrated": 0.1954022988505747,
+        "tuned_raw_transported": 0.19750957854406131,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.1954022988505747,
+        "rev_calibrated": 0.5519125683060111,
+        "rev_tuned_raw_transported": 0.5398907103825137,
+        "rev_fixed_limit": 0.5519125683060111
+      }
+    },
+    "319": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.017172675521821633,
+        "calibrated": 0.05113851992409867,
+        "tuned_raw_transported": 0.05199240986717268,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.07950664136622392,
+        "rev_calibrated": 0.5899198167239406,
+        "rev_tuned_raw_transported": 0.579610538373425,
+        "rev_fixed_limit": 0.24742268041237114
+      },
+      "r0.2": {
+        "climatology_expense": 0.17172675521821631,
+        "perfect_expense": 0.034345351043643266,
+        "calibrated": 0.08842504743833018,
+        "tuned_raw_transported": 0.08614800759013283,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.09544592030360532,
+        "rev_calibrated": 0.6063535911602208,
+        "rev_tuned_raw_transported": 0.62292817679558,
+        "rev_fixed_limit": 0.5552486187845302
+      },
+      "r0.4": {
+        "climatology_expense": 0.17172675521821631,
+        "perfect_expense": 0.06869070208728653,
+        "calibrated": 0.12789373814041743,
+        "tuned_raw_transported": 0.12941176470588234,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.12732447817836812,
+        "rev_calibrated": 0.42541436464088417,
+        "rev_tuned_raw_transported": 0.41068139963167605,
+        "rev_fixed_limit": 0.4309392265193371
+      }
+    },
+    "323": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.018026565464895637,
+        "calibrated": 0.05265654648956357,
+        "tuned_raw_transported": 0.05341555977229602,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.08709677419354839,
+        "rev_calibrated": 0.5775462962962964,
+        "rev_tuned_raw_transported": 0.5682870370370371,
+        "rev_fixed_limit": 0.15740740740740747
+      },
+      "r0.2": {
+        "climatology_expense": 0.18026565464895636,
+        "perfect_expense": 0.036053130929791274,
+        "calibrated": 0.09411764705882353,
+        "tuned_raw_transported": 0.0935483870967742,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.10588235294117648,
+        "rev_calibrated": 0.5973684210526315,
+        "rev_tuned_raw_transported": 0.6013157894736841,
+        "rev_fixed_limit": 0.5157894736842104
+      },
+      "r0.4": {
+        "climatology_expense": 0.18026565464895636,
+        "perfect_expense": 0.07210626185958255,
+        "calibrated": 0.14231499051233398,
+        "tuned_raw_transported": 0.14212523719165088,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.14345351043643265,
+        "rev_calibrated": 0.350877192982456,
+        "rev_tuned_raw_transported": 0.35263157894736824,
+        "rev_fixed_limit": 0.3403508771929824
+      }
+    },
+    "324": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.02106261859582543,
+        "calibrated": 0.06119544592030361,
+        "tuned_raw_transported": 0.0610056925996205,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.10512333965844402,
+        "rev_calibrated": 0.4915865384615384,
+        "rev_tuned_raw_transported": 0.4939903846153845,
+        "rev_fixed_limit": -0.064903846153846
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.04212523719165086,
+        "calibrated": 0.10075901328273244,
+        "tuned_raw_transported": 0.10018975332068311,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.1239089184060721,
+        "rev_calibrated": 0.6286057692307693,
+        "rev_tuned_raw_transported": 0.6322115384615384,
+        "rev_fixed_limit": 0.4819711538461539
+      },
+      "r0.4": {
+        "climatology_expense": 0.21062618595825428,
+        "perfect_expense": 0.08425047438330172,
+        "calibrated": 0.1603415559772296,
+        "tuned_raw_transported": 0.16110056925996208,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.1614800759013283,
+        "rev_calibrated": 0.397897897897898,
+        "rev_tuned_raw_transported": 0.3918918918918917,
+        "rev_fixed_limit": 0.3888888888888888
+      }
+    },
+    "330": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.03709677419354839,
+        "calibrated": 0.0823529411764706,
+        "tuned_raw_transported": 0.0847248576850095,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.1857685009487666,
+        "rev_calibrated": 0.28054298642533926,
+        "rev_tuned_raw_transported": 0.24283559577677225,
+        "rev_fixed_limit": -1.3634992458521868
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.07419354838709678,
+        "calibrated": 0.15502846299810247,
+        "tuned_raw_transported": 0.15502846299810247,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.20929791271347248,
+        "rev_calibrated": 0.3574660633484164,
+        "rev_tuned_raw_transported": 0.3574660633484164,
+        "rev_fixed_limit": -0.07390648567119142
+      },
+      "r0.4": {
+        "climatology_expense": 0.3709677419354839,
+        "perfect_expense": 0.14838709677419357,
+        "calibrated": 0.25654648956356735,
+        "tuned_raw_transported": 0.25901328273244784,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.25635673624288424,
+        "rev_calibrated": 0.5140664961636829,
+        "rev_tuned_raw_transported": 0.5029838022165387,
+        "rev_fixed_limit": 0.514919011082694
+      }
+    },
+    "340": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.012428842504743833,
+        "calibrated": 0.04971537001897534,
+        "tuned_raw_transported": 0.04971537001897534,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.050569259962049334,
+        "rev_calibrated": 0.5742145178764896,
+        "rev_tuned_raw_transported": 0.5742145178764896,
+        "rev_fixed_limit": 0.5644637053087758
+      },
+      "r0.2": {
+        "climatology_expense": 0.12428842504743833,
+        "perfect_expense": 0.024857685009487665,
+        "calibrated": 0.07647058823529412,
+        "tuned_raw_transported": 0.07001897533206831,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.06793168880455408,
+        "rev_calibrated": 0.48091603053435106,
+        "rev_tuned_raw_transported": 0.5458015267175572,
+        "rev_fixed_limit": 0.5667938931297709
+      },
+      "r0.4": {
+        "climatology_expense": 0.12428842504743833,
+        "perfect_expense": 0.04971537001897533,
+        "calibrated": 0.10322580645161292,
+        "tuned_raw_transported": 0.10645161290322581,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.10265654648956356,
+        "rev_calibrated": 0.2824427480916028,
+        "rev_tuned_raw_transported": 0.23918575063613215,
+        "rev_fixed_limit": 0.2900763358778627
+      }
+    },
+    "343": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.024193548387096777,
+        "calibrated": 0.06546489563567362,
+        "tuned_raw_transported": 0.06850094876660343,
+        "tuned_raw_transported_threshold": 8.91521759033203,
+        "fixed_limit": 0.12874762808349147,
+        "rev_calibrated": 0.45556946182728425,
+        "rev_tuned_raw_transported": 0.4155193992490613,
+        "rev_fixed_limit": -0.37922403003754696
+      },
+      "r0.2": {
+        "climatology_expense": 0.2,
+        "perfect_expense": 0.048387096774193554,
+        "calibrated": 0.11366223908918406,
+        "tuned_raw_transported": 0.11707779886148006,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.14648956356736242,
+        "rev_calibrated": 0.5694618272841052,
+        "rev_tuned_raw_transported": 0.5469336670838549,
+        "rev_fixed_limit": 0.35294117647058837
+      },
+      "r0.4": {
+        "climatology_expense": 0.24193548387096775,
+        "perfect_expense": 0.09677419354838711,
+        "calibrated": 0.18292220113851992,
+        "tuned_raw_transported": 0.18425047438330172,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.18197343453510437,
+        "rev_calibrated": 0.4065359477124184,
+        "rev_tuned_raw_transported": 0.3973856209150327,
+        "rev_fixed_limit": 0.4130718954248367
+      }
+    },
+    "344": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.019070208728652754,
+        "calibrated": 0.04734345351043644,
+        "tuned_raw_transported": 0.04734345351043644,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.10113851992409867,
+        "rev_calibrated": 0.6506447831184057,
+        "rev_tuned_raw_transported": 0.6506447831184057,
+        "rev_fixed_limit": -0.014067995310668125
+      },
+      "r0.2": {
+        "climatology_expense": 0.19070208728652752,
+        "perfect_expense": 0.03814041745730551,
+        "calibrated": 0.08519924098671727,
+        "tuned_raw_transported": 0.08292220113851992,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.1159392789373814,
+        "rev_calibrated": 0.6915422885572139,
+        "rev_tuned_raw_transported": 0.7064676616915424,
+        "rev_fixed_limit": 0.49004975124378114
+      },
+      "r0.4": {
+        "climatology_expense": 0.19070208728652752,
+        "perfect_expense": 0.07628083491461102,
+        "calibrated": 0.144022770398482,
+        "tuned_raw_transported": 0.14535104364326376,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.14554079696394687,
+        "rev_calibrated": 0.40796019900497504,
+        "rev_tuned_raw_transported": 0.3963515754560531,
+        "rev_fixed_limit": 0.39469320066335
+      }
+    },
+    "348": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.015559772296015182,
+        "calibrated": 0.05085388994307401,
+        "tuned_raw_transported": 0.05085388994307401,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.08586337760910816,
+        "rev_calibrated": 0.5820224719101124,
+        "rev_tuned_raw_transported": 0.5820224719101124,
+        "rev_fixed_limit": 0.16741573033707874
+      },
+      "r0.2": {
+        "climatology_expense": 0.1555977229601518,
+        "perfect_expense": 0.031119544592030365,
+        "calibrated": 0.0840607210626186,
+        "tuned_raw_transported": 0.08368121442125237,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.10056925996204934,
+        "rev_calibrated": 0.5746951219512196,
+        "rev_tuned_raw_transported": 0.5777439024390245,
+        "rev_fixed_limit": 0.4420731707317074
+      },
+      "r0.4": {
+        "climatology_expense": 0.1555977229601518,
+        "perfect_expense": 0.06223908918406073,
+        "calibrated": 0.12884250474383302,
+        "tuned_raw_transported": 0.13092979127134724,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.12998102466793168,
+        "rev_calibrated": 0.2865853658536586,
+        "rev_tuned_raw_transported": 0.264227642276423,
+        "rev_fixed_limit": 0.2743902439024392
+      }
+    },
+    "350": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.010721062618595826,
+        "calibrated": 0.04819734345351044,
+        "tuned_raw_transported": 0.04810246679316889,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.05920303605313093,
+        "rev_calibrated": 0.5802337938363443,
+        "rev_tuned_raw_transported": 0.5812964930924548,
+        "rev_fixed_limit": 0.45696068012752394
+      },
+      "r0.2": {
+        "climatology_expense": 0.10721062618595825,
+        "perfect_expense": 0.02144212523719165,
+        "calibrated": 0.07267552182163188,
+        "tuned_raw_transported": 0.07229601518026565,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.07381404174573056,
+        "rev_calibrated": 0.40265486725663713,
+        "rev_tuned_raw_transported": 0.4070796460176991,
+        "rev_fixed_limit": 0.3893805309734512
+      },
+      "r0.4": {
+        "climatology_expense": 0.10721062618595825,
+        "perfect_expense": 0.0428842504743833,
+        "calibrated": 0.10284629981024668,
+        "tuned_raw_transported": 0.10151802656546491,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.1030360531309298,
+        "rev_calibrated": 0.0678466076696165,
+        "rev_tuned_raw_transported": 0.0884955752212387,
+        "rev_fixed_limit": 0.06489675516224176
+      }
+    },
+    "356": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.013946869070208728,
+        "calibrated": 0.056451612903225805,
+        "tuned_raw_transported": 0.056451612903225805,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.06869070208728653,
+        "rev_calibrated": 0.5060639470782801,
+        "rev_tuned_raw_transported": 0.5060639470782801,
+        "rev_fixed_limit": 0.3638368246968026
+      },
+      "r0.2": {
+        "climatology_expense": 0.13946869070208728,
+        "perfect_expense": 0.027893738140417457,
+        "calibrated": 0.08614800759013283,
+        "tuned_raw_transported": 0.08197343453510436,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.08330170777988614,
+        "rev_calibrated": 0.477891156462585,
+        "rev_tuned_raw_transported": 0.5153061224489796,
+        "rev_fixed_limit": 0.5034013605442177
+      },
+      "r0.4": {
+        "climatology_expense": 0.13946869070208728,
+        "perfect_expense": 0.05578747628083491,
+        "calibrated": 0.11309297912713473,
+        "tuned_raw_transported": 0.11214421252371917,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.11252371916508538,
+        "rev_calibrated": 0.3151927437641722,
+        "rev_tuned_raw_transported": 0.3265306122448978,
+        "rev_fixed_limit": 0.3219954648526077
+      }
+    },
+    "370": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.01204933586337761,
+        "calibrated": 0.04629981024667932,
+        "tuned_raw_transported": 0.04611005692599621,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.06812144212523719,
+        "rev_calibrated": 0.6105717367853291,
+        "rev_tuned_raw_transported": 0.6127292340884575,
+        "rev_fixed_limit": 0.3624595469255665
+      },
+      "r0.2": {
+        "climatology_expense": 0.1204933586337761,
+        "perfect_expense": 0.02409867172675522,
+        "calibrated": 0.07039848197343454,
+        "tuned_raw_transported": 0.0730550284629981,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.08026565464895635,
+        "rev_calibrated": 0.5196850393700787,
+        "rev_tuned_raw_transported": 0.49212598425196846,
+        "rev_fixed_limit": 0.4173228346456693
+      },
+      "r0.4": {
+        "climatology_expense": 0.1204933586337761,
+        "perfect_expense": 0.04819734345351044,
+        "calibrated": 0.10569259962049336,
+        "tuned_raw_transported": 0.10664136622390892,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.10455407969639469,
+        "rev_calibrated": 0.2047244094488189,
+        "rev_tuned_raw_transported": 0.19160104986876644,
+        "rev_fixed_limit": 0.22047244094488197
+      }
+    },
+    "375": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.012068965517241381,
+        "calibrated": 0.04626436781609196,
+        "tuned_raw_transported": 0.04597701149425288,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.05555555555555556,
+        "rev_calibrated": 0.611111111111111,
+        "rev_tuned_raw_transported": 0.6143790849673202,
+        "rev_fixed_limit": 0.5054466230936819
+      },
+      "r0.2": {
+        "climatology_expense": 0.1206896551724138,
+        "perfect_expense": 0.024137931034482762,
+        "calibrated": 0.06934865900383141,
+        "tuned_raw_transported": 0.06839080459770115,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.06896551724137931,
+        "rev_calibrated": 0.5317460317460319,
+        "rev_tuned_raw_transported": 0.5416666666666667,
+        "rev_fixed_limit": 0.5357142857142858
+      },
+      "r0.4": {
+        "climatology_expense": 0.1206896551724138,
+        "perfect_expense": 0.048275862068965524,
+        "calibrated": 0.09616858237547893,
+        "tuned_raw_transported": 0.09693486590038314,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.09578544061302682,
+        "rev_calibrated": 0.33862433862433866,
+        "rev_tuned_raw_transported": 0.32804232804232814,
+        "rev_fixed_limit": 0.3439153439153439
+      }
+    },
+    "377": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.011859582542694497,
+        "calibrated": 0.05,
+        "tuned_raw_transported": 0.05,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.05749525616698292,
+        "rev_calibrated": 0.5672766415500538,
+        "rev_tuned_raw_transported": 0.5672766415500538,
+        "rev_fixed_limit": 0.4822389666307858
+      },
+      "r0.2": {
+        "climatology_expense": 0.11859582542694497,
+        "perfect_expense": 0.023719165085388995,
+        "calibrated": 0.07533206831119545,
+        "tuned_raw_transported": 0.07381404174573056,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.07229601518026565,
+        "rev_calibrated": 0.45599999999999996,
+        "rev_tuned_raw_transported": 0.47199999999999986,
+        "rev_fixed_limit": 0.48799999999999993
+      },
+      "r0.4": {
+        "climatology_expense": 0.11859582542694497,
+        "perfect_expense": 0.04743833017077799,
+        "calibrated": 0.10208728652751423,
+        "tuned_raw_transported": 0.10056925996204934,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.10189753320683112,
+        "rev_calibrated": 0.23200000000000004,
+        "rev_tuned_raw_transported": 0.2533333333333333,
+        "rev_fixed_limit": 0.2346666666666666
+      }
+    },
+    "380": {
+      "r0.1": {
+        "climatology_expense": 0.1,
+        "perfect_expense": 0.014041745730550285,
+        "calibrated": 0.038899430740037946,
+        "tuned_raw_transported": 0.038899430740037946,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.0713472485768501,
+        "rev_calibrated": 0.7108167770419427,
+        "rev_tuned_raw_transported": 0.7108167770419427,
+        "rev_fixed_limit": 0.3333333333333333
+      },
+      "r0.2": {
+        "climatology_expense": 0.14041745730550284,
+        "perfect_expense": 0.02808349146110057,
+        "calibrated": 0.06641366223908918,
+        "tuned_raw_transported": 0.06755218216318787,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.08387096774193549,
+        "rev_calibrated": 0.6587837837837838,
+        "rev_tuned_raw_transported": 0.6486486486486485,
+        "rev_fixed_limit": 0.5033783783783783
+      },
+      "r0.4": {
+        "climatology_expense": 0.14041745730550284,
+        "perfect_expense": 0.05616698292220114,
+        "calibrated": 0.10815939278937381,
+        "tuned_raw_transported": 0.10891840607210626,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.10891840607210626,
+        "rev_calibrated": 0.3828828828828829,
+        "rev_tuned_raw_transported": 0.37387387387387383,
+        "rev_fixed_limit": 0.37387387387387383
+      }
+    },
+    "391": {
+      "r0.1": {
+        "climatology_expense": 0.024667931688804556,
+        "perfect_expense": 0.0024667931688804557,
+        "calibrated": 0.04165085388994308,
+        "tuned_raw_transported": 0.04127134724857685,
+        "tuned_raw_transported_threshold": 8.606826400756836,
+        "fixed_limit": 0.017931688804554077,
+        "rev_calibrated": -0.7649572649572651,
+        "rev_tuned_raw_transported": -0.747863247863248,
+        "rev_fixed_limit": 0.3034188034188036
+      },
+      "r0.2": {
+        "climatology_expense": 0.024667931688804556,
+        "perfect_expense": 0.0049335863377609115,
+        "calibrated": 0.056166982922201146,
+        "tuned_raw_transported": 0.051423149905123346,
+        "tuned_raw_transported_threshold": 10.199999809265137,
+        "fixed_limit": 0.03111954459203036,
+        "rev_calibrated": -1.5961538461538465,
+        "rev_tuned_raw_transported": -1.3557692307692308,
+        "rev_fixed_limit": -0.3269230769230768
+      },
+      "r0.4": {
+        "climatology_expense": 0.024667931688804556,
+        "perfect_expense": 0.009867172675521823,
+        "calibrated": 0.057115749525616696,
+        "tuned_raw_transported": 0.05464895635673624,
+        "tuned_raw_transported_threshold": 12.223962783813477,
+        "fixed_limit": 0.05749525616698292,
+        "rev_calibrated": -2.1923076923076916,
+        "rev_tuned_raw_transported": -2.0256410256410255,
+        "rev_fixed_limit": -2.2179487179487176
+      }
+    }
+  },
+  "value_transfer_summary": {
+    "r0.1": {
+      "calibrated": {
+        "median_rev": 0.5060639470782801,
+        "negative_stations": 2,
+        "n": 45
+      },
+      "tuned_raw_transported": {
+        "median_rev": 0.5143198090692124,
+        "negative_stations": 2,
+        "n": 45
+      },
+      "fixed_limit": {
+        "median_rev": 0.15740740740740747,
+        "negative_stations": 19,
+        "n": 45
+      },
+      "calibrated_minus_tuned_raw": {
+        "median_rev_gain": -0.0012269938650306678,
+        "stations_calibrated_better": 12,
+        "stations_tuned_raw_better": 24,
+        "n": 45
+      }
+    },
+    "r0.2": {
+      "calibrated": {
+        "median_rev": 0.5196850393700787,
+        "negative_stations": 1,
+        "n": 45
+      },
+      "tuned_raw_transported": {
+        "median_rev": 0.5258397932816538,
+        "negative_stations": 1,
+        "n": 45
+      },
+      "fixed_limit": {
+        "median_rev": 0.4420731707317074,
+        "negative_stations": 4,
+        "n": 45
+      },
+      "calibrated_minus_tuned_raw": {
+        "median_rev_gain": -0.003947368421052588,
+        "stations_calibrated_better": 15,
+        "stations_tuned_raw_better": 27,
+        "n": 45
+      }
+    },
+    "r0.4": {
+      "calibrated": {
+        "median_rev": 0.397897897897898,
+        "negative_stations": 3,
+        "n": 45
+      },
+      "tuned_raw_transported": {
+        "median_rev": 0.39224806201550366,
+        "negative_stations": 3,
+        "n": 45
+      },
+      "fixed_limit": {
+        "median_rev": 0.3888888888888888,
+        "negative_stations": 3,
+        "n": 45
+      },
+      "calibrated_minus_tuned_raw": {
+        "median_rev_gain": 0.007194244604316502,
+        "stations_calibrated_better": 27,
+        "stations_tuned_raw_better": 17,
+        "n": 45
+      }
+    }
+  },
+  "by_lead_test": {
+    "12": {
+      "n": 23662,
+      "positives": 4604,
+      "brier": 0.09622336792068628,
+      "skill_vs_climatology": 0.3859965433652349,
+      "skill_vs_raw": 0.329750564692588
+    },
+    "18": {
+      "n": 23660,
+      "positives": 4914,
+      "brier": 0.09675488049994928,
+      "skill_vs_climatology": 0.41202535762346537,
+      "skill_vs_raw": 0.3010013824034199
+    }
+  }
+}

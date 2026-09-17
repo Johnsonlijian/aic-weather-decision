@@ -1,0 +1,122 @@
+[
+  {
+    "status": "OK",
+    "station": "240",
+    "year": 2021,
+    "rows": 5136,
+    "FX_missing": 0,
+    "sha256": "bedaf6b585c9d1d67e1fad397dcd017d4c378cff8658ecdaaf268c2c51f75f66"
+  },
+  {
+    "status": "OK",
+    "station": "240",
+    "year": 2022,
+    "rows": 8760,
+    "FX_missing": 0,
+    "sha256": "7201eabd611ff67bed7b679c830bf258aa87b25564c3d581811329ecc9c2876e"
+  },
+  {
+    "status": "OK",
+    "station": "240",
+    "year": 2023,
+    "rows": 8760,
+    "FX_missing": 0,
+    "sha256": "74c4059b982e06af728f91aaa45c3e7a9d3c01cae8021044ef0b2781fcc7ca63"
+  },
+  {
+    "status": "OK",
+    "station": "240",
+    "year": 2024,
+    "rows": 8784,
+    "FX_missing": 0,
+    "sha256": "8a069ddd82fec4d943f0a7ccf49535cdf2cede8cebf14afc31e699ed93aa3d27"
+  },
+  {
+    "status": "OK",
+    "station": "260",
+    "year": 2021,
+    "rows": 5136,
+    "FX_missing": 0,
+    "sha256": "be08be4995a147d63777e6b3a3dde8996d8c212d060d4d8611bda66424a7371e"
+  },
+  {
+    "status": "OK",
+    "station": "240",
+    "year": 2025,
+    "rows": 8760,
+    "FX_missing": 0,
+    "sha256": "352cf352ef5a0b4a76b43e7e6690c15ba2b9e5374ea0ab64232e016358c6cab0"
+  },
+  {
+    "status": "OK",
+    "station": "260",
+    "year": 2022,
+    "rows": 8760,
+    "FX_missing": 0,
+    "sha256": "3c526247cd5e33997f7117095874a99bc7d4f0051b64f4325cbf52487b96ed29"
+  },
+  {
+    "status": "OK",
+    "station": "260",
+    "year": 2023,
+    "rows": 8760,
+    "FX_missing": 0,
+    "sha256": "6ef65520702116e7cd066e5f753d41df02fa4b2dddae5b54b7959b7573b8dd25"
+  },
+  {
+    "status": "OK",
+    "station": "260",
+    "year": 2024,
+    "rows": 8784,
+    "FX_missing": 0,
+    "sha256": "fc300ddf4ecb5f8b51a1d484d4f66824ce042bce7ba51c994af4b2c27dc6c82a"
+  },
+  {
+    "status": "OK",
+    "station": "344",
+    "year": 2021,
+    "rows": 5136,
+    "FX_missing": 0,
+    "sha256": "6788ec97a30136464d7eaa89d6037d73b8224aa1ea9d31d2332b96c5d739bf8d"
+  },
+  {
+    "status": "OK",
+    "station": "260",
+    "year": 2025,
+    "rows": 8760,
+    "FX_missing": 0,
+    "sha256": "fd65371bead522acbc766bfca908fecc6026d92ae8aaf11111ca1855e04fea08"
+  },
+  {
+    "status": "OK",
+    "station": "344",
+    "year": 2022,
+    "rows": 8760,
+    "FX_missing": 0,
+    "sha256": "76a839b9e095634b9337b22753eb77d07149f1a9a1d71497cadbe998235177ca"
+  },
+  {
+    "status": "OK",
+    "station": "344",
+    "year": 2023,
+    "rows": 8760,
+    "FX_missing": 0,
+    "sha256": "eda9dc4b84fa8046b0920490767cf2c7e7a3830098b4cc8d70e2b6bd1d0898ce"
+  },
+  {
+    "status": "OK",
+    "station": "344",
+    "year": 2024,
+    "rows": 8784,
+    "FX_missing": 0,
+    "sha256": "99d89aa58fc79706f571be05cc520531f97b6cee743986746b6d7e8595161b5a"
+  },
+  {
+    "status": "OK",
+    "station": "344",
+    "year": 2025,
+    "rows": 8760,
+    "FX_missing": 0,
+    "sha256": "914fbe90afca2fa743d344af1c979e5497c427d213686505cac572f5513700c3"
+  }
+]

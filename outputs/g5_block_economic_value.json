@@ -1,0 +1,1637 @@
+[
+  {
+    "threshold": 9.0,
+    "horizon": 12,
+    "test_base_rate": 0.43606255749770007,
+    "curve": [
+      {
+        "cost_loss_ratio": 0.02,
+        "critical_prob": 0.9803921568627451,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.0710267229254571,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -34.1979336595976
+      },
+      {
+        "cost_loss_ratio": 0.02444312127604943,
+        "critical_prob": 0.9761400894120866,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.0710267229254571,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -27.66929552089416
+      },
+      {
+        "cost_loss_ratio": 0.029873308885782997,
+        "critical_prob": 0.9709932196241664,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.09704641350210971,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -21.674014422917622
+      },
+      {
+        "cost_loss_ratio": 0.036509845600603934,
+        "critical_prob": 0.96477617095914,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.09704641350210971,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -17.425555044845186
+      },
+      {
+        "cost_loss_ratio": 0.04462072918927006,
+        "critical_prob": 0.9572852347819097,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.09704641350210971,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -13.949354661029819
+      },
+      {
+        "cost_loss_ratio": 0.05453349474995434,
+        "critical_prob": 0.9482866167632874,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.09704641350210971,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -11.105036748798597
+      },
+      {
+        "cost_loss_ratio": 0.06664844128899693,
+        "critical_prob": 0.9375160186720423,
+        "action_rate": 0.05765102729224164,
+        "hit_rate": 0.12939521800281295,
+        "false_alarm_rate": 0.002175095160413268,
+        "relative_economic_value": -8.429623745076286
+      },
+      {
+        "cost_loss_ratio": 0.08145479666433054,
+        "critical_prob": 0.9246803501028688,
+        "action_rate": 0.05765102729224164,
+        "hit_rate": 0.12939521800281295,
+        "false_alarm_rate": 0.002175095160413268,
+        "relative_economic_value": -6.593590995660925
+      },
+      {
+        "cost_loss_ratio": 0.09955047366910884,
+        "critical_prob": 0.9094625703384792,
+        "action_rate": 0.07727690892364306,
+        "hit_rate": 0.17299578059071732,
+        "false_alarm_rate": 0.003262642740619902,
+        "relative_economic_value": -4.787440461402167
+      },
+      {
+        "cost_loss_ratio": 0.12166621504910963,
+        "critical_prob": 0.8915308195818461,
+        "action_rate": 0.09230297454768475,
+        "hit_rate": 0.20253164556962028,
+        "false_alarm_rate": 0.007069059271343121,
+        "relative_economic_value": -3.4587180764056615
+      },
+      {
+        "cost_loss_ratio": 0.14869510248216478,
+        "critical_prob": 0.8705530282484394,
+        "action_rate": 0.09230297454768475,
+        "hit_rate": 0.20253164556962028,
+        "false_alarm_rate": 0.007069059271343121,
+        "relative_economic_value": -2.5374355531359525
+      },
+      {
+        "cost_loss_ratio": 0.18172862115630756,
+        "critical_prob": 0.8462179743277367,
+        "action_rate": 0.12020852499233364,
+        "hit_rate": 0.2587904360056259,
+        "false_alarm_rate": 0.013050570962479607,
+        "relative_economic_value": -1.5937231727201069
+      },
+      {
+        "cost_loss_ratio": 0.22210073631264335,
+        "critical_prob": 0.8182631515444694,
+        "action_rate": 0.14627414903403863,
+        "hit_rate": 0.3115330520393812,
+        "false_alarm_rate": 0.018488308863512777,
+        "relative_economic_value": -0.8830395569120694
+      },
+      {
+        "cost_loss_ratio": 0.2714417616594907,
+        "critical_prob": 0.7865086944248206,
+        "action_rate": 0.16712664826740264,
+        "hit_rate": 0.349507735583685,
+        "false_alarm_rate": 0.026101141924959215,
+        "relative_economic_value": -0.3761441741394004
+      },
+      {
+        "cost_loss_ratio": 0.3317441949813717,
+        "critical_prob": 0.7508949569808245,
+        "action_rate": 0.16712664826740264,
+        "hit_rate": 0.349507735583685,
+        "false_alarm_rate": 0.026101141924959215,
+        "relative_economic_value": -0.039311011304536105
+      },
+      {
+        "cost_loss_ratio": 0.4054431795277526,
+        "critical_prob": 0.711519337506062,
+        "action_rate": 0.22999080036798528,
+        "hit_rate": 0.469760900140647,
+        "false_alarm_rate": 0.04458945078847199,
+        "relative_economic_value": 0.3541634651645949
+      },
+      {
+        "cost_loss_ratio": 0.49551484038719684,
+        "critical_prob": 0.6686660493058663,
+        "action_rate": 0.22999080036798528,
+        "hit_rate": 0.469760900140647,
+        "false_alarm_rate": 0.04458945078847199,
+        "relative_economic_value": 0.41312099377692607
+      },
+      {
+        "cost_loss_ratio": 0.6055964668833264,
+        "critical_prob": 0.6228215000629214,
+        "action_rate": 0.28058877644894203,
+        "hit_rate": 0.5506329113924051,
+        "false_alarm_rate": 0.07177814029363784,
+        "relative_economic_value": 0.40809943725639136
+      },
+      {
+        "cost_loss_ratio": 0.7401333942188094,
+        "critical_prob": 0.5746685876624567,
+        "action_rate": 0.3002146580803435,
+        "hit_rate": 0.5808720112517581,
+        "false_alarm_rate": 0.0831973898858075,
+        "relative_economic_value": 0.27442784360776307
+      },
+      {
+        "cost_loss_ratio": 0.9045585157672229,
+        "critical_prob": 0.5250560650782446,
+        "action_rate": 0.3253603189205765,
+        "hit_rate": 0.6153305203938115,
+        "false_alarm_rate": 0.10114192495921696,
+        "relative_economic_value": -0.6243587142666714
+      },
+      {
+        "cost_loss_ratio": 1.1055116751090743,
+        "critical_prob": 0.4749439349217552,
+        "action_rate": 0.3839313094142901,
+        "hit_rate": 0.6947960618846696,
+        "false_alarm_rate": 0.14355628058727568,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 1.3511077973389827,
+        "critical_prob": 0.4253314123375433,
+        "action_rate": 0.3839313094142901,
+        "hit_rate": 0.6947960618846696,
+        "false_alarm_rate": 0.14355628058727568,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 1.6512645873686373,
+        "critical_prob": 0.37717849993707847,
+        "action_rate": 0.43422263109475623,
+        "hit_rate": 0.7566807313642756,
+        "false_alarm_rate": 0.18488308863512778,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 2.018103028394866,
+        "critical_prob": 0.3313339506941337,
+        "action_rate": 0.5697638761116222,
+        "hit_rate": 0.888888888888889,
+        "false_alarm_rate": 0.3230016313213703,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 2.4664368535309165,
+        "critical_prob": 0.2884806624939378,
+        "action_rate": 0.5952161913523459,
+        "hit_rate": 0.9057665260196907,
+        "false_alarm_rate": 0.35508428493746597,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 3.014370756528697,
+        "critical_prob": 0.24910504301917522,
+        "action_rate": 0.5952161913523459,
+        "hit_rate": 0.9057665260196907,
+        "false_alarm_rate": 0.35508428493746597,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 3.6840314986403864,
+        "critical_prob": 0.21349130557517934,
+        "action_rate": 0.6231217417969948,
+        "hit_rate": 0.9177215189873418,
+        "false_alarm_rate": 0.39532354540511144,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 4.502461435302655,
+        "critical_prob": 0.18173684845553062,
+        "action_rate": 0.6556271082490034,
+        "hit_rate": 0.9317862165963433,
+        "false_alarm_rate": 0.4420880913539967,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 5.502710545191917,
+        "critical_prob": 0.1537820256722632,
+        "action_rate": 0.7488500459981601,
+        "hit_rate": 0.9746835443037976,
+        "false_alarm_rate": 0.5742251223491027,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 6.7251710601561046,
+        "critical_prob": 0.1294469717515605,
+        "action_rate": 0.7828886844526219,
+        "hit_rate": 0.9845288326300985,
+        "false_alarm_rate": 0.6269711799891244,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 8.219208591278669,
+        "critical_prob": 0.10846918041815386,
+        "action_rate": 0.7828886844526219,
+        "hit_rate": 0.9845288326300985,
+        "false_alarm_rate": 0.6269711799891244,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 10.045155619488595,
+        "critical_prob": 0.09053742966152081,
+        "action_rate": 0.7828886844526219,
+        "hit_rate": 0.9845288326300985,
+        "false_alarm_rate": 0.6269711799891244,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 12.276747852197456,
+        "critical_prob": 0.07531964989713112,
+        "action_rate": 0.83409996933456,
+        "hit_rate": 0.9908579465541492,
+        "false_alarm_rate": 0.7128874388254486,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 15.004101831337087,
+        "critical_prob": 0.06248398132795768,
+        "action_rate": 0.8650720637841153,
+        "hit_rate": 0.9929676511954993,
+        "false_alarm_rate": 0.7661772702555737,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 18.337354035078384,
+        "critical_prob": 0.05171338323671264,
+        "action_rate": 0.8650720637841153,
+        "hit_rate": 0.9929676511954993,
+        "false_alarm_rate": 0.7661772702555737,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 22.41110842806374,
+        "critical_prob": 0.042714765218090395,
+        "action_rate": 0.8981907390371052,
+        "hit_rate": 0.9971870604781997,
+        "false_alarm_rate": 0.821642196846112,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 27.38987206189277,
+        "critical_prob": 0.03522382904086005,
+        "action_rate": 0.9221097822753757,
+        "hit_rate": 0.9985935302390999,
+        "false_alarm_rate": 0.8629690048939641,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 33.47469822721615,
+        "critical_prob": 0.029006780375833634,
+        "action_rate": 0.9221097822753757,
+        "hit_rate": 0.9985935302390999,
+        "false_alarm_rate": 0.8629690048939641,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 40.911305422350054,
+        "critical_prob": 0.023859910587913345,
+        "action_rate": 0.9221097822753757,
+        "hit_rate": 0.9985935302390999,
+        "false_alarm_rate": 0.8629690048939641,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 50.0,
+        "critical_prob": 0.0196078431372549,
+        "action_rate": 0.948788715118062,
+        "hit_rate": 0.99929676511955,
+        "false_alarm_rate": 0.9097335508428493,
+        "relative_economic_value": NaN
+      }
+    ]
+  },
+  {
+    "threshold": 12.0,
+    "horizon": 12,
+    "test_base_rate": 0.17172646427476235,
+    "curve": [
+      {
+        "cost_loss_ratio": 0.02,
+        "critical_prob": 0.9803921568627451,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -9.159200296186599
+      },
+      {
+        "cost_loss_ratio": 0.02444312127604943,
+        "critical_prob": 0.9761400894120866,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.0625,
+        "false_alarm_rate": 0.001480932987782303,
+        "relative_economic_value": -6.759139336073216
+      },
+      {
+        "cost_loss_ratio": 0.029873308885782997,
+        "critical_prob": 0.9709932196241664,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.0625,
+        "false_alarm_rate": 0.001480932987782303,
+        "relative_economic_value": -5.313667741313763
+      },
+      {
+        "cost_loss_ratio": 0.036509845600603934,
+        "critical_prob": 0.96477617095914,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.0625,
+        "false_alarm_rate": 0.001480932987782303,
+        "relative_economic_value": -4.130945143463051
+      },
+      {
+        "cost_loss_ratio": 0.04462072918927006,
+        "critical_prob": 0.9572852347819097,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.0625,
+        "false_alarm_rate": 0.001480932987782303,
+        "relative_economic_value": -3.163210634851337
+      },
+      {
+        "cost_loss_ratio": 0.05453349474995434,
+        "critical_prob": 0.9482866167632874,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.0625,
+        "false_alarm_rate": 0.001480932987782303,
+        "relative_economic_value": -2.3713849938601044
+      },
+      {
+        "cost_loss_ratio": 0.06664844128899693,
+        "critical_prob": 0.9375160186720423,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.0625,
+        "false_alarm_rate": 0.001480932987782303,
+        "relative_economic_value": -1.7234925810632962
+      },
+      {
+        "cost_loss_ratio": 0.08145479666433054,
+        "critical_prob": 0.9246803501028688,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.0625,
+        "false_alarm_rate": 0.001480932987782303,
+        "relative_economic_value": -1.1933700934482272
+      },
+      {
+        "cost_loss_ratio": 0.09955047366910884,
+        "critical_prob": 0.9094625703384792,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.0625,
+        "false_alarm_rate": 0.001480932987782303,
+        "relative_economic_value": -0.759610033406706
+      },
+      {
+        "cost_loss_ratio": 0.12166621504910963,
+        "critical_prob": 0.8915308195818461,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.10714285714285714,
+        "false_alarm_rate": 0.0022213994816734544,
+        "relative_economic_value": -0.3386169180449222
+      },
+      {
+        "cost_loss_ratio": 0.14869510248216478,
+        "critical_prob": 0.8705530282484394,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.10714285714285714,
+        "false_alarm_rate": 0.0022213994816734544,
+        "relative_economic_value": -0.0620457349418919
+      },
+      {
+        "cost_loss_ratio": 0.18172862115630756,
+        "critical_prob": 0.8462179743277367,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.1625,
+        "false_alarm_rate": 0.003702332469455757,
+        "relative_economic_value": 0.15853413484435255
+      },
+      {
+        "cost_loss_ratio": 0.22210073631264335,
+        "critical_prob": 0.8182631515444694,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.1625,
+        "false_alarm_rate": 0.003702332469455757,
+        "relative_economic_value": 0.15740154476016374
+      },
+      {
+        "cost_loss_ratio": 0.2714417616594907,
+        "critical_prob": 0.7865086944248206,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.1625,
+        "false_alarm_rate": 0.003702332469455757,
+        "relative_economic_value": 0.15584689519620443
+      },
+      {
+        "cost_loss_ratio": 0.3317441949813717,
+        "critical_prob": 0.7508949569808245,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.1625,
+        "false_alarm_rate": 0.003702332469455757,
+        "relative_economic_value": 0.15363512604406768
+      },
+      {
+        "cost_loss_ratio": 0.4054431795277526,
+        "critical_prob": 0.711519337506062,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.1625,
+        "false_alarm_rate": 0.003702332469455757,
+        "relative_economic_value": 0.1503227672646481
+      },
+      {
+        "cost_loss_ratio": 0.49551484038719684,
+        "critical_prob": 0.6686660493058663,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.21428571428571427,
+        "false_alarm_rate": 0.006664198445020363,
+        "relative_economic_value": 0.18271439365666814
+      },
+      {
+        "cost_loss_ratio": 0.6055964668833264,
+        "critical_prob": 0.6228215000629214,
+        "action_rate": 0.05765102729224164,
+        "hit_rate": 0.28035714285714286,
+        "false_alarm_rate": 0.011477230655312847,
+        "relative_economic_value": 0.19535767577294713
+      },
+      {
+        "cost_loss_ratio": 0.7401333942188094,
+        "critical_prob": 0.5746685876624567,
+        "action_rate": 0.05765102729224164,
+        "hit_rate": 0.28035714285714286,
+        "false_alarm_rate": 0.011477230655312847,
+        "relative_economic_value": 0.12269290618484407
+      },
+      {
+        "cost_loss_ratio": 0.9045585157672229,
+        "critical_prob": 0.5250560650782446,
+        "action_rate": 0.09230297454768475,
+        "hit_rate": 0.3857142857142857,
+        "false_alarm_rate": 0.031469825990373936,
+        "relative_economic_value": -1.0528536654513505
+      },
+      {
+        "cost_loss_ratio": 1.1055116751090743,
+        "critical_prob": 0.4749439349217552,
+        "action_rate": 0.12020852499233364,
+        "hit_rate": 0.46964285714285714,
+        "false_alarm_rate": 0.047760088855979266,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 1.3511077973389827,
+        "critical_prob": 0.4253314123375433,
+        "action_rate": 0.12020852499233364,
+        "hit_rate": 0.46964285714285714,
+        "false_alarm_rate": 0.047760088855979266,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 1.6512645873686373,
+        "critical_prob": 0.37717849993707847,
+        "action_rate": 0.12020852499233364,
+        "hit_rate": 0.46964285714285714,
+        "false_alarm_rate": 0.047760088855979266,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 2.018103028394866,
+        "critical_prob": 0.3313339506941337,
+        "action_rate": 0.14627414903403863,
+        "hit_rate": 0.5357142857142857,
+        "false_alarm_rate": 0.06553128470936691,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 2.4664368535309165,
+        "critical_prob": 0.2884806624939378,
+        "action_rate": 0.22999080036798528,
+        "hit_rate": 0.7267857142857143,
+        "false_alarm_rate": 0.12699000370233246,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 3.014370756528697,
+        "critical_prob": 0.24910504301917522,
+        "action_rate": 0.22999080036798528,
+        "hit_rate": 0.7267857142857143,
+        "false_alarm_rate": 0.12699000370233246,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 3.6840314986403864,
+        "critical_prob": 0.21349130557517934,
+        "action_rate": 0.25206991720331184,
+        "hit_rate": 0.7678571428571428,
+        "false_alarm_rate": 0.1451314328026657,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 4.502461435302655,
+        "critical_prob": 0.18173684845553062,
+        "action_rate": 0.28058877644894203,
+        "hit_rate": 0.8017857142857142,
+        "false_alarm_rate": 0.1725286930766383,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 5.502710545191917,
+        "critical_prob": 0.1537820256722632,
+        "action_rate": 0.3002146580803435,
+        "hit_rate": 0.825,
+        "false_alarm_rate": 0.19141058867086266,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 6.7251710601561046,
+        "critical_prob": 0.1294469717515605,
+        "action_rate": 0.3253603189205765,
+        "hit_rate": 0.8482142857142857,
+        "false_alarm_rate": 0.21695668271010737,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 8.219208591278669,
+        "critical_prob": 0.10846918041815386,
+        "action_rate": 0.35878564857405704,
+        "hit_rate": 0.8839285714285714,
+        "false_alarm_rate": 0.24990744168826362,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 10.045155619488595,
+        "critical_prob": 0.09053742966152081,
+        "action_rate": 0.3839313094142901,
+        "hit_rate": 0.9017857142857142,
+        "false_alarm_rate": 0.276564235468345,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 12.276747852197456,
+        "critical_prob": 0.07531964989713112,
+        "action_rate": 0.3839313094142901,
+        "hit_rate": 0.9017857142857142,
+        "false_alarm_rate": 0.276564235468345,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 15.004101831337087,
+        "critical_prob": 0.06248398132795768,
+        "action_rate": 0.43422263109475623,
+        "hit_rate": 0.9392857142857143,
+        "false_alarm_rate": 0.32950758978156236,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 18.337354035078384,
+        "critical_prob": 0.05171338323671264,
+        "action_rate": 0.5697638761116222,
+        "hit_rate": 0.9785714285714286,
+        "false_alarm_rate": 0.48500555349870417,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 22.41110842806374,
+        "critical_prob": 0.042714765218090395,
+        "action_rate": 0.5697638761116222,
+        "hit_rate": 0.9785714285714286,
+        "false_alarm_rate": 0.48500555349870417,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 27.38987206189277,
+        "critical_prob": 0.03522382904086005,
+        "action_rate": 0.5697638761116222,
+        "hit_rate": 0.9785714285714286,
+        "false_alarm_rate": 0.48500555349870417,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 33.47469822721615,
+        "critical_prob": 0.029006780375833634,
+        "action_rate": 0.5697638761116222,
+        "hit_rate": 0.9785714285714286,
+        "false_alarm_rate": 0.48500555349870417,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 40.911305422350054,
+        "critical_prob": 0.023859910587913345,
+        "action_rate": 0.5697638761116222,
+        "hit_rate": 0.9785714285714286,
+        "false_alarm_rate": 0.48500555349870417,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 50.0,
+        "critical_prob": 0.0196078431372549,
+        "action_rate": 0.6556271082490034,
+        "hit_rate": 0.9875,
+        "false_alarm_rate": 0.5868196964087374,
+        "relative_economic_value": NaN
+      }
+    ]
+  },
+  {
+    "threshold": 13.0,
+    "horizon": 12,
+    "test_base_rate": 0.12082183379331493,
+    "curve": [
+      {
+        "cost_loss_ratio": 0.02,
+        "critical_prob": 0.9803921568627451,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -5.733868154865712
+      },
+      {
+        "cost_loss_ratio": 0.02444312127604943,
+        "critical_prob": 0.9761400894120866,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -4.4848462980139185
+      },
+      {
+        "cost_loss_ratio": 0.029873308885782997,
+        "critical_prob": 0.9709932196241664,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.08375634517766498,
+        "false_alarm_rate": 0.0020927799093128706,
+        "relative_economic_value": -3.0911636065661052
+      },
+      {
+        "cost_loss_ratio": 0.036509845600603934,
+        "critical_prob": 0.96477617095914,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.08375634517766498,
+        "false_alarm_rate": 0.0020927799093128706,
+        "relative_economic_value": -2.3249891225473616
+      },
+      {
+        "cost_loss_ratio": 0.04462072918927006,
+        "critical_prob": 0.9572852347819097,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.08375634517766498,
+        "false_alarm_rate": 0.0020927799093128706,
+        "relative_economic_value": -1.698085156097318
+      },
+      {
+        "cost_loss_ratio": 0.05453349474995434,
+        "critical_prob": 0.9482866167632874,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.08375634517766498,
+        "false_alarm_rate": 0.0020927799093128706,
+        "relative_economic_value": -1.1851359632589082
+      },
+      {
+        "cost_loss_ratio": 0.06664844128899693,
+        "critical_prob": 0.9375160186720423,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.08375634517766498,
+        "false_alarm_rate": 0.0020927799093128706,
+        "relative_economic_value": -0.7654275413717063
+      },
+      {
+        "cost_loss_ratio": 0.08145479666433054,
+        "critical_prob": 0.9246803501028688,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.08375634517766498,
+        "false_alarm_rate": 0.0020927799093128706,
+        "relative_economic_value": -0.4220111526485103
+      },
+      {
+        "cost_loss_ratio": 0.09955047366910884,
+        "critical_prob": 0.9094625703384792,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.08375634517766498,
+        "false_alarm_rate": 0.0020927799093128706,
+        "relative_economic_value": -0.14101889732660702
+      },
+      {
+        "cost_loss_ratio": 0.12166621504910963,
+        "critical_prob": 0.8915308195818461,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.08375634517766498,
+        "false_alarm_rate": 0.0020927799093128706,
+        "relative_economic_value": 0.08164691362386062
+      },
+      {
+        "cost_loss_ratio": 0.14869510248216478,
+        "critical_prob": 0.8705530282484394,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.08375634517766498,
+        "false_alarm_rate": 0.0020927799093128706,
+        "relative_economic_value": 0.08109643751098924
+      },
+      {
+        "cost_loss_ratio": 0.18172862115630756,
+        "critical_prob": 0.8462179743277367,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.08375634517766498,
+        "false_alarm_rate": 0.0020927799093128706,
+        "relative_economic_value": 0.0803742875830012
+      },
+      {
+        "cost_loss_ratio": 0.22210073631264335,
+        "critical_prob": 0.8182631515444694,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.08375634517766498,
+        "false_alarm_rate": 0.0020927799093128706,
+        "relative_economic_value": 0.0794084239579063
+      },
+      {
+        "cost_loss_ratio": 0.2714417616594907,
+        "critical_prob": 0.7865086944248206,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.14467005076142134,
+        "false_alarm_rate": 0.003139169863969306,
+        "relative_economic_value": 0.13615948014945967
+      },
+      {
+        "cost_loss_ratio": 0.3317441949813717,
+        "critical_prob": 0.7508949569808245,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.21827411167512692,
+        "false_alarm_rate": 0.005231949773282176,
+        "relative_economic_value": 0.19937438039851998
+      },
+      {
+        "cost_loss_ratio": 0.4054431795277526,
+        "critical_prob": 0.711519337506062,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.21827411167512692,
+        "false_alarm_rate": 0.005231949773282176,
+        "relative_economic_value": 0.19231249873681353
+      },
+      {
+        "cost_loss_ratio": 0.49551484038719684,
+        "critical_prob": 0.6686660493058663,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.21827411167512692,
+        "false_alarm_rate": 0.005231949773282176,
+        "relative_economic_value": 0.18087999248674738
+      },
+      {
+        "cost_loss_ratio": 0.6055964668833264,
+        "critical_prob": 0.6228215000629214,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.21827411167512692,
+        "false_alarm_rate": 0.005231949773282176,
+        "relative_economic_value": 0.15981697040222315
+      },
+      {
+        "cost_loss_ratio": 0.7401333942188094,
+        "critical_prob": 0.5746685876624567,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.27664974619289345,
+        "false_alarm_rate": 0.010115102895012208,
+        "relative_economic_value": 0.06701594861976952
+      },
+      {
+        "cost_loss_ratio": 0.9045585157672229,
+        "critical_prob": 0.5250560650782446,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.27664974619289345,
+        "false_alarm_rate": 0.010115102895012208,
+        "relative_economic_value": -0.4209418789767068
+      },
+      {
+        "cost_loss_ratio": 1.1055116751090743,
+        "critical_prob": 0.4749439349217552,
+        "action_rate": 0.05765102729224164,
+        "hit_rate": 0.3654822335025381,
+        "false_alarm_rate": 0.015347052668294383,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 1.3511077973389827,
+        "critical_prob": 0.4253314123375433,
+        "action_rate": 0.07727690892364306,
+        "hit_rate": 0.43147208121827413,
+        "false_alarm_rate": 0.028601325427275896,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 1.6512645873686373,
+        "critical_prob": 0.37717849993707847,
+        "action_rate": 0.09230297454768475,
+        "hit_rate": 0.4720812182741117,
+        "false_alarm_rate": 0.040111614928496686,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 2.018103028394866,
+        "critical_prob": 0.3313339506941337,
+        "action_rate": 0.12020852499233364,
+        "hit_rate": 0.5634517766497461,
+        "false_alarm_rate": 0.05929543076386467,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 2.4664368535309165,
+        "critical_prob": 0.2884806624939378,
+        "action_rate": 0.12020852499233364,
+        "hit_rate": 0.5634517766497461,
+        "false_alarm_rate": 0.05929543076386467,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 3.014370756528697,
+        "critical_prob": 0.24910504301917522,
+        "action_rate": 0.14627414903403863,
+        "hit_rate": 0.6243654822335026,
+        "false_alarm_rate": 0.08057202650854552,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 3.6840314986403864,
+        "critical_prob": 0.21349130557517934,
+        "action_rate": 0.16712664826740264,
+        "hit_rate": 0.6802030456852791,
+        "false_alarm_rate": 0.09661667247994418,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 4.502461435302655,
+        "critical_prob": 0.18173684845553062,
+        "action_rate": 0.21067157313707452,
+        "hit_rate": 0.7715736040609137,
+        "false_alarm_rate": 0.13358911754447156,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 5.502710545191917,
+        "critical_prob": 0.1537820256722632,
+        "action_rate": 0.22999080036798528,
+        "hit_rate": 0.8045685279187818,
+        "false_alarm_rate": 0.15102895012207884,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 6.7251710601561046,
+        "critical_prob": 0.1294469717515605,
+        "action_rate": 0.25206991720331184,
+        "hit_rate": 0.8426395939086294,
+        "false_alarm_rate": 0.1709103592605511,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 8.219208591278669,
+        "critical_prob": 0.10846918041815386,
+        "action_rate": 0.25206991720331184,
+        "hit_rate": 0.8426395939086294,
+        "false_alarm_rate": 0.1709103592605511,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 10.045155619488595,
+        "critical_prob": 0.09053742966152081,
+        "action_rate": 0.28058877644894203,
+        "hit_rate": 0.8730964467005077,
+        "false_alarm_rate": 0.19916288803627485,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 12.276747852197456,
+        "critical_prob": 0.07531964989713112,
+        "action_rate": 0.3002146580803435,
+        "hit_rate": 0.8908629441624366,
+        "false_alarm_rate": 0.2190442971747471,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 15.004101831337087,
+        "critical_prob": 0.06248398132795768,
+        "action_rate": 0.35878564857405704,
+        "hit_rate": 0.9289340101522843,
+        "false_alarm_rate": 0.2804325078479247,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 18.337354035078384,
+        "critical_prob": 0.05171338323671264,
+        "action_rate": 0.3839313094142901,
+        "hit_rate": 0.9416243654822335,
+        "false_alarm_rate": 0.30728985001743986,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 22.41110842806374,
+        "critical_prob": 0.042714765218090395,
+        "action_rate": 0.3839313094142901,
+        "hit_rate": 0.9416243654822335,
+        "false_alarm_rate": 0.30728985001743986,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 27.38987206189277,
+        "critical_prob": 0.03522382904086005,
+        "action_rate": 0.4127568230604109,
+        "hit_rate": 0.9568527918781726,
+        "false_alarm_rate": 0.33798395535402864,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 33.47469822721615,
+        "critical_prob": 0.029006780375833634,
+        "action_rate": 0.5394050904630482,
+        "hit_rate": 0.9822335025380711,
+        "false_alarm_rate": 0.478549005929543,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 40.911305422350054,
+        "critical_prob": 0.023859910587913345,
+        "action_rate": 0.5697638761116222,
+        "hit_rate": 0.9873096446700508,
+        "false_alarm_rate": 0.5123822811301011,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 50.0,
+        "critical_prob": 0.0196078431372549,
+        "action_rate": 0.5697638761116222,
+        "hit_rate": 0.9873096446700508,
+        "false_alarm_rate": 0.5123822811301011,
+        "relative_economic_value": NaN
+      }
+    ]
+  },
+  {
+    "threshold": 16.5,
+    "horizon": 12,
+    "test_base_rate": 0.034958601655933765,
+    "curve": [
+      {
+        "cost_loss_ratio": 0.02,
+        "critical_prob": 0.9803921568627451,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -0.7750238322211631
+      },
+      {
+        "cost_loss_ratio": 0.02444312127604943,
+        "critical_prob": 0.9761400894120866,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -0.44578608774957146
+      },
+      {
+        "cost_loss_ratio": 0.029873308885782997,
+        "critical_prob": 0.9709932196241664,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": -0.1763951693367141
+      },
+      {
+        "cost_loss_ratio": 0.036509845600603934,
+        "critical_prob": 0.96477617095914,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.04462072918927006,
+        "critical_prob": 0.9572852347819097,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.05453349474995434,
+        "critical_prob": 0.9482866167632874,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.06664844128899693,
+        "critical_prob": 0.9375160186720423,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.08145479666433054,
+        "critical_prob": 0.9246803501028688,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.09955047366910884,
+        "critical_prob": 0.9094625703384792,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.12166621504910963,
+        "critical_prob": 0.8915308195818461,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.14869510248216478,
+        "critical_prob": 0.8705530282484394,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.18172862115630756,
+        "critical_prob": 0.8462179743277367,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.22210073631264335,
+        "critical_prob": 0.8182631515444694,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.2714417616594907,
+        "critical_prob": 0.7865086944248206,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.19298245614035087,
+        "false_alarm_rate": 0.005401970130282809,
+        "relative_economic_value": 0.1374231949718126
+      },
+      {
+        "cost_loss_ratio": 0.3317441949813717,
+        "critical_prob": 0.7508949569808245,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.19298245614035087,
+        "false_alarm_rate": 0.005401970130282809,
+        "relative_economic_value": 0.11895298240309171
+      },
+      {
+        "cost_loss_ratio": 0.4054431795277526,
+        "critical_prob": 0.711519337506062,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.19298245614035087,
+        "false_alarm_rate": 0.005401970130282809,
+        "relative_economic_value": 0.0912918810170624
+      },
+      {
+        "cost_loss_ratio": 0.49551484038719684,
+        "critical_prob": 0.6686660493058663,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.19298245614035087,
+        "false_alarm_rate": 0.005401970130282809,
+        "relative_economic_value": 0.046511222032885234
+      },
+      {
+        "cost_loss_ratio": 0.6055964668833264,
+        "critical_prob": 0.6228215000629214,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.19298245614035087,
+        "false_alarm_rate": 0.005401970130282809,
+        "relative_economic_value": -0.03599177324322175
+      },
+      {
+        "cost_loss_ratio": 0.7401333942188094,
+        "critical_prob": 0.5746685876624567,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.19298245614035087,
+        "false_alarm_rate": 0.005401970130282809,
+        "relative_economic_value": -0.23173840778729188
+      },
+      {
+        "cost_loss_ratio": 0.9045585157672229,
+        "critical_prob": 0.5250560650782446,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.3333333333333333,
+        "false_alarm_rate": 0.008897362567524627,
+        "relative_economic_value": -1.9945041769119882
+      },
+      {
+        "cost_loss_ratio": 1.1055116751090743,
+        "critical_prob": 0.4749439349217552,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.3333333333333333,
+        "false_alarm_rate": 0.008897362567524627,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 1.3511077973389827,
+        "critical_prob": 0.4253314123375433,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.3333333333333333,
+        "false_alarm_rate": 0.008897362567524627,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 1.6512645873686373,
+        "critical_prob": 0.37717849993707847,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.43859649122807015,
+        "false_alarm_rate": 0.01620591039084843,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 2.018103028394866,
+        "critical_prob": 0.3313339506941337,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.43859649122807015,
+        "false_alarm_rate": 0.01620591039084843,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 2.4664368535309165,
+        "critical_prob": 0.2884806624939378,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.43859649122807015,
+        "false_alarm_rate": 0.01620591039084843,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 3.014370756528697,
+        "critical_prob": 0.24910504301917522,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.43859649122807015,
+        "false_alarm_rate": 0.01620591039084843,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 3.6840314986403864,
+        "critical_prob": 0.21349130557517934,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.5,
+        "false_alarm_rate": 0.025738798856053385,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 4.502461435302655,
+        "critical_prob": 0.18173684845553062,
+        "action_rate": 0.05765102729224164,
+        "hit_rate": 0.5701754385964912,
+        "false_alarm_rate": 0.03908484270734033,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 5.502710545191917,
+        "critical_prob": 0.1537820256722632,
+        "action_rate": 0.07727690892364306,
+        "hit_rate": 0.6403508771929823,
+        "false_alarm_rate": 0.05687956784238958,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 6.7251710601561046,
+        "critical_prob": 0.1294469717515605,
+        "action_rate": 0.07727690892364306,
+        "hit_rate": 0.6403508771929823,
+        "false_alarm_rate": 0.05687956784238958,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 8.219208591278669,
+        "critical_prob": 0.10846918041815386,
+        "action_rate": 0.09230297454768475,
+        "hit_rate": 0.6578947368421052,
+        "false_alarm_rate": 0.07181442643787735,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 10.045155619488595,
+        "critical_prob": 0.09053742966152081,
+        "action_rate": 0.14627414903403863,
+        "hit_rate": 0.8070175438596491,
+        "false_alarm_rate": 0.12233873530346362,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 12.276747852197456,
+        "critical_prob": 0.07531964989713112,
+        "action_rate": 0.14627414903403863,
+        "hit_rate": 0.8070175438596491,
+        "false_alarm_rate": 0.12233873530346362,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 15.004101831337087,
+        "critical_prob": 0.06248398132795768,
+        "action_rate": 0.14627414903403863,
+        "hit_rate": 0.8070175438596491,
+        "false_alarm_rate": 0.12233873530346362,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 18.337354035078384,
+        "critical_prob": 0.05171338323671264,
+        "action_rate": 0.14627414903403863,
+        "hit_rate": 0.8070175438596491,
+        "false_alarm_rate": 0.12233873530346362,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 22.41110842806374,
+        "critical_prob": 0.042714765218090395,
+        "action_rate": 0.14627414903403863,
+        "hit_rate": 0.8070175438596491,
+        "false_alarm_rate": 0.12233873530346362,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 27.38987206189277,
+        "critical_prob": 0.03522382904086005,
+        "action_rate": 0.21067157313707452,
+        "hit_rate": 0.9035087719298245,
+        "false_alarm_rate": 0.1855735621226565,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 33.47469822721615,
+        "critical_prob": 0.029006780375833634,
+        "action_rate": 0.21067157313707452,
+        "hit_rate": 0.9035087719298245,
+        "false_alarm_rate": 0.1855735621226565,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 40.911305422350054,
+        "critical_prob": 0.023859910587913345,
+        "action_rate": 0.22999080036798528,
+        "hit_rate": 0.9298245614035087,
+        "false_alarm_rate": 0.20463933905306642,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 50.0,
+        "critical_prob": 0.0196078431372549,
+        "action_rate": 0.28058877644894203,
+        "hit_rate": 0.956140350877193,
+        "false_alarm_rate": 0.25611693676517316,
+        "relative_economic_value": NaN
+      }
+    ]
+  },
+  {
+    "threshold": 20.0,
+    "horizon": 12,
+    "test_base_rate": 0.007973014412756822,
+    "curve": [
+      {
+        "cost_loss_ratio": 0.02,
+        "critical_prob": 0.9803921568627451,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.02444312127604943,
+        "critical_prob": 0.9761400894120866,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.029873308885782997,
+        "critical_prob": 0.9709932196241664,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.036509845600603934,
+        "critical_prob": 0.96477617095914,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.04462072918927006,
+        "critical_prob": 0.9572852347819097,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.05453349474995434,
+        "critical_prob": 0.9482866167632874,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.06664844128899693,
+        "critical_prob": 0.9375160186720423,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.08145479666433054,
+        "critical_prob": 0.9246803501028688,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.09955047366910884,
+        "critical_prob": 0.9094625703384792,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.12166621504910963,
+        "critical_prob": 0.8915308195818461,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.14869510248216478,
+        "critical_prob": 0.8705530282484394,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.18172862115630756,
+        "critical_prob": 0.8462179743277367,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.22210073631264335,
+        "critical_prob": 0.8182631515444694,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.2714417616594907,
+        "critical_prob": 0.7865086944248206,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.3317441949813717,
+        "critical_prob": 0.7508949569808245,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.4054431795277526,
+        "critical_prob": 0.711519337506062,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.49551484038719684,
+        "critical_prob": 0.6686660493058663,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.6055964668833264,
+        "critical_prob": 0.6228215000629214,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.7401333942188094,
+        "critical_prob": 0.5746685876624567,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 0.9045585157672229,
+        "critical_prob": 0.5250560650782446,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": 0.0
+      },
+      {
+        "cost_loss_ratio": 1.1055116751090743,
+        "critical_prob": 0.4749439349217552,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 1.3511077973389827,
+        "critical_prob": 0.4253314123375433,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 1.6512645873686373,
+        "critical_prob": 0.37717849993707847,
+        "action_rate": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 2.018103028394866,
+        "critical_prob": 0.3313339506941337,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.5384615384615385,
+        "false_alarm_rate": 0.007727975270479134,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 2.4664368535309165,
+        "critical_prob": 0.2884806624939378,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.5384615384615385,
+        "false_alarm_rate": 0.007727975270479134,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 3.014370756528697,
+        "critical_prob": 0.24910504301917522,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.5384615384615385,
+        "false_alarm_rate": 0.007727975270479134,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 3.6840314986403864,
+        "critical_prob": 0.21349130557517934,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.5384615384615385,
+        "false_alarm_rate": 0.007727975270479134,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 4.502461435302655,
+        "critical_prob": 0.18173684845553062,
+        "action_rate": 0.011959521619135235,
+        "hit_rate": 0.5384615384615385,
+        "false_alarm_rate": 0.007727975270479134,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 5.502710545191917,
+        "critical_prob": 0.1537820256722632,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.8076923076923078,
+        "false_alarm_rate": 0.013910355486862442,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 6.7251710601561046,
+        "critical_prob": 0.1294469717515605,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.8076923076923078,
+        "false_alarm_rate": 0.013910355486862442,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 8.219208591278669,
+        "critical_prob": 0.10846918041815386,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.8076923076923078,
+        "false_alarm_rate": 0.013910355486862442,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 10.045155619488595,
+        "critical_prob": 0.09053742966152081,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.8076923076923078,
+        "false_alarm_rate": 0.013910355486862442,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 12.276747852197456,
+        "critical_prob": 0.07531964989713112,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.8076923076923078,
+        "false_alarm_rate": 0.013910355486862442,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 15.004101831337087,
+        "critical_prob": 0.06248398132795768,
+        "action_rate": 0.020239190432382703,
+        "hit_rate": 0.8076923076923078,
+        "false_alarm_rate": 0.013910355486862442,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 18.337354035078384,
+        "critical_prob": 0.05171338323671264,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.8461538461538463,
+        "false_alarm_rate": 0.024420401854714065,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 22.41110842806374,
+        "critical_prob": 0.042714765218090395,
+        "action_rate": 0.03097209444955535,
+        "hit_rate": 0.8461538461538463,
+        "false_alarm_rate": 0.024420401854714065,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 27.38987206189277,
+        "critical_prob": 0.03522382904086005,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.8846153846153847,
+        "false_alarm_rate": 0.035548686244204014,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 33.47469822721615,
+        "critical_prob": 0.029006780375833634,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.8846153846153847,
+        "false_alarm_rate": 0.035548686244204014,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 40.911305422350054,
+        "critical_prob": 0.023859910587913345,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.8846153846153847,
+        "false_alarm_rate": 0.035548686244204014,
+        "relative_economic_value": NaN
+      },
+      {
+        "cost_loss_ratio": 50.0,
+        "critical_prob": 0.0196078431372549,
+        "action_rate": 0.04231830726770929,
+        "hit_rate": 0.8846153846153847,
+        "false_alarm_rate": 0.035548686244204014,
+        "relative_economic_value": NaN
+      }
+    ]
+  }
+]

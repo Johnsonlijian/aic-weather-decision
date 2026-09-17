@@ -1,0 +1,569 @@
+{
+  "schema_version": "G2_operation_contract_spec/1.0",
+  "as_of": "2026-09-15",
+  "project": "AiC_Weather_Decision_Project_v1",
+  "purpose": "Machine-readable, citation-backed weather operation contract for two weather-sensitive construction operations, so an hour-by-hour simulation can decide whether a work task may START and may CONTINUE.",
+  "provenance_tag_vocabulary": {
+    "DOCUMENTED_LIMIT": "A numeric threshold read verbatim in a source that was actually fetched. locator is mandatory.",
+    "DOCUMENTED_LIMIT_OUR_ARITHMETIC": "A numeric threshold obtained by arithmetic on two or more documented values. The derivation is stated and the two parent values are each DOCUMENTED_LIMIT.",
+    "DOCUMENTED_PROCEDURE": "A documented requirement or duty that contains no number (e.g. a delegation to the manufacturer). Never read a number out of such a field.",
+    "DOCUMENTED_LIMIT_RECOMMENDATION": "A numeric value that is a documented industry recommendation rather than a standard clause or a manufacturer rating.",
+    "ASSUMED": "Our modelling assumption. No source supports the number. sensitivity_range is mandatory.",
+    "NOT_ESTABLISHED": "The source is silent; no value may be used without declaring it ASSUMED.",
+    "NOT_OBTAINABLE": "The rule exists in a source but the numeric boundary could not be obtained in readable form."
+  },
+  "hard_rules": [
+    "No field tagged DOCUMENTED_* may be changed without re-reading the cited locator.",
+    "No field tagged ASSUMED may appear in a manuscript sentence as an engineering fact.",
+    "OUT_OF_SERVICE thresholds are physically distinct from in-service thresholds and MUST NOT authorise a work start.",
+    "A forecast gust field is not a 10-minute mean; the two are separate variables in the code and must never be silently equated."
+  ],
+  "operations": [
+    {
+      "operation_id": "OP01_tower_crane_segment_lift",
+      "label": "Tower-crane lifting and placement of a precast concrete deck segment",
+      "why_chosen": "This is the project's original weak gate. It is now supported by a primary manufacturer manual (S23) for the numeric limit, by a UK industry recommendation (S24) as a conservative alternative, and by two jurisdictions (S25 Germany, S26 USA) documenting that the numeric limit is delegated to the manufacturer rather than fixed by code. That combination lets the contract state a real start/continuation rule instead of reusing the HS2 11.1/20 m/s media figures.",
+      "resource_scope": {
+        "primary_resource": "tower crane",
+        "held_during_work": true,
+        "secondary_resources": ["lifting crew", "segment supply / transport"],
+        "exclusive_load_zone": "ASSUMED: ground area under the jib is exclusive during the lift"
+      },
+      "governing_variable": {
+        "name": "wind_speed_at_crane_anemometer",
+        "unit": "m/s",
+        "measurement_height_reference": {
+          "value": "crane-mounted anemoscope (required when working height > 50 m; manual does not state the sensor height above ground)",
+          "tag": "DOCUMENTED_PROCEDURE",
+          "locator": "S23 Yongmao STT293 manual Sec. 3.4.1(h) and Sec. 10.7; sensor height NOT_ESTABLISHED"
+        },
+        "averaging_interval": {
+          "value": "NOT_ESTABLISHED_IN_SOURCE",
+          "tag": "NOT_ESTABLISHED",
+          "note": "The manufacturer manual and both regulations state a magnitude without an averaging period. WMO CIMO Guide (S29) documents that the standard averaged wind quantity is a 10-minute mean and that the 3-second peak gust is a distinct variable, but no crane source seen adopts either explicitly."
+        }
+      },
+      "phases": [
+        {
+          "phase_id": "MAIN_LIFT",
+          "description": "in-service lifting and travelling of the suspended segment",
+          "start_rule": {
+            "expression": "wind <= start_limit",
+            "start_limit": 20.0,
+            "unit": "m/s",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S23 Yongmao STT293 Operation & Service Manual, Ch. 2.1 item 4",
+            "verbatim": "the max. wind speed for operating is 20m/s"
+          },
+          "continuation_rule": {
+            "expression": "wind <= continuation_limit; no re-application of the start rule to an operation already in progress",
+            "continuation_limit": 20.0,
+            "unit": "m/s",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S23 same clause; S23 Sec. 3.4.1(h) 'If the wind speed exceeds 20 m/s ... then the tower crane must stop working'",
+            "state_asymmetry": false,
+            "state_asymmetry_note": "This operation has NO start/continue asymmetry: the manufacturer gives one limit. The HS2 11.1/20 m/s asymmetry is retained only as motivation (HS2_segment_installation_BASELINE_ONLY)."
+          },
+          "conservative_alternative_limit": {
+            "value": 16.5,
+            "unit": "m/s",
+            "tag": "DOCUMENTED_LIMIT_RECOMMENDATION",
+            "locator": "S24 CPA TIN 101 Issue A (04.12.09) p.1, UK tower-crane industry recommendation produced with tower crane suppliers, major contractors and HSE"
+          },
+          "tracking_and_stop_rule": {
+            "observable": "continuous crane anemometer reading, in the operator's view",
+            "stop_trigger": "wind reaches the continuation limit (20 m/s per S23; 16.5 m/s if the conservative variant is active)",
+            "early_action_duty": {
+              "value": "the operator must monitor wind constantly and take the crane out of service BEFORE the limiting wind speed is reached",
+              "tag": "DOCUMENTED_PROCEDURE",
+              "locator": "S24 CPA TIN 101 p.2 'It is important that the operator monitors the wind speed constantly ... to take the mobile crane out of service before the limiting wind speed is reached'"
+            },
+            "stop_margin": {
+              "value": 0.0,
+              "unit": "m/s",
+              "tag": "ASSUMED",
+              "justification": "S24 documents a duty to act early but gives no numeric margin. A zero margin is the conservative default; any non-zero margin is a swept parameter.",
+              "sensitivity_range": [0.0, 1.0, 2.0]
+            },
+            "no_start_in_rising_wind": {
+              "value": "lifts are not to be started in rising winds",
+              "tag": "DOCUMENTED_PROCEDURE",
+              "locator": "S24 CPA TIN 101 p.2 'to ensure that lifts are not started in rising winds'"
+            }
+          },
+          "required_uninterrupted_duration": {
+            "value": null,
+            "unit": "hours",
+            "tag": "NOT_ESTABLISHED",
+            "justification": "No source seen gives the duration of one segmental lift cycle. This is the single largest remaining gap for OP01.",
+            "sensitivity_parameter": "lift_cycle_duration_h",
+            "sensitivity_range": [0.5, 1.0, 2.0, 4.0]
+          },
+          "interruption_permitted": true,
+          "interruption_conditions": "An interruption is physically permitted, but only after the suspended load has been set down; S23 gives no instruction for a load already in the air.",
+          "failure_response": {
+            "value": "at the limit the anemoscope raises audible and visual alarm and the crane must stop working",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S23 Sec. 3.4.1(h); Sec. 3.4.2 special notice; Sec. 10.7.3.2"
+          },
+          "safe_terminal_state": {
+            "description": "Load landed and released, hook raised to the top, trolley driven to the jib foot, weathervane effect engaged so the jib slews freely, power off, rain measures applied; a travelling crane additionally anchored on 4 rail clamps.",
+            "tag": "DOCUMENTED_PROCEDURE",
+            "locator": "S23 Sec. 3.4.3 a-c; corroborated in a second jurisdiction by S25 DGUV Vorschrift 52 Sec. 30(6)2 and Sec. 30(6)1",
+            "simulation_meaning": "The task returns to NOT_STARTED with no partial credit; the crane is released from the work face."
+          },
+          "resource_hold_during_pause": {
+            "value": true,
+            "tag": "ASSUMED",
+            "justification": "No source states whether the crew stands by or is redeployed. Holding the crew is the conservative assumption for a schedule experiment.",
+            "sensitivity_parameter": "hold_crew_during_wind_pause",
+            "sensitivity_values": [true, false]
+          },
+          "recovery_duration": {
+            "value": 0.0,
+            "unit": "hours",
+            "tag": "ASSUMED",
+            "justification": "No source documents a restart delay after a wind stop. Zero is the optimistic default and must be swept.",
+            "sensitivity_parameter": "lift_restart_delay_h",
+            "sensitivity_range": [0.0, 0.5, 1.0, 2.0]
+          }
+        },
+        {
+          "phase_id": "POSITION_AND_RELEASE_CLAMPS",
+          "description": "precision slewing / slewing-brake use and rail-clamp release",
+          "start_rule": {
+            "expression": "wind <= 13",
+            "start_limit": 13.0,
+            "unit": "m/s",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S23 Sec. 2.4 item 1(c) '(wind speed <=13m/s)' for releasing rail clamps; Sec. 10.7.3.2 'Set the limit value to 13 when it hoisting'; Sec. 10.7.4.1 'W1 - 13m/s limit alarm set'"
+          },
+          "continuation_rule": {
+            "expression": "wind <= 13; above 13 m/s the slewing brake must be released and the jib allowed to weathervane",
+            "continuation_limit": 13.0,
+            "unit": "m/s",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S23 Sec. 3.4.1(c) and Sec. 10.7.3.2"
+          },
+          "note": "This is a crane-FUNCTION limit, not a second stop-work threshold. It must not be presented as contradicting the 20 m/s in-service limit."
+        },
+        {
+          "phase_id": "OUT_OF_SERVICE",
+          "description": "parked crane between shifts and during storms",
+          "out_of_service_limit": {
+            "value": 50.0,
+            "unit": "m/s",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S23 Ch. 2.1 item 4 'the max. wind speed out of service is 50m/s'"
+          },
+          "design_in_service_limit_for_comparison": {
+            "value": 20.0,
+            "unit": "m/s",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S24 CPA TIN 101 p.1 'Tower cranes, by comparison, normally have a maximum in-service design wind speed of 45 mph (20 m/s, 72kph)'"
+          },
+          "securing_duty": {
+            "value": "secure the crane in good time, at the latest on reaching the crane-critical wind speed and at the end of work",
+            "tag": "DOCUMENTED_PROCEDURE",
+            "locator": "S25 DGUV Vorschrift 52 Sec. 30(6)1"
+          },
+          "code_hard_constraint": false,
+          "authorises_work_start": false,
+          "simulation_meaning": "A boolean feasibility state for the crane asset, never an input to a start decision."
+        }
+      ],
+      "reviewer_attack_risk": {
+        "severity": "HIGH",
+        "attack": "20 m/s comes from one crane model's manual, and neither that manual nor either regulation states the averaging interval or the sensor height. A reviewer can therefore argue the project compares a forecast gust field against an unknown reference quantity, so the whole G2 gate is still open.",
+        "mitigation": [
+          "Carry averaging_interval as an explicit NOT_ESTABLISHED field and sweep it as a model parameter rather than asserting a value.",
+          "Run the main experiment at both 20 m/s (manufacturer) and 16.5 m/s (UK industry recommendation, S24) so the threshold is swept, not asserted.",
+          "Never describe 20 m/s as a code requirement: S25 and S26 both document that the numeric limit is delegated to the manufacturer.",
+          "Report the wind-speed-measurement mismatch (S29 WMO definitions vs project GFS GUST semantics) as a stated limitation."
+        ]
+      }
+    },
+    {
+      "operation_id": "OP02_segmental_epoxy_jointing",
+      "label": "Match-cast precast segment epoxy jointing (material-cure operation)",
+      "why_chosen": "This is the project's second operation and the one that actually closes the harder half of G2. It is the only operation found whose full contract is published: a numeric start window, a numeric non-preemptive duration, a documented interruption prohibition, a documented 24-hour recovery, a documented resource hold and a documented safe terminal state. It also binds the simulation's continuous-work model to a real material constraint rather than to a fabricated lift duration.",
+      "resource_scope": {
+        "primary_resource": "erection equipment providing joint contact pressure",
+        "held_during_work": true,
+        "secondary_resources": ["epoxy mixing crew", "artificial heating plant (cold-weather variant only)"],
+        "hold_is_documented": true
+      },
+      "governing_variables": [
+        {
+          "name": "substrate_temperature",
+          "unit": "degF",
+          "measurement_location": "concrete mating surfaces of the joint (NOT air temperature)",
+          "start_rule": {
+            "expression": "40 <= substrate_temperature <= 115",
+            "lower_limit": 40.0,
+            "upper_limit": 115.0,
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S27 VDOT IIM-S&B-91 Sec. 453-5.3 'Apply the epoxy bonding agent only when the substrate temperature of both surfaces to be joined is between 40 degrees F and 115 degrees F'",
+            "hot_weather_stop": {
+              "expression": "substrate_temperature > 115 -> do not proceed",
+              "tag": "DOCUMENTED_LIMIT",
+              "locator": "S27 Sec. 453-5.7.1"
+            }
+          },
+          "continuation_rule": {
+            "expression": "the band must hold from application through the contact-pressure window and, in the artificially heated case, for 24 hours after joining",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S27 Sec. 453-5.7.2 item 4"
+          },
+          "sensitivity_parameter": "substrate_temp_lower_bound_degF",
+          "sensitivity_range": [35.0, 40.0, 45.0]
+        },
+        {
+          "name": "elapsed_time_mix_to_contact_pressure",
+          "unit": "minutes",
+          "start_rule": {
+            "expression": "elapsed <= 42",
+            "limit": 42.0,
+            "tag": "DOCUMENTED_LIMIT_OUR_ARITHMETIC",
+            "derivation": "70% x 60 minutes minimum open time = 42 minutes",
+            "parent_values": [
+              {
+                "value": "Normal-Set Epoxy 60 minutes, minimum",
+                "tag": "DOCUMENTED_LIMIT",
+                "locator": "S27 VDOT IIM-S&B-91 Sec. 453-4.5.2 contact time (open time)"
+              },
+              {
+                "value": "does not exceed 70% of the open time for the particular formulation",
+                "tag": "DOCUMENTED_LIMIT",
+                "locator": "S27 Sec. 453-5.1 and Sec. 453-5.6"
+              }
+            ],
+            "slow_set_variant": {
+              "open_time_minimum_hours": 6.0,
+              "usable_window_hours": 4.2,
+              "tag": "DOCUMENTED_LIMIT_OUR_ARITHMETIC",
+              "locator": "S27 Sec. 453-4.5.2 slow-set 6 hours minimum combined with the 70% rule in Sec. 453-5.1"
+            },
+            "separate_application_limit": {
+              "value": "the material in a batch must be applied to the joint face within a maximum of 20 minutes after combining the components",
+              "tag": "DOCUMENTED_LIMIT",
+              "locator": "S27 Sec. 453-5.4"
+            }
+          },
+          "continuation_rule": {
+            "expression": "the window is non-preemptive: once mixing starts the joint must be completed, or the segments separated and cleaned",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S27 Sec. 453-5.6 and Sec. 453-5.8"
+          },
+          "sensitivity_parameter": "epoxy_open_window_min",
+          "sensitivity_range": [30.0, 42.0, 60.0],
+          "sensitivity_note": "Only 60 minutes (documented) and 42 minutes (our arithmetic) are defensible. 30 minutes exists solely to test how much the result depends on the window."
+        }
+      ],
+      "phases": [
+        {
+          "phase_id": "JOINT_PREP",
+          "description": "surface cleanliness and dryness check before mixing",
+          "start_rule": {
+            "expression": "surfaces free of oil, release agent, laitance; no free moisture (a dry rag wiped over the surface must not become damp)",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S27 Sec. 453-5.2"
+          },
+          "duration": {"value": null, "unit": "hours", "tag": "NOT_ESTABLISHED"}
+        },
+        {
+          "phase_id": "JOINT_MAKE",
+          "description": "mix, apply, bring segments together, apply contact pressure",
+          "start_rule": {
+            "expression": "substrate in band AND surfaces dry AND segments within approximately 18 inches of final position",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S27 Sec. 453-5.4 'Do not mix until the segments to be joined are within approximately 18 inches of their final position'"
+          },
+          "required_uninterrupted_duration": {
+            "value": 42.0,
+            "unit": "minutes",
+            "tag": "DOCUMENTED_LIMIT_OUR_ARITHMETIC",
+            "derivation": "70% x 60-minute minimum normal-set open time",
+            "locator": "S27 Sec. 453-4.5.2 plus Sec. 453-5.1 / Sec. 453-5.6"
+          },
+          "interruption_permitted": false,
+          "interruption_note": "Contact pressure must not be reduced until the epoxy has properly hardened and cured, and if it is reduced the joint must not be subjected to tensile stress.",
+          "contact_pressure": {
+            "value": "approximately 40 psi, applied uniformly, maintained through the curing period",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S27 Sec. 453-5.1 and Sec. 453-5.6"
+          }
+        },
+        {
+          "phase_id": "POST_JOIN_CURE_HOLD",
+          "description": "temperature-controlled hold after joining (artificially heated cold-weather route)",
+          "required_uninterrupted_duration": {
+            "value": 24.0,
+            "unit": "hours",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S27 VDOT IIM-S&B-91 Sec. 453-5.7.2 item 4 'Maintain the temperature of the substrate surfaces between 40 degrees F and 95 degrees F for at least 24 hours after joining the surfaces'"
+          },
+          "hold_band": {
+            "lower": 40.0,
+            "upper": 95.0,
+            "unit": "degF",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S27 Sec. 453-5.7.2 items 2-3"
+          },
+          "air_temperature_gate": {
+            "value": "epoxy jointing operations may proceed if the air temperature is above 45 degrees F and rising",
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S27 Sec. 453-5.7.2 closing sentence"
+          },
+          "resource_hold_during_pause": {
+            "value": true,
+            "tag": "DOCUMENTED_LIMIT",
+            "locator": "S27 Sec. 453-5.6 'Do not reduce the contact pressure until the epoxy in the joint has properly hardened and cured'"
+          },
+          "sensitivity_parameter": "post_join_hold_h",
+          "sensitivity_range": [12.0, 24.0, 36.0],
+          "sensitivity_note": "Only 24 hours is documented; 12 and 36 hours are stress-test values."
+        }
+      ],
+      "failure_response": {
+        "value": "separate the segments and remove all epoxy from the faces with spatulas and approved solvent",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S27 Sec. 453-5.8"
+      },
+      "recovery_duration": {
+        "value": 24.0,
+        "unit": "hours",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S27 Sec. 453-5.8 'Do not re-apply epoxy until the faces have been properly cleaned and solvents dispersed, for a period of 24 hours'"
+      },
+      "safe_terminal_state": {
+        "description": "Joint filled, a discernible bead of extruded epoxy along the exposed joint edges, contact pressure maintained until cure, internal post-tensioning ducts swabbed.",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S27 Sec. 453-5.6 and Sec. 453-5.1",
+        "simulation_meaning": "Completion is a physical joint state, not a timer expiry; a joint that fails the window returns the task to NOT_STARTED after the 24-hour recovery."
+      },
+      "reviewer_attack_risk": {
+        "severity": "MEDIUM-LOW",
+        "attack": "VDOT IIM-S&B-91 is one US state owner's specification incorporating FDOT Specifications 452 and 453, not a national or international standard, and the specific project erection manual is not public.",
+        "mitigation": [
+          "Cite locators precisely at clause level so a reviewer can verify each number.",
+          "Print both documented parents (60-minute open time; 70% rule) next to the derived 42 minutes and label the derived value as our arithmetic.",
+          "State that the project erection manual, not this IIM, governs on a real site.",
+          "Cross-reference the independent 5 degrees C (41 degrees F) lower bound in GB 50666-2011 Sec. 8.1.2 (S28) to show the lower bound is not an outlier."
+        ]
+      }
+    }
+  ],
+  "secondary_operation_for_material_reference": {
+    "operation_id": "OP03_concrete_placement_delivery",
+    "label": "Concrete placing and delivery (hot, cold and rain weather regimes)",
+    "status": "REPORTED AS EVIDENCE, NOT PROPOSED AS A SIMULATED OPERATION",
+    "reason": "The governing quantity is measured inside the material (mixture temperature at placing), which no weather forecast can supply. Only the multi-day ambient regime trigger is ex-ante forecastable.",
+    "documented_limits": [
+      {
+        "name": "concrete_mixture_temperature_at_placing",
+        "lower": 5.0,
+        "upper": 35.0,
+        "unit": "degC",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S28 GB 50666-2011 Sec. 8.1.2 '混凝土拌合物入模温度不应低于5℃，且不应高于35℃', invoked again by Sec. 10.3.5",
+        "forecastable": false
+      },
+      {
+        "name": "concrete_mixture_discharge_temperature_winter",
+        "value": 10.0,
+        "unit": "degC",
+        "note": "should not be below; for ready-mixed or long-haul concrete it should not be below 15 degrees C",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S28 GB 50666-2011 Sec. 10.2.7"
+      },
+      {
+        "name": "winter_construction_trigger",
+        "value": "outdoor daily mean air temperature steadily below 5 degrees C for 5 consecutive days",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S28 GB 50666-2011 Sec. 10.1.1",
+        "forecastable": true,
+        "hysteresis": "the regime is left when the daily mean is steadily above 5 degrees C for 5 consecutive days",
+        "sensitivity_parameter": "winter_trigger_days_and_temp",
+        "sensitivity_range": {"days": [3, 5, 7], "degC": [3.0, 5.0, 7.0]}
+      },
+      {
+        "name": "hot_weather_construction_trigger",
+        "value": "outdoor daily mean air temperature at or above 30 degrees C",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S28 GB 50666-2011 Sec. 10.1.2",
+        "forecastable": true
+      },
+      {
+        "name": "rain_gate",
+        "value": "light/moderate rain: open-air placing should not proceed and large-area open-air placing shall not start; heavy rain or rainstorm: open-air placing shall not proceed",
+        "tag": "NOT_OBTAINABLE",
+        "locator": "S28 GB 50666-2011 Sec. 10.4.4",
+        "gap": "The code uses the Chinese rainfall categories (小雨/中雨/大雨/暴雨) and publishes NO mm/h boundary in this clause. No rainfall-intensity standard was obtained in readable form, so no mm/h number may be used without declaring it ASSUMED.",
+        "action": "Keep this gate categorical. Do not invent a mm/h threshold."
+      },
+      {
+        "name": "striking_surface_to_ambient_difference",
+        "value": 20.0,
+        "unit": "degC",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S28 GB 50666-2011 Sec. 10.2.16; related criteria in Sec. 10.2.15 item 1 and Sec. 10.2.10 (2 degrees C layer floor)"
+      }
+    ]
+  },
+  "measurement_semantics": {
+    "critical_statement": "A numerical weather prediction gust field is not a 10-minute mean wind speed. The project must not silently compare them.",
+    "evidence": [
+      {
+        "fact": "The standard averaged wind quantity is an average over 10 to 60 minutes; the CIMO Guide deals mainly with 10-minute averages as used for forecasting purposes, and states that averaging periods shorter than a few minutes should be described as long gusts.",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S29 WMO CIMO Guide Part I Chapter 5, Sec. 5.1.1"
+      },
+      {
+        "fact": "The standard synoptic reporting average is 10 minutes.",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S29 WMO CIMO Guide Sec. 5.1.2 'should represent an average over 10 min'"
+      },
+      {
+        "fact": "The 3-second peak gust is a separate routine variable, and gust duration is defined by the response of the measuring system.",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S29 WMO CIMO Guide Sec. 5.1.3 and Sec. 5.8.2"
+      },
+      {
+        "fact": "The project's KNMI FX column is the maximum wind speed during the preceding hour, not an instantaneous gust; its own metadata carries the warning 'FX is preceding-hour maximum, not instantaneous launch-time gust'.",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "project file data/raw/knmi_260_20250101_07.txt.metadata.json, field warning"
+      },
+      {
+        "fact": "The project's GFS GUST field is decoded with GRIB_COMMENT 'Wind speed (gust) [m/s]', GRIB_ELEMENT GUST, PDT 0 at the surface; the project metadata records temporal_support 'instantaneous forecast; not the KNMI preceding-hour maximum'.",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "project file data/raw/gfs_pilot/gfs_20250111_06_f006_gust.grib2.metadata.json"
+      },
+      {
+        "fact": "The Chinese national lifting code requires tall outdoor cranes to carry a wind alarm that DISPLAYS the INSTANTANEOUS wind speed (瞬时风速), alarming when the working-state design wind speed is exceeded.",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S39 GB 6067.1-2010 Sec. 9.6.1.2; anemometer mounting position in Sec. 9.6.1.1"
+      },
+      {
+        "fact": "The only published averaging window found anywhere in the lifting chain is the mean gust speed over a 3-second interval (3 s时距内的平均阵风速度) specified for a tower-crane anemometer. This appears in a DRAFT FOR COMMENT ONLY and is NOT in force.",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S42 GB 6067.3-202X draft Sec. 10.3.3 — DRAFT, NOT BINDING, must never be cited as a code requirement"
+      },
+      {
+        "fact": "One Chinese wind stop rule IS mean-based: the work-at-height code stops open-air climbing and suspended work from Beaufort force 6, and the code's own commentary converts force 6 to 'wind speed exceeding 10.8 m/s to 13.8 m/s'. Beaufort force is defined on a MEAN wind speed.",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S40 JGJ 80-2016 Sec. 3.0.8 and its tiaowen shuoming; the mean-wind definition of Beaufort force is in S30 Met Office table"
+      },
+      {
+        "fact": "Chinese tower-crane and general lifting codes state the wind limit against a HEIGHT (最大高度处 / 起重机械最高处), which no manufacturer manual or European/UK source in this contract does.",
+        "tag": "DOCUMENTED_LIMIT",
+        "locator": "S35 GB 55034-2022 Sec. 3.4.7; S37 JGJ 196-2010 Sec. 3.4.8"
+      }
+    ],
+    "averaging_interval_conclusion": {
+      "status": "RESOLVED_IN_THE_NEGATIVE",
+      "statement": "Across four crane-wind code/manual families examined (CN code chain, DE regulation, US regulation, one manufacturer manual plus one UK trade note), NOT ONE states the averaging interval of the limit VALUE. What the Chinese chain does document is that the governing annunciated quantity is INSTANTANEOUS (S39), that the only printed window anywhere is a 3-second mean gust in an unenforced draft (S42), and that the one mean-based rule is a Beaufort-force work-at-height stop (S40), not a crane rating.",
+      "consequence": "Three of the four families imply or state a SHORT-duration quantity and none states a 10-minute mean. This materially strengthens the conservative default of treating the forecast gust as the governing quantity, but it does NOT prove that a gust limit is correct, and it must be reported as inference rather than as a documented equivalence.",
+      "do_not_claim": "Do not write that any code specifies a 3-second gust limit for cranes. S42 is a draft; S39 specifies an instantaneous DISPLAY, not the averaging window of the limit."
+    },
+    "consequences_for_the_contract": [
+      "The contract compares a forecast GUST field against a manufacturer wind limit whose averaging interval is NOT_ESTABLISHED. This must be stated as a measurement mismatch, not resolved by assumption.",
+      "The GFS-to-limited-quantity mapping is a calibration problem: the project must fit and report a mapping (e.g. GFS gust to KNMI FX-class preceding-hour maximum) and carry its residual into the decision, rather than subtracting the two fields and calling the difference a standard error.",
+      "Because the crane limit has no published averaging interval, the safest defensible reading is the conservative one: treat the forecast gust as if it were the governing quantity and sweep the interval as a parameter.",
+      "Wind speed increases with height. S24 documents a forecast height correction table (10 m reference height, multiplier 1.00 at 10 m rising to 1.39 at 100 m in open countryside). If the limit is measured at jib height and the forecast is at 10 m, the contract must apply a documented height correction and expose the terrain class as a sensitivity parameter.",
+      "Height-correction sensitivity parameter: height_correction_multiplier, sensitivity range [1.00, 1.10, 1.26, 1.39] taken from S24's table for 10 / 20 / 50 / 100 m."
+    ]
+  },
+  "sensitivity_parameters_register": [
+    {"parameter": "in_service_wind_limit_ms", "baseline": 20.0, "range": [12.0, 16.5, 20.0], "tag": "DOCUMENTED_LIMIT", "why": "cross-jurisdiction spread: 12.0 m/s Chinese industry code (S36 Sec. 4.1.15), 16.5 m/s UK industry recommendation (S24), 20 m/s manufacturer rating (S23)"},
+    {"parameter": "crane_install_dismantle_wind_limit_ms", "baseline": 9.0, "range": [9.0, 12.0, 13.0], "tag": "DOCUMENTED_LIMIT", "why": "9.0 m/s is the full-text mandatory Chinese code value (S35 GB 55034-2022 Sec. 3.4.7); 12.0 (S37 JGJ 196-2010 Sec. 4.0.9) and 13.0 (S38 GB 5144-2006 Sec. 10.2) are the superseded values"},
+    {"parameter": "wind_stop_margin_ms", "baseline": 0.0, "range": [0.0, 1.0, 2.0], "tag": "ASSUMED", "why": "S24 documents a duty to act early but gives no number"},
+    {"parameter": "lift_cycle_duration_h", "baseline": 1.0, "range": [0.5, 1.0, 2.0, 4.0], "tag": "ASSUMED", "why": "no published segmental lift cycle duration was found"},
+    {"parameter": "lift_restart_delay_h", "baseline": 0.0, "range": [0.0, 0.5, 1.0, 2.0], "tag": "ASSUMED", "why": "no documented restart delay"},
+    {"parameter": "hold_crew_during_wind_pause", "baseline": true, "values": [true, false], "tag": "ASSUMED", "why": "conservative resource treatment"},
+    {"parameter": "epoxy_open_window_min", "baseline": 42.0, "range": [30.0, 42.0, 60.0], "tag": "DOCUMENTED_LIMIT_OUR_ARITHMETIC", "why": "60 min documented, 70% rule documented, 42 min is the product"},
+    {"parameter": "post_join_hold_h", "baseline": 24.0, "range": [12.0, 24.0, 36.0], "tag": "DOCUMENTED_LIMIT", "why": "24 h documented; other values are stress tests"},
+    {"parameter": "substrate_temp_lower_bound_degF", "baseline": 40.0, "range": [35.0, 40.0, 45.0], "tag": "DOCUMENTED_LIMIT", "why": "40 F documented in S27; cross-checked by 5 C in S28 Sec. 8.1.2 for a different operation"},
+    {"parameter": "avg_interval_treatment", "baseline": "gust_as_governing", "values": ["gust_as_governing", "10min_mean_proxy", "interval_unknown_swept"], "tag": "ASSUMED", "why": "no crane source states the averaging interval"},
+    {"parameter": "height_correction_multiplier", "baseline": 1.10, "range": [1.00, 1.10, 1.26, 1.39], "tag": "DOCUMENTED_LIMIT", "why": "S24 p.2 table for 10 / 20 / 50 / 100 m in open countryside"},
+    {"parameter": "winter_trigger_persistence_days", "baseline": 5, "range": [3, 5, 7], "tag": "DOCUMENTED_LIMIT", "why": "5 days documented in S28 Sec. 10.1.1"},
+    {"parameter": "gfs_gust_to_observed_mapping", "baseline": "fitted_on_train_split_only", "values": ["identity", "fitted_on_train_split_only", "quantile_mapped"], "tag": "ASSUMED", "why": "the mapping is a research contribution, not a documented relation"}
+  ],
+  "residual_risk_list": [
+    {"id": "R1", "risk": "No crane source states whether its wind limit is a gust, a 1-minute mean or a 10-minute mean.", "severity": "HIGH", "status": "OPEN", "handling": "Declared NOT_ESTABLISHED and swept; never resolved by assertion."},
+    {"id": "R2", "risk": "No published duration exists for one segmental lifting cycle, so OP01's required uninterrupted duration is ASSUMED.", "severity": "HIGH", "status": "OPEN", "handling": "Swept parameter lift_cycle_duration_h; the defensible duration evidence sits in OP02 instead."},
+    {"id": "R3", "risk": "The 20 m/s in-service value is one crane model's manual; it is not a code requirement and not universal.", "severity": "HIGH", "status": "MITIGATED", "handling": "Second sources S25 and S26 both document that the code delegates the number to the manufacturer; S24 supplies a conservative alternative."},
+    {"id": "R4", "risk": "Measurement height mismatch: forecasts are for a 10 m reference height while the crane limit is read at the jib.", "severity": "MEDIUM", "status": "MITIGATED", "handling": "Apply the S24 height-multiplier table and expose the multiplier as a sensitivity parameter."},
+    {"id": "R5", "risk": "Forecast gust field versus unstated averaging interval: a calibration mapping is required and its residual must propagate into the decision.", "severity": "HIGH", "status": "OPEN", "handling": "Stated as a measurement mismatch; mapping fitted on the training split only and reported with its residuals."},
+    {"id": "R6", "risk": "OP02 uses a US state DOT owner specification (VDOT IIM-S&B-91 incorporating FDOT 452/453), not a national or international standard, and the real project erection manual is not public.", "severity": "MEDIUM", "status": "PARTIAL", "handling": "Clause-level locators, explicit statement that the project manual governs, and a cross-reference to the independent GB 50666-2011 lower bound."},
+    {"id": "R7", "risk": "The 42-minute epoxy window is our arithmetic on two documented values, not a printed number.", "severity": "LOW", "status": "MITIGATED", "handling": "Both parent values are printed beside the derived value, which is tagged DOCUMENTED_LIMIT_OUR_ARITHMETIC."},
+    {"id": "R8", "risk": "The rain gate has no numeric mm/h boundary in the code, so any numeric rain threshold would be invented.", "severity": "HIGH", "status": "OPEN", "handling": "Gate kept categorical; the mm/h conversion is flagged as not obtained; the main experiment will run with rain disabled and enabled."},
+    {"id": "R9", "risk": "No recovery duration is documented for the crane operation after a wind stop.", "severity": "MEDIUM", "status": "OPEN", "handling": "Zero baseline swept to 2 hours; declared ASSUMED."},
+    {"id": "R10", "risk": "GB/T 28591-2012 was retrieved but is image-only, so no Chinese wind-force-to-m/s boundary could be read from the Chinese standard itself.", "severity": "MEDIUM", "status": "OPEN", "handling": "Met Office Beaufort table (S30) used instead, with the mapping labelled as ours; GB/T 28591 retained as a lead."},
+    {"id": "R11", "risk": "EN 13001-2, ISO 4302, FEM 1.001/1.005, BS 7121-1 and BS EN 14439 are paywalled and were NOT read; no clause or table value from them is recorded anywhere in this contract.", "severity": "MEDIUM", "status": "OPEN", "handling": "Recorded as not obtained. The secondary description that manufacturers' limits normally sit below the design in-service wind speed is attributed to S24 (see S24's statement that mobile-crane duty-chart maxima are normally 31 mph / 14 m/s and frequently well below)."},
+    {"id": "R12", "risk": "Wind limits for the out-of-service (storm) condition must never be used to authorise work.", "severity": "HIGH", "status": "MITIGATED", "handling": "Encoded as a boolean crane-asset state with authorises_work_start=false and asserted in code."},
+    {"id": "R13", "risk": "Scope error: the Chinese mandatory code's 9.0 m/s limit (S35 GB 55034-2022 Sec. 3.4.7) governs crane INSTALLATION AND DISMANTLING, not ordinary lifting. Using it as a lifting threshold would be a misattribution.", "severity": "HIGH", "status": "MITIGATED", "handling": "Encoded as its own phase INSTALL_DISMANTLE_LIMIT and kept strictly out of the main-lift start rule; used in the paper only as independent code-level evidence that state-dependent wind contracts exist."},
+    {"id": "R14", "risk": "Over-claiming the state asymmetry: JGJ 33-2012 gives 9.0 m/s for installation/dismantling and 12.0 m/s for open-air lifting within one code, which looks like a start/continuation asymmetry but is actually two adjacent ACTIVITIES.", "severity": "MEDIUM", "status": "MITIGATED", "handling": "Stated explicitly in the row and in the audit: it must NOT be described as a start/continuation asymmetry of a single operation. The HS2 11.1/20 m/s case remains motivation only."},
+    {"id": "R15", "risk": "Cross-source numeric conflict: 9.0 (S35 mandatory), 12.0 (S36 Sec. 4.1.15; S37), 13.0 (S38 Sec. 10.2), 16.5 (S24), 20.0 (S23) m/s. A reviewer can call this cherry-picking.", "severity": "HIGH", "status": "PARTIAL", "handling": "Present the full spread as the REASON the threshold is swept; state the code hierarchy (GB 55034-2022 is the later mandatory full-text code and prevails); report the main result across the spread rather than at one value."},
+    {"id": "R16", "risk": "Draft standard misuse: the only printed averaging window found (3-second mean gust) sits in GB 6067.3-202X, a draft for comment.", "severity": "MEDIUM", "status": "MITIGATED", "handling": "Source S42 is labelled DRAFT FOR COMMENT ONLY / NOT IN FORCE in the ledger and in the spec, and the do_not_claim field forbids citing it as a code requirement."},
+    {"id": "R17", "risk": "Secondary-only citation for GB 50164-2011 Sec. 6.4.4: the clause text was seen only as a quotation inside a provincial guidance document; the standard's free copy is an image-only scan.", "severity": "LOW", "status": "MITIGATED", "handling": "The 5 degrees C value is corroborated by GB 50666-2011 Sec. 8.1.2 (S28) and JGJ/T 104-2011 Sec. 6.2.6 (S41), both read directly; S43 must not be cited for its clause number."}
+  ],
+  "what_we_could_not_obtain": [
+    "EN 13001-2:2021 full text or any table value or clause number from it (paywalled; only the scope abstract was readable).",
+    "ISO 4302:2016 full text or any table value from it (paywalled).",
+    "FEM 1.001 and FEM 1.005 full text (paywalled; the VDMA product page only).",
+    "BS 7121-1:2016 full text, and therefore confirmation of whether its wind provision for personnel carriers is 7 m/s in the 2016 edition as TIN 101 reports for the 2006 edition (paywalled).",
+    "BS EN 14439 (tower cranes) full text, and therefore the standard's own in-service and out-of-service wind states (paywalled).",
+    "Any numeric wind threshold in a UK or US national regulation: neither DGUV Vorschrift 52 (S25) nor 29 CFR 1926 Subpart CC (S26) contains one; both delegate to the manufacturer.",
+    "A readable numeric copy of GB/T 28591-2012 (retrieved file is image-only). The Chinese Beaufort-to-m/s conversion is instead taken from the codes' OWN internal conversions: JGJ 33-2012 Table 4-2 of its tiaowen shuoming (force 6 = 10.8-13.8 m/s) and JGJ 80-2016 Sec. 3.0.8 commentary (force 6 = 10.8-13.8 m/s), both read directly, plus the Met Office table (S30).",
+    "A numeric non-working-state wind pressure or speed for tower cranes in Chinese codes: GB 5144-2006 Sec. 6.3.4/6.8 and GB 6067.1-2010 Sec. 9.4 are QUALITATIVE and defer to the manufacturer. The widely circulated '800 Pa' figure was NOT seen in any source and is NOT reported.",
+    "The clause text of GB 50164-2011 Sec. 6.4.4 read directly: only a secondary quotation inside a provincial guidance document was seen, and the free full-text copy is an image-only scan with no text layer (S43, SECONDARY).",
+    "Any numeric wind speed or evaporation-rate threshold for CONCRETE MATERIAL behaviour in GB 50666-2011: Sec. 10.2.14 (防风) and Sec. 10.3.6 (挡风、遮阳、喷雾) are qualitative. The only numeric wind limit touching concrete placing is JGJ 33-2012 Sec. 8.10.8 at 10.8 m/s, which limits the placing BOOM (a machine), not the material.",
+    "Cell values of GB 50666-2011 Tables 10.2.5 (maximum heating temperature of mixing water and aggregate) and 10.3.3 (maximum temperature of raw materials entering the mixer): the mirror HTML lost the table cells and the tables are images.",
+    "GB/T 5144-2023 does not exist: an official openstd search for 'GB/T 5144' returns zero records. A checklist document writing 'GBT5144-2006' is a typo and must not be cited.",
+    "A published duration for one precast segmental lifting cycle.",
+    "Any crane-source statement of the averaging interval attached to a crane wind limit.",
+    "A numeric mm/h rainfall-intensity boundary for the GB 50666-2011 rain gate.",
+    "A minimum placing-temperature clause from GB 50164-2011 read directly (only a secondary citation inside a Chinese provincial document was seen).",
+    "ACI 305R-20 Section 5.2 and any ACI numeric evaporation-rate limit: the ACI preview PDFs were fetched but the numeric clauses fall outside the free preview, so no ACI number is recorded. ACI 305R-20's symbol definitions (wind speed measured at 20 in. / 0.5 m above the concrete surface; evaporation in kg/m2 per hour) were readable and are the only ACI facts used."
+  ],
+  "citation_index": {
+    "S23": "Yongmao STT293 Tower Crane Operation & Service Manual (manufacturer)",
+    "S24": "CPA TIN 101 The Effect of Wind on Mobile Cranes In-service (UK trade body)",
+    "S25": "DGUV Vorschrift 52 Krane Section 30 (German statutory regulation)",
+    "S26": "29 CFR 1926.1417 and 1926.1435 (US OSHA, via Cornell LII e-CFR)",
+    "S27": "VDOT IIM-S&B-91 General Requirements for Post-Tensioned Bridge Superstructures (owner specification)",
+    "S28": "GB 50666-2011 Code for construction of concrete structures (Chinese national code)",
+    "S29": "WMO CIMO Guide Part I Chapter 5 Measurement of Surface Wind",
+    "S30": "Met Office Beaufort wind force scale",
+    "S31": "GB/T 28591-2012 Wind force scale (retrieved but image-only, unusable)",
+    "S32": "CIM 5710-2016 (lead only, never fetched)",
+    "S33": "ASME B30.5 (SECONDARY only)",
+    "S34": "ASCC wind-speed shutdown article (industry commentary)",
+    "S35": "GB 55034-2022 General code for safety, health and occupational hygiene on building and municipal construction sites (MANDATORY full-text Chinese code; prevails)",
+    "S36": "JGJ 33-2012 Safety technical regulations for the use of construction machinery (Chinese industry standard)",
+    "S37": "JGJ 196-2010 Safety technical regulations for installation, use and dismantling of tower cranes (Chinese industry standard)",
+    "S38": "GB 5144-2006 Safety code for tower cranes (Chinese national standard)",
+    "S39": "GB 6067.1-2010 Safety rules for lifting appliances Part 1: General (Chinese national standard)",
+    "S40": "JGJ 80-2016 Technical code for safety of high-altitude work in construction (Chinese industry standard)",
+    "S41": "JGJ/T 104-2011 Specification for winter construction of building engineering (Chinese industry standard)",
+    "S42": "GB 6067.3-202X Safety rules for lifting appliances Part 3: Tower cranes (DRAFT FOR COMMENT ONLY - NOT BINDING)",
+    "S43": "GB 50164-2011 Standard for quality control of concrete Sec. 6.4.4 (SECONDARY ONLY)"
+  },
+  "cross_jurisdiction_wind_limit_spread": {
+    "note": "Recorded so that no single number is presented as THE crane wind limit. All values are for DIFFERENT activities and must not be pooled into one mean.",
+    "entries": [
+      {"value_ms": 9.0, "activity": "crane installation and dismantling", "kind": "mandatory full-text code", "tag": "DOCUMENTED_LIMIT", "locator": "S35 GB 55034-2022 Sec. 3.4.7"},
+      {"value_ms": 10.8, "activity": "concrete placing boom", "kind": "industry code", "tag": "DOCUMENTED_LIMIT", "locator": "S36 JGJ 33-2012 Sec. 8.10.8"},
+      {"value_ms": 10.8, "activity": "open-air climbing and suspended work at height (Beaufort force 6 lower bound)", "kind": "industry code, mean-defined", "tag": "DOCUMENTED_LIMIT", "locator": "S40 JGJ 80-2016 Sec. 3.0.8"},
+      {"value_ms": 12.0, "activity": "open-air lifting / normal tower-crane use", "kind": "industry code", "tag": "DOCUMENTED_LIMIT", "locator": "S36 JGJ 33-2012 Sec. 4.1.15; S37 JGJ 196-2010 Sec. 4.0.9"},
+      {"value_ms": 13.0, "activity": "tower-crane installation/dismantling/section change (superseded by S35)", "kind": "national standard, superseded", "tag": "DOCUMENTED_LIMIT", "locator": "S38 GB 5144-2006 Sec. 10.2"},
+      {"value_ms": 13.0, "activity": "precision slewing / rail-clamp release on one crane model", "kind": "manufacturer, function-specific", "tag": "DOCUMENTED_LIMIT", "locator": "S23 Yongmao STT293 Sec. 2.4 item 1(c), Sec. 10.7.3.2"},
+      {"value_ms": 14.0, "activity": "mobile-crane duty chart maximum", "kind": "manufacturer duty chart, 'frequently well below this value'", "tag": "DOCUMENTED_LIMIT", "locator": "S24 CPA TIN 101 p.1"},
+      {"value_ms": 16.5, "activity": "tower-crane in-service (UK industry recommendation)", "kind": "trade-body recommendation", "tag": "DOCUMENTED_LIMIT_RECOMMENDATION", "locator": "S24 CPA TIN 101 p.1"},
+      {"value_ms": 20.0, "activity": "tower-crane in-service (manufacturer rating)", "kind": "manufacturer manual", "tag": "DOCUMENTED_LIMIT", "locator": "S23 Yongmao STT293 Ch. 2.1 item 4"},
+      {"value_ms": 50.0, "activity": "tower-crane OUT OF SERVICE / storm", "kind": "manufacturer manual, design state", "tag": "DOCUMENTED_LIMIT", "locator": "S23 Yongmao STT293 Ch. 2.1 item 4"}
+    ],
+    "why_this_matters": "The spread from 9.0 to 20 m/s across legitimate sources, for different activities and jurisdictions, is itself the justification for treating the threshold as a swept parameter in the experiment rather than asserting one number. Reporting a single value as 'the' limit would be indefensible."
+  }
+}

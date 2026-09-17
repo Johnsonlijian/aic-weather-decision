@@ -1,0 +1,144 @@
+{
+  "study_start": "2021-06-01",
+  "study_end": "2025-09-30",
+  "declared_publication_latency_hours": 4.0,
+  "declared_min_decision_margin_hours": 2.0,
+  "thresholds": [
+    9.0,
+    12.0,
+    13.0,
+    16.5,
+    20.0
+  ],
+  "horizons": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "observation_rows": 113904,
+  "observation_gap_hours_per_station": {
+    "240": 0,
+    "260": 0,
+    "344": 0
+  },
+  "forecast_rows": 39684,
+  "joined_rows": 37956,
+  "rows_dropped_by_availability_rule": 0,
+  "rows_kept": 37956,
+  "observed_object_latency_hours": {
+    "min": 3.4941666666666666,
+    "median": 3.7044444444444444,
+    "max": 392.0286111111111
+  },
+  "decision_margin_hours": {
+    "min": 6.0,
+    "median": 6.0,
+    "max": 6.0
+  },
+  "label_counts": {
+    "L2_thr9.0": {
+      "positives": 10816,
+      "n": 37956
+    },
+    "L2_thr12.0": {
+      "positives": 4315,
+      "n": 37956
+    },
+    "L2_thr13.0": {
+      "positives": 3163,
+      "n": 37956
+    },
+    "L2_thr16.5": {
+      "positives": 1077,
+      "n": 37956
+    },
+    "L2_thr20.0": {
+      "positives": 224,
+      "n": 37956
+    },
+    "L4_thr9.0": {
+      "positives": 12471,
+      "n": 37956
+    },
+    "L4_thr12.0": {
+      "positives": 5240,
+      "n": 37956
+    },
+    "L4_thr13.0": {
+      "positives": 3842,
+      "n": 37956
+    },
+    "L4_thr16.5": {
+      "positives": 1357,
+      "n": 37956
+    },
+    "L4_thr20.0": {
+      "positives": 308,
+      "n": 37956
+    },
+    "L6_thr9.0": {
+      "positives": 13925,
+      "n": 37956
+    },
+    "L6_thr12.0": {
+      "positives": 5941,
+      "n": 37956
+    },
+    "L6_thr13.0": {
+      "positives": 4419,
+      "n": 37956
+    },
+    "L6_thr16.5": {
+      "positives": 1677,
+      "n": 37956
+    },
+    "L6_thr20.0": {
+      "positives": 395,
+      "n": 37956
+    },
+    "L8_thr9.0": {
+      "positives": 15617,
+      "n": 37956
+    },
+    "L8_thr12.0": {
+      "positives": 6782,
+      "n": 37956
+    },
+    "L8_thr13.0": {
+      "positives": 5093,
+      "n": 37956
+    },
+    "L8_thr16.5": {
+      "positives": 1971,
+      "n": 37956
+    },
+    "L8_thr20.0": {
+      "positives": 457,
+      "n": 37956
+    }
+  },
+  "per_station_rows": {
+    "240": 12652,
+    "260": 12652,
+    "344": 12652
+  },
+  "per_year_rows": {
+    "2021": 5124,
+    "2022": 8760,
+    "2023": 8757,
+    "2024": 8781,
+    "2025": 6534
+  },
+  "per_lead_rows": {
+    "6": 4746,
+    "12": 4743,
+    "18": 4743,
+    "24": 4743,
+    "36": 4746,
+    "48": 4746,
+    "60": 4746,
+    "72": 4743
+  },
+  "note": "GFS GUST is an instantaneous gridded gust forecast; KNMI FX is a preceding-hour maximum. Rows pair the two at the declared time endpoint only and are never treated as a direct observation-minus-forecast error sample."
+}

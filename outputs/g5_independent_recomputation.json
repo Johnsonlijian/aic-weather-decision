@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "name": "Table 1 at 9 m/s",
+      "agrees": true,
+      "detail": "recomputed (np.float64(40.8), np.float64(47.1), np.float64(15.5), np.float64(30.9)) vs printed (40.8, 47.1, 15.5, 30.9)"
+    },
+    {
+      "name": "Table 1 at 12 m/s",
+      "agrees": true,
+      "detail": "recomputed (np.float64(18.8), np.float64(20.1), np.float64(8.0), np.float64(38.3)) vs printed (18.8, 20.1, 8.0, 38.3)"
+    },
+    {
+      "name": "Table 1 at 13 m/s",
+      "agrees": true,
+      "detail": "recomputed (np.float64(13.3), np.float64(14.5), np.float64(5.8), np.float64(42.7)) vs printed (13.3, 14.5, 5.8, 42.7)"
+    },
+    {
+      "name": "Table 1 at 16.5 m/s",
+      "agrees": true,
+      "detail": "recomputed (np.float64(3.8), np.float64(5.1), np.float64(1.6), np.float64(53.7)) vs printed (3.8, 5.1, 1.6, 53.7)"
+    },
+    {
+      "name": "Table 1 at 20 m/s",
+      "agrees": true,
+      "detail": "recomputed (np.float64(1.2), np.float64(1.1), np.float64(0.7), np.float64(53.8)) vs printed (1.2, 1.1, 0.7, 53.8)"
+    },
+    {
+      "name": "skill vs climatology at 9 m/s",
+      "agrees": true,
+      "detail": "independent +0.407 vs shipped +0.407"
+    },
+    {
+      "name": "skill vs climatology at 12 m/s",
+      "agrees": true,
+      "detail": "independent +0.412 vs shipped +0.412"
+    },
+    {
+      "name": "skill vs climatology at 13 m/s",
+      "agrees": true,
+      "detail": "independent +0.407 vs shipped +0.407"
+    },
+    {
+      "name": "skill vs climatology at 16.5 m/s",
+      "agrees": true,
+      "detail": "independent +0.374 vs shipped +0.374"
+    },
+    {
+      "name": "skill vs climatology at 20 m/s",
+      "agrees": true,
+      "detail": "independent +0.271 vs shipped +0.271"
+    },
+    {
+      "name": "replay positives reconcile with the table",
+      "agrees": true,
+      "detail": "9,518 positives over 45 stations"
+    },
+    {
+      "name": "replay epoch count matches the table",
+      "agrees": true,
+      "detail": "47,322 test epochs"
+    },
+    {
+      "name": "REV at C/L = 0.2 (calibrated rule)",
+      "agrees": true,
+      "detail": "independent +0.627 vs shipped +0.616"
+    }
+  ],
+  "note": "recomputed from the frozen epoch table with a locally implemented estimator, not by importing calibration.py",
+  "all_agree": true
+}

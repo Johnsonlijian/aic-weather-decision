@@ -1,0 +1,743 @@
+[
+  {
+    "id": "weatherwise",
+    "type": "article-journal",
+    "title": "Weather-wise: A weather-aware planning tool for improving construction productivity and dealing with claims",
+    "author": [
+      {
+        "family": "Ballesteros-Pérez",
+        "given": "Pablo"
+      },
+      {
+        "family": "Rojas-Céspedes",
+        "given": "Yonatan Alexis"
+      },
+      {
+        "family": "Hughes",
+        "given": "Will"
+      },
+      {
+        "family": "Kabiri",
+        "given": "Shabnam"
+      },
+      {
+        "family": "Pellicer",
+        "given": "Eugenio"
+      },
+      {
+        "family": "Mora-Melià",
+        "given": "Daniel"
+      },
+      {
+        "family": "del Campo-Hitschfeld",
+        "given": "Maria Luisa"
+      }
+    ],
+    "container-title": "Automation in Construction",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          12
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.autcon.2017.08.022",
+    "URL": "https://doi.org/10.1016/j.autcon.2017.08.022",
+    "volume": "84",
+    "page": "81-95"
+  },
+  {
+    "id": "kerkhove2017",
+    "type": "article-journal",
+    "title": "Optimised scheduling for weather sensitive offshore construction projects",
+    "author": [
+      {
+        "family": "Kerkhove",
+        "given": "L.-P."
+      },
+      {
+        "family": "Vanhoucke",
+        "given": "M."
+      }
+    ],
+    "container-title": "Omega",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.omega.2016.01.011",
+    "URL": "https://doi.org/10.1016/j.omega.2016.01.011",
+    "volume": "66",
+    "page": "58-78"
+  },
+  {
+    "id": "zhou2021",
+    "type": "article-journal",
+    "title": "Stochastic resource-constrained project scheduling problem with time varying weather conditions and an improved estimation of distribution algorithm",
+    "author": [
+      {
+        "family": "Zhou",
+        "given": "Yifan"
+      },
+      {
+        "family": "Miao",
+        "given": "Jindan"
+      },
+      {
+        "family": "Yan",
+        "given": "Bin"
+      },
+      {
+        "family": "Zhang",
+        "given": "Zhisheng"
+      }
+    ],
+    "container-title": "Computers &amp; Industrial Engineering",
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          7
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.cie.2021.107322",
+    "URL": "https://doi.org/10.1016/j.cie.2021.107322",
+    "volume": "157",
+    "page": "107322"
+  },
+  {
+    "id": "elmachtoub2022",
+    "type": "article-journal",
+    "title": "Smart “Predict, then Optimize”",
+    "author": [
+      {
+        "family": "Elmachtoub",
+        "given": "Adam N."
+      },
+      {
+        "family": "Grigas",
+        "given": "Paul"
+      }
+    ],
+    "container-title": "Management Science",
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1287/mnsc.2020.3922",
+    "URL": "https://doi.org/10.1287/mnsc.2020.3922",
+    "volume": "68",
+    "issue": "1",
+    "page": "9-26"
+  },
+  {
+    "id": "knmi",
+    "type": "webpage",
+    "title": "Hourly station observations",
+    "author": [
+      {
+        "literal": "Royal Netherlands Meteorological Institute"
+      }
+    ],
+    "URL": "https://www.daggegevens.knmi.nl/klimatologie/uurgegevens",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          14
+        ]
+      ]
+    }
+  },
+  {
+    "id": "gfsarchive",
+    "type": "webpage",
+    "title": "NOAA Global Forecast System historical archive",
+    "author": [
+      {
+        "literal": "NOAA"
+      }
+    ],
+    "URL": "https://registry.opendata.aws/noaa-gfs-bdp-pds/",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          14
+        ]
+      ]
+    }
+  },
+  {
+    "id": "murphy1977",
+    "type": "article-journal",
+    "title": "The Value of Climatological, Categorical and Probabilistic Forecasts in the Cost-Loss Ratio Situation",
+    "author": [
+      {
+        "family": "Murphy",
+        "given": "A. H."
+      }
+    ],
+    "container-title": "Monthly Weather Review",
+    "issued": {
+      "date-parts": [
+        [
+          1977
+        ]
+      ]
+    },
+    "DOI": "10.1175/1520-0493(1977)105<0803:TVOCCA>2.0.CO;2",
+    "URL": "https://doi.org/10.1175/1520-0493(1977)105<0803:TVOCCA>2.0.CO;2",
+    "volume": "105",
+    "page": "803-816"
+  },
+  {
+    "id": "murphy1993",
+    "type": "article-journal",
+    "title": "What Is a Good Forecast? An Essay on the Nature of Goodness in Weather Forecasting",
+    "author": [
+      {
+        "family": "Murphy",
+        "given": "A. H."
+      }
+    ],
+    "container-title": "Weather and Forecasting",
+    "issued": {
+      "date-parts": [
+        [
+          1993
+        ]
+      ]
+    },
+    "DOI": "10.1175/1520-0434(1993)008<0281:WIAGFA>2.0.CO;2",
+    "URL": "https://doi.org/10.1175/1520-0434(1993)008<0281:WIAGFA>2.0.CO;2",
+    "volume": "8",
+    "page": "281-293"
+  },
+  {
+    "id": "thompson1952",
+    "type": "article-journal",
+    "title": "On the Operational Deficiencies in Categorical Weather Forecasts",
+    "author": [
+      {
+        "family": "Thompson",
+        "given": "J. C."
+      }
+    ],
+    "container-title": "Bulletin of the American Meteorological Society",
+    "issued": {
+      "date-parts": [
+        [
+          1952
+        ]
+      ]
+    },
+    "DOI": "10.1175/1520-0477-33.6.223",
+    "URL": "https://doi.org/10.1175/1520-0477-33.6.223",
+    "volume": "33",
+    "page": "223-226"
+  },
+  {
+    "id": "richardson2000",
+    "type": "article-journal",
+    "title": "Skill and relative economic value of the ECMWF ensemble prediction system",
+    "author": [
+      {
+        "family": "Richardson",
+        "given": "D. S."
+      }
+    ],
+    "container-title": "Quarterly Journal of the Royal Meteorological Society",
+    "issued": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    },
+    "DOI": "10.1002/qj.49712656313",
+    "URL": "https://doi.org/10.1002/qj.49712656313",
+    "volume": "126",
+    "page": "649-667"
+  },
+  {
+    "id": "zhu2002",
+    "type": "article-journal",
+    "title": "The Economic Value Of Ensemble-Based Weather Forecasts",
+    "author": [
+      {
+        "family": "Zhu",
+        "given": "Y."
+      },
+      {
+        "family": "Toth",
+        "given": "Z."
+      },
+      {
+        "family": "Wobus",
+        "given": "R."
+      },
+      {
+        "family": "Richardson",
+        "given": "D."
+      },
+      {
+        "family": "Mylne",
+        "given": "K."
+      }
+    ],
+    "container-title": "Bulletin of the American Meteorological Society",
+    "issued": {
+      "date-parts": [
+        [
+          2002
+        ]
+      ]
+    },
+    "DOI": "10.1175/1520-0477(2002)083<0073:TEVOEB>2.3.CO;2",
+    "URL": "https://doi.org/10.1175/1520-0477(2002)083<0073:TEVOEB>2.3.CO;2",
+    "volume": "83",
+    "page": "73-83"
+  },
+  {
+    "id": "doskeland2023",
+    "type": "article-journal",
+    "title": "Use of response forecasting in decision making for weather sensitive offshore construction work",
+    "author": [
+      {
+        "family": "Døskeland",
+        "given": "Ø."
+      },
+      {
+        "family": "Gudmestad",
+        "given": "O. T."
+      },
+      {
+        "family": "Moen",
+        "given": "P."
+      }
+    ],
+    "container-title": "Ocean Engineering",
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.oceaneng.2023.115896",
+    "URL": "https://doi.org/10.1016/j.oceaneng.2023.115896",
+    "volume": "287",
+    "page": "115896"
+  },
+  {
+    "id": "tinoco2019",
+    "type": "paper-conference",
+    "title": "The Use of Ensemble Forecast in Defining Offshore Installation Operability: A Case Study on Umbilical Shore Float-In Operations",
+    "author": [
+      {
+        "family": "Tinoco",
+        "given": "F."
+      },
+      {
+        "family": "Ting",
+        "given": "K. C."
+      },
+      {
+        "family": "Chavan",
+        "given": "K."
+      }
+    ],
+    "container-title": "Proceedings of the ASME 2019 38th International Conference on Ocean, Offshore and Arctic Engineering (OMAE2019)",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "DOI": "10.1115/omae2019-96137",
+    "URL": "https://doi.org/10.1115/omae2019-96137"
+  },
+  {
+    "id": "yongmao",
+    "type": "webpage",
+    "title": "Yongmao STT293 Tower Crane Operation & Service Manual (en version 2.0)",
+    "author": [
+      {
+        "literal": "Yongmao Machinery"
+      }
+    ],
+    "URL": "https://cranemanuals.com/wp-content/uploads/2024/03/Yongmao-STT293-Tower-Crane-Operating-Service-Manual.pdf",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          15
+        ]
+      ]
+    }
+  },
+  {
+    "id": "cpatin101",
+    "type": "webpage",
+    "title": "TIN 101: The Effect of Wind on Mobile Cranes In-service",
+    "author": [
+      {
+        "literal": "Construction Plant-hire Association, Crane Interest Group"
+      }
+    ],
+    "URL": "http://www.ritchiestraining.co.uk/wp-content/uploads/2016/01/TheEffectofWindonMobileCranesIn-service.pdf",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          15
+        ]
+      ]
+    }
+  },
+  {
+    "id": "gb55034",
+    "type": "webpage",
+    "title": "GB 55034-2022 General code for safety, health and occupational hygiene on building and municipal construction sites",
+    "author": [
+      {
+        "literal": "Ministry of Housing and Urban-Rural Development of the PRC"
+      }
+    ],
+    "URL": "https://gf.cabr-fire.com/m/article-62620.htm",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          15
+        ]
+      ]
+    }
+  },
+  {
+    "id": "jgj33",
+    "type": "webpage",
+    "title": "JGJ 33-2012 Safety technical regulations for the use of construction machinery",
+    "author": [
+      {
+        "literal": "Ministry of Housing and Urban-Rural Development of the PRC"
+      }
+    ],
+    "URL": "http://gzhxaq.com/mydata/law/202102/04/16123986714443.htm",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          15
+        ]
+      ]
+    }
+  },
+  {
+    "id": "jgj196",
+    "type": "webpage",
+    "title": "JGJ 196-2010 Safety technical regulations for installation, use and dismantling of tower cranes in construction",
+    "author": [
+      {
+        "literal": "Ministry of Housing and Urban-Rural Development of the PRC"
+      }
+    ],
+    "URL": "http://www.zgjjzyjy.org/newss.asp?id=1259",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          15
+        ]
+      ]
+    }
+  },
+  {
+    "id": "gb5144",
+    "type": "webpage",
+    "title": "GB 5144-2006 Safety code for tower cranes",
+    "author": [
+      {
+        "literal": "General Administration of Quality Supervision, Inspection and Quarantine of the PRC"
+      }
+    ],
+    "URL": "http://www.zhuoligk.com/Inews/1565.html",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          15
+        ]
+      ]
+    }
+  },
+  {
+    "id": "vdot",
+    "type": "webpage",
+    "title": "VDOT IIM-S&B-91: General Requirements for the Usage, Design and Specification of Post-Tensioned Bridge Superstructures",
+    "author": [
+      {
+        "literal": "Virginia Department of Transportation"
+      }
+    ],
+    "URL": "https://snowplowing.vdot.virginia.gov/media/vdotvirginiagov/doing-business/technical-guidance-and-support/technical-guidance-documents/structure-and-bridge/migrated-acc/iim/SBIIM91.pdf",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          15
+        ]
+      ]
+    }
+  },
+  {
+    "id": "wmocimo",
+    "type": "webpage",
+    "title": "WMO Guide to Meteorological Instruments and Methods of Observation (CIMO Guide), Part I Chapter 5: Measurement of Surface Wind",
+    "author": [
+      {
+        "literal": "World Meteorological Organization"
+      }
+    ],
+    "URL": "https://old.wmo.int/extranet/pages/prog/www/IMOP/publications/CIMO-Guide/Prelim_2018_ed/8_I_5_en_MR_tc.pdf",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          15
+        ]
+      ]
+    }
+  },
+  {
+    "id": "jafarpour2024",
+    "type": "article-journal",
+    "title": "Optimized planning for weather-sensitive offshore construction operations - An application to float-over installation of super-heavy offshore topsides",
+    "author": [
+      {
+        "family": "Jafarpour Hamedani",
+        "given": "S."
+      },
+      {
+        "family": "Khedmati",
+        "given": "M. R."
+      }
+    ],
+    "container-title": "Ocean Engineering",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.oceaneng.2024.117027",
+    "URL": "https://doi.org/10.1016/j.oceaneng.2024.117027",
+    "volume": "297",
+    "page": "117027"
+  },
+  {
+    "id": "augustyn2025app",
+    "type": "article-journal",
+    "title": "Numerical and Analytical Determination of the Critical Wind Speed Causing the Overturning of the Top-Slewing Tower Crane",
+    "author": [
+      {
+        "family": "Augustyn",
+        "given": "Marcin"
+      },
+      {
+        "family": "Barski",
+        "given": "Marek"
+      }
+    ],
+    "container-title": "Applied Sciences",
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          4,
+          23
+        ]
+      ]
+    },
+    "DOI": "10.3390/app15094683",
+    "URL": "https://doi.org/10.3390/app15094683",
+    "volume": "15",
+    "issue": "9",
+    "page": "4683"
+  },
+  {
+    "id": "li2023jmse",
+    "type": "article-journal",
+    "title": "Machine Learning-Based Prediction of Dynamic Responses of a Tower Crane under Strong Coastal Winds",
+    "author": [
+      {
+        "family": "Li",
+        "given": "Qiang"
+      },
+      {
+        "family": "Fan",
+        "given": "Weijie"
+      },
+      {
+        "family": "Huang",
+        "given": "Mingfeng"
+      },
+      {
+        "family": "Jin",
+        "given": "Heng"
+      },
+      {
+        "family": "Zhang",
+        "given": "Jun"
+      },
+      {
+        "family": "Ma",
+        "given": "Jiaxing"
+      }
+    ],
+    "container-title": "Journal of Marine Science and Engineering",
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          4,
+          10
+        ]
+      ]
+    },
+    "DOI": "10.3390/jmse11040803",
+    "URL": "https://doi.org/10.3390/jmse11040803",
+    "volume": "11",
+    "issue": "4",
+    "page": "803"
+  },
+  {
+    "id": "jafarpour2023marstruc",
+    "type": "article-journal",
+    "title": "Optimal weather window for transportation of large-scale offshore structures",
+    "author": [
+      {
+        "family": "Hamedani",
+        "given": "Shahed Jafarpour"
+      },
+      {
+        "family": "Khedmati",
+        "given": "Mohammad Reza"
+      }
+    ],
+    "container-title": "Marine Structures",
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.marstruc.2023.103483",
+    "URL": "https://doi.org/10.1016/j.marstruc.2023.103483",
+    "volume": "92",
+    "page": "103483"
+  },
+  {
+    "id": "wu2021marstruc",
+    "type": "article-journal",
+    "title": "Methodology for developing a response-based correction factor (alpha-factor) for allowable sea state assessment of marine operations considering weather forecast uncertainty",
+    "author": [
+      {
+        "family": "Wu",
+        "given": "Mengning"
+      },
+      {
+        "family": "Gao",
+        "given": "Zhen"
+      }
+    ],
+    "container-title": "Marine Structures",
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          9
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.marstruc.2021.103050",
+    "URL": "https://doi.org/10.1016/j.marstruc.2021.103050",
+    "volume": "79",
+    "page": "103050"
+  },
+  {
+    "id": "schulz2022mwr",
+    "type": "article-journal",
+    "title": "Machine Learning Methods for Postprocessing Ensemble Forecasts of Wind Gusts: A Systematic Comparison",
+    "author": [
+      {
+        "family": "Schulz",
+        "given": "Benedikt"
+      },
+      {
+        "family": "Lerch",
+        "given": "Sebastian"
+      }
+    ],
+    "container-title": "Monthly Weather Review",
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1175/mwr-d-21-0150.1",
+    "URL": "https://doi.org/10.1175/mwr-d-21-0150.1",
+    "volume": "150",
+    "issue": "1",
+    "page": "235-257"
+  },
+  {
+    "id": "cpatin110",
+    "type": "report",
+    "title": "TIN CIG/TCIG 110: Planning & Control of Lifting Operations in Wind",
+    "author": [
+      {
+        "literal": "Construction Plant-hire Association, Crane and Tower Crane Interest Group"
+      }
+    ],
+    "publisher": "Construction Plant-hire Association",
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          7
+        ]
+      ]
+    },
+    "URL": "https://cpa.uk.net/wp-content/uploads/2025/08/CPA-CIG_TCIG-TIN-110-Planning-Control-of-Lifting-Operations-in-Wind-V1-July-2025.pdf",
+    "note": "Verified against the publisher PDF: forecasts at 10 m above ground, 3-second gust versus 10-minute mean distinction, 10 km grid-square support, height correction recommended."
+  }
+]

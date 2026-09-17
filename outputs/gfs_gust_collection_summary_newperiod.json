@@ -1,0 +1,400 @@
+{
+  "analysis_status": "ARCHIVE_SAMPLING_ONLY_NO_SKILL_OR_DECISION_RESULT",
+  "created_at": "2026-09-17T01:10:16.937800+00:00",
+  "start": "2025-10-01",
+  "end": "2026-08-31",
+  "cycles": [
+    "00",
+    "12"
+  ],
+  "leads": [
+    6,
+    12,
+    18,
+    24,
+    30,
+    36,
+    42,
+    48,
+    54,
+    60,
+    66,
+    72
+  ],
+  "stations": [
+    {
+      "station_id": "209",
+      "name": "Ijmond",
+      "latitude": 52.465,
+      "longitude": 4.518,
+      "altitude_m": 0.0
+    },
+    {
+      "station_id": "215",
+      "name": "Voorschoten",
+      "latitude": 52.141,
+      "longitude": 4.437,
+      "altitude_m": -1.1
+    },
+    {
+      "station_id": "225",
+      "name": "Ijmuiden",
+      "latitude": 52.463,
+      "longitude": 4.555,
+      "altitude_m": 4.4
+    },
+    {
+      "station_id": "235",
+      "name": "De Kooy",
+      "latitude": 52.928,
+      "longitude": 4.781,
+      "altitude_m": 1.2
+    },
+    {
+      "station_id": "240",
+      "name": "Schiphol",
+      "latitude": 52.318,
+      "longitude": 4.79,
+      "altitude_m": -3.3
+    },
+    {
+      "station_id": "242",
+      "name": "Vlieland",
+      "latitude": 53.241,
+      "longitude": 4.921,
+      "altitude_m": 10.8
+    },
+    {
+      "station_id": "248",
+      "name": "Wijdenes",
+      "latitude": 52.634,
+      "longitude": 5.174,
+      "altitude_m": 0.8
+    },
+    {
+      "station_id": "249",
+      "name": "Berkhout",
+      "latitude": 52.644,
+      "longitude": 4.979,
+      "altitude_m": -2.4
+    },
+    {
+      "station_id": "251",
+      "name": "Hoorn (Terschelling)",
+      "latitude": 53.392,
+      "longitude": 5.346,
+      "altitude_m": 0.7
+    },
+    {
+      "station_id": "257",
+      "name": "Wijk Aan Zee",
+      "latitude": 52.506,
+      "longitude": 4.603,
+      "altitude_m": 8.5
+    },
+    {
+      "station_id": "258",
+      "name": "Houtribdijk",
+      "latitude": 52.649,
+      "longitude": 5.401,
+      "altitude_m": 7.3
+    },
+    {
+      "station_id": "260",
+      "name": "De Bilt",
+      "latitude": 52.1,
+      "longitude": 5.18,
+      "altitude_m": 1.9
+    },
+    {
+      "station_id": "267",
+      "name": "Stavoren",
+      "latitude": 52.898,
+      "longitude": 5.384,
+      "altitude_m": -1.3
+    },
+    {
+      "station_id": "269",
+      "name": "Lelystad",
+      "latitude": 52.458,
+      "longitude": 5.52,
+      "altitude_m": -3.7
+    },
+    {
+      "station_id": "270",
+      "name": "Leeuwarden",
+      "latitude": 53.224,
+      "longitude": 5.752,
+      "altitude_m": 1.2
+    },
+    {
+      "station_id": "273",
+      "name": "Marknesse",
+      "latitude": 52.703,
+      "longitude": 5.888,
+      "altitude_m": -3.3
+    },
+    {
+      "station_id": "275",
+      "name": "Deelen",
+      "latitude": 52.056,
+      "longitude": 5.873,
+      "altitude_m": 48.2
+    },
+    {
+      "station_id": "277",
+      "name": "Lauwersoog",
+      "latitude": 53.413,
+      "longitude": 6.2,
+      "altitude_m": 2.9
+    },
+    {
+      "station_id": "278",
+      "name": "Heino",
+      "latitude": 52.435,
+      "longitude": 6.259,
+      "altitude_m": 3.6
+    },
+    {
+      "station_id": "279",
+      "name": "Hoogeveen",
+      "latitude": 52.75,
+      "longitude": 6.574,
+      "altitude_m": 15.8
+    },
+    {
+      "station_id": "280",
+      "name": "Eelde",
+      "latitude": 53.125,
+      "longitude": 6.585,
+      "altitude_m": 5.2
+    },
+    {
+      "station_id": "283",
+      "name": "Hupsel",
+      "latitude": 52.069,
+      "longitude": 6.657,
+      "altitude_m": 29.1
+    },
+    {
+      "station_id": "285",
+      "name": "Huibertgat",
+      "latitude": 53.575,
+      "longitude": 6.399,
+      "altitude_m": 0.0
+    },
+    {
+      "station_id": "286",
+      "name": "Nieuw Beerta",
+      "latitude": 53.196,
+      "longitude": 7.15,
+      "altitude_m": -0.2
+    },
+    {
+      "station_id": "290",
+      "name": "Twenthe",
+      "latitude": 52.274,
+      "longitude": 6.891,
+      "altitude_m": 34.8
+    },
+    {
+      "station_id": "308",
+      "name": "Cadzand",
+      "latitude": 51.381,
+      "longitude": 3.379,
+      "altitude_m": 0.0
+    },
+    {
+      "station_id": "310",
+      "name": "Vlissingen",
+      "latitude": 51.442,
+      "longitude": 3.596,
+      "altitude_m": 8.0
+    },
+    {
+      "station_id": "312",
+      "name": "Oosterschelde",
+      "latitude": 51.768,
+      "longitude": 3.622,
+      "altitude_m": 0.0
+    },
+    {
+      "station_id": "313",
+      "name": "Vlakte V.d. Raan",
+      "latitude": 51.505,
+      "longitude": 3.242,
+      "altitude_m": 0.0
+    },
+    {
+      "station_id": "315",
+      "name": "Hansweert",
+      "latitude": 51.447,
+      "longitude": 3.998,
+      "altitude_m": 0.0
+    },
+    {
+      "station_id": "316",
+      "name": "Schaar",
+      "latitude": 51.657,
+      "longitude": 3.694,
+      "altitude_m": 0.0
+    },
+    {
+      "station_id": "319",
+      "name": "Westdorpe",
+      "latitude": 51.226,
+      "longitude": 3.861,
+      "altitude_m": 1.7
+    },
+    {
+      "station_id": "323",
+      "name": "Wilhelminadorp",
+      "latitude": 51.527,
+      "longitude": 3.884,
+      "altitude_m": 1.4
+    },
+    {
+      "station_id": "324",
+      "name": "Stavenisse",
+      "latitude": 51.596,
+      "longitude": 4.006,
+      "altitude_m": 0.0
+    },
+    {
+      "station_id": "330",
+      "name": "Hoek Van Holland",
+      "latitude": 51.992,
+      "longitude": 4.122,
+      "altitude_m": 11.9
+    },
+    {
+      "station_id": "340",
+      "name": "Woensdrecht",
+      "latitude": 51.449,
+      "longitude": 4.342,
+      "altitude_m": 19.2
+    },
+    {
+      "station_id": "343",
+      "name": "R'dam-Geulhaven",
+      "latitude": 51.893,
+      "longitude": 4.313,
+      "altitude_m": 3.5
+    },
+    {
+      "station_id": "344",
+      "name": "Rotterdam",
+      "latitude": 51.962,
+      "longitude": 4.447,
+      "altitude_m": -4.3
+    },
+    {
+      "station_id": "348",
+      "name": "Cabauw",
+      "latitude": 51.97,
+      "longitude": 4.926,
+      "altitude_m": -0.7
+    },
+    {
+      "station_id": "350",
+      "name": "Gilze-Rijen",
+      "latitude": 51.566,
+      "longitude": 4.936,
+      "altitude_m": 14.9
+    },
+    {
+      "station_id": "356",
+      "name": "Herwijnen",
+      "latitude": 51.859,
+      "longitude": 5.146,
+      "altitude_m": 0.7
+    },
+    {
+      "station_id": "370",
+      "name": "Eindhoven",
+      "latitude": 51.451,
+      "longitude": 5.377,
+      "altitude_m": 22.6
+    },
+    {
+      "station_id": "375",
+      "name": "Volkel",
+      "latitude": 51.659,
+      "longitude": 5.707,
+      "altitude_m": 22.0
+    },
+    {
+      "station_id": "377",
+      "name": "Ell",
+      "latitude": 51.198,
+      "longitude": 5.763,
+      "altitude_m": 30.0
+    },
+    {
+      "station_id": "380",
+      "name": "Maastricht",
+      "latitude": 50.906,
+      "longitude": 5.762,
+      "altitude_m": 114.3
+    },
+    {
+      "station_id": "391",
+      "name": "Arcen",
+      "latitude": 51.498,
+      "longitude": 6.197,
+      "altitude_m": 19.5
+    }
+  ],
+  "messages_verified": 66,
+  "runs_failed": 0,
+  "rows_per_station_year": {
+    "209_2026": 66,
+    "215_2026": 66,
+    "225_2026": 66,
+    "235_2026": 66,
+    "240_2026": 66,
+    "242_2026": 66,
+    "248_2026": 66,
+    "249_2026": 66,
+    "251_2026": 66,
+    "257_2026": 66,
+    "258_2026": 66,
+    "260_2026": 66,
+    "267_2026": 66,
+    "269_2026": 66,
+    "270_2026": 66,
+    "273_2026": 66,
+    "275_2026": 66,
+    "277_2026": 66,
+    "278_2026": 66,
+    "279_2026": 66,
+    "280_2026": 66,
+    "283_2026": 66,
+    "285_2026": 66,
+    "286_2026": 66,
+    "290_2026": 66,
+    "308_2026": 66,
+    "310_2026": 66,
+    "312_2026": 66,
+    "313_2026": 66,
+    "315_2026": 66,
+    "316_2026": 66,
+    "319_2026": 66,
+    "323_2026": 66,
+    "324_2026": 66,
+    "330_2026": 66,
+    "340_2026": 66,
+    "343_2026": 66,
+    "344_2026": 66,
+    "348_2026": 66,
+    "350_2026": 66,
+    "356_2026": 66,
+    "370_2026": 66,
+    "375_2026": 66,
+    "377_2026": 66,
+    "380_2026": 66,
+    "391_2026": 66
+  },
+  "manifest": "gfs_gust_manifest_newperiod.jsonl",
+  "note": "GUST is an instantaneous surface gust forecast. KNMI FX is a preceding-hour maximum. Pairing is by declared time endpoint only."
+}

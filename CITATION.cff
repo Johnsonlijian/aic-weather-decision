@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software or the associated dataset, please cite it as below."
+title: "Resolvability of weather-sensitive construction windows under latency-audited, non-anticipative forecast replay"
+type: software
+authors:
+  - family-names: Ren
+    given-names: Lijian
+    affiliation: Inner Mongolia University of Technology
+    orcid: ""
+identifiers:
+  - type: doi
+    value: ""
+repository-code: "https://github.com/Johnsonlijian/aic-weather-decision"
+license: MIT
+keywords:
+  - construction scheduling
+  - weather windows
+  - forecast calibration
+  - forecast availability
+  - decision value
+  - resource constraints
+date-released: "2026-09-15"
+abstract: >-
+  A latency-audited, non-anticipative replay benchmark that measures whether the
+  decision-relevant weather-sensitive construction window is resolvable from
+  archived as-issued NOAA GFS surface-gust forecasts paired with KNMI station
+  observations (2021-2025). The package fits decision-aligned block-window
+  calibrators, reports Brier skill and relative economic value, and runs a lift
+  campaign comparing blind, raw-threshold, climatology and calibrated rules.

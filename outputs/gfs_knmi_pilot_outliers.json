@@ -1,0 +1,159 @@
+[
+  {
+    "column": "issue_date",
+    "status": "Skipped \u2014 fewer than 4 numeric values"
+  },
+  {
+    "method": "IQR",
+    "q1": 4.5,
+    "q3": 13.5,
+    "iqr": 9.0,
+    "lower_bound": -9.0,
+    "upper_bound": 27.0,
+    "outlier_count": 0,
+    "outlier_pct": 0.0,
+    "outlier_values": [],
+    "column": "issue_cycle",
+    "total_numeric": 124,
+    "risk_assessment": "Clean \u2014 no outliers detected"
+  },
+  {
+    "column": "issue_time",
+    "status": "Skipped \u2014 fewer than 4 numeric values"
+  },
+  {
+    "column": "valid_time",
+    "status": "Skipped \u2014 fewer than 4 numeric values"
+  },
+  {
+    "method": "IQR",
+    "q1": 6.0,
+    "q3": 6.0,
+    "iqr": 0.0,
+    "lower_bound": 6.0,
+    "upper_bound": 6.0,
+    "outlier_count": 0,
+    "outlier_pct": 0.0,
+    "outlier_values": [],
+    "column": "lead_hours",
+    "total_numeric": 124,
+    "risk_assessment": "Clean \u2014 no outliers detected"
+  },
+  {
+    "method": "IQR",
+    "q1": 260.0,
+    "q3": 260.0,
+    "iqr": 0.0,
+    "lower_bound": 260.0,
+    "upper_bound": 260.0,
+    "outlier_count": 0,
+    "outlier_pct": 0.0,
+    "outlier_values": [],
+    "column": "station_id",
+    "total_numeric": 124,
+    "risk_assessment": "Clean \u2014 no outliers detected"
+  },
+  {
+    "method": "IQR",
+    "q1": 52.1,
+    "q3": 52.1,
+    "iqr": 0.0,
+    "lower_bound": 52.1,
+    "upper_bound": 52.1,
+    "outlier_count": 0,
+    "outlier_pct": 0.0,
+    "outlier_values": [],
+    "column": "latitude",
+    "total_numeric": 124,
+    "risk_assessment": "Clean \u2014 no outliers detected"
+  },
+  {
+    "method": "IQR",
+    "q1": 5.18,
+    "q3": 5.18,
+    "iqr": 0.0,
+    "lower_bound": 5.18,
+    "upper_bound": 5.18,
+    "outlier_count": 0,
+    "outlier_pct": 0.0,
+    "outlier_values": [],
+    "column": "longitude",
+    "total_numeric": 124,
+    "risk_assessment": "Clean \u2014 no outliers detected"
+  },
+  {
+    "method": "IQR",
+    "q1": 5.25,
+    "q3": 5.25,
+    "iqr": 0.0,
+    "lower_bound": 5.25,
+    "upper_bound": 5.25,
+    "outlier_count": 0,
+    "outlier_pct": 0.0,
+    "outlier_values": [],
+    "column": "grid_longitude",
+    "total_numeric": 124,
+    "risk_assessment": "Clean \u2014 no outliers detected"
+  },
+  {
+    "method": "IQR",
+    "q1": 52.0,
+    "q3": 52.0,
+    "iqr": 0.0,
+    "lower_bound": 52.0,
+    "upper_bound": 52.0,
+    "outlier_count": 0,
+    "outlier_pct": 0.0,
+    "outlier_values": [],
+    "column": "grid_latitude",
+    "total_numeric": 124,
+    "risk_assessment": "Clean \u2014 no outliers detected"
+  },
+  {
+    "method": "IQR",
+    "q1": 3.2219,
+    "q3": 11.3009,
+    "iqr": 8.079,
+    "lower_bound": -8.8967,
+    "upper_bound": 23.4194,
+    "outlier_count": 2,
+    "outlier_pct": 1.61,
+    "outlier_values": [
+      23.6012,
+      24.8017
+    ],
+    "column": "GUST_ms",
+    "total_numeric": 124,
+    "risk_assessment": "Moderate \u2014 review individually; could be legitimate extremes or entry errors"
+  },
+  {
+    "method": "IQR",
+    "q1": 4.0,
+    "q3": 8.25,
+    "iqr": 4.25,
+    "lower_bound": -2.375,
+    "upper_bound": 14.625,
+    "outlier_count": 5,
+    "outlier_pct": 4.03,
+    "outlier_values": [
+      16.0,
+      17.0,
+      19.0
+    ],
+    "column": "KNMI_FX_ms",
+    "total_numeric": 124,
+    "risk_assessment": "Moderate \u2014 review individually; could be legitimate extremes or entry errors"
+  },
+  {
+    "column": "gfs_file",
+    "status": "Skipped \u2014 fewer than 4 numeric values"
+  },
+  {
+    "column": "pairing_rule",
+    "status": "Skipped \u2014 fewer than 4 numeric values"
+  },
+  {
+    "column": "observation_available",
+    "status": "Skipped \u2014 fewer than 4 numeric values"
+  }
+]

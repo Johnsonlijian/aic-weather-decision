@@ -1,0 +1,163 @@
+{
+  "detector": {
+    "9": {
+      "claim_rate": 40.8,
+      "true_rate": 47.1,
+      "false_alarm_rate": 15.5,
+      "miss_rate": 30.9,
+      "positives": 22305
+    },
+    "12": {
+      "claim_rate": 18.8,
+      "true_rate": 20.1,
+      "false_alarm_rate": 8.0,
+      "miss_rate": 38.3,
+      "positives": 9518
+    },
+    "13": {
+      "claim_rate": 13.3,
+      "true_rate": 14.5,
+      "false_alarm_rate": 5.8,
+      "miss_rate": 42.7,
+      "positives": 6858
+    },
+    "16.5": {
+      "claim_rate": 3.8,
+      "true_rate": 5.1,
+      "false_alarm_rate": 1.6,
+      "miss_rate": 53.7,
+      "positives": 2406
+    },
+    "20": {
+      "claim_rate": 1.2,
+      "true_rate": 1.1,
+      "false_alarm_rate": 0.7,
+      "miss_rate": 53.8,
+      "positives": 509
+    }
+  },
+  "test_epochs": 47322,
+  "splits": {
+    "CAL": 65491,
+    "FIT": 169184,
+    "TEST": 47322
+  },
+  "skill": {
+    "9": {
+      "vs_climatology": 0.407,
+      "vs_raw_threshold": 0.348,
+      "logistic_vs_climatology": 0.4,
+      "reliability_bins_sum": 47322,
+      "split_n": 47322
+    },
+    "12": {
+      "vs_climatology": 0.412,
+      "vs_raw_threshold": 0.316,
+      "logistic_vs_climatology": 0.41,
+      "reliability_bins_sum": 47322,
+      "split_n": 47322
+    },
+    "13": {
+      "vs_climatology": 0.407,
+      "vs_raw_threshold": 0.321,
+      "logistic_vs_climatology": 0.407,
+      "reliability_bins_sum": 47322,
+      "split_n": 47322
+    },
+    "16.5": {
+      "vs_climatology": 0.374,
+      "vs_raw_threshold": 0.255,
+      "logistic_vs_climatology": 0.377,
+      "reliability_bins_sum": 47322,
+      "split_n": 47322
+    },
+    "20": {
+      "vs_climatology": 0.271,
+      "vs_raw_threshold": 0.366,
+      "logistic_vs_climatology": 0.287,
+      "reliability_bins_sum": 47322,
+      "split_n": 47322
+    }
+  },
+  "value": {
+    "9": {
+      "calibrated_peak": 0.54,
+      "calibrated_peak_ratio": 0.488,
+      "tuned_raw_peak": 0.54,
+      "tuned_raw_peak_ratio": 0.488,
+      "fixed_raw_peak": 0.525,
+      "max_disagreements": 2608,
+      "test_n": 47322,
+      "disagreement_share": 0.055
+    },
+    "12": {
+      "calibrated_peak": 0.616,
+      "calibrated_peak_ratio": 0.19,
+      "tuned_raw_peak": 0.618,
+      "tuned_raw_peak_ratio": 0.19,
+      "fixed_raw_peak": 0.53,
+      "max_disagreements": 4071,
+      "test_n": 47322,
+      "disagreement_share": 0.086
+    },
+    "13": {
+      "calibrated_peak": 0.649,
+      "calibrated_peak_ratio": 0.15,
+      "tuned_raw_peak": 0.649,
+      "tuned_raw_peak_ratio": 0.15,
+      "fixed_raw_peak": 0.513,
+      "max_disagreements": 3644,
+      "test_n": 47322,
+      "disagreement_share": 0.077
+    },
+    "16.5": {
+      "calibrated_peak": 0.721,
+      "calibrated_peak_ratio": 0.052,
+      "tuned_raw_peak": 0.721,
+      "tuned_raw_peak_ratio": 0.052,
+      "fixed_raw_peak": 0.447,
+      "max_disagreements": 2199,
+      "test_n": 47322,
+      "disagreement_share": 0.046
+    },
+    "20": {
+      "calibrated_peak": 0.835,
+      "calibrated_peak_ratio": 0.01,
+      "tuned_raw_peak": 0.791,
+      "tuned_raw_peak_ratio": 0.013,
+      "fixed_raw_peak": 0.455,
+      "max_disagreements": 3656,
+      "test_n": 47322,
+      "disagreement_share": 0.077
+    }
+  },
+  "spatial": {
+    "stations_evaluated": 45,
+    "transfer_median_skill": 0.3718599751572459,
+    "transfer_min_skill": -1.7027446775475545,
+    "transfer_negative_stations": 2,
+    "site_specific_median_skill": 0.39584393853516564,
+    "raw_threshold_median_skill": 0.12093411175979996,
+    "pooled_skill_vs_climatology": 0.39948889722841596,
+    "pooled_skill_vs_raw": 0.31563881829015583,
+    "test_positives": 9518
+  },
+  "spatial_by_lead": {
+    "12": {
+      "n": 23662,
+      "positives": 4604,
+      "brier": 0.09622336792068628,
+      "skill_vs_climatology": 0.3859965433652349,
+      "skill_vs_raw": 0.329750564692588
+    },
+    "18": {
+      "n": 23660,
+      "positives": 4914,
+      "brier": 0.09675488049994928,
+      "skill_vs_climatology": 0.41202535762346537,
+      "skill_vs_raw": 0.3010013824034199
+    }
+  },
+  "gust_12_rate": 0.201132665567812,
+  "mean_wind_12_rate": null
+}

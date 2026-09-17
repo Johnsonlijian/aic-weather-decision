@@ -1,0 +1,18 @@
+[
+  {
+    "name": "knmi_sample",
+    "error": "HTTPSConnectionPool(host='www.daggegevens.knmi.nl', port=443): Max retries exceeded with url: /klimatologie/uurgegevens?stns=240%3A260%3A344&start=2025010101&end=2025010724&vars=FH%3AFX (Caused by NameResolutionError(\"HTTPSConnection(host='www.daggegevens.knmi.nl', port=443): Failed to resolve 'www.daggegevens.knmi.nl' ([Errno -3] Temporary failure in name resolution)\"))"
+  },
+  {
+    "name": "gfs_index",
+    "error": "HTTPSConnectionPool(host='noaa-gfs-bdp-pds.s3.amazonaws.com', port=443): Max retries exceeded with url: /gfs.20250101/00/atmos/gfs.t00z.pgrb2.0p25.f006.idx (Caused by NameResolutionError(\"HTTPSConnection(host='noaa-gfs-bdp-pds.s3.amazonaws.com', port=443): Failed to resolve 'noaa-gfs-bdp-pds.s3.amazonaws.com' ([Errno -3] Temporary failure in name resolution)\"))"
+  },
+  {
+    "name": "psplib_home",
+    "error": "HTTPSConnectionPool(host='www.om-db.wi.tum.de', port=443): Max retries exceeded with url: /psplib/ (Caused by NameResolutionError(\"HTTPSConnection(host='www.om-db.wi.tum.de', port=443): Failed to resolve 'www.om-db.wi.tum.de' ([Errno -3] Temporary failure in name resolution)\"))"
+  },
+  {
+    "name": "single_run",
+    "error": "HTTPSConnectionPool(host='single-runs-api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=52.1&longitude=5.18&hourly=wind_gusts_10m&models=gfs_global&run=2026-08-01T00%3A00&wind_speed_unit=ms&timezone=UTC&forecast_days=3 (Caused by NameResolutionError(\"HTTPSConnection(host='single-runs-api.open-meteo.com', port=443): Failed to resolve 'single-runs-api.open-meteo.com' ([Errno -3] Temporary failure in name resolution)\"))"
+  }
+]

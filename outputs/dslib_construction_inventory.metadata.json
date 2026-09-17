@@ -1,0 +1,16 @@
+{
+  "analysis_status": "SELECTIVE_METADATA_INVENTORY_NO_PROJECT_FILES_EXTRACTED",
+  "created_at": "2026-09-15T01:55:25.483466+00:00",
+  "archive": "R:\\IMUT_WORKPOOL\\01_PROJECTS\\NAS_DRIVE\\IMUT\\2026-AiC-Weather-Decision\\AiC_Weather_Decision_Project_v1\\data\\raw\\networks\\DSLIB3.4.zip",
+  "archive_sha256": "19f87632c589f5d49f72b5f071992efc6379df2beb35f1efd3a60ac1381dc277",
+  "archive_members": 1400,
+  "workbook_member": "DSLIB 3.4/DSLIB_Analysis_Sheet.xlsx",
+  "all_dslib_rows": 231,
+  "construction_rows": 163,
+  "protrack_codes": 231,
+  "excel_codes": 231,
+  "project_card_codes": 228,
+  "project_card_missing_for_construction": 2,
+  "rights_status": "third-party release; redistribution and project-level use rights require audit",
+  "scientific_boundary": "Inventory fields are candidate project-network metadata; they do not establish weather sensitivity, operation duration, forecast availability, or empirical scheduling value."
+}

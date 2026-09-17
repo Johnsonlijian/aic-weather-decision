@@ -1,0 +1,5 @@
+source_type,policy_id,truth_case,task_name,action_start,forecast_window_probability,observed_window_status
+constructed_not_observed,earliest,hidden_future_good,lift,0,0.5,1
+constructed_not_observed,earliest,hidden_future_bad,lift,0,0.5,0
+constructed_not_observed,risk_aware,hidden_future_good,lift,3,1.0,1
+constructed_not_observed,risk_aware,hidden_future_bad,lift,3,1.0,0

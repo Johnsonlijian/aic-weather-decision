@@ -1,0 +1,47 @@
+[
+  {
+    "limit": 9.0,
+    "claim_pct": 40.7,
+    "true_pct": 47.0,
+    "fa_pct": 15.4,
+    "miss_pct": 30.8,
+    "positives": 22174,
+    "n": 47142
+  },
+  {
+    "limit": 12.0,
+    "claim_pct": 18.9,
+    "true_pct": 20.0,
+    "fa_pct": 8.0,
+    "miss_pct": 37.9,
+    "positives": 9450,
+    "n": 47142
+  },
+  {
+    "limit": 13.0,
+    "claim_pct": 13.3,
+    "true_pct": 14.4,
+    "fa_pct": 5.8,
+    "miss_pct": 42.3,
+    "positives": 6811,
+    "n": 47142
+  },
+  {
+    "limit": 16.5,
+    "claim_pct": 3.8,
+    "true_pct": 5.1,
+    "fa_pct": 1.6,
+    "miss_pct": 53.5,
+    "positives": 2392,
+    "n": 47142
+  },
+  {
+    "limit": 20.0,
+    "claim_pct": 1.2,
+    "true_pct": 1.1,
+    "fa_pct": 0.7,
+    "miss_pct": 53.6,
+    "positives": 506,
+    "n": 47142
+  }
+]

@@ -1,0 +1,117 @@
+{
+  "manifest": "outputs/gfs_gust_manifest_newperiod.jsonl",
+  "lead_grid": [
+    6,
+    12,
+    18,
+    24,
+    30,
+    36,
+    42,
+    48,
+    54,
+    60,
+    66,
+    72
+  ],
+  "cycles": [
+    "00",
+    "12"
+  ],
+  "issue_dates": 335,
+  "run_cycles": 8040,
+  "by_month": {
+    "2025-10": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31,
+      "keys": 744,
+      "keys_expected": 744
+    },
+    "2025-11": {
+      "days_present": 30,
+      "days_complete": 30,
+      "days_in_month": 30,
+      "keys": 720,
+      "keys_expected": 720
+    },
+    "2025-12": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31,
+      "keys": 744,
+      "keys_expected": 744
+    },
+    "2026-01": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31,
+      "keys": 744,
+      "keys_expected": 744
+    },
+    "2026-02": {
+      "days_present": 28,
+      "days_complete": 28,
+      "days_in_month": 28,
+      "keys": 672,
+      "keys_expected": 672
+    },
+    "2026-03": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31,
+      "keys": 744,
+      "keys_expected": 744
+    },
+    "2026-04": {
+      "days_present": 30,
+      "days_complete": 30,
+      "days_in_month": 30,
+      "keys": 720,
+      "keys_expected": 720
+    },
+    "2026-05": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31,
+      "keys": 744,
+      "keys_expected": 744
+    },
+    "2026-06": {
+      "days_present": 30,
+      "days_complete": 30,
+      "days_in_month": 30,
+      "keys": 720,
+      "keys_expected": 720
+    },
+    "2026-07": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31,
+      "keys": 744,
+      "keys_expected": 744
+    },
+    "2026-08": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31,
+      "keys": 744,
+      "keys_expected": 744
+    }
+  },
+  "complete_months": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "first_date": "2025-10-01",
+  "last_date": "2026-08-31"
+}

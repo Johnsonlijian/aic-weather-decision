@@ -1,0 +1,125 @@
+{
+  "total_rows": 124,
+  "columns": [
+    {
+      "column": "issue_date",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "string",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "issue_cycle",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "int",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "issue_time",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "string",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "valid_time",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "string",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "lead_hours",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "float",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "station_id",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "int",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "latitude",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "float",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "longitude",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "float",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "grid_longitude",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "float",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "grid_latitude",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "float",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "GUST_ms",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "float",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "KNMI_FX_ms",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "float",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "gfs_file",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "string",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "pairing_rule",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "string",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    },
+    {
+      "column": "observation_available",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "col_type": "bool",
+      "mechanism": "None",
+      "strategy": "No action needed"
+    }
+  ]
+}

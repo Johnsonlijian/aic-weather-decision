@@ -1,0 +1,34 @@
+digraph G {
+  rankdir=LR;
+  bgcolor="white";
+  node [fontname="Helvetica", fontsize=11, shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#3a6ea5", penwidth=1.2, margin="0.16,0.10"];
+  edge [color="#5a5a5a", penwidth=1.0, arrowsize=0.8];
+  graph [pad=0.2, nodesep=0.55, ranksep=0.75];
+
+  subgraph cluster_stages {
+    label="Forecast-to-decision mechanism";
+    fontname="Helvetica"; fontsize=13; fontcolor="#222222";
+    labeljust=l; style="rounded"; color="#cccccc";
+
+    a [label="Archived forecast\nNOAA GFS GUST 0.25°\n12,111 as-issued runs\n(2021–2025)"];
+    b [label="Availability boundary\naudited from archive\nissue + 4 h ≤ decision\n(Last-Modified 3.5–4.0 h)"];
+    c [label="Block event\n12 h window (t, t+12]\nany observed gust > limit\nforecast: block maximum"];
+    d [label="Decision-level calibration\nP(event | forecast)\nbinned / logistic\nfit 2021–23 only"];
+    e [label="Risk rule\nwork iff P ≤ p*\np* = 1 / (1 + C/L)"];
+    f [label="Planner outcome\ncompleted lifts\nunsafe exposure\nmissed safe blocks"];
+
+    a -> b -> c -> d -> e -> f;
+  }
+
+  subgraph cluster_mechanism {
+    label="Measured mechanism (held-out 2025)";
+    fontname="Helvetica"; fontsize=12; fontcolor="#7a1f1f";
+    labeljust=l; style="rounded"; color="#d9b3b3";
+    m1 [label="Raw threshold misses\n45% of true events at 12 m/s\n(63% at 16.5 m/s)", fillcolor="#fbeaea", color="#b06a6a"];
+    m2 [label="Calibration recovers the event\nBrier skill +0.20…+0.35 vs raw\n+0.26…+0.41 vs climatology", fillcolor="#eaf7ea", color="#4f8a4f"];
+    m1 -> m2 [style=bold, color="#7a1f1f", label="repairs", fontsize=10];
+  }
+
+  d -> m1 [style=dashed, color="#b06a6a", label="before", fontsize=9];
+  d -> m2 [style=dashed, color="#4f8a4f", label="after", fontsize=9];
+}

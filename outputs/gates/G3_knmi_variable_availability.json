@@ -1,0 +1,198 @@
+{
+  "probe_status": "VARIABLE_AVAILABILITY_ONLY_NO_ANALYSIS_CONCLUSION",
+  "created_at": "2026-09-15T05:01:21.461371+00:00",
+  "request_parameters": {
+    "stns": "260",
+    "start": "2024010101",
+    "end": "2024123124",
+    "vars": "DD:FH:FF:FX:T:TD:SQ:Q:DR:RH:P:VV:N:U:WW:IX:M:R:S:O:Y"
+  },
+  "requested_variables": [
+    "DD",
+    "FH",
+    "FF",
+    "FX",
+    "T",
+    "TD",
+    "SQ",
+    "Q",
+    "DR",
+    "RH",
+    "P",
+    "VV",
+    "N",
+    "U",
+    "WW",
+    "IX",
+    "M",
+    "R",
+    "S",
+    "O",
+    "Y"
+  ],
+  "returned_header": [
+    "STN",
+    "YYYYMMDD",
+    "HH",
+    "DD",
+    "FH",
+    "FF",
+    "FX",
+    "T",
+    "TD",
+    "SQ",
+    "Q",
+    "DR",
+    "RH",
+    "P",
+    "VV",
+    "N",
+    "U",
+    "WW",
+    "IX",
+    "M",
+    "R",
+    "S",
+    "O",
+    "Y"
+  ],
+  "returned_variables": [
+    "DD",
+    "FH",
+    "FF",
+    "FX",
+    "T",
+    "TD",
+    "SQ",
+    "Q",
+    "DR",
+    "RH",
+    "P",
+    "VV",
+    "N",
+    "U",
+    "WW",
+    "IX",
+    "M",
+    "R",
+    "S",
+    "O",
+    "Y"
+  ],
+  "parsed_rows": 8808,
+  "verbatim_rows": 8808,
+  "availability": {
+    "DD": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "FH": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "FF": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "FX": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "T": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "TD": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "SQ": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "Q": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "DR": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "RH": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "P": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "VV": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "N": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "U": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "WW": {
+      "non_empty": 0,
+      "rows": 8808,
+      "missing": 8808
+    },
+    "IX": {
+      "non_empty": 0,
+      "rows": 8808,
+      "missing": 8808
+    },
+    "M": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "R": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "S": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "O": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    },
+    "Y": {
+      "non_empty": 8808,
+      "rows": 8808,
+      "missing": 0
+    }
+  },
+  "retrieval": {
+    "url": "https://www.daggegevens.knmi.nl/klimatologie/uurgegevens?stns=260&start=2024010101&end=2024123124&vars=DD:FH:FF:FX:T:TD:SQ:Q:DR:RH:P:VV:N:U:WW:IX:M:R:S:O:Y",
+    "http_status": 200,
+    "retrieved_at": "2026-09-15T05:01:21.116365+00:00",
+    "sha256": "387e0277068c9fbfc75d9c73f3b09fdc251607093a033c1a96b0fa4b091a7eb8",
+    "bytes": 1301168
+  }
+}

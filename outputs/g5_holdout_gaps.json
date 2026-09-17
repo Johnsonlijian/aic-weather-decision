@@ -1,0 +1,527 @@
+{
+  "frozen_window_months": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2025-10",
+    "2025-11",
+    "2025-12"
+  ],
+  "leads_required_by_the_analysis": [
+    6,
+    12,
+    18,
+    24
+  ],
+  "failure_records": 71,
+  "manifest_records": 8040,
+  "failure_records_in_frozen_window": 71,
+  "frozen_window_issue_dates": 335,
+  "date_cycles_missing_a_lead": 0,
+  "recovery": [
+    {
+      "issue_date": "2025-12-03",
+      "issue_cycle": "12",
+      "lead_hours": 18,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2025-12-08",
+      "issue_cycle": "12",
+      "lead_hours": 30,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2025-12-10",
+      "issue_cycle": "12",
+      "lead_hours": 48,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2025-12-11",
+      "issue_cycle": "00",
+      "lead_hours": 66,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-02-20",
+      "issue_cycle": "12",
+      "lead_hours": 18,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-02-27",
+      "issue_cycle": "12",
+      "lead_hours": 48,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-02-27",
+      "issue_cycle": "00",
+      "lead_hours": 60,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-03-06",
+      "issue_cycle": "00",
+      "lead_hours": 66,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-03-07",
+      "issue_cycle": "12",
+      "lead_hours": 18,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-03-11",
+      "issue_cycle": "12",
+      "lead_hours": 60,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-03-24",
+      "issue_cycle": "00",
+      "lead_hours": 18,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-03-23",
+      "issue_cycle": "12",
+      "lead_hours": 72,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-03-27",
+      "issue_cycle": "12",
+      "lead_hours": 42,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-04-09",
+      "issue_cycle": "00",
+      "lead_hours": 36,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-04-10",
+      "issue_cycle": "00",
+      "lead_hours": 72,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-04-13",
+      "issue_cycle": "00",
+      "lead_hours": 42,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-04-20",
+      "issue_cycle": "00",
+      "lead_hours": 12,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-04-19",
+      "issue_cycle": "12",
+      "lead_hours": 72,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-04-24",
+      "issue_cycle": "00",
+      "lead_hours": 30,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-04-26",
+      "issue_cycle": "12",
+      "lead_hours": 6,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-04-29",
+      "issue_cycle": "00",
+      "lead_hours": 24,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-04-29",
+      "issue_cycle": "12",
+      "lead_hours": 24,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-04-30",
+      "issue_cycle": "00",
+      "lead_hours": 24,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-01",
+      "issue_cycle": "12",
+      "lead_hours": 24,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-02",
+      "issue_cycle": "12",
+      "lead_hours": 36,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-04",
+      "issue_cycle": "12",
+      "lead_hours": 24,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-07",
+      "issue_cycle": "00",
+      "lead_hours": 24,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-12",
+      "issue_cycle": "12",
+      "lead_hours": 42,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-14",
+      "issue_cycle": "00",
+      "lead_hours": 24,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-18",
+      "issue_cycle": "12",
+      "lead_hours": 18,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-19",
+      "issue_cycle": "12",
+      "lead_hours": 36,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-20",
+      "issue_cycle": "00",
+      "lead_hours": 36,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-20",
+      "issue_cycle": "00",
+      "lead_hours": 30,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-21",
+      "issue_cycle": "12",
+      "lead_hours": 60,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-24",
+      "issue_cycle": "12",
+      "lead_hours": 42,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-25",
+      "issue_cycle": "12",
+      "lead_hours": 24,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-25",
+      "issue_cycle": "12",
+      "lead_hours": 54,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-26",
+      "issue_cycle": "00",
+      "lead_hours": 66,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-26",
+      "issue_cycle": "12",
+      "lead_hours": 72,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-28",
+      "issue_cycle": "12",
+      "lead_hours": 54,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-05-31",
+      "issue_cycle": "12",
+      "lead_hours": 30,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-06-01",
+      "issue_cycle": "00",
+      "lead_hours": 36,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-06-03",
+      "issue_cycle": "12",
+      "lead_hours": 60,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-06-11",
+      "issue_cycle": "12",
+      "lead_hours": 30,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-06-16",
+      "issue_cycle": "00",
+      "lead_hours": 42,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-06-22",
+      "issue_cycle": "00",
+      "lead_hours": 18,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-06-22",
+      "issue_cycle": "12",
+      "lead_hours": 24,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-06-23",
+      "issue_cycle": "12",
+      "lead_hours": 72,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-06-25",
+      "issue_cycle": "00",
+      "lead_hours": 30,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-03",
+      "issue_cycle": "00",
+      "lead_hours": 30,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-04",
+      "issue_cycle": "12",
+      "lead_hours": 54,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-05",
+      "issue_cycle": "00",
+      "lead_hours": 36,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-05",
+      "issue_cycle": "00",
+      "lead_hours": 66,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-07",
+      "issue_cycle": "12",
+      "lead_hours": 48,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-09",
+      "issue_cycle": "12",
+      "lead_hours": 36,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-10",
+      "issue_cycle": "00",
+      "lead_hours": 24,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-13",
+      "issue_cycle": "12",
+      "lead_hours": 60,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-16",
+      "issue_cycle": "00",
+      "lead_hours": 18,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-17",
+      "issue_cycle": "12",
+      "lead_hours": 18,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-21",
+      "issue_cycle": "00",
+      "lead_hours": 60,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-20",
+      "issue_cycle": "12",
+      "lead_hours": 30,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-23",
+      "issue_cycle": "12",
+      "lead_hours": 36,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-25",
+      "issue_cycle": "12",
+      "lead_hours": 18,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-26",
+      "issue_cycle": "12",
+      "lead_hours": 18,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-27",
+      "issue_cycle": "12",
+      "lead_hours": 48,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-07-29",
+      "issue_cycle": "12",
+      "lead_hours": 54,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-08-05",
+      "issue_cycle": "00",
+      "lead_hours": 24,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-08-13",
+      "issue_cycle": "00",
+      "lead_hours": 48,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-08-14",
+      "issue_cycle": "00",
+      "lead_hours": 72,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-08-20",
+      "issue_cycle": "12",
+      "lead_hours": 30,
+      "leads_present_now": 12,
+      "recovered": true
+    },
+    {
+      "issue_date": "2026-08-26",
+      "issue_cycle": "00",
+      "lead_hours": 60,
+      "leads_present_now": 12,
+      "recovered": true
+    }
+  ],
+  "note": "the failure log records attempts; the manifest records verified messages, so a failure record can coexist with a complete key when a later attempt succeeded",
+  "verdict": "frozen hold-out window has no gaps in the manifest"
+}

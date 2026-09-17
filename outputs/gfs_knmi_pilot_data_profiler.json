@@ -1,0 +1,429 @@
+{
+  "total_rows": 124,
+  "dqs": {
+    "score": 81.3,
+    "dimensions": {
+      "completeness": 100.0,
+      "consistency": 46.7,
+      "validity": 88.0,
+      "uniqueness": 90.0,
+      "timeliness": 85.0
+    }
+  },
+  "columns": [
+    {
+      "column": "issue_date",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 31,
+      "cardinality_pct": 25.0,
+      "inferred_type": "string",
+      "top_values": [
+        [
+          "2025-01-01",
+          4
+        ],
+        [
+          "2025-01-02",
+          4
+        ],
+        [
+          "2025-01-03",
+          4
+        ],
+        [
+          "2025-01-04",
+          4
+        ],
+        [
+          "2025-01-05",
+          4
+        ]
+      ],
+      "is_constant": false,
+      "is_high_cardinality": false
+    },
+    {
+      "column": "issue_cycle",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 4,
+      "cardinality_pct": 3.23,
+      "inferred_type": "int",
+      "top_values": [
+        [
+          "00",
+          31
+        ],
+        [
+          "06",
+          31
+        ],
+        [
+          "12",
+          31
+        ],
+        [
+          "18",
+          31
+        ]
+      ],
+      "is_constant": false,
+      "is_high_cardinality": false,
+      "min": 0.0,
+      "max": 18.0,
+      "mean": 9.0,
+      "std": 6.7354
+    },
+    {
+      "column": "issue_time",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 124,
+      "cardinality_pct": 100.0,
+      "inferred_type": "string",
+      "top_values": [
+        [
+          "2025-01-01T00:00:00+00:00",
+          1
+        ],
+        [
+          "2025-01-01T06:00:00+00:00",
+          1
+        ],
+        [
+          "2025-01-01T12:00:00+00:00",
+          1
+        ],
+        [
+          "2025-01-01T18:00:00+00:00",
+          1
+        ],
+        [
+          "2025-01-02T00:00:00+00:00",
+          1
+        ]
+      ],
+      "is_constant": false,
+      "is_high_cardinality": true
+    },
+    {
+      "column": "valid_time",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 124,
+      "cardinality_pct": 100.0,
+      "inferred_type": "string",
+      "top_values": [
+        [
+          "2025-01-01T06:00:00+00:00",
+          1
+        ],
+        [
+          "2025-01-01T12:00:00+00:00",
+          1
+        ],
+        [
+          "2025-01-01T18:00:00+00:00",
+          1
+        ],
+        [
+          "2025-01-02T00:00:00+00:00",
+          1
+        ],
+        [
+          "2025-01-02T06:00:00+00:00",
+          1
+        ]
+      ],
+      "is_constant": false,
+      "is_high_cardinality": true
+    },
+    {
+      "column": "lead_hours",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 1,
+      "cardinality_pct": 0.81,
+      "inferred_type": "float",
+      "top_values": [
+        [
+          "6.0",
+          124
+        ]
+      ],
+      "is_constant": true,
+      "is_high_cardinality": false,
+      "min": 6.0,
+      "max": 6.0,
+      "mean": 6.0,
+      "std": 0.0
+    },
+    {
+      "column": "station_id",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 1,
+      "cardinality_pct": 0.81,
+      "inferred_type": "int",
+      "top_values": [
+        [
+          "260",
+          124
+        ]
+      ],
+      "is_constant": true,
+      "is_high_cardinality": false,
+      "min": 260.0,
+      "max": 260.0,
+      "mean": 260.0,
+      "std": 0.0
+    },
+    {
+      "column": "latitude",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 1,
+      "cardinality_pct": 0.81,
+      "inferred_type": "float",
+      "top_values": [
+        [
+          "52.1",
+          124
+        ]
+      ],
+      "is_constant": true,
+      "is_high_cardinality": false,
+      "min": 52.1,
+      "max": 52.1,
+      "mean": 52.1,
+      "std": 0.0
+    },
+    {
+      "column": "longitude",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 1,
+      "cardinality_pct": 0.81,
+      "inferred_type": "float",
+      "top_values": [
+        [
+          "5.18",
+          124
+        ]
+      ],
+      "is_constant": true,
+      "is_high_cardinality": false,
+      "min": 5.18,
+      "max": 5.18,
+      "mean": 5.18,
+      "std": 0.0
+    },
+    {
+      "column": "grid_longitude",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 1,
+      "cardinality_pct": 0.81,
+      "inferred_type": "float",
+      "top_values": [
+        [
+          "5.25",
+          124
+        ]
+      ],
+      "is_constant": true,
+      "is_high_cardinality": false,
+      "min": 5.25,
+      "max": 5.25,
+      "mean": 5.25,
+      "std": 0.0
+    },
+    {
+      "column": "grid_latitude",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 1,
+      "cardinality_pct": 0.81,
+      "inferred_type": "float",
+      "top_values": [
+        [
+          "52.0",
+          124
+        ]
+      ],
+      "is_constant": true,
+      "is_high_cardinality": false,
+      "min": 52.0,
+      "max": 52.0,
+      "mean": 52.0,
+      "std": 0.0
+    },
+    {
+      "column": "GUST_ms",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 124,
+      "cardinality_pct": 100.0,
+      "inferred_type": "float",
+      "top_values": [
+        [
+          "21.10696029663086",
+          1
+        ],
+        [
+          "24.801746368408203",
+          1
+        ],
+        [
+          "10.604681968688965",
+          1
+        ],
+        [
+          "8.81168270111084",
+          1
+        ],
+        [
+          "2.602344512939453",
+          1
+        ]
+      ],
+      "is_constant": false,
+      "is_high_cardinality": true,
+      "min": 0.5,
+      "max": 24.801746368408203,
+      "mean": 7.6517,
+      "std": 5.6396
+    },
+    {
+      "column": "KNMI_FX_ms",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 17,
+      "cardinality_pct": 13.71,
+      "inferred_type": "float",
+      "top_values": [
+        [
+          "4.0",
+          24
+        ],
+        [
+          "5.0",
+          15
+        ],
+        [
+          "3.0",
+          15
+        ],
+        [
+          "6.0",
+          12
+        ],
+        [
+          "8.0",
+          9
+        ]
+      ],
+      "is_constant": false,
+      "is_high_cardinality": false,
+      "min": 1.0,
+      "max": 19.0,
+      "mean": 6.2581,
+      "std": 3.8017
+    },
+    {
+      "column": "gfs_file",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 124,
+      "cardinality_pct": 100.0,
+      "inferred_type": "string",
+      "top_values": [
+        [
+          "gfs_20250101_00_f006_gust.grib2",
+          1
+        ],
+        [
+          "gfs_20250101_06_f006_gust.grib2",
+          1
+        ],
+        [
+          "gfs_20250101_12_f006_gust.grib2",
+          1
+        ],
+        [
+          "gfs_20250101_18_f006_gust.grib2",
+          1
+        ],
+        [
+          "gfs_20250102_00_f006_gust.grib2",
+          1
+        ]
+      ],
+      "is_constant": false,
+      "is_high_cardinality": true
+    },
+    {
+      "column": "pairing_rule",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 1,
+      "cardinality_pct": 0.81,
+      "inferred_type": "string",
+      "top_values": [
+        [
+          "GFS valid_time == KNMI interval_end",
+          124
+        ]
+      ],
+      "is_constant": true,
+      "is_high_cardinality": false
+    },
+    {
+      "column": "observation_available",
+      "total_rows": 124,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 124,
+      "unique_count": 1,
+      "cardinality_pct": 0.81,
+      "inferred_type": "bool",
+      "top_values": [
+        [
+          "True",
+          124
+        ]
+      ],
+      "is_constant": true,
+      "is_high_cardinality": false
+    }
+  ]
+}

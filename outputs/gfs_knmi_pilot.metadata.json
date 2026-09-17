@@ -1,0 +1,1269 @@
+{
+  "analysis_status": "OFFLINE_ALIGNMENT_PILOT_NO_OPERATIONAL_BACKTEST",
+  "created_at": "2026-09-15T00:09:31.668427+00:00",
+  "station": {
+    "station_id": "260",
+    "latitude": 52.1,
+    "longitude": 5.18
+  },
+  "start": "2025-01-01",
+  "end": "2025-01-31",
+  "cycles": [
+    "00",
+    "06",
+    "12",
+    "18"
+  ],
+  "lead_hours": 6,
+  "forecast_variable": "GFS GUST instantaneous gridded forecast",
+  "observation_variable": "KNMI FX preceding-hour maximum wind speed",
+  "pairing_rule": "GFS valid_time == KNMI interval_end",
+  "rows_written": 124,
+  "paired_observations": 124,
+  "failed_attempts": 0,
+  "availability_status": "offline historical archive; publication latency not established",
+  "attempts": [
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250101_00_f006_gust",
+      "bytes": 607446,
+      "index_sha256": "e33dd51334cdafd26f284bd14f414c3768827325d687cb8c0499edb3bc5e3d99",
+      "issue_date": "2025-01-01",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-01T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250101_06_f006_gust",
+      "bytes": 605143,
+      "index_sha256": "412fb7f1e5516b72c2f1dd12f9e6441dd14468fa5d98bbbc7299719fcefe8e75",
+      "issue_date": "2025-01-01",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-01T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250101_12_f006_gust",
+      "bytes": 615640,
+      "index_sha256": "a3977b09ed8272f0afc833b44d8ccaa03e9c237f989910d8eb0aed46ff29c576",
+      "issue_date": "2025-01-01",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-01T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250101_18_f006_gust",
+      "bytes": 620304,
+      "index_sha256": "1eb30ca8b6f31e5a8d3ff37ff75bed40fcc3f68dddaa176b620d8d5e08b17b20",
+      "issue_date": "2025-01-01",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-02T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250102_00_f006_gust",
+      "bytes": 612581,
+      "index_sha256": "161c50217af417893dd69f0750545c6e04dec3d534664e80015a9bcd92e3478e",
+      "issue_date": "2025-01-02",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-02T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250102_06_f006_gust",
+      "bytes": 611155,
+      "index_sha256": "1cf24af0f75f12711ad8a8408f099636b4da8076c4e23eccc7c0e5fd5f5b2552",
+      "issue_date": "2025-01-02",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-02T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250102_12_f006_gust",
+      "bytes": 618059,
+      "index_sha256": "f5213b65493bb4d3e75441d451b65f7e11488d88dd2eaaa1d482c21c6b317c1a",
+      "issue_date": "2025-01-02",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-02T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250102_18_f006_gust",
+      "bytes": 618581,
+      "index_sha256": "307ea28455bb13355f04153f5d695024ef663317aa8167561f15e40f9b63dd1b",
+      "issue_date": "2025-01-02",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-03T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250103_00_f006_gust",
+      "bytes": 611020,
+      "index_sha256": "2edb815487a6522758bfc29674a1b074d91405bff330db84740031bc45d300af",
+      "issue_date": "2025-01-03",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-03T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250103_06_f006_gust",
+      "bytes": 610441,
+      "index_sha256": "c13218256412455bd38e6858ab2860a027a6a55fa05efcab7fce9fbc71fb3563",
+      "issue_date": "2025-01-03",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-03T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250103_12_f006_gust",
+      "bytes": 618218,
+      "index_sha256": "e360f5ea91ea9d17b08af0bca1b3658214e380cfdbdaa1a06db4712f9ddc6b24",
+      "issue_date": "2025-01-03",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-03T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250103_18_f006_gust",
+      "bytes": 619783,
+      "index_sha256": "1cb4fad7736722753e1417e4ebdc9f3af8b58473df66054a257a7e093746efd8",
+      "issue_date": "2025-01-03",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-04T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250104_00_f006_gust",
+      "bytes": 610336,
+      "index_sha256": "ea9b2968acd257af80ed10d5cdf6bc5bedfdd2609fbef11aeab25c743558f660",
+      "issue_date": "2025-01-04",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-04T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250104_06_f006_gust",
+      "bytes": 605328,
+      "index_sha256": "6768121697d9952744329d160fd07abc224e91d00022961411c16ceae0f2ed10",
+      "issue_date": "2025-01-04",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-04T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250104_12_f006_gust",
+      "bytes": 611384,
+      "index_sha256": "689e318ec4921bafd555fdc43319877677e9e63adc7f9b07e52832259c3420bc",
+      "issue_date": "2025-01-04",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-04T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250104_18_f006_gust",
+      "bytes": 615755,
+      "index_sha256": "380635ca89eef842a9f6b54e209f4923557becf9d00dd702d34d5db8ce264969",
+      "issue_date": "2025-01-04",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-05T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250105_00_f006_gust",
+      "bytes": 604733,
+      "index_sha256": "ac1d00ce520dd43b69dc16a4aa4988c762ce0e92c7dee723e1f4c3fef194a2ff",
+      "issue_date": "2025-01-05",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-05T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250105_06_f006_gust",
+      "bytes": 600314,
+      "index_sha256": "30cd897ec74e41f2de23934ec5c6b90909e22a8218dfd4c6bd8b003a88e71cbb",
+      "issue_date": "2025-01-05",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-05T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250105_12_f006_gust",
+      "bytes": 611563,
+      "index_sha256": "ebb64b2844ba12585f3ebff03f51a812d946819099921e16aa2275075ca0ff98",
+      "issue_date": "2025-01-05",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-05T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250105_18_f006_gust",
+      "bytes": 610239,
+      "index_sha256": "42855fac7f9149ca7268d7ac353e4f14abb49a7d2599f3a152723d74bee983f6",
+      "issue_date": "2025-01-05",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-06T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250106_00_f006_gust",
+      "bytes": 605143,
+      "index_sha256": "9afcd48bc18396c20c1c77fe32c4d6b5ad951a4e03c31e77f483f2d7aef35e15",
+      "issue_date": "2025-01-06",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-06T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250106_06_f006_gust",
+      "bytes": 603038,
+      "index_sha256": "612b21004add93815d152fb66917e8cf97eefcad92ef3b0e0c6d8ba7b6811274",
+      "issue_date": "2025-01-06",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-06T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250106_12_f006_gust",
+      "bytes": 610391,
+      "index_sha256": "3dc2694727c761ba4c34b23f564f51b009c2bbcd1636a7a1451e00ccba1a2c17",
+      "issue_date": "2025-01-06",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-06T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250106_18_f006_gust",
+      "bytes": 615181,
+      "index_sha256": "1ae4d719aff1a2a8eafd7c2859298e0a9ddd359f3f3980ecbe683e4656da8a90",
+      "issue_date": "2025-01-06",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-07T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250107_00_f006_gust",
+      "bytes": 606466,
+      "index_sha256": "225c26074aca84103238c5d9c71a0d7b5b0cef6f6595682af476219977210b20",
+      "issue_date": "2025-01-07",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-07T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250107_06_f006_gust",
+      "bytes": 605323,
+      "index_sha256": "fc06d7031f4f72ccc15ea008c0155a1c306cc486e62bb4b328f756ef36a1a841",
+      "issue_date": "2025-01-07",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-07T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250107_12_f006_gust",
+      "bytes": 610750,
+      "index_sha256": "a4622d7ce6bd2ef997ab3395310d3a4f297f070c9bf65b723d6a997b9e396bd3",
+      "issue_date": "2025-01-07",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-07T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250107_18_f006_gust",
+      "bytes": 616473,
+      "index_sha256": "e5c21fcdc168e64fdc2ce07d1d7580127fdfb8f0e352525f1aa19bcb8e1627d1",
+      "issue_date": "2025-01-07",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-08T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250108_00_f006_gust",
+      "bytes": 609016,
+      "index_sha256": "9a371b51f4f91e755915df2d8110c0f046230246e070047334fe46b18841da32",
+      "issue_date": "2025-01-08",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-08T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250108_06_f006_gust",
+      "bytes": 606450,
+      "index_sha256": "fc54a35ad91fa3f9b57c1294a69a9b35dc7f04e0bad415e5686fa18aabf09f32",
+      "issue_date": "2025-01-08",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-08T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250108_12_f006_gust",
+      "bytes": 617476,
+      "index_sha256": "779e6b55e98ad0281c33365146db65d3397721cdf40a9c731cc1bb72b599a07c",
+      "issue_date": "2025-01-08",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-08T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250108_18_f006_gust",
+      "bytes": 614113,
+      "index_sha256": "42ea80bfe44315f9b9db720708a480e95f8b515e055b3c48414b62e0cd322191",
+      "issue_date": "2025-01-08",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-09T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250109_00_f006_gust",
+      "bytes": 612321,
+      "index_sha256": "c14bab9345a29eb397211b0f6863c5624f124e5e173c3bb9d02b6d56d2dea773",
+      "issue_date": "2025-01-09",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-09T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250109_06_f006_gust",
+      "bytes": 610961,
+      "index_sha256": "83b11e82db453ade10ba16d26edb2b9d38ac7dc5d5faa6a42126b52d98a01542",
+      "issue_date": "2025-01-09",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-09T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250109_12_f006_gust",
+      "bytes": 618543,
+      "index_sha256": "b739d60d9288553e0e49d73774bf486c79cdbbdbf458e5212c80426b10e7166c",
+      "issue_date": "2025-01-09",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-09T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250109_18_f006_gust",
+      "bytes": 622846,
+      "index_sha256": "d5e54ff7e0d036c2833c78ee663464e624cdc32de077b6bccf3a8b11c500c191",
+      "issue_date": "2025-01-09",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-10T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250110_00_f006_gust",
+      "bytes": 617433,
+      "index_sha256": "9343cc2ac1295b2a4597e0357840d76e9447de5342043353c3932f7bed699c45",
+      "issue_date": "2025-01-10",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-10T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250110_06_f006_gust",
+      "bytes": 614997,
+      "index_sha256": "a86180120ee13e6bb10447b154f7e443df98f56b2a76a12b300750fb821baa63",
+      "issue_date": "2025-01-10",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-10T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250110_12_f006_gust",
+      "bytes": 618000,
+      "index_sha256": "c6cd87be8cafe2de7db16c57f31c58621c5b41bbc45f925ed49e1e97144a41cb",
+      "issue_date": "2025-01-10",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-10T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250110_18_f006_gust",
+      "bytes": 619062,
+      "index_sha256": "a4738046fa8dffa191d7d916d22f717075783dd2438771d9db6b28059d59660f",
+      "issue_date": "2025-01-10",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-11T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250111_00_f006_gust",
+      "bytes": 618541,
+      "index_sha256": "1582e344b2b79e0306ef5d8845568aac0d7421756bbe7cdfa58a9fc9de2df6b1",
+      "issue_date": "2025-01-11",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-11T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250111_06_f006_gust",
+      "bytes": 613389,
+      "index_sha256": "11aa504aad1bf66ae312b1c25fb27fdb7d4299901042d9c8b7143675f42d5d56",
+      "issue_date": "2025-01-11",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-11T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250111_12_f006_gust",
+      "bytes": 614621,
+      "index_sha256": "4c44458d8d9da9e789966ae7b2b23ebf363737e5f53b3d6b9021bccd826eff36",
+      "issue_date": "2025-01-11",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-11T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250111_18_f006_gust",
+      "bytes": 617041,
+      "index_sha256": "54462930f925b5fc01855d07ea6f7c8a14141d06ef9ad2a09c3714efba2f12e8",
+      "issue_date": "2025-01-11",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-12T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250112_00_f006_gust",
+      "bytes": 613664,
+      "index_sha256": "af460de3fe78314bdaf036fdf9124689b43957324c4d192e35b49286bb7f2942",
+      "issue_date": "2025-01-12",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-12T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250112_06_f006_gust",
+      "bytes": 613249,
+      "index_sha256": "342bbfb613d5442d9fae13a68431ad66ba36c62544814fd8d65dfd5c244cd679",
+      "issue_date": "2025-01-12",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-12T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250112_12_f006_gust",
+      "bytes": 611429,
+      "index_sha256": "74d7b067dc96bd8c9969680c3d556721e6d64aee3d8a599a44b6135e1ff7a811",
+      "issue_date": "2025-01-12",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-12T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250112_18_f006_gust",
+      "bytes": 612980,
+      "index_sha256": "67469ec755105b66794c08521213b4261225b4dc8c1711a056e1eeb969f12030",
+      "issue_date": "2025-01-12",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-13T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250113_00_f006_gust",
+      "bytes": 607742,
+      "index_sha256": "669f554ade7558614ba7e49e410f5f091beec5f2bc32a64110d8bf37f3671b29",
+      "issue_date": "2025-01-13",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-13T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250113_06_f006_gust",
+      "bytes": 607818,
+      "index_sha256": "78780437b9d80be0c3fe3fad96cfbb8c0cdfa129dea569dbec8b9db56d4f8f5d",
+      "issue_date": "2025-01-13",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-13T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250113_12_f006_gust",
+      "bytes": 615394,
+      "index_sha256": "79477f9f46bd50df8cc67a54cff40fdf67236b4787266f593a5713fb4ed27e52",
+      "issue_date": "2025-01-13",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-13T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250113_18_f006_gust",
+      "bytes": 619617,
+      "index_sha256": "af2654a42f009f29230e9a2e73f4b51ba5d49699d279898b4f4ee09070e50c5a",
+      "issue_date": "2025-01-13",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-14T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250114_00_f006_gust",
+      "bytes": 614122,
+      "index_sha256": "f2e1046c42ebd48750ecaf71f5751f5712db28927fdbd4732c9f612cf38fa6f3",
+      "issue_date": "2025-01-14",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-14T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250114_06_f006_gust",
+      "bytes": 611945,
+      "index_sha256": "3391dd2b51a5382309e41d604e40b68184729e0e92468aa207b43432c72a635b",
+      "issue_date": "2025-01-14",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-14T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250114_12_f006_gust",
+      "bytes": 618369,
+      "index_sha256": "5d76564f3b0c6585d62b5dace227369cca4049041b375cffa9e29376d8affc86",
+      "issue_date": "2025-01-14",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-14T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250114_18_f006_gust",
+      "bytes": 624157,
+      "index_sha256": "c32009cbc98b749424e0696b53acb42f4792ae40a58ef204a22598d0748c0d30",
+      "issue_date": "2025-01-14",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-15T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250115_00_f006_gust",
+      "bytes": 615442,
+      "index_sha256": "58913266203cb7d714f5f3699a70b22b6d40cfd882ff865e111aa6c6d4ce184b",
+      "issue_date": "2025-01-15",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-15T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250115_06_f006_gust",
+      "bytes": 613992,
+      "index_sha256": "10315659fc6f28bdb42f247811c62797849380f976b2dbb96bd2dac96b31bdbe",
+      "issue_date": "2025-01-15",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-15T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250115_12_f006_gust",
+      "bytes": 620364,
+      "index_sha256": "966be176079eece5441a9ad7088930a9ba5f4cb6bb750c9ce3b132695a232ebd",
+      "issue_date": "2025-01-15",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-15T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250115_18_f006_gust",
+      "bytes": 622899,
+      "index_sha256": "88fce219d3ee66b7f3a2a88def9d30c38d1f3c34a93da5427523517b8466d64d",
+      "issue_date": "2025-01-15",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-16T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250116_00_f006_gust",
+      "bytes": 621004,
+      "index_sha256": "26131ba2c64b3ef35cae691a8bba7bd62739f63428c7aa17dd027ed4dc1ef32b",
+      "issue_date": "2025-01-16",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-16T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250116_06_f006_gust",
+      "bytes": 617068,
+      "index_sha256": "0b316752e4467a49698dae093cf7d63c12073cebb8290ba79d49661c773c93b9",
+      "issue_date": "2025-01-16",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-16T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250116_12_f006_gust",
+      "bytes": 619204,
+      "index_sha256": "a825f5141080f6c9c74138ea9a2df7611bac04b21f419c4e0267dea02ce51c5a",
+      "issue_date": "2025-01-16",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-16T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250116_18_f006_gust",
+      "bytes": 626196,
+      "index_sha256": "d9dbb9ea9a7730b2f84feebf4f56ee87ffa43eba3430a931b02f460dc49b86ca",
+      "issue_date": "2025-01-16",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-17T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250117_00_f006_gust",
+      "bytes": 617604,
+      "index_sha256": "9d4a5552857faa81c816d8bf0c59038842b69ad4f8d2c928821b960a2763a631",
+      "issue_date": "2025-01-17",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-17T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250117_06_f006_gust",
+      "bytes": 615583,
+      "index_sha256": "f8308e8ee4a69c42d7c1a87176cb2c946f8b4fb7a61f9481f26255f10ba42a94",
+      "issue_date": "2025-01-17",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-17T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250117_12_f006_gust",
+      "bytes": 621897,
+      "index_sha256": "1d339ac48d0cf54616410677282a4f43c035adfca591a5c0cb63552cfca89ffb",
+      "issue_date": "2025-01-17",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-17T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250117_18_f006_gust",
+      "bytes": 623324,
+      "index_sha256": "147c59c3959e039b791bc5e528dbf04fb6979b821cfed30d106bec59b2baa0a7",
+      "issue_date": "2025-01-17",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-18T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250118_00_f006_gust",
+      "bytes": 618172,
+      "index_sha256": "89d2192bc6aec0a2eb9e55f5688743a6c1b08a4a2e527170a38c88ade43110d7",
+      "issue_date": "2025-01-18",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-18T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250118_06_f006_gust",
+      "bytes": 615905,
+      "index_sha256": "c5a36b3ac3a8bd6adbdbdb65d65a0f66401d8c46796663c13e3868df0df53ac1",
+      "issue_date": "2025-01-18",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-18T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250118_12_f006_gust",
+      "bytes": 621216,
+      "index_sha256": "4def2853432bd1bed46e16913bdeb486e3d0341cb573d80f62ee6f700add4f44",
+      "issue_date": "2025-01-18",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-18T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250118_18_f006_gust",
+      "bytes": 617525,
+      "index_sha256": "f884433ba8f74a224c9ed1757cc2434310160db7e3fffd786a5d31210cc42c75",
+      "issue_date": "2025-01-18",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-19T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250119_00_f006_gust",
+      "bytes": 612744,
+      "index_sha256": "a32f58dec0c4b1f9addadd10684a059331a454560db6dd9d78f8ebfc187fffee",
+      "issue_date": "2025-01-19",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-19T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250119_06_f006_gust",
+      "bytes": 611549,
+      "index_sha256": "4613e756a58151e2d68b77ac84c3077e8ace61696231864d9db37375b63aba86",
+      "issue_date": "2025-01-19",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-19T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250119_12_f006_gust",
+      "bytes": 617518,
+      "index_sha256": "93ca59d3a69ea93d2bafe7b3e915b38cf2b3166da561aebd03ce49deff73d42c",
+      "issue_date": "2025-01-19",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-19T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250119_18_f006_gust",
+      "bytes": 616034,
+      "index_sha256": "12f38bbac585829d48b5da91dffd43203d625dd433061e4ed1508bf664b55ec1",
+      "issue_date": "2025-01-19",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-20T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250120_00_f006_gust",
+      "bytes": 612012,
+      "index_sha256": "6c97c878db4ea4dabe3aa9dcd01caee106297aab7c2c4a20c41cc725f1320e76",
+      "issue_date": "2025-01-20",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-20T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250120_06_f006_gust",
+      "bytes": 611686,
+      "index_sha256": "069814d66c61c638de35b29882d5aa512a913f1dddedcf4b457b0bbb9fef01d4",
+      "issue_date": "2025-01-20",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-20T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250120_12_f006_gust",
+      "bytes": 615439,
+      "index_sha256": "b654a59cc4464d0abac521bdcc66f8b19c771a4a91d305e0d5e69a98bf6c68c8",
+      "issue_date": "2025-01-20",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-20T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250120_18_f006_gust",
+      "bytes": 619034,
+      "index_sha256": "4934c8a5ca793e0e56526563f78d7ab31cf89090e35faf0bb9b696e4a56ff8bd",
+      "issue_date": "2025-01-20",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-21T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250121_00_f006_gust",
+      "bytes": 616469,
+      "index_sha256": "6f1a3736cb3973ad3aab3a5cc09524fffecdfc79878a372c12a2e4d4edbca443",
+      "issue_date": "2025-01-21",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-21T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250121_06_f006_gust",
+      "bytes": 613490,
+      "index_sha256": "7311e997f55cdfae407cf70aea524b0861481df16b3ff5bf403a35e1aabd19a2",
+      "issue_date": "2025-01-21",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-21T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250121_12_f006_gust",
+      "bytes": 622459,
+      "index_sha256": "80635fc378e9b66b30f72f3ec721a07ea267dfbc7ebc4e9c22e5f069973ef1eb",
+      "issue_date": "2025-01-21",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-21T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250121_18_f006_gust",
+      "bytes": 624463,
+      "index_sha256": "92852829deae86a8f99542335799b932a1a1ba55d125a7736b1bf075902f23a5",
+      "issue_date": "2025-01-21",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-22T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250122_00_f006_gust",
+      "bytes": 620554,
+      "index_sha256": "aa9d99d45745dd0aebb084748e57ea13ab4d9a35f4e992d2597d6f1454ce45e9",
+      "issue_date": "2025-01-22",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-22T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250122_06_f006_gust",
+      "bytes": 617156,
+      "index_sha256": "fac4bb6ac845ca7ac5a0b6e56a28369c564371d3be60abf78b27897be8623b29",
+      "issue_date": "2025-01-22",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-22T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250122_12_f006_gust",
+      "bytes": 623212,
+      "index_sha256": "ced59dfe6c3ad193970d670cb00a5c6e0c125b06a7258612cc62b75d388feb50",
+      "issue_date": "2025-01-22",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-22T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250122_18_f006_gust",
+      "bytes": 617432,
+      "index_sha256": "41b65a93de40ae6d906b99c419b1f5e16b71fcb9a0f30a32fc8a8675b1f4280a",
+      "issue_date": "2025-01-22",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-23T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250123_00_f006_gust",
+      "bytes": 612942,
+      "index_sha256": "a0dce77d78aa8ce7e107ec7cd9ff041dc64e30f8b630dbad769d2893b91ba919",
+      "issue_date": "2025-01-23",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-23T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250123_06_f006_gust",
+      "bytes": 605830,
+      "index_sha256": "3424d60c0d98d0cd9b0810ad274aaa038bd1dd18efb360ad8f036678c8fb106a",
+      "issue_date": "2025-01-23",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-23T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250123_12_f006_gust",
+      "bytes": 612516,
+      "index_sha256": "a605e877df0e7a57412ad593c6dcd88c1abf6cf263efc80ee9ba9f9879075509",
+      "issue_date": "2025-01-23",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-23T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250123_18_f006_gust",
+      "bytes": 619204,
+      "index_sha256": "f7f8d5b1b056f8475ac1d08b70db02a7714bc762db7aae43d1abe6f55bcc04a9",
+      "issue_date": "2025-01-23",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-24T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250124_00_f006_gust",
+      "bytes": 608388,
+      "index_sha256": "35819c03f37ef361b24710ab551cf1c015b662ba3deba390392fee26b0e9e545",
+      "issue_date": "2025-01-24",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-24T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250124_06_f006_gust",
+      "bytes": 608164,
+      "index_sha256": "3cc8bffa2851914c649c0fd053c845bfeca6f980f5da6484e9f2145703194021",
+      "issue_date": "2025-01-24",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-24T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250124_12_f006_gust",
+      "bytes": 619813,
+      "index_sha256": "9747c8952c246be7772eb9a09216743761a8a621c71d2521637407079b826c1b",
+      "issue_date": "2025-01-24",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-24T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250124_18_f006_gust",
+      "bytes": 624267,
+      "index_sha256": "62686d29a395a8a78b2bd267bf52f17131d66546cc2a36cc412ebc532eb9544e",
+      "issue_date": "2025-01-24",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-25T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250125_00_f006_gust",
+      "bytes": 614213,
+      "index_sha256": "66b1f70f15edbdda4c95d2db2cbcf8a8463e8306f942220f9c67adb863c79a20",
+      "issue_date": "2025-01-25",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-25T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250125_06_f006_gust",
+      "bytes": 616838,
+      "index_sha256": "3024e7467483a49b28f58e5fc0dc608896aa9348f106ea0f5aa2b6e2fb3e2cb9",
+      "issue_date": "2025-01-25",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-25T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250125_12_f006_gust",
+      "bytes": 617401,
+      "index_sha256": "a4e3c77d67ca156ebe81c08e1602432a55352591c086d46cc5bf4058d3d87efc",
+      "issue_date": "2025-01-25",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-25T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250125_18_f006_gust",
+      "bytes": 617353,
+      "index_sha256": "ef354c9aad8920ae462b56210e9238073cd5c0d8d23f009ae1b8add7ee33a7e6",
+      "issue_date": "2025-01-25",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-26T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250126_00_f006_gust",
+      "bytes": 610790,
+      "index_sha256": "4f237b97bcb7df2dc264c31feffefb27170bded8d6b133d2bf606ed77e62c27f",
+      "issue_date": "2025-01-26",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-26T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250126_06_f006_gust",
+      "bytes": 608738,
+      "index_sha256": "10cf07e734c58b5fb73a824d988c10882bb174f9baf9934e8fbc5a35ac08b1be",
+      "issue_date": "2025-01-26",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-26T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250126_12_f006_gust",
+      "bytes": 616416,
+      "index_sha256": "235e22945bb3ff1a7ba98ca800d23ec86a14ed5cf015292b83e635a306ace21d",
+      "issue_date": "2025-01-26",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-26T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250126_18_f006_gust",
+      "bytes": 620841,
+      "index_sha256": "e4494344bc71e86d708b340b40be1d70c78d4a092c5bf398b5177bde5ffc6e83",
+      "issue_date": "2025-01-26",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-27T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250127_00_f006_gust",
+      "bytes": 614892,
+      "index_sha256": "60c0f2d3c74fc6b766a5c6d349fbeff4fd38bcbdc1c718881fcccb76f1bb48d8",
+      "issue_date": "2025-01-27",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-27T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250127_06_f006_gust",
+      "bytes": 612750,
+      "index_sha256": "1e7322050dd0bb67bd66a3e8802685393041a6e1d8ec357a75e3e780f1d44c8e",
+      "issue_date": "2025-01-27",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-27T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250127_12_f006_gust",
+      "bytes": 619039,
+      "index_sha256": "1bea71014586eb0c99128a89ea35468e859edcb1dbfe7d7d5285b55c5e3229bc",
+      "issue_date": "2025-01-27",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-27T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250127_18_f006_gust",
+      "bytes": 626165,
+      "index_sha256": "f2270cd2095a027d6fdc8fce9853fb90d2486e2749d9051b11f28a459665560c",
+      "issue_date": "2025-01-27",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-28T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250128_00_f006_gust",
+      "bytes": 614054,
+      "index_sha256": "7989943c8d8ee7756e558dc770af1c7cb65a2c72b1c12457e588fc7db0245682",
+      "issue_date": "2025-01-28",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-28T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250128_06_f006_gust",
+      "bytes": 609271,
+      "index_sha256": "d7f05bea02a3190112a284e2b10e348c839fd5e0e5406cde2bb8ab2c5df38891",
+      "issue_date": "2025-01-28",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-28T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250128_12_f006_gust",
+      "bytes": 616130,
+      "index_sha256": "9661ab33b0c19eefca665dd9267f5d197cf72d34083e34864c2450be64e7a833",
+      "issue_date": "2025-01-28",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-28T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250128_18_f006_gust",
+      "bytes": 622893,
+      "index_sha256": "129e6bff98b43cd5fd46afb840576e6a0d556c789aa614a7228a28c9de8d6e36",
+      "issue_date": "2025-01-28",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-29T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250129_00_f006_gust",
+      "bytes": 611857,
+      "index_sha256": "0aa626c7b245c2df1185d5eb5b11facc9759e431a1a01a1e77cdf68ff412a8d8",
+      "issue_date": "2025-01-29",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-29T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250129_06_f006_gust",
+      "bytes": 608440,
+      "index_sha256": "d279fb1e11a7efe964bac5f90a62eacf47ea32c7a52dc408d0648eb6d3870009",
+      "issue_date": "2025-01-29",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-29T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250129_12_f006_gust",
+      "bytes": 616439,
+      "index_sha256": "fa1a2aa62ba9ef5b1845ba66078849073bd66180d5ae67b12b71182d136ae7e1",
+      "issue_date": "2025-01-29",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-29T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250129_18_f006_gust",
+      "bytes": 617272,
+      "index_sha256": "daceb8c87d50f41f4e427f748218d401172f05cc82593a1d48730fc56cb52752",
+      "issue_date": "2025-01-29",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-30T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250130_00_f006_gust",
+      "bytes": 609210,
+      "index_sha256": "a7ddcf07cc75187db0771054dc23cc8f82c2d6955cb5f913192827aef44b6116",
+      "issue_date": "2025-01-30",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-30T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250130_06_f006_gust",
+      "bytes": 610838,
+      "index_sha256": "88b28b4554bdd43c8458e9524286351c951cee283b6912867e7bdaca05c12f09",
+      "issue_date": "2025-01-30",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-30T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250130_12_f006_gust",
+      "bytes": 616917,
+      "index_sha256": "e40ccb5208f439012ef4ccd5c3d6e925e746629e3e14fe6b5e0c6d6780f1b876",
+      "issue_date": "2025-01-30",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-30T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250130_18_f006_gust",
+      "bytes": 616162,
+      "index_sha256": "a774499271ce23710d8dd232655fd9a4671186fb07a2d0d5df1f217956e810a9",
+      "issue_date": "2025-01-30",
+      "issue_cycle": "18",
+      "valid_time": "2025-01-31T00:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250131_00_f006_gust",
+      "bytes": 614580,
+      "index_sha256": "6d5c46cccc772e23e411fef60be1838e317ed9823491f73f6a2f8873db8cd50f",
+      "issue_date": "2025-01-31",
+      "issue_cycle": "00",
+      "valid_time": "2025-01-31T06:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250131_06_f006_gust",
+      "bytes": 604772,
+      "index_sha256": "1162b7d02c685cd87f14ee51ca80571c91bc3268880edddb08f8ad218150376a",
+      "issue_date": "2025-01-31",
+      "issue_cycle": "06",
+      "valid_time": "2025-01-31T12:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250131_12_f006_gust",
+      "bytes": 611278,
+      "index_sha256": "dc99e6c6ccddc03ec635fefc448e5cc3d2793ae802ae067d4103b6934196ccab",
+      "issue_date": "2025-01-31",
+      "issue_cycle": "12",
+      "valid_time": "2025-01-31T18:00:00+00:00",
+      "paired_observation": true
+    },
+    {
+      "status": "downloaded",
+      "stem": "gfs_20250131_18_f006_gust",
+      "bytes": 619829,
+      "index_sha256": "9e66953289a7e30293f06fbd296cef450a952d8aa713fde3e0054b0d41e59530",
+      "issue_date": "2025-01-31",
+      "issue_cycle": "18",
+      "valid_time": "2025-02-01T00:00:00+00:00",
+      "paired_observation": true
+    }
+  ],
+  "no_performance_claim": true,
+  "next_gate": "establish operational publication latency, then predeclare calibration and frozen test split"
+}

@@ -1,0 +1,205 @@
+{
+  "analysis_status": "PROBE_ONLY_NO_PERFORMANCE_RESULT",
+  "created_at": "2026-09-15T01:55:26.041316+00:00",
+  "knmi": {
+    "source_type": "station_observation",
+    "variable": "FX_ms",
+    "provider_semantics": "maximum wind speed during the preceding hour",
+    "availability_status": "historical archive; operational latency not established",
+    "stations": [
+      "240",
+      "260",
+      "344"
+    ],
+    "years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "chunks": [
+      {
+        "station_id": "240",
+        "year": 2021,
+        "rows": 5136,
+        "first_interval_end": "2021-06-01T01:00:00+00:00",
+        "last_interval_end": "2022-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "240",
+        "year": 2022,
+        "rows": 8760,
+        "first_interval_end": "2022-01-01T01:00:00+00:00",
+        "last_interval_end": "2023-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "240",
+        "year": 2023,
+        "rows": 8760,
+        "first_interval_end": "2023-01-01T01:00:00+00:00",
+        "last_interval_end": "2024-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "240",
+        "year": 2024,
+        "rows": 8784,
+        "first_interval_end": "2024-01-01T01:00:00+00:00",
+        "last_interval_end": "2025-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "240",
+        "year": 2025,
+        "rows": 8760,
+        "first_interval_end": "2025-01-01T01:00:00+00:00",
+        "last_interval_end": "2026-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "260",
+        "year": 2021,
+        "rows": 5136,
+        "first_interval_end": "2021-06-01T01:00:00+00:00",
+        "last_interval_end": "2022-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "260",
+        "year": 2022,
+        "rows": 8760,
+        "first_interval_end": "2022-01-01T01:00:00+00:00",
+        "last_interval_end": "2023-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "260",
+        "year": 2023,
+        "rows": 8760,
+        "first_interval_end": "2023-01-01T01:00:00+00:00",
+        "last_interval_end": "2024-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "260",
+        "year": 2024,
+        "rows": 8784,
+        "first_interval_end": "2024-01-01T01:00:00+00:00",
+        "last_interval_end": "2025-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "260",
+        "year": 2025,
+        "rows": 8760,
+        "first_interval_end": "2025-01-01T01:00:00+00:00",
+        "last_interval_end": "2026-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "344",
+        "year": 2021,
+        "rows": 5136,
+        "first_interval_end": "2021-06-01T01:00:00+00:00",
+        "last_interval_end": "2022-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "344",
+        "year": 2022,
+        "rows": 8760,
+        "first_interval_end": "2022-01-01T01:00:00+00:00",
+        "last_interval_end": "2023-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "344",
+        "year": 2023,
+        "rows": 8760,
+        "first_interval_end": "2023-01-01T01:00:00+00:00",
+        "last_interval_end": "2024-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "344",
+        "year": 2024,
+        "rows": 8784,
+        "first_interval_end": "2024-01-01T01:00:00+00:00",
+        "last_interval_end": "2025-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      },
+      {
+        "station_id": "344",
+        "year": 2025,
+        "rows": 8760,
+        "first_interval_end": "2025-01-01T01:00:00+00:00",
+        "last_interval_end": "2026-01-01T00:00:00+00:00",
+        "missing_FX": 0,
+        "missing_FH": 0
+      }
+    ],
+    "total_rows": 120600,
+    "missing_FX": 0,
+    "missing_FH": 0
+  },
+  "gfs": {
+    "source_type": "gridded_forecast",
+    "variable": "GUST_ms",
+    "provider_semantics": "instantaneous surface gust forecast at the valid time",
+    "record_type": "operational_archive_probe",
+    "reference_time": "2025-01-01T00:00:00+00:00",
+    "valid_time": "2025-01-01T06:00:00+00:00",
+    "lead_hours": 6.0,
+    "publication_proxy": "Wed, 01 Jan 2025 03:36:01 GMT",
+    "publication_latency_status": "object Last-Modified observed; publication proxy needs conservative latency rule",
+    "decoded_station_row": {
+      "station_id": "260",
+      "latitude": "52.1",
+      "longitude": "5.18",
+      "grid_longitude": "5.25",
+      "grid_latitude": "52.0",
+      "GUST_ms": "21.10696029663086",
+      "forecast_ref_unix": "1735689600",
+      "forecast_valid_unix": "1735711200",
+      "forecast_seconds": "21600",
+      "spatial_method": "nearest_grid_cell"
+    },
+    "grid_shape": [
+      721,
+      1440
+    ],
+    "decoder": "rasterio/GDAL"
+  },
+  "pair_smoke": {
+    "pairing_rule": "GFS valid_time == KNMI interval_end",
+    "gfs_valid_time": "2025-01-01T06:00:00+00:00",
+    "station_id": "260",
+    "gfs_GUST_ms": 21.10696029663086,
+    "knmi_FX_ms": 17.0,
+    "interpretation": "semantic smoke pair only; no skill or calibration estimate"
+  },
+  "required_before_calibration": [
+    "operational forecast publication/availability archive",
+    "multiple issue times and leads",
+    "frozen train/validation/test split",
+    "calibration model specified before test evaluation",
+    "predeclared missingness and administrative-cutoff denominator rules"
+  ]
+}

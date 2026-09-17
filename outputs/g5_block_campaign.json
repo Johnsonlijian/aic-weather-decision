@@ -1,0 +1,802 @@
+[
+  {
+    "horizon": 12,
+    "threshold": 9.0,
+    "total_lifts": 24,
+    "stations": {
+      "240": {
+        "blind": {
+          "blocks_to_complete": 43,
+          "completed": 24,
+          "unsafe_blocks": 19,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 49,
+          "completed": 24,
+          "unsafe_blocks": 6,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 542,
+          "completed": 0,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 256,
+          "finished": false
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 123,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 44,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 72,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 17,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 66,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 12,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 49,
+          "completed": 24,
+          "unsafe_blocks": 6,
+          "missed_safe_blocks": 2,
+          "finished": true
+        }
+      },
+      "260": {
+        "blind": {
+          "blocks_to_complete": 36,
+          "completed": 24,
+          "unsafe_blocks": 12,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 40,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 4,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 542,
+          "completed": 0,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 325,
+          "finished": false
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 91,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 38,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 66,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 19,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 60,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 13,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 40,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 4,
+          "finished": true
+        }
+      },
+      "344": {
+        "blind": {
+          "blocks_to_complete": 40,
+          "completed": 24,
+          "unsafe_blocks": 16,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 42,
+          "completed": 24,
+          "unsafe_blocks": 5,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 542,
+          "completed": 0,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 286,
+          "finished": false
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 219,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 101,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 123,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 40,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 66,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 13,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 42,
+          "completed": 24,
+          "unsafe_blocks": 4,
+          "missed_safe_blocks": 2,
+          "finished": true
+        }
+      }
+    }
+  },
+  {
+    "horizon": 12,
+    "threshold": 12.0,
+    "total_lifts": 24,
+    "stations": {
+      "240": {
+        "blind": {
+          "blocks_to_complete": 34,
+          "completed": 24,
+          "unsafe_blocks": 10,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 35,
+          "completed": 24,
+          "unsafe_blocks": 4,
+          "missed_safe_blocks": 1,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 542,
+          "completed": 0,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 425,
+          "finished": false
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 50,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 13,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 39,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 5,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 38,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 4,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 35,
+          "completed": 24,
+          "unsafe_blocks": 5,
+          "missed_safe_blocks": 1,
+          "finished": true
+        }
+      },
+      "260": {
+        "blind": {
+          "blocks_to_complete": 32,
+          "completed": 24,
+          "unsafe_blocks": 8,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 34,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 542,
+          "completed": 0,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 471,
+          "finished": false
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 49,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 15,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 39,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 7,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 36,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 4,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 34,
+          "completed": 24,
+          "unsafe_blocks": 3,
+          "missed_safe_blocks": 2,
+          "finished": true
+        }
+      },
+      "344": {
+        "blind": {
+          "blocks_to_complete": 31,
+          "completed": 24,
+          "unsafe_blocks": 7,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 32,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 1,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 542,
+          "completed": 0,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 434,
+          "finished": false
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 50,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 16,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 37,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 6,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 35,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 4,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 32,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 1,
+          "finished": true
+        }
+      }
+    }
+  },
+  {
+    "horizon": 12,
+    "threshold": 13.0,
+    "total_lifts": 24,
+    "stations": {
+      "240": {
+        "blind": {
+          "blocks_to_complete": 32,
+          "completed": 24,
+          "unsafe_blocks": 8,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 33,
+          "completed": 24,
+          "unsafe_blocks": 3,
+          "missed_safe_blocks": 1,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 542,
+          "completed": 0,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 456,
+          "finished": false
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 38,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 6,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 37,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 5,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 34,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 33,
+          "completed": 24,
+          "unsafe_blocks": 3,
+          "missed_safe_blocks": 1,
+          "finished": true
+        }
+      },
+      "260": {
+        "blind": {
+          "blocks_to_complete": 29,
+          "completed": 24,
+          "unsafe_blocks": 5,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 31,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 542,
+          "completed": 0,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 503,
+          "finished": false
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 39,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 10,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 36,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 7,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 34,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 5,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 31,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 2,
+          "finished": true
+        }
+      },
+      "344": {
+        "blind": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 6,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 31,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 1,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 542,
+          "completed": 0,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 464,
+          "finished": false
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 38,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 8,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 35,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 5,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 34,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 4,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 31,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 1,
+          "finished": true
+        }
+      }
+    }
+  },
+  {
+    "horizon": 12,
+    "threshold": 16.5,
+    "total_lifts": 24,
+    "stations": {
+      "240": {
+        "blind": {
+          "blocks_to_complete": 29,
+          "completed": 24,
+          "unsafe_blocks": 5,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 1,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 29,
+          "completed": 24,
+          "unsafe_blocks": 5,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 32,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 3,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 31,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 31,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 1,
+          "finished": true
+        }
+      },
+      "260": {
+        "blind": {
+          "blocks_to_complete": 27,
+          "completed": 24,
+          "unsafe_blocks": 3,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 29,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 27,
+          "completed": 24,
+          "unsafe_blocks": 3,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 34,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 7,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 3,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 3,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 29,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 2,
+          "finished": true
+        }
+      },
+      "344": {
+        "blind": {
+          "blocks_to_complete": 28,
+          "completed": 24,
+          "unsafe_blocks": 4,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 28,
+          "completed": 24,
+          "unsafe_blocks": 4,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 31,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 3,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 0,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 2,
+          "finished": true
+        }
+      }
+    }
+  },
+  {
+    "horizon": 12,
+    "threshold": 20.0,
+    "total_lifts": 24,
+    "stations": {
+      "240": {
+        "blind": {
+          "blocks_to_complete": 27,
+          "completed": 24,
+          "unsafe_blocks": 3,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 28,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 1,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 27,
+          "completed": 24,
+          "unsafe_blocks": 3,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 29,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 29,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 28,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 1,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 27,
+          "completed": 24,
+          "unsafe_blocks": 3,
+          "missed_safe_blocks": 0,
+          "finished": true
+        }
+      },
+      "260": {
+        "blind": {
+          "blocks_to_complete": 26,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 28,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 2,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 26,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 29,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 3,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 29,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 3,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 29,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 3,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 26,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 0,
+          "finished": true
+        }
+      },
+      "344": {
+        "blind": {
+          "blocks_to_complete": 27,
+          "completed": 24,
+          "unsafe_blocks": 3,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "raw": {
+          "blocks_to_complete": 28,
+          "completed": 24,
+          "unsafe_blocks": 2,
+          "missed_safe_blocks": 1,
+          "finished": true
+        },
+        "climatology": {
+          "blocks_to_complete": 27,
+          "completed": 24,
+          "unsafe_blocks": 3,
+          "missed_safe_blocks": 0,
+          "finished": true
+        },
+        "calibrated_p0.05": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 3,
+          "finished": true
+        },
+        "calibrated_p0.1": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 3,
+          "finished": true
+        },
+        "calibrated_p0.2": {
+          "blocks_to_complete": 30,
+          "completed": 24,
+          "unsafe_blocks": 1,
+          "missed_safe_blocks": 3,
+          "finished": true
+        },
+        "calibrated_p0.4": {
+          "blocks_to_complete": 27,
+          "completed": 24,
+          "unsafe_blocks": 3,
+          "missed_safe_blocks": 0,
+          "finished": true
+        }
+      }
+    }
+  }
+]

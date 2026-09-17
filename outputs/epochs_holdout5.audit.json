@@ -1,0 +1,404 @@
+{
+  "created_at": "2026-09-17T01:02:56.907571+00:00",
+  "stations": 46,
+  "rows": 26502,
+  "horizons": [
+    6,
+    12,
+    24
+  ],
+  "wind_limits": [
+    9.0,
+    12.0,
+    13.0,
+    16.5,
+    20.0
+  ],
+  "temperature_windows": {
+    "concrete": [
+      5.0,
+      35.0
+    ],
+    "epoxy": [
+      4.4,
+      46.0
+    ]
+  },
+  "rows_per_split": {
+    "OTHER": 26502
+  },
+  "rows_per_station": {
+    "209": 603,
+    "215": 603,
+    "225": 603,
+    "235": 603,
+    "240": 603,
+    "242": 603,
+    "248": 603,
+    "249": 591,
+    "251": 603,
+    "258": 603,
+    "260": 603,
+    "267": 603,
+    "269": 603,
+    "270": 603,
+    "273": 603,
+    "275": 603,
+    "277": 603,
+    "278": 595,
+    "279": 603,
+    "280": 603,
+    "283": 603,
+    "285": 603,
+    "286": 603,
+    "290": 603,
+    "308": 603,
+    "310": 603,
+    "312": 598,
+    "313": 603,
+    "315": 603,
+    "316": 598,
+    "319": 603,
+    "323": 603,
+    "324": 603,
+    "330": 603,
+    "340": 603,
+    "343": 603,
+    "344": 603,
+    "348": 603,
+    "350": 603,
+    "356": 603,
+    "370": 603,
+    "375": 603,
+    "377": 603,
+    "380": 603
+  },
+  "lead_used_L12": {
+    "12": 13272,
+    "18": 13230
+  },
+  "positive_rates": {
+    "L12_thr9.0": {
+      "all": 0.5563353709154026,
+      "test": NaN,
+      "test_positives": 0
+    },
+    "L12_thr12.0": {
+      "all": 0.29556259904912835,
+      "test": NaN,
+      "test_positives": 0
+    },
+    "L12_thr13.0": {
+      "all": 0.22836012376424422,
+      "test": NaN,
+      "test_positives": 0
+    },
+    "L12_thr16.5": {
+      "all": 0.09455890121500264,
+      "test": NaN,
+      "test_positives": 0
+    },
+    "L12_thr20.0": {
+      "all": 0.02120594672100219,
+      "test": NaN,
+      "test_positives": 0
+    }
+  },
+  "skips": {
+    "209": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "215": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "225": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "235": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "240": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "242": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "248": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "249": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 12
+    },
+    "251": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "257": {
+      "INELIGIBLE": "fx_coverage",
+      "fx_complete": false,
+      "t_complete": true,
+      "rh_complete": false,
+      "coverage": {
+        "FX_ms": 0.0,
+        "T_degC": 1.0,
+        "RH_amount_mm": 0.0
+      }
+    },
+    "258": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "260": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "267": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "269": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "270": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "273": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "275": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "277": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "278": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 8
+    },
+    "279": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "280": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "283": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "285": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "286": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "290": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "308": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "310": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "312": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 5
+    },
+    "313": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "315": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "316": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 5
+    },
+    "319": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "323": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "324": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "330": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "340": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "343": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "344": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "348": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "350": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "356": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "370": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "375": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "377": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "380": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 0,
+      "wind_window_unresolved": 0
+    },
+    "391": {
+      "run_missing": 1,
+      "window_not_covered": 0,
+      "observation_incomplete": 603,
+      "wind_window_unresolved": 0
+    }
+  },
+  "eligibility": {
+    "257": {
+      "INELIGIBLE": "fx_coverage",
+      "fx_complete": false,
+      "t_complete": true,
+      "rh_complete": false,
+      "coverage": {
+        "FX_ms": 0.0,
+        "T_degC": 1.0,
+        "RH_amount_mm": 0.0
+      }
+    }
+  },
+  "note": "Joint windows require wind <= 12 m/s AND no rain AND temperature inside the documented placing/jointing range over the whole block."
+}

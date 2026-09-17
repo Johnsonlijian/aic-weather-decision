@@ -1,0 +1,140 @@
+{
+  "horizon": 12,
+  "thresholds": [
+    {
+      "threshold": 9.0,
+      "fx_test": {
+        "skill_vs_climatology": 0.4095628946678782,
+        "skill_vs_raw_threshold": 0.33889228410504213,
+        "positives": 1422,
+        "n": 3261
+      },
+      "fx_cal": {
+        "skill_vs_climatology": 0.42719797148147076,
+        "skill_vs_raw_threshold": 0.3272116169289908,
+        "positives": 2234,
+        "n": 4392
+      },
+      "fh_test": {
+        "skill_vs_climatology": 0.22250237486945812,
+        "skill_vs_raw_threshold": 0.8938073951951205,
+        "positives": 144,
+        "n": 3261
+      },
+      "fh_cal": {
+        "skill_vs_climatology": 0.30293732381211125,
+        "skill_vs_raw_threshold": 0.8718554199507343,
+        "positives": 367,
+        "n": 4392
+      }
+    },
+    {
+      "threshold": 12.0,
+      "fx_test": {
+        "skill_vs_climatology": 0.3744548045453777,
+        "skill_vs_raw_threshold": 0.32965575810396985,
+        "positives": 560,
+        "n": 3261
+      },
+      "fx_cal": {
+        "skill_vs_climatology": 0.4098125762285826,
+        "skill_vs_raw_threshold": 0.33967503703247515,
+        "positives": 1029,
+        "n": 4392
+      },
+      "fh_test": {
+        "skill_vs_climatology": 0.15208970004717037,
+        "skill_vs_raw_threshold": 0.965481040203943,
+        "positives": 19,
+        "n": 3261
+      },
+      "fh_cal": {
+        "skill_vs_climatology": 0.14602415659822776,
+        "skill_vs_raw_threshold": 0.9356077124376219,
+        "positives": 79,
+        "n": 4392
+      }
+    },
+    {
+      "threshold": 13.0,
+      "fx_test": {
+        "skill_vs_climatology": 0.36874652471584,
+        "skill_vs_raw_threshold": 0.29905171565058397,
+        "positives": 394,
+        "n": 3261
+      },
+      "fx_cal": {
+        "skill_vs_climatology": 0.4060880387983301,
+        "skill_vs_raw_threshold": 0.34779578125034916,
+        "positives": 791,
+        "n": 4392
+      },
+      "fh_test": {
+        "skill_vs_climatology": 0.15233897476733937,
+        "skill_vs_raw_threshold": 0.9565382296441785,
+        "positives": 15,
+        "n": 3261
+      },
+      "fh_cal": {
+        "skill_vs_climatology": 0.10617852319461152,
+        "skill_vs_raw_threshold": 0.9488608572774346,
+        "positives": 46,
+        "n": 4392
+      }
+    },
+    {
+      "threshold": 16.5,
+      "fx_test": {
+        "skill_vs_climatology": 0.2577559611325225,
+        "skill_vs_raw_threshold": 0.19815882524022577,
+        "positives": 114,
+        "n": 3261
+      },
+      "fx_cal": {
+        "skill_vs_climatology": 0.34725744312695495,
+        "skill_vs_raw_threshold": 0.23951592490824314,
+        "positives": 330,
+        "n": 4392
+      },
+      "fh_test": {
+        "skill_vs_climatology": 0.011650549257750886,
+        "skill_vs_raw_threshold": 0.973269845405095,
+        "positives": 2,
+        "n": 3261
+      },
+      "fh_cal": {
+        "skill_vs_climatology": 0.05245840516417333,
+        "skill_vs_raw_threshold": 0.9649726515671069,
+        "positives": 9,
+        "n": 4392
+      }
+    },
+    {
+      "threshold": 20.0,
+      "fx_test": {
+        "skill_vs_climatology": 0.2552505393340839,
+        "skill_vs_raw_threshold": 0.3523601953985426,
+        "positives": 26,
+        "n": 3261
+      },
+      "fx_cal": {
+        "skill_vs_climatology": 0.1985457808769654,
+        "skill_vs_raw_threshold": 0.31029807538648846,
+        "positives": 86,
+        "n": 4392
+      },
+      "fh_test": {
+        "skill_vs_climatology": -18.13185395644769,
+        "skill_vs_raw_threshold": 0.9996104333928505,
+        "positives": 0,
+        "n": 3261
+      },
+      "fh_cal": {
+        "skill_vs_climatology": -40.52271750341681,
+        "skill_vs_raw_threshold": 0.9997153167101599,
+        "positives": 0,
+        "n": 4392
+      }
+    }
+  ]
+}

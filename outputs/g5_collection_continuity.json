@@ -1,0 +1,194 @@
+{
+  "months": [
+    {
+      "month": "2025-01",
+      "source": "frozen",
+      "rows": 5520,
+      "mean_forecast": 9.874348015392172,
+      "mean_observed": 10.23786231884058,
+      "forecast_bias": -0.36351430344840807,
+      "event_rate": 0.30778985507246376
+    },
+    {
+      "month": "2025-02",
+      "source": "frozen",
+      "rows": 5026,
+      "mean_forecast": 9.21123722474318,
+      "mean_observed": 9.094707520891365,
+      "forecast_bias": 0.11652970385181405,
+      "event_rate": 0.15857540787902905
+    },
+    {
+      "month": "2025-03",
+      "source": "frozen",
+      "rows": 5580,
+      "mean_forecast": 7.057106213757641,
+      "mean_observed": 8.177598566308244,
+      "forecast_bias": -1.1204923525506034,
+      "event_rate": 0.07311827956989247
+    },
+    {
+      "month": "2025-04",
+      "source": "frozen",
+      "rows": 5400,
+      "mean_forecast": 7.310967872849218,
+      "mean_observed": 8.44648148148148,
+      "forecast_bias": -1.1355136086322632,
+      "event_rate": 0.08074074074074074
+    },
+    {
+      "month": "2025-05",
+      "source": "frozen",
+      "rows": 5580,
+      "mean_forecast": 8.83856007080779,
+      "mean_observed": 10.561648745519713,
+      "forecast_bias": -1.7230886747119243,
+      "event_rate": 0.22885304659498207
+    },
+    {
+      "month": "2025-06",
+      "source": "frozen",
+      "rows": 5276,
+      "mean_forecast": 9.398448575415152,
+      "mean_observed": 10.568612585291888,
+      "forecast_bias": -1.1701640098767356,
+      "event_rate": 0.29397270659590596
+    },
+    {
+      "month": "2025-07",
+      "source": "frozen",
+      "rows": 5535,
+      "mean_forecast": 7.1842298309546715,
+      "mean_observed": 9.40252935862692,
+      "forecast_bias": -2.218299527672248,
+      "event_rate": 0.15176151761517614
+    },
+    {
+      "month": "2025-08",
+      "source": "frozen",
+      "rows": 5580,
+      "mean_forecast": 7.797993282103197,
+      "mean_observed": 9.356989247311828,
+      "forecast_bias": -1.5589959652086316,
+      "event_rate": 0.15143369175627241
+    },
+    {
+      "month": "2025-09",
+      "source": "frozen",
+      "rows": 3825,
+      "mean_forecast": 11.358888558733698,
+      "mean_observed": 12.206013071895425,
+      "forecast_bias": -0.8471245131617273,
+      "event_rate": 0.43529411764705883
+    },
+    {
+      "month": "2025-10",
+      "source": "holdout",
+      "rows": 5400,
+      "mean_forecast": 10.777194628737591,
+      "mean_observed": 11.10074074074074,
+      "forecast_bias": -0.3235461120031484,
+      "event_rate": 0.33425925925925926
+    },
+    {
+      "month": "2025-11",
+      "source": "holdout",
+      "rows": 5280,
+      "mean_forecast": 11.005070698803122,
+      "mean_observed": 10.36780303030303,
+      "forecast_bias": 0.6372676685000922,
+      "event_rate": 0.26875
+    },
+    {
+      "month": "2025-12",
+      "source": "holdout",
+      "rows": 5456,
+      "mean_forecast": 12.079551443217262,
+      "mean_observed": 10.342192082111437,
+      "forecast_bias": 1.7373593611058258,
+      "event_rate": 0.2872067448680352
+    },
+    {
+      "month": "2026-01",
+      "source": "holdout",
+      "rows": 5438,
+      "mean_forecast": 10.72502299271861,
+      "mean_observed": 10.238690695108495,
+      "forecast_bias": 0.4863322976101152,
+      "event_rate": 0.2581831555719014
+    },
+    {
+      "month": "2026-02",
+      "source": "holdout",
+      "rows": 4928,
+      "mean_forecast": 11.480541580489703,
+      "mean_observed": 11.036525974025974,
+      "forecast_bias": 0.4440156064637293,
+      "event_rate": 0.33238636363636365
+    },
+    {
+      "month": "2026-03",
+      "source": "holdout",
+      "rows": 5456,
+      "mean_forecast": 8.971183441087735,
+      "mean_observed": 10.197763929618768,
+      "forecast_bias": -1.2265804885310327,
+      "event_rate": 0.2961876832844575
+    },
+    {
+      "month": "2026-04",
+      "source": "holdout",
+      "rows": 5280,
+      "mean_forecast": 8.60173856200594,
+      "mean_observed": 9.780871212121212,
+      "forecast_bias": -1.1791326501152728,
+      "event_rate": 0.21477272727272728
+    },
+    {
+      "month": "2026-05",
+      "source": "holdout",
+      "rows": 5383,
+      "mean_forecast": 7.237922701044152,
+      "mean_observed": 9.23945755155118,
+      "forecast_bias": -2.001534850507028,
+      "event_rate": 0.14285714285714285
+    },
+    {
+      "month": "2026-06",
+      "source": "holdout",
+      "rows": 5259,
+      "mean_forecast": 8.293593781906562,
+      "mean_observed": 10.355580908918045,
+      "forecast_bias": -2.0619871270114825,
+      "event_rate": 0.2648792546111428
+    },
+    {
+      "month": "2026-07",
+      "source": "holdout",
+      "rows": 5456,
+      "mean_forecast": 7.823251356368016,
+      "mean_observed": 9.618951612903226,
+      "forecast_bias": -1.79570025653521,
+      "event_rate": 0.1381964809384164
+    },
+    {
+      "month": "2026-08",
+      "source": "holdout",
+      "rows": 5431,
+      "mean_forecast": 8.278200776125708,
+      "mean_observed": 9.650893021542993,
+      "forecast_bias": -1.3726922454172854,
+      "event_rate": 0.17621064260725464
+    }
+  ],
+  "boundary": {
+    "from": "2025-09",
+    "to": "2025-10",
+    "forecast_change": -0.5816939299961064,
+    "observed_change": -1.1052723311546853,
+    "event_rate_change": -0.10103485838779958
+  },
+  "frozen_mean_bias": -1.1371327972760756,
+  "holdout_mean_bias": -0.6101942794709637,
+  "verdict": "coherent seasonal change across the boundary; no evidence of a decode discontinuity between the two collections"
+}

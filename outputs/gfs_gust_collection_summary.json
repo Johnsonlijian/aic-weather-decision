@@ -1,0 +1,56 @@
+{
+  "analysis_status": "ARCHIVE_SAMPLING_ONLY_NO_SKILL_OR_DECISION_RESULT",
+  "created_at": "2026-09-15T06:01:34.822989+00:00",
+  "start": "2021-03-23",
+  "end": "2025-09-30",
+  "cycles": [
+    "12"
+  ],
+  "leads": [
+    30,
+    42,
+    54,
+    66
+  ],
+  "stations": [
+    {
+      "station_id": "240",
+      "name": "Schiphol (airport, coastal-influenced)",
+      "latitude": 52.3,
+      "longitude": 4.79
+    },
+    {
+      "station_id": "260",
+      "name": "De Bilt (inland)",
+      "latitude": 52.1,
+      "longitude": 5.18
+    },
+    {
+      "station_id": "344",
+      "name": "Rotterdam (urban port)",
+      "latitude": 51.89,
+      "longitude": 4.31
+    }
+  ],
+  "messages_verified": 6596,
+  "runs_failed": 16,
+  "rows_per_station_year": {
+    "240_2021": 1128,
+    "240_2022": 1458,
+    "240_2023": 1460,
+    "240_2024": 1463,
+    "240_2025": 1087,
+    "260_2021": 1128,
+    "260_2022": 1458,
+    "260_2023": 1460,
+    "260_2024": 1463,
+    "260_2025": 1087,
+    "344_2021": 1128,
+    "344_2022": 1458,
+    "344_2023": 1460,
+    "344_2024": 1463,
+    "344_2025": 1087
+  },
+  "manifest": "gfs_gust_manifest.jsonl",
+  "note": "GUST is an instantaneous surface gust forecast. KNMI FX is a preceding-hour maximum. Pairing is by declared time endpoint only."
+}

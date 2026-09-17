@@ -1,0 +1,46 @@
+[
+  {
+    "file": "sources\\raw\\hs2_weather_2025.html",
+    "status": "CACHED"
+  },
+  {
+    "file": "sources\\raw\\mohamed_2021_lookahead.pdf",
+    "status": "CACHED"
+  },
+  {
+    "file": "sources\\raw\\weatherwise_crossref.json",
+    "status": "CACHED"
+  },
+  {
+    "file": "sources\\raw\\kerkhove_crossref.json",
+    "status": "CACHED"
+  },
+  {
+    "file": "sources\\raw\\zhou_crossref.json",
+    "status": "CACHED"
+  },
+  {
+    "file": "sources\\raw\\mohamed_crossref.json",
+    "status": "CACHED"
+  },
+  {
+    "file": "sources\\raw\\psplib_home.html",
+    "status": "CACHED"
+  },
+  {
+    "file": "sources\\raw\\dslib_repo.json",
+    "status": "CACHED"
+  },
+  {
+    "file": "data\\raw\\networks\\j30.sm.zip",
+    "status": "DOWNLOADED",
+    "bytes": 458761,
+    "sha256": "acd65524b95108a7ba08c1e512ffc6d028e9ba86a2a898b4462f71953e0f8467"
+  },
+  {
+    "file": "sources\\raw\\weatherwise_author.pdf",
+    "status": "DOWNLOADED",
+    "bytes": 3007150,
+    "sha256": "f5135b4c34e1ec22d44aae9fda747c553d41f2d9a67edd98f0896ea9b15ef438"
+  }
+]

@@ -1,0 +1,17 @@
+path,slot,weather_mps,valid_start
+A  contiguous calm slots,0,8,1
+A  contiguous calm slots,1,8,1
+A  contiguous calm slots,2,8,1
+A  contiguous calm slots,3,8,1
+A  contiguous calm slots,4,8,0
+A  contiguous calm slots,5,8,0
+A  contiguous calm slots,6,25,
+A  contiguous calm slots,7,25,
+B  fragmented calm slots,0,8,0
+B  fragmented calm slots,1,8,0
+B  fragmented calm slots,2,25,0
+B  fragmented calm slots,3,8,0
+B  fragmented calm slots,4,8,0
+B  fragmented calm slots,5,25,0
+B  fragmented calm slots,6,8,
+B  fragmented calm slots,7,8,

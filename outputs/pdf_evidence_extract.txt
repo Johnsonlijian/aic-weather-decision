@@ -1,0 +1,7783 @@
+### mohamed_2021_lookahead.pdf pages=28
+
+[PAGE 1]
+ 
+ 
+ 
+ 
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60. https://doi.org/10.3390/su131810060
+ 
+www.mdpi.com/journal/sustainability
+ 
+Article
+ 
+Simulation
+-
+Based 
+Approach for Lookahead Scheduling of 
+ 
+Onshore Wind Projects Subject to Weather Risk
+ 
+Emad Mohamed
+ 
+1
+,
+ 
+Parinaz Jafari
+ 
+1
+, 
+Adam Chehour
+i
+ 
+2
+ 
+and Simaan AbouRizk
+ 
+1,
+*
+ 
+1
+ 
+Department of Civil and Environmental Engineering, University of Alberta, 
+ 
+Edmonton, AB T6G 2W2, Canada; ehmohame@ualberta.ca (E.M.); parinaz@ualberta.ca (P.J.)
+ 
+2
+ 
+DNV Energy Systems Canada Inc., Montreal,
+ 
+QC
+ 
+H1Y 3N1
+,
+ 
+Canada; adam.chehouri@dnv.com
+ 
+*
+ 
+Correspondence: 
+abourizk@ualberta.ca
+ 
+Abstract: 
+Executed outdoors in high
+-
+wind areas,
+ 
+adverse weather conditions represent a significant 
+risk to onshore wind farm construction 
+activities. While methods for considering historical weather 
+data during pre
+-
+construction scheduling are available, approaches capable of quantitatively as-
+sessing how short
+-
+term weather fluctuations may impact upcoming construction activities have yet 
+to b
+e developed. This study is proposing a hybrid simulation
+-
+based approach that uses short
+-
+term 
+precipitation, wind speed, and temperature forecasts together with planned and as
+-
+built activity 
+durations to develop lookahead (e.g., upcoming 14
+-
+day) schedules f
+or improved project planning 
+and control. Functionality and applicability of the method was demonstrated on a case study of a 
+40
+ 
+MW onshore wind project, and the method was validated using event validity, face validation, 
+and sensitivity analysis. As expec
+ted, favorable weather conditions experienced during the tested 
+lookahead periods resulted in a negligible impact (less than 10% reduction) on the productivity of 
+weather
+-
+sensitive activities, which translated into a project delay of 
+one
+ 
+day. 
+The r
+esponsiv
+eness of 
+the framework was confirmed through sensitivity analysis, which demonstrated a 50% reduction 
+in productivity resulting from poor weather conditions. The ability of the method to provide deci-
+sion
+-
+support not currently offered by commercially
+-
+availa
+ble scheduling systems was confirmed 
+by subject experts, who endorsed the ability of the method to enhance lookahead scheduling and to 
+facilitate the monitoring and control of weather impact uncertainty on project durations.
+ 
+Keywords:
+ 
+renewable energy; ons
+hore; wind farm; construction; risk; uncertainty; weather; 
+lookahead; simulation
+ 
+ 
+1. 
+Introduction
+ 
+M
+any countries are transitioning their energy production towards renewable sources 
+to reduce greenhouse gas emissions and meet sustainability targets
+. 
+Since 2009, global 
+onshore wind capacity has increased fourfold, producing more than 594 GW in 2019 alone 
+[1].
+ 
+To meet the growing demand, installation of additional wind farms and supporting 
+infrastructure is necessary. However, onshore wind projects are 
+constructed in outdoor 
+environments characterized by high wind speeds 
+[2]
+ 
+and other adverse weather events 
+that can result in significant construction delays 
+[2
+–
+4]
+. Indeed, the schedule delay of an 
+average wind farm project 
+was
+ 
+estimated to be approximatel
+y 10% of the planned project 
+duration [5]. Delays in wind farm construction are particularly problematic [6], as most 
+contracts between the owner and the engineering, procurement, and construction (EPC) 
+contract
+or(s)
+ 
+include a provision for liquidated dama
+ges if a project exceeds the contrac-
+tually
+-
+specified end date [7]. Completing wind farm construction tasks on time is essential 
+for ensuring profitability [6].
+ 
+Variability is an inherent characteristic of construction projects, with as
+-
+built pro-
+gress regul
+arly deviating from planned schedules. To mitigate delays, practitioners often 
+schedule projects from two perspectives, generating (1) 
+a 
+master 
+schedule
+ 
+that provides a 
+Citation:
+ 
+Mohamed, E.; Jafari, P.; 
+Chehouri, A.; AbouRizk, S. 
+ 
+Simulation
+-
+Based Approach for 
+Lookahead Scheduling of Onshore 
+Wind Projects Subject to Weather 
+Risk. 
+Sustainability 
+2021
+, 
+131
+, 60. 
+https://doi.org/10.3390/su131810060
+ 
+Academic Editors: Sunkuk Kim
+ 
+and 
+António Abreu
+ 
+Received: 
+15 June 2021
+ 
+Accepted: 
+3 September 2021
+ 
+Published:
+ 
+8 Septembe
+r 2021
+ 
+Publisher’s Note:
+ 
+MDPI stays neu-
+tral with regard to jurisdictional 
+claims in published maps and institu-
+tional affiliations.
+ 
+ 
+C
+opyright:
+ 
+© 2021
+ 
+by the authors. Li-
+censee MDPI, Basel, Switzerland. 
+This article is an open access article 
+distributed under the terms and con-
+diti
+ons of the Creative Commons At-
+tribution (CC BY) license (http://crea-
+tivecommons.org/licenses/by/4.0/).
+ 
+
+
+[PAGE 2]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+2
+ 
+of 
+28
+ 
+ 
+holistic 
+view
+ 
+of the entire project and (2)
+ 
+a 
+lookahead schedule
+ 
+that provides a short
+-
+term, 
+detailed work plan for upcoming tasks [8]. 
+Together, master scheduling and short
+-
+term 
+or lookahead scheduling are key elements of successful project delivery 
+[9]
+. Master sched-
+uling provides a global view of a project that can be used for long
+-
+term co
+ordination, 
+rough budgeting, and bid preparation 
+[9
+–
+11]
+, while lookahead scheduling is used for on-
+going performance analysis, increasing reliability of detailed work plans, and for identi-
+fying and implementing effective corrective actions during execution 
+[9,10,12]
+. 
+ 
+The e
+valuation of the impact of weather on construction project scheduling has been 
+addressed and successfully applied by numerous research studies 
+[2,13
+–
+17]
+. These ap-
+proaches use historical weather data (either extreme conditions or averages) 
+to predict 
+the 
+weather
+-
+related impact on project durations when generating master project schedules. 
+Weather can have 
+either
+ 
+a negative or positive impact on productivity and, subsequently, 
+on project duration. When weather conditions are better than 
+expected, productivity of 
+construction projects can improve and schedules may be shortened
+,
+ 
+representing an op-
+portunity for the project team. In contrast, when weather conditions are worse than ex-
+pected, productivity of construction projects may be reduced
+,
+ 
+representing a threat to pro-
+ject success. Although useful for high
+-
+level pre
+-
+construction scheduling and bid prepara-
+tion, the suitability of these approaches for short
+-
+term lookahead scheduling is primarily 
+limited by two factors. First, as a consequence
+ 
+of being designed for long
+-
+term master 
+scheduling, existing approaches are not able to incorporate as
+-
+built data, limiting the reli-
+ability of lookahead schedules. Second, previous methods use average or extreme weather 
+data that do not capture fluctuation
+s in weather conditions that occur during project exe-
+cution [18]. These limitations have resulted in the development of unrealistic lookahead 
+schedules, preventing practitioners from identifying and implementing corrective actions 
+in the time
+-
+frame require
+d to mitigate weather
+-
+related delays. Indeed, a model capable of 
+integrating as
+-
+built information
+,
+ 
+while simultaneously considering short
+-
+term weather 
+forecasts to improve lookahead scheduling
+,
+ 
+has yet to be described in the literature.
+ 
+To address the afor
+ementioned gaps, this research is proposing a simulation
+-
+based 
+approach that integrates as
+-
+built information with short
+-
+term weather forecast data to im-
+prove lookahead scheduling in onshore wind farm construction. The proposed frame-
+work includes a newly
+-
+de
+veloped and generic hybrid simulation model (i.e., discrete
+-
+event and continuous) of both weather
+-
+sensitive and non
+-
+sensitive activities in onshore 
+wind farm construction. Short
+-
+term weather precipitation, wind speed, and temperature 
+data are used to deriv
+e a productivity factor for weather
+-
+sensitive activities. These data
+—
+together with as
+-
+built information
+—
+are input into the model, which generates a 14
+-
+day 
+lookahead schedule. Functionality and validity were demonstrated following the appli-
+cation of the pro
+posed framework to a case study of a real onshore wind farm construction 
+project. As the first reported framework to integrate as
+-
+built construction information and 
+short
+-
+term weather forecast data for lookahead scheduling, 
+the 
+practical application of 
+thi
+s approach is expected to improve the evaluation, understanding, and monitoring of 
+weather uncertainties on project execution for improved project management and control 
+of wind farm construction.
+ 
+2. 
+Literature Review
+ 
+2.1. 
+Adverse Weather in Construction P
+rojects
+ 
+Adverse weather was ranked as the second leading cause of construction
+-
+related 
+claims in Canada [19] and as the third most critical risk factor for construction schedule 
+overruns in Jordan [20]. 
+The n
+egative consequences of adverse weather on const
+ruction 
+projects includes reduced productivity, work stoppage, and ruined materials,
+ 
+which
+ 
+often 
+result in schedule delays, cost overruns 
+[21
+–
+23]
+, and disputes between project stakehold-
+ers [18,24]. Weather
+-
+related parameters that 
+were
+ 
+extensively studied i
+n construction in-
+clude precipitation, air temperature, and wind speed.
+ 
+
+[PAGE 3]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+3
+ 
+of 
+28
+ 
+ 
+Precipitation alone has a significant effect on materials and construction productivity 
+[16,25], both during and after periods of rain. The length
+s
+ 
+of the resulting delays are typ-
+ically
+ 
+proportional to the amount of precipitation and the duration of the event [25], with 
+work stoppages resulting if precipitation rates become too high. Estimates of reduction in 
+productivity resulting from precipitation events range between 40% for light pr
+ecipitation 
+[26] to upwards of 60% [27]. Productivity is also affected by both low and high air tem-
+peratures [25]. High temperatures may lead to heat stress or 
+the 
+dehydration of workers 
+[25], and work stoppages are recommended when temperatures decrease b
+elow 
+−
+25 °C to 
+ensure worker safety 
+[26]
+—
+particularly when low temperatures are combined with high 
+wind speeds (measured as wind chill) [16]. Wind alone can result in work stoppages, de-
+creased productivity, and negative impacts on materials. High wind cond
+itions may cause 
+the surface of fresh concrete to dehydrate and crack
+,
+ 
+and can increase the risk of accidents 
+when performing high
+-
+altitude work [25]. Lifting activities are also affected by wind, with 
+the impact depending on a combination of factors, such
+ 
+as wind speed, height of the lifting 
+operation, and the type of object to be lifted [25].
+ 
+Wind farm projects require locations with relatively high and consistent wind speeds 
+to maximize electricity generation during the operation phase of the project. Fr
+om a con-
+tractor’s perspective, however, high wind speeds represent a significant risk in terms of 
+safety, time, and cost [2,3]. Installation of the turbine and tower sections of a structure is 
+completed using heavy cranes. In addition to effects on worker 
+and equipment produc-
+tivity, safety regulations mandated by many regulatory bodies require lifting activities to 
+be halted at certain wind speed thresholds to avoid crane overturning 
+[3]
+. Reductions in 
+productivity of turbine installation due to wind speed 
+have been detailed by Guo, Chen, 
+and Chiu 
+[2
+]
+.
+ 
+The impact of weather on construction projects is highly variable, depending on nu-
+merous factors, including the type of construction, location, and season [28], and affecting 
+the individual tasks of a construc
+tion project differently. Low temperature, rain, and other 
+weather conditions may hamper productivity of certain workers and machinery, while 
+others may be unaffected. Regulations mandating threshold values for weather conditions 
+at which work must stop va
+ries between countries and even from city to city [29]. Given 
+the uncertainty in weather and the variability associated with its impact, appropriately 
+considering weather as a risk factor requires the use of sophisticated risk analysis and 
+decision
+-
+support
+ 
+tools before and during construction execution [13]. To achieve the 
+planned schedule, advanced planning is required to prepare mitigation strategies that can 
+effectively reduce the negative impact of weather on project cost and time 
+[25,29,30]
+.
+ 
+Monitoring
+ 
+and control tools are commonly used to evaluate project performance 
+during the execution of construction projects. According to the PMBOK
+®
+ 
+Guide (2008) 
+[31]
+, project monitoring and control consists of a set of processes designed to track, review, 
+and regu
+late the progress and performance of the project, identify areas in which changes 
+to the plan are required, and initiate corresponding changes 
+[31]
+. Continuous monitoring 
+and control provide the project team with insights into the health of the project to 
+identify 
+any areas that may require additional attention 
+[31]
+, including project cost, schedule, qual-
+ity, risk, scope, procurement, and communication management. Engaging in timely pro-
+ject monitoring and control can help minimize deviations from planned ba
+selines to 
+achieve original project objectives 
+[32
+–
+35]
+. Lookahead scheduling represents one of the 
+decision functions within production control systems 
+[11]
+. This approach is often imple-
+mented in coordination with other monitoring and control tools.
+ 
+Project monitoring and control tools 
+were
+ 
+classified as either one
+-
+dimensional or 
+multi
+-
+dimensional control systems 
+[34]
+. One
+-
+dimensional project control tools are simple 
+to implement; however, control is focused on one specific dimension (i.e., cost) rath
+er than 
+on the entire set of project objectives 
+[34]
+. Multi
+-
+dimensional project control tools integrate 
+several dimensions within one control system, such as the 
+e
+arned 
+v
+alue (EV) approach
+, 
+which was
+ 
+designed to assess cost and time simultaneously 
+[34]
+. A 
+detailed review of the 
+tools proposed by different bodies of knowledge for project monitoring and control 
+was
+ 
+
+[PAGE 4]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+4
+ 
+of 
+28
+ 
+ 
+compiled by Montes
+-
+Guerra 
+[33]
+. Recent advances in this field include the automation of 
+project monitoring and control to reduce the time required
+ 
+to obtain as
+-
+built data through 
+the introduction of digital technologies, such as sensors, GPS, and RFID 
+[35
+–
+37]
+.
+ 
+2.2. 
+Weather
+-
+Related Project Delays in Construction
+ 
+“Clear and specific” weather
+-
+related clauses are a common component of wind farm 
+construc
+tion contracts [24]. Designed to allocate responsibilities and reduce claims, these 
+clauses clarify compensation for weather delays caused by productivity loss or work stop-
+pages [29]. Construction contracts generally differentiate between weather delays th
+at can 
+be anticipated and those that cannot [22]. Delays resulting from severe weather that is 
+anticipated is usually considered non
+-
+excusable, where only delays caused by abnormal 
+and unforeseeable weather events are granted a time extension [18,29]. Many
+ 
+wind farm 
+construction projects are awarded by the owner on a calendar
+-
+day basis 
+[2]
+. To determine 
+the expected project duration for bidding, contractors typically use approximation or 
+quantitative methods to calculate the number of days expected to be im
+pacted by severe 
+weather for bidding (and other pre
+-
+construction) purposes. Often, the expected number 
+of non
+-
+working days due to weather are specifically defined in the contract [16], with se-
+vere penalties imposed on the contractor for projects that are n
+ot completed by the con-
+tract
+-
+specified end date.
+ 
+Typically, approximation methods are used to determine the number of severe 
+weather
+-
+associated days for bidding and pre
+-
+construction planning. Approximation 
+methods involve the review of historical weather d
+ata to calculate the average number of 
+days associated with severe weather conditions each month and using the remaining 
+working days to develop the project schedule [29]. In addition to approximation methods, 
+numerous quantitative methods 
+have been
+ 
+develo
+ped. Quantitative methods use histori-
+cal weather data to evaluate the impact of weather on project schedules, either directly or 
+through a weather generator, as shown i
+n Table 1. Weather generators are numerical mod-
+els that reproduce synthetic weather data
+ 
+as a daily time
+-
+series of weather variables with 
+the same statistical properties as historical 
+weather data [29]. Both parametric and non
+-
+parametric approaches 
+are
+ 
+applied. 
+While most models use simulation, others have 
+adopted a mathematical approach or a
+ 
+combination of fuzzy logic with the critical path 
+method (CPM). 
+Three weather parameters have received the most attention: temperature, 
+precipitation, and wind speed. Previous studies have either modeled the effect of one 
+weather parameter or a combinatio
+n thereof.
+ 
+Table 1. 
+Summary of quantitative weather models.
+ 
+Reference
+ 
+Modeling
+ 
+Theory
+ 
+1
+ 
+Project 
+ 
+Type
+ 
+Weather 
+ 
+Modeling
+ 
+Weather Parameters
+ 
+2
+ 
+Temp.
+ 
+Wind
+ 
+Prec.
+ 
+[17]
+ 
+Fuzzy + CPM
+ 
+Highway 
+ 
+Historical
+ 
+-
+ 
+-
+ 
+✔
+ 
+[13]
+ 
+Fuzzy + CPM
+ 
+Highway 
+ 
+Historical
+ 
+-
+ 
+-
+ 
+✔
+ 
+[2]
+ 
+Fuzzy + CPM
+ 
+Onshore Wind
+ 
+Historical
+ 
+-
+ 
+✔
+ 
+-
+ 
+[38]
+ 
+Mathematical
+ 
+Onshore Wind
+ 
+Historical
+ 
+-
+ 
+✔
+ 
+✔
+ 
+[14]
+ 
+Mathematical
+ 
+Highway 
+ 
+Historical
+ 
+-
+ 
+-
+ 
+✔
+ 
+[16]
+ 
+Mathematical
+ 
+Highway 
+ 
+Generator
+ 
+-
+ 
+-
+ 
+✔
+ 
+[24]
+ 
+Mathematical
+ 
+Buildings
+ 
+Historical
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+[39]
+ 
+Mathematical
+ 
+Buildings
+ 
+Historical
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+[40]
+ 
+Mathematical
+ 
+Bridge
+ 
+Historical
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+[3]
+ 
+DES
+ 
+Onshore Wind
+ 
+Generator
+ 
+-
+ 
+✔
+ 
+-
+ 
+[
+23
+]
+ 
+DES
+ 
+Tunneling
+ 
+Generator
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+[
+41
+]
+ 
+DES
+ 
+Dams
+ 
+Generator
+ 
+-
+ 
+-
+ 
+✔
+ 
+[29]
+ 
+DES
+ 
+Tall Buildings
+ 
+Generator
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+[25]
+ 
+DES
+ 
+In Situ Wall
+ 
+Historical
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+
+[PAGE 5]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+5
+ 
+of 
+28
+ 
+ 
+[15]
+ 
+DES + Continuous
+ 
+Pipeline
+ 
+Generator
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+[
+42
+]
+ 
+M.
+-
+Crit. + Reg.
+ 
+Residential
+ 
+Historical 
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+1
+ 
+Fuzzy + CPM: 
+f
+uzzy 
+l
+ogic and 
+c
+ritical 
+p
+ath 
+m
+ethod, DES: 
+d
+iscrete
+-
+e
+vent 
+s
+imulation, M. Crit. + 
+Reg.: 
+m
+ulti
+-
+c
+riteria and 
+r
+egression; 
+2
+ 
+Temp.: 
+t
+emperature, Prec.: 
+p
+recipitation
+.
+ 
+2.3. 
+Assessing the Impact of Weather on Wind Farm Construction
+ 
+Of the quantitative weather models previously
+ 
+developed, only three 
+were
+ 
+designed 
+for onshore wind farm construction: Guo et al. 
+[2]
+ 
+propo
+sed a fuzzy
+-
+based approach for 
+assessing the impact of wind speed uncertainty on wind turbine installation
+;
+ 
+Atef et al. 
+[3]
+ 
+introduced a discrete
+-
+event simulation approach of wind turbine assembly activities cou-
+pled with a weather generator
+; and
+ 
+Zhou et al
+. [38] proposed a mathematical optimization 
+approach to optimize the schedule under resources constraints in consideration of wind 
+speed and precipitation. 
+Notably, only the effect of wind speed and precipitation on tur-
+bine assembly was considered by these
+ 
+three studies, and all studies were designed to 
+generate a holistic, master scheduling of the project at 
+the 
+early planning stage. Although 
+useful for early scheduling during the pre
+-
+construction phase, these approaches are not 
+suitable for developing sho
+rt
+-
+term lookahead schedules used during the execution phase.
+ 
+Currently, lookahead scheduling in wind farm construction relies on conventional 
+scheduling techniques, such as bar charts and the CPM. However, these techniques are 
+not able to precisely capture
+ 
+the impact of weather uncertainties or to model productivity
+-
+influencing factors when developing short
+-
+term project schedules 
+[2]
+. In practice, the im-
+pact of wind uncertainty is usually estimated by a rule
+-
+of
+-
+thumb approach and subjective 
+judgements based
+ 
+on practitioners’ past experiences 
+[2]
+. This approach can result in inap-
+propriate adjustments, which may lead to deviations from the planned schedule 
+[2]
+. Tools 
+capable of reliably quantifying
+—
+in a detailed manner
+—
+the schedule delays associated 
+with adver
+se weather are expected to result in improved management of weather risks, 
+more realistic scheduling, enhanced utilization of construction resources, and safer work 
+environments 
+[3]
+. Reliable quantitative tools for short
+-
+term lookahead scheduling in wind 
+f
+arm construction, however, have yet to be reported in construction engineering and man-
+agement literature.
+ 
+2.4. 
+Research Gaps
+ 
+Barriers limiting the application of existing quantitative methods to assess the impact 
+of weather in onshore wind farm 
+construction for short
+-
+term lookahead scheduling in-
+clude:
+ 
+1.
+ 
+Methods for assessing the impact of weather in onshore wind farm construction [2,3] 
+only addressed the impact of wind speed on turbine installation and d
+id
+ 
+not consider 
+the influence of other weathe
+r parameters, such as precipitation and air temperature, 
+on project schedules
+. 
+ 
+2.
+ 
+Existing methods [2,3] 
+were
+ 
+limited to turbine installation, and 
+c
+ould not
+ 
+consider 
+the impact of weather on other construction activities. To examine the impact of 
+weather on 
+the project schedule, all project activities and their criticality should be 
+modeled and considered. This is particularly important when considering that cer-
+tain non
+-
+critical activities may become critical as a result of weather delays. Con-
+versely, certain
+ 
+weather
+-
+sensitive activities may not fall on the critical path, with 
+weather
+-
+related delays in these instances not affecting project duration. For example, 
+a 
+weather
+-
+related delay in pouring the concrete foundation will delay all subsequent 
+construction a
+ctivities, resulting in a considerable impact on overall project duration. 
+In contrast, a weather
+-
+related delay in the non
+-
+critical activity of substation drainage 
+installation will have a minimal impact on the overall project duration
+ 
+3.
+ 
+Short
+-
+term weather f
+orecasts are typically more accurate and reliable than historical 
+weather data [
+43
+]. Existing methods
+,
+ 
+presented in Table 1
+,
+ 
+use historical weather data 
+as 
+an 
+input
+—
+either directly or through a weather generator
+—
+which often results in 
+
+[PAGE 6]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+6
+ 
+of 
+28
+ 
+ 
+daily weather predictions that are not matched to actual weather conditions during 
+the short
+-
+term lookahead period. 
+ 
+4.
+ 
+Existing methods
+,
+ 
+presented in Table 1
+,
+ 
+are unable to incorpora
+te as
+-
+built data into 
+the quantitative scheduling system as the project progresses, thereby limiting the ac-
+curacy and representativeness of the output schedules during the construction phase.
+ 
+2.5. 
+Simulation as a Proposed Approach
+ 
+Construction simulation a
+llows
+ 
+for
+ 
+the development of and experimentation with 
+computer
+-
+based representations of construction projects at a detailed level to understand 
+their underlying behavior and investigate the effects of external factors [
+44
+]. The ability of 
+discrete
+-
+event si
+mulation (DES) to incorporate the variability associated with external fac-
+tors, such as weather, to determine the impact of uncertainty on system outcomes 
+is 
+well
+-
+established. As presented in
+ 
+S
+ection 2.2
+ 
+(
+Table 1
+)
+, several studies have successfully ap-
+plied
+ 
+DES to investigate the effects of adverse weather on construction activities 
+[3,15,23,25,29,
+41
+]
+, and DES 
+was
+ 
+shown to be a reasonable tool for scheduling construction 
+activities of onshore wind projects [
+45
+]. However, a simulation model capable of consid-
+e
+ring the impact of weather on the activities on onshore wind farm construction has not 
+been developed. 
+ 
+3. 
+Proposed Framework
+ 
+This research is proposing a hybrid DES
+-
+continuous simulation
+-
+based framework to 
+integrate as
+-
+built information with short
+-
+term pr
+ecipitation, air temperature, and wind 
+speed forecast data to improve lookahead scheduling at the project
+-
+level in onshore wind 
+farm construction. The proposed framework centers around a newly
+-
+developed and ge-
+neric hybrid simulation model (i.e., discrete
+-
+e
+vent and continuous) of both weather
+-
+sen-
+sitive and non
+-
+sensitive activities in onshore wind farm construction. Advances to the ex-
+isting state
+-
+of
+-
+the
+-
+art include the ability of the model to simultaneously
+:
+ 
+(1) consider the 
+influence of additional weather pa
+rameters, such as precipitation and air temperature, on 
+project schedules, (2) model all critical and non
+-
+critical construction activities, (3) incor-
+porate short
+-
+term weather forecast information, and (4) integrate as
+-
+built data to enhance 
+short
+-
+term looka
+head scheduling in onshore wind farm construction.
+ 
+The proposed framework consists of three compo
+nents
+:
+ 
+(1) data collection and prep-
+aration, (2)
+ 
+simulation, and (3) framework outputs, as shown in Figure 1. First, the method 
+examines short
+-
+term weather fore
+cast data and determines upcoming weather conditions 
+over the lookahead period (e.g., 14 days). The productivity 
+of any uncompleted activities 
+during the lookahead periods are multiplied by a pre
+-
+established productivity factor to 
+determine a new activity 
+duration given the expected weather.
+ 
+
+[PAGE 7]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+7
+ 
+of 
+28
+ 
+ 
+ 
+Figure 1. 
+Proposed framework.
+ 
+Using the new durations for the activities within the specified lookahead period to-
+gether with (1) the actual durations of completed act
+ivities and (2) the planned durations 
+of activities
+ 
+in the post
+-
+lookahead period, the method generates an updated project sched-
+ule each time new as
+-
+built information is entered (Figure 2).
+ 
+This process is 
+repeated each 
+lookahead update period (i.e., i, 
+i 
++
+ 
+1, ….) until the project is completed.
+ 
+ 
+Figure 2. 
+As
+-
+built versus planned durations for two lookahead update periods
+.
+ 
+3.1. 
+Data Collection and Preparation
+ 
+The i
+nputs required to apply the proposed approach include
+:
+ 
+(1) 
+the 
+weather impact 
+on productivity of construction activities, (2) 
+the 
+short
+-
+term weather forecast for the 
+lookahead period, (3)
+ 
+the
+ 
+planned duration of activities not yet completed, and (4)
+ 
+the
+ 
+as
+-
+built (i.e., actual) duration of completed activities. 
+ 
+3.1.1. 
+Weather Impact on Productivity
+ 
+This input associates weather parameter v
+alues to construction productivity using if
+-
+then rules encompassing three considerations [15]: (1) weather parameters that influence 
+the activity, (2) weather conditions that would cause each activity to stop (i.e., stopping 
+conditions), and (3) the relati
+onship between activity productivity and weather condi-
+tions.
+ 
+Not started
+Lookahead update 
+(i)
+Constructed (complete)
+As
+-
+built duration 
+(constant)
+Planned duration under 
+weather impact
+Planned duration 
+(constant or distribution)
+Not started
+Lookahead update 
+(i+1)
+Constructed (complete)
+As
+-
+built duration 
+(constant)
+Planned duration under 
+weather impact
+Planned duration 
+(constant or distribution)
+
+[PAGE 8]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+8
+ 
+of 
+28
+ 
+ 
+First, activities are listed, and whether or not each activity is sensitive to weather is 
+determined. Then, the specific weather parameters that are capable of affecting produc-
+tivity are identifi
+ed for each weather
+-
+sensitive activity. For example, turbine assembly is 
+sensitive to wind speed because of the crane lifts associated with this activity, whereas 
+labor
+-
+dependent activities are generally influenced by both temperature and wind speed.
+ 
+Then,
+ 
+thresholds for each weather parameter for each activity are determined. 
+Thresholds are divided into 
+weather
+-
+related work stoppage thresholds
+, which define the 
+weather values beyond which the construction activities cannot proceed 
+[15,18,21,25,29]
+, 
+and 
+wea
+ther
+-
+related productivity loss thresholds
+, which define the weather values at 
+which construction work can continue
+,
+ 
+but at a lower productivity [18,21]. Threshold val-
+ues are affected by a number of factors, such as trades and natural and social factors, in-
+cluding location of the project and cultural mores (i.e., unofficial norms) recommending 
+weather conditions at which trades can work [18].
+ 
+Official threshold values, when availa-
+ble, can be obtained from a variety of sources, including work safety regulatio
+ns, organi-
+zation
+-
+specific practices, historical data, subject matter experts, and/or construction liter-
+ature. In some cases, work stoppage thresholds can be written into construction contracts 
+to reduce disputes that may arise due to weather
+-
+related work s
+toppages [18,29].
+ 
+Finally, for activities with productivity loss thresholds, a mathematical relationship 
+between weather parameter values and productivity is established for each set of weather 
+parameter values. Two methods for deriving a mathematical relationship 
+were
+ 
+repo
+rted 
+in literature. The first method calculates the impact on activity duration directly (i.e., per-
+centage of duration is added to the original duration 
+[3]
+), while the second method calcu-
+lates the impact of weather on activity productivity through a produ
+ctivity factor [15]. 
+Productivity factor values can be calculated by inputting historical project data and/or 
+subjective information into the productivity factor equation proposed by [15]. Notably, in 
+the absence of applicable historical information, produ
+ctivity factor values can also be ob-
+tained from construction literature. In adverse conditions, productivity factors are less 
+than a value of 1; while in favorable conditions, productivity factors are higher than a 
+value of 1.
+ 
+3.1.2. 
+Short
+-
+Term Weather For
+ecasts
+ 
+Short
+-
+term weather forecasts are available from a variety of publicly
+-
+available and 
+commercial providers, which typically provide daily weather forecasts for the upcoming 
+7, 10, and/or 14 days. Weather conditions encompass a number of parameters, in
+cluding 
+sk
+y temperature, atmospheric pressure, cloudiness, humidity, air temperature, wind 
+speed, and precipitation. A
+n extensive review of weather
+-
+related construction delays, 
+compiled by Schuldt 
+et al.
+, “identified extreme temperatures, precipitation, an
+d high 
+winds as the most impactful weather conditions on construction” [21]. These findings 
+were confirmed by the practitioners in
+ 
+S
+ection 4.1.1
+,
+ 
+who asserted that, based on their 
+experience, wind speed, air temperature, and precipitation were the most cri
+tical factors 
+affecting productivity of onshore wind farm construction projects.
+ 
+3.1.3. 
+Activity Durations: Planned and As
+-
+Built
+ 
+The p
+lanned durations for activities that have not yet been completed are determined 
+using historical project data or subject matter expert opinion. At the initial stage of con-
+struction, all activities will be input with planned durations. Methods for determini
+ng 
+activity durations 
+are
+ 
+extensively discussed in construction literature. Readers are re-
+ferred to [
+46
+] for a detailed review of activity duration planning. Planned durations can 
+be input as constant values or as probability distributions. As activities a
+re completed, 
+planned durations will be replaced with as
+-
+built (i.e., actual) durations within the simu-
+lation model. This applies to both weather
+-
+sensitive and non
+-
+sensitive activities. As
+-
+built 
+durations can only be input as constant values, given that as
+-
+built durations are known. 
+ 
+ 
+ 
+
+[PAGE 9]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+9
+ 
+of 
+28
+ 
+ 
+3.2. 
+Simulation
+ 
+Once
+ 
+the
+ 
+required data are collected, they are input into the proposed simulation 
+model for onshore wind farm construction. Here, DES 
+wa
+s used to model non
+-
+sensitive 
+weather activities, and
+—
+due to dynamic chan
+ges in weather conditions
+—
+continuous sim-
+ulation 
+wa
+s used to model weather
+-
+sensitive activities. The model is capable of consider-
+ing both regular variability (through the input of planned durations as probability distri-
+butions) and the impact of weather on 
+productivity (through the application of the 
+productivity if
+-
+then rules) to predict durations of both the individual activities and of the 
+overall project. Model development and application are detailed as follows.
+ 
+3.2.1. 
+Model Development
+ 
+A simulation mod
+el can be developed once the underlying system behavior is de-
+fined and understood. The construction process of onshore wind projects and simulation 
+logic are detailed as follows.
+ 
+ 
+
+ 
+Construction Process Configuration;
+ 
+To develop the model, common components 
+of onshore wind farm construction were 
+identified and abstracted. Previous studies were reviewed 
+[
+45
+,
+47
+,
+48
+]
+, and a typical on-
+shore wind farm project was found to be comprised of six major work packages: site prep-
+aration, 
+the 
+foundation, turbine assembly,
+ 
+t
+he
+ 
+collection system, mechanical completion, 
+and commissioning. Each of these work packages was further partitioned into more de-
+tailed work
+-
+packages, as 
+shown in Figure 3. 
+As
+ 
+the proposed method requires weather 
+impacts on activity duration to be determine
+d
+, the work packages were further parti-
+tioned at the activity level following a detailed review of
+:
+ 
+(1) previous onshore wind farm 
+construction projects available in literature 
+[2,3,
+45
+,
+47
+]
+ 
+and (2) 10 real onshore wind farm 
+projects
+,
+ 
+as detailed in 
+Suppleme
+ntary Materials (
+Table S1
+)
+.
+ 
+ 
+Figure 3. 
+Work breakdown structure of an onshore wind project.
+ 
+The detailed 
+activities within each work package
+,
+ 
+and the logical relationships be-
+tween them
+,
+ 
+are illustrated in Figure 4. The generic activity
+-
+level WBS (Figures 3 and 4) 
+was reviewed by subject matters experts
+, who confirmed that the WBS was accurate and 
+representative of a typical onshore wind farm construction project.
+ 
+Onshore Wind Farm Construction
+Foundation
+Site preparation
+Access road 
+construction 
+Foundation tower 1
+Crane pads and 
+laydown areas
+Turbine assembly
+Turbine 1 assembly
+Turbine 2 assembly
+Collection system
+Underground 
+collector system 
+Substation 
+Commissioning 
+Turbine 1
+Turbine 2
+Foundation tower 2
+⁞
+ 
+Foundation tower 
+n
+⁞
+ 
+Turbine 
+n
+ 
+assembly
+Transmission line 
+⁞
+ 
+Turbine 
+n
+Mechanical 
+completion
+Turbine 1
+Turbine 2
+⁞
+ 
+Turbine 
+n
+
+[PAGE 10]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+10
+ 
+of 
+28
+ 
+ 
+ 
+Figure 4. 
+Detailed act
+ivities and sequence of work for an onshore wind project.
+ 
+
+ 
+Simulation Logic;
+ 
+Once the generic construction process was established, a combined discrete
+-
+event 
+and continuous simulation modeling approach was used to develop a generic simulation 
+model. The 
+sim
+ulation logic underlying the hybrid simulation model is detailed in Figure 
+5. In DES, entities are objects that have attributes, experience events, consume resources, 
+and enter queues over time. An entity can be dynamic by moving through the system or 
+rema
+in static to serve other 
+entities [
+49
+]. As an entity moves through the model, events are 
+scheduled, thereby representing
+ 
+the
+ 
+progress of the system.
+ 
+ 
+Figure 5. 
+Simulation logic for activities and project duration calculation for an update period.
+ 
+In the current study, one entity is created at the beginning of the simulation. Depend-
+ing on the activity sequence, further entities are created as needed. Following the creation 
+of an entity, the simulation model retrieves the forecasted weather parameter
+ 
+values for 
+Underground circuit
+  
+Foundation
+Site preparation: Access road and crane pads
+ 
+Collection system: Substation
+Compact 
+subsoil
+Add geotextile 
+layer
+Add and grade 
+gravel layer
+compaction
+Soil excavation 
+and stockpile
+Adjust base level 
+and pour mud
+-
+slab
+Rebar, anchor fixing, 
+and formwork
+Concrete 
+pouring 
+Concrete 
+curing 
+Install cables using cable 
+plough and reel truck
+Transmission line
+Excavate the whole 
+substation area
+Add and grade layer 
+of engineered gravel
+compaction
+Formwork 
+and rebar
+Concrete 
+pouring
+Install 
+drainage
+Install ground 
+grid system
+Install electrical 
+components
+Turbine assembly
+ 
+Install blades
+Install rotor 
+Install 
+nacelle
+Install tower 
+segments
+Mechanical completion
+ 
+Inspection of all 
+towers and cables  
+Commissioning 
+ 
+Commissioning of 
+all turbines  
+Start 
+Clear and cut 
+the grass
+Scrape 
+topsoil 
+Finish
+Start
+Set Time Now = 0
+Weather forecast
+End
+Read weather forecast
+ 
+for update period
+Use planned duration
+Apply productivity rules to calculate 
+activity duration 
+as a
+ 
+continuous task
+Use actual duration
+Calculate
+ 
+project duration 
+For activity (
+j
+)  = 1 to 
+m
+Activity = 
+m ?
+Yes
+Is an activity within update period
+?
+Is an activity 
+weather 
+sensitive?
+Yes
+Is an activity already 
+executed
+?
+No
+No
+No
+Yes
+Yes
+No
+
+[PAGE 11]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+11
+ 
+of 
+28
+ 
+ 
+each day of the update period (i.e., 14 days). When an entity arrives at a weather
+-
+sensitive 
+activity, one of three statuses is selected based on the “
+t
+ime 
+n
+ow” value:
+ 
+(1)
+ 
+If the “
+t
+ime 
+n
+ow” value is greater than the lower boundary of the update per
+iod, but 
+less than the upper boundary of update period, the weather
+-
+sensitive activity is in-
+cluded in the lookahead period. Continuous simulation, as 
+was
+ 
+recommended in 
+the 
+literature [11,21], is then applied to model productivity in consideration of 
+the 
+w
+eather impact.
+ 
+(2)
+ 
+If the “
+t
+ime 
+n
+ow” value is greater than the upper boundary of update period, the 
+weather
+-
+sensitive activity does not fall within the lookahead period, 
+thus 
+the planned 
+activity duration is used.
+ 
+(3)
+ 
+If the “
+t
+ime 
+n
+ow” value is less than the lower boundary of update period, the 
+weather
+-
+sensitive activity 
+was
+ 
+completed in the previous lookahead period, 
+thus 
+the 
+actual duration is used.
+ 
+A non
+-
+sensitive weather activity has only two statuses: completed or to be executed
+. 
+For completed activities, actual durations are used. Planned durations are used for incom-
+plete or to be executed activities.
+ 
+The simulation model provides successive progress updates at one
+-
+day intervals. 
+The 
+p
+artial completion of a weather sensitive act
+ivity is permitted at the end of an update 
+cycle. Activities with a duration greater than the lookahead period (i.e., 14 days) are di-
+vided into segments with durations equal to or less than the lookahead period. The pro-
+gress for discrete activities is asse
+ssed based on the number of discrete units completed 
+and the time required for their execution. This process continues until the project 
+is
+ 
+fully 
+simulated. Based on the simulation results, a total project duration is calculated. The sim-
+ulation model is ru
+n for a pre
+-
+determined number of iterations, and the results of each 
+iteration are combined to provide final results.
+ 
+3.3. 
+Framework Outputs
+ 
+The first output of the model is the expected duration of the individual weather
+-
+sen-
+sitive activities in considerat
+ion of the short
+-
+term weather forecast. This is presented as a 
+plot that visualizes the progress of activities and total accumulated duration. The second 
+output of the model is the expected duration of the entire project. This is visualized as a 
+histogram
+,
+ 
+illustrating the range and distribution of project durations obtained from each 
+run of the simulation model. Various statistics can also be obtained from the simulation 
+results, including minimum, average, and maximum durations
+,
+ 
+as well as the standard 
+de
+viation. Lastly, the model allows tracking and extraction of finish times for individual 
+activities, which can be visualized as a histogram.
+ 
+These outputs can provide effective, proactive decision
+-
+support to practitioners, 
+helping activities (particularly 
+those on the critical path) remain on schedule and reducing 
+the likelihood of project delays. 
+A discussion of the practical implications of the frame-
+work outputs are detailed in Section 5.1
+.
+ 
+4. 
+Case Study 
+ 
+A real wind farm project was used to demonstrate t
+he functionality and applicability 
+of the proposed framework. The onshore project consisted of eight 5.0
+ 
+MW wind turbine 
+generators for a total project output of 40 MW. The focus of the case study was on con-
+struction activities that were of interest to our
+ 
+industrial partner. Other activities, such as 
+electrical tasks, were not included in this study. Data from two points (i.e., update periods) 
+during construction execution were collected and used to evaluate the ability of the frame-
+work to incorporate as
+-
+b
+uilt data.
+ 
+ 
+ 
+
+[PAGE 12]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+12
+ 
+of 
+28
+ 
+ 
+4.1. 
+Data Collection and Preparation
+ 
+4.1.1. 
+Weather Impact on Productivity
+ 
+First, rules that describe the impact of weather parameters on productivity were de-
+veloped. Influencing weather parameters and threshold conditions for each activity we
+re 
+collected from construction literature or were provided by the contractor. 
+The i
+nput data 
+were reviewed by experts in the field, who confirmed that the thresholds were appropri-
+ate for the jobsite. The input data, together with their sources, are 
+summari
+zed in Tables 
+2 and 3. 
+The q
+ualifications of the subject matter experts are listed in Table 4. 
+Importantly, 
+the experts indicated that work must also be suspended for approximately 
+five
+ 
+working 
+days following a heavy snowfall to ensure that all materials, 
+including blades and other 
+components, are cleared of snow.
+ 
+Table 2. 
+Weather
+-
+sensitive activities and influencing weather parameters.
+ 
+Activity
+ 
+Weather Parameters
+ 
+Temperature
+ 
+Wind
+ 
+Precipitation
+ 
+Excavation 
+ 
+✔
+ 
+ 
+✔
+ 
+Compaction 
+ 
+✔
+ 
+ 
+✔
+ 
+Formwork and 
+r
+ebar
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+Concrete pouring 
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+Install tower segments
+ 
+✔
+ 
+✔
+ 
+ 
+Install nacelle 
+ 
+✔
+ 
+✔
+ 
+ 
+Install rotor
+ 
+✔
+ 
+✔
+ 
+ 
+Mechanical completion
+ 
+✔
+ 
+✔
+ 
+ 
+Commissioning 
+ 
+✔
+ 
+✔
+ 
+ 
+Table 3. 
+Stopping thresholds for weather
+-
+sensitive activities.
+ 
+Activity
+ 
+Weather Parameters
+ 
+Reference
+ 
+Temperature
+ 
+(°C)
+ 
+Wind
+ 
+(m/s
+ 
+1
+)
+ 
+Precipitation
+ 
+(mm/h)
+ 
+Excavation 
+ 
+<
+−
+25
+ 
+-
+ 
+>5 
+ 
+[16]
+ 
+Compaction 
+ 
+<
+−
+25
+ 
+-
+ 
+>5 
+ 
+[16]
+ 
+Formwork and rebar
+ 
+<
+−
+25
+ 
+>15
+ 
+>5 
+ 
+[16
+,
+25]
+ 
+Concrete pouring 
+ 
+<0 
+ 
+>11.5
+ 
+2.5
+ 
+*
+ 
+[16
+,
+25]
+ 
+Install tower segments
+ 
+<
+−
+25
+ 
+>14
+ 
+-
+ 
+[2,3]
+ 
+Install nacelle 
+ 
+<
+−
+25
+ 
+>14
+ 
+-
+ 
+[2,3]
+ 
+Install rotor
+ 
+<
+−
+25
+ 
+>14
+ 
+-
+ 
+[2,3]
+ 
+Mechanical completion
+ 
+<
+−
+25
+ 
+>11
+ 
+-
+ 
+Expert 
+ 
+Commissioning 
+ 
+<
+−
+25
+ 
+>11
+ 
+-
+ 
+Expert
+ 
+1
+ 
+1 m/s = 3.6 km/h
+. 
+*
+ 
+During precipitation event
+.
+ 
+Table 4. 
+Expert qualifications.
+ 
+No.
+ 
+Years of Experience in 
+ 
+Industry
+ 
+Education 
+ 
+Level
+ 
+1
+ 
+8
+ 
+Doctorate
+ 
+2
+ 
+15
+ 
+Master
+ 
+3
+ 
+7
+ 
+Bachelor
+ 
+As historical project data were not available, relationships between productivity and 
+weather parameters were obtained from those proposed in construction literature. Re-
+ported impacts of air temperature (Figure S1) [26], precipitation (Figure S2) [25], and
+ 
+wind 
+speed (Figure S3) [2] on productivity from 
+the 
+literature were examined, previous projects 
+
+[PAGE 13]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+13
+ 
+of 
+28
+ 
+ 
+were reviewed, and a list of rules was prepared based on these findings. A total of 150 
+rules were defined for this case study. As mentioned previously, the li
+st of rules can differ 
+between organizations and from project
+-
+to
+-
+project. As such, the list of rules should be 
+reviewed and modified, if required, for each new project. A sample of the developed rules 
+is sum
+marized in Table 5. The complete list of rules wa
+s validated by the subject matter 
+experts
+.
+ 
+Table 5. 
+Sample of developed rules.
+ 
+Weather Parameters
+ 
+Productivity 
+ 
+Factor
+ 
+Temperature 
+(°C)
+ 
+Wind 
+(m/s)
+ 
+Precipitation 
+(mm/h)
+ 
+T < 
+−
+25
+ 
+P = 0
+ 
+W = 0
+ 
+0
+ 
+−
+24.9 < T < 
+−
+15
+ 
+P = 0
+ 
+W = 0
+ 
+0.55
+ 
+−
+24.9 < T < 
+−
+15
+ 
+0 < P < 
+0.5
+ 
+W < 7
+ 
+0.4
+ 
+−
+24.9 < T < 
+−
+15
+ 
+0.5 < P < 1
+ 
+W > 7 
+ 
+0
+ 
+−
+24.9 < T < 
+−
+15
+ 
+1 < P <4
+ 
+W >7
+ 
+0
+ 
+−
+14.9 < T < 
+−
+5
+ 
+P = 0
+ 
+W = 0
+ 
+0.75
+ 
+−
+14.9 < T < 
+−
+5
+ 
+0 < P < 0.5
+ 
+0 < W < 7
+ 
+0.65
+ 
+−
+14.9 < T < 
+−
+5
+ 
+0.5 < P < 1
+ 
+7 < W < 10
+ 
+0.6
+ 
+−
+14.9 < T < 
+−
+5
+ 
+1 < P < 4
+ 
+7 < W < 10
+ 
+0.5
+ 
+4.1.2. 
+Short
+-
+Term Weather Forecasts
+ 
+In this study, a 14
+-
+day weather forecast was selected, as it matched the lookahead 
+update period used by the contractor, which was two weeks. Due to its easy
+-
+to
+-
+use inter-
+face, Dark Sky API [
+50
+] was used to collect weathe
+r data, including temperature, wind, 
+and precipitation levels. 
+Since
+ 
+weather forecast data were provided hourly, hourly values 
+during the period of construction operations (8:00 AM to 5:00 PM) were averaged to ob-
+tain daily forecast values. Data for 
+the 
+two
+ 
+update periods (i.e., 28 days) was collected, as 
+detailed in Table S1. The project was located in Alberta, Canada
+;
+ 
+weather information 
+for
+ 
+the project specific location was extracted.
+ 
+4.1.3. 
+Activity Durations
+ 
+The third input is the planned durations and 
+logical relationships of the activities 
+under each work package, as sho
+wn in Table 6. Activity durations specific to this case 
+study were provided by the contractor
+. Widely
+-
+used and commonly
+-
+recommended 
+[
+47
+,
+51
+–
+53
+]
+, triangular distributions were used to sto
+chastically represent regular (i.e., non
+-
+weather) variability in construction activity durations. Notably, activities related to site 
+preparation, foundation, turbine assembly, mechanical completion, and commissioning 
+are repeated for each of eight turbine
+s.
+ 
+Table 6. 
+Project activity details.
+ 
+Work 
+ 
+Package
+ 
+1
+ 
+Activity
+ 
+ID
+ 
+Duration 
+ 
+(Days)
+ 
+2
+ 
+Pred. ID/
+ 
+Rel. (Lag)
+ 
+3
+ 
+Required
+ 
+Resources
+ 
+4
+ 
+Site 
+ 
+Preparation
+ 
+Scrape topsoil
+ 
+A1
+ 
+Tri
+ 
+(5, 7, 6)
+ 
+-
+ 
+Bulldozer
+ 
+Compact subsoil
+ 
+A2
+ 
+Tri
+ 
+(5, 7, 6)
+ 
+A1/F.S
+ 
+Compactor
+ 
+Add 
+geotextile layer
+ 
+A3
+ 
+Tri
+ 
+(2, 4, 3)
+ 
+A2/F.S
+ 
+Geotextile Crew
+ 
+Add and grade gravel layer
+ 
+A4
+ 
+Tri
+ 
+(5, 7, 6)
+ 
+A3/F.S
+ 
+Grader
+ 
+Compaction
+ 
+A5
+ 
+Tri
+ 
+(5, 7, 6)
+ 
+A4/F.S
+ 
+Compactor
+ 
+Collection Sys-
+tem: Substa-
+tion
+ 
+Excavate substation area
+ 
+A6
+ 
+Tri
+ 
+(7, 12, 10)
+ 
+A0/F.S
+ 
+Excavator
+ 
+Add and grade gravel layer
+ 
+A7
+ 
+Tri
+ 
+(3, 5, 4)
+ 
+A6/F.S
+ 
+Grader
+ 
+Compaction
+ 
+A8
+ 
+Tri
+ 
+(2, 4, 3)
+ 
+A7/F.S
+ 
+Compactor
+ 
+Formwork and rebar
+ 
+A9
+ 
+Tri
+ 
+(7, 12, 10)
+ 
+A8/F.S
+ 
+Crew
+ 
+
+[PAGE 14]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+14
+ 
+of 
+28
+ 
+ 
+Concrete pouring
+ 
+A10
+ 
+Tri
+ 
+(1, 3, 2)
+ 
+A9/F.S
+ 
+Pouring Crew
+ 
+Install drainage
+ 
+A11
+ 
+Tri
+ 
+(5, 12, 7)
+ 
+A10/F.S
+ 
+Crew, Excavator
+ 
+Foundation 
+ 
+Construct
+ 
+Soil excavation
+ 
+A12
+ 
+Tri
+ 
+(2, 3, 2.5)
+ 
+A5/F.S
+ 
+Excavator
+ 
+Adjust base level, pour slab
+ 
+A13
+ 
+Tri
+ 
+(1, 2, 1.5)
+ 
+A12/F.S
+ 
+Pouring Crew
+ 
+Rebar, anchor, formwork
+ 
+A14
+ 
+Tri
+ 
+(2, 4, 3)
+ 
+A13/F.S
+ 
+Crew
+ 
+Concrete pouring
+ 
+A15
+ 
+Tri
+ 
+(1, 2, 1.5)
+ 
+A14/F.S
+ 
+Pouring Crew
+ 
+Concrete curing
+ 
+A16
+ 
+21
+ 
+A15/F.S
+ 
+-
+ 
+Circuit
+ 
+Install cables
+ 
+A17
+ 
+Tri
+ 
+(100, 110, 105)
+ 
+A5/F.S
+ 
+Cable Plough, Crew
+ 
+Turbine
+ 
+Install tower segments
+ 
+A18
+ 
+Tri
+ 
+(2, 3, 2.5)
+ 
+A16/F.S
+ 
+Crane, Assy. Crew
+ 
+ 
+Install nacelle
+ 
+A19
+ 
+Tri
+ 
+(0.5, 1, 1)
+ 
+A18/F.S
+ 
+Crane, Assy. Crew
+ 
+ 
+Install rotor and blades
+ 
+A20
+ 
+Tri
+ 
+(2, 3, 2.5)
+ 
+A19/F.S
+ 
+Crane, Assy. Crew
+ 
+Mechanical 
+ 
+Inspection of one tower
+ 
+A21
+ 
+Tri
+ 
+(3, 7, 5)
+ 
+A22/F.S
+ 
+Crane, Insp. Crew
+ 
+Commis.
+ 
+Commissioning 
+one
+ 
+turbine
+ 
+A22
+ 
+Tri
+ 
+(5, 9, 7)
+ 
+A11/F.S 
+A17/F.S
+ 
+A21/F.S
+ 
+Crew
+ 
+1
+ 
+Commis.: 
+c
+ommissioning; 
+2
+ 
+Tri: 
+t
+riangular 
+d
+istribution; 
+3
+ 
+Pred.: 
+p
+redecessor
+ 
+a
+ctivity, Rel.: 
+r
+ela-
+tionship; 
+4
+ 
+Assy.: 
+a
+ssembly, Insp.: 
+i
+nspection
+.
+ 
+4.2. 
+Simulation
+ 
+In this study, an in
+-
+house developed simulation 
+engine, 
+Simphony.NET
+ 
+4.6 [
+54
+,
+55
+], 
+was used as the simulation environment to model the onshore wind project activities and 
+associated weather impact. The model was built using the approach detailed in 
+Section 
+3.2. The unit of time was set to days, which included an 8
+ 
+h
+ 
+workday and no night shifts. 
+The developed rules were coded as if
+-
+then rules and stored using global variables in 
+Sim-
+phony.NET
+, such that they 
+were
+ 
+readable by all activities in the simul
+ation model. Whether 
+or not a weather
+-
+sensitive activity occurred during the update period was determined 
+using a conditional branch in 
+Simphony.NET
+, as shown in Figure 6. 
+A snapshot of the en-
+tire model is provided in Figure S4.
+ 
+ 
+Figure 6. 
+Modeling of wea
+ther
+-
+sensitive activity.
+ 
+If a weather
+-
+sensitive activity did not occur during the update period (i.e., already 
+completed or scheduled to begin in subsequent periods), the actual or planned duration 
+was used, as described in Section 3.2.
+ 
+Weather data were i
+nput to a database that was read 
+by the model every simulated day. For weather
+-
+sensitive activities occurring during the 
+update period, the appropriate rule was identified, and the simulated activity duration 
+was multiplied by the corresponding productivit
+y factor.
+ 
+The simulation was then run for 1000 iterations, as recommended in 
+[
+56
+],
+ 
+to achieve 
+the desired level of confidence. Notably, this 
+wa
+s well in excess of the 120 iterations rec-
+ommended for a simulation to reach maturity 
+[
+57
+]
+.
+ 
+
+
+[PAGE 15]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+15
+ 
+of 
+28
+ 
+ 
+4.2.1. 
+Simulation Model Validation
+ 
+The generic hybrid simulation model was validated using trace validation, event va-
+lidity, and face validation approaches [
+58
+]
+. First, trace validation, which records the be-
+havior of various entities in a trace window, was used t
+o evaluate the logic of the simula-
+tion model. The sequence of the activities through which the entities flowed was the same 
+as the planned activity sequence, indicating that the logic of the simulation model was 
+consistent with the logic observed in practi
+ce.
+ 
+Second, using event validity, the simulated project duration was compared with the 
+planned duration calculated by the contractor using commercial scheduling software [
+59
+]. 
+The simulated project duration (without considering weather impact) was an avera
+ge of 
+246 days (σ = 4), which was similar to the original deterministic project duration of 240 
+days, demonstrating that the model 
+was
+ 
+capable of generating results that 
+wer
+e 
+repre-
+sentative of real events. 
+ 
+Third
+, face validation of the model’s logic 
+was conducted. Three subject matter ex-
+perts, whose qualifications are listed in Table 4, reviewed the simulation logic of the 
+model. All three experts confirmed that the logic was sound. Based on the findings of the 
+trace validation, event validity, and fa
+ce validation tests, the model was applied to the 
+case study.
+ 
+4.3. 
+Framework Outputs and Results
+ 
+The framework was applied to each of the two lookahead update periods. During 
+the first lookahead update period, activities of two work
+-
+packages
+—
+site preparati
+on and 
+collection system
+—
+were initiated in this lookahead period. Of the two work packages, 
+only two weather
+-
+sensitive activities (i.e., compaction of subsoil in site preparation and 
+excavation of substation in collection system) were initiated during the 
+first lookahead 
+period. The planned duration of compaction was 
+t
+riangular (5, 7, 6) (Table 6) and excava-
+tion was 
+t
+riangular (7, 12, 10) (Table 6). 
+The p
+lanned durations were used for the remain-
+der of the activities scheduled to be executed during the first
+ 
+update period.
+ 
+Weather conditions during the first update period were favorable (Table S2), with air 
+temperatures ranging 
+between 14.3
+ 
+°C to 23.4
+ 
+°C, wind speeds remaining below 8.75 m/s, 
+and precipitation rates below 0.5 mm/h for 13 out of the 14 days. A
+s expected, the impact 
+of weather on the productivity of the weather
+-
+sensitive activities 
+w
+as
+ 
+minimal, ranging 
+between 0.9 and 1.0 for both compaction (Figure 7a) and excavation (Figure 8a). The av-
+erage simulated duration for compaction was 5.5 days, while
+ 
+the average simulated du-
+ration of excavation was 10.5 days. The accumulated duration for one simulation run of 
+both activities are illustrated in Figures 7b and 8b. The impact of weather resulted in a 
+simulated finish time (considering the impact of weath
+er on productivity) for compaction 
+of
+ 
+11.5 days (σ = 1; Figure 9b) and excavation of 11 days (σ = 1; Figure 10b), which is similar to 
+the finish time obtained when weather impact was not considered (Figures 9a and 10a). The 
+average simulated total project 
+duration was determined to be 246 days (σ = 4; Figure 11)
+ 
+com-
+pared to the planned project 
+duration of 240 days. Since weather had a negligible impact 
+on project duration, practitioners determined that no corrective actions were needed for 
+this lookahead pe
+riod.
+ 
+
+[PAGE 16]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+16
+ 
+of 
+28
+ 
+ 
+ 
+ 
+(
+a
+)
+ 
+(
+b
+)
+ 
+Figure 7. 
+Weather impact on compaction activity: (
+a
+) progress as productivity factor
+,
+ 
+and (
+b
+) accumulated activity dura-
+tion.
+ 
+ 
+ 
+(
+a
+)
+ 
+(
+b
+)
+ 
+Figure 8. 
+Weather impact on substation excavation activity: (
+a
+) progress as 
+productivity factor
+,
+ 
+and (
+b
+) accumulated sim-
+ulated activity duration.
+ 
+ 
+ 
+(
+a
+)
+ 
+(
+b
+)
+ 
+Figure 9. 
+Finish time of compaction activity: (
+a
+) without weather impact
+,
+ 
+and (
+b
+) considering weather impact.
+ 
+
+
+[PAGE 17]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+17
+ 
+of 
+28
+ 
+ 
+ 
+ 
+(
+a
+)
+ 
+(
+b
+)
+ 
+Figure 10. 
+Finish time of excavation 
+activity: (
+a
+) without weather impact
+,
+ 
+and (
+b
+) considering weather impact.
+ 
+ 
+Figure 11. 
+Project duration after considering weather impact for first lookahead update.
+ 
+Similar to the first update period, weather conditions during the second update pe-
+riod were
+ 
+favorable (Table S2), ranging between 14.9
+ 
+°C and 24.6
+ 
+°C, 
+with 
+wind speeds 
+remaining below 6.16 m/s, and no precipitation. Nine activities 
+were
+ 
+initiated during the 
+first u
+pdat
+e period, of which two were still ongoing. Progress information is 
+detailed in Table 
+7.
+ 
+Table 7. 
+Progress of project activities at day 14.
+ 
+Activity
+ 
+Weather
+-
+ 
+Sensitive?
+ 
+Progress 
+ 
+(%)
+ 
+Actual
+ 
+Duration (Days)
+ 
+Remaining
+ 
+Scrape topsoil section 1
+ 
+No
+ 
+100
+ 
+6
+ 
+0
+ 
+Scrape topsoil section 2
+ 
+No
+ 
+100
+ 
+5
+ 
+0
+ 
+Compact subsoil of section 1
+ 
+Yes
+ 
+100
+ 
+6
+ 
+0
+ 
+Scrape topsoil section 3
+ 
+No
+ 
+In Progress
+ 
+2
+ 
+Tri (3, 5, 4)
+ 
+Compact subsoil of section 2
+ 
+Yes
+ 
+In Progress
+ 
+3
+ 
+Tri (2, 4, 3)
+ 
+Add geotextile layer of section 1
+ 
+No
+ 
+100
+ 
+3
+ 
+0
+ 
+Excavation of substation area
+ 
+Yes
+ 
+100
+ 
+11
+ 
+0
+ 
+Gravel layer of 
+substation
+ 
+No
+ 
+100
+ 
+4
+ 
+0
+ 
+
+
+[PAGE 18]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+18
+ 
+of 
+28
+ 
+ 
+The a
+ctual durations were used for completed activities. For in progress activities, a 
+discrete task was used for the completed portion of the activity, and the remaining portion 
+was modeled as 
+a 
+continuous task to allow
+ 
+for the
+ 
+consideration of weather effects
+. In 
+addition to the in progress activities, seven weather
+-
+sensitive activities were initiated dur-
+ing the second update period. As expected, the favorable weather conditions had a 
+mini-
+mal impact on productivity, resulting in a simulated project duration of
+ 
+245 days (σ = 4; 
+Figure 12). A high
+-
+level summary of the results for update periods 1 and 2 is provided in 
+Table 8.
+ 
+Table 8. 
+High
+-
+level summary of results for update periods 1 and 2 of case study.
+ 
+Period
+ 
+Impact on
+ 
+Project 
+ 
+Duration
+ 
+Corrective Action
+ 
+Productivity
+ 
+1
+ 
+Total Project
+ 
+Duration
+ 
+Baseline
+ 
+-
+ 
+-
+ 
+246 days (σ = 4)
+ 
+-
+ 
+1
+ 
+<10% 
+ 
+Minimal
+ 
+246 days (σ = 4)
+ 
+None required
+ 
+2
+ 
+<10% 
+ 
+Minimal
+ 
+245 days (σ = 4)
+ 
+None required
+ 
+1
+ 
+Weather
+-
+sensitive activities
+.
+ 
+ 
+Figure 12. 
+Project duration after 
+considering weather impact for second lookahead update.
+ 
+Framework Evaluation
+ 
+In addition to validating the model’s logic (detailed in Section 4.2.1), the framework 
+was validated through two additional tests: a sensitivity analysis
+,
+ 
+and a face validation of
+ 
+the output results [
+58
+]. First, the sensitivity of the model to changes in weather conditions 
+was examined. In contrast to favorable weather conditions observed in the case study, the 
+sensitivity analysis input unfavorable weath
+er data into the simulation
+ 
+model (Table 9). 
+Here, air temperatures were below 0
+ 
+°C, with average wind speeds ranging between 2 
+and 20 m/s
+,
+ 
+and precipitation present on 7 of 
+the 14 days.
+ 
+ 
+ 
+
+
+[PAGE 19]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+19
+ 
+of 
+28
+ 
+ 
+Table 9. 
+New weather parameters for first 14 days.
+ 
+Days 
+ 
+Since Start
+ 
+Average 
+ 
+Temperature 
+ 
+(°C)
+ 
+Average 
+ 
+Precipitation 
+ 
+(mm/h)
+ 
+Average 
+ 
+Wind Speed 
+ 
+(m/s)
+ 
+1
+ 
+‒
+10.0
+ 
+1.00
+ 
+2
+ 
+2
+ 
+‒
+3.5
+ 
+2.00
+ 
+4
+ 
+3
+ 
+‒
+7.7
+ 
+3.50
+ 
+2
+ 
+4
+ 
+‒
+8.0
+ 
+1.50
+ 
+3
+ 
+5
+ 
+‒
+9.4
+ 
+4.00
+ 
+5
+ 
+6
+ 
+‒
+9.4
+ 
+2.00
+ 
+6
+ 
+7
+ 
+-
+8.9
+ 
+0.00
+ 
+7
+ 
+8
+ 
+‒
+12.1
+ 
+0.00
+ 
+8
+ 
+9
+ 
+‒
+16.8
+ 
+5.00
+ 
+9
+ 
+10
+ 
+‒
+1.1
+ 
+0.00
+ 
+14
+ 
+11
+ 
+‒
+1.9
+ 
+0.00
+ 
+15
+ 
+12
+ 
+0.0
+ 
+0.00
+ 
+20
+ 
+13
+ 
+‒
+1.9
+ 
+0.00
+ 
+8
+ 
+14
+ 
+‒
+1.8
+ 
+0.00
+ 
+6
+ 
+The daily productivity factor of compaction ranged from 0.5 to 0.9,
+ 
+which,
+ 
+in turn
+,
+ 
+extend
+ed
+ 
+the duration of compaction from a
+n average simulated planned duration of 6 
+days (Figure 13b) to a simulated 
+weather
+-
+impacted duration of 11 days
+. This was
+ 
+reflected 
+in the finish time of the activity
+, as shown
+ 
+in Figure 14. Altogether, the unfavorable 
+weather conditions during the first 14 days alone caused an overall project delay of 5 days, 
+resulting in a simu
+lated project duration of 251 days (σ = 4) (Figure 15). 
+Moreover
+, Figure 
+13a demonstrates that the sensitivity analysis results were consistent 
+with expected out-
+comes, with unfavorable weather conditions resulting in longer activity durations and 
+delayed p
+roject completion dates.
+ 
+ 
+ 
+(
+a
+)
+ 
+(
+b
+)
+ 
+Figure 13. 
+Weather impact on compaction activity: (
+a
+) progress as productivity factor
+,
+ 
+and (
+b
+) accumulated activity dura-
+tion.
+ 
+
+
+[PAGE 20]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+20
+ 
+of 
+28
+ 
+ 
+ 
+Figure 14. 
+Finish time of compaction activity under new weather parameters.
+ 
+ 
+Figure 15. 
+Project duration under impact of new weather parameters.
+ 
+Table 10 presents a comparative summary of the first lookahead update period and 
+the baseline schedule. Notably, poor weather conditions
+,
+ 
+causing a 50% reduction in the 
+productivity 
+of wea
+ther
+-
+sensitive activities
+,
+ 
+resulted in a 5
+-
+day delay in project completion 
+time. Corrective actions would be required to mitigate the impact of the delay on overall 
+project duration.
+ 
+Table 10. 
+High
+-
+level summary of results for update period 1 of 
+sensitivity analysis.
+ 
+Period
+ 
+Impact on
+ 
+Project 
+ 
+Duration
+ 
+Corrective 
+ 
+Action
+ 
+Productivity
+ 
+1
+ 
+Total Project 
+ 
+Duration
+ 
+Baseline
+ 
+-
+ 
+-
+ 
+246 days (σ = 4)
+ 
+-
+ 
+1
+ 
+≈50%
+ 
+Notable
+ 
+251 days (σ = 4)
+ 
+Required
+ 
+ 
+1
+ 
+Weather
+-
+sensitive activities
+.
+ 
+
+
+[PAGE 21]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+21
+ 
+of 
+28
+ 
+ 
+Face validation was also used to assess the advantages and applicability of the pro-
+posed method. 
+The r
+esults of the case study and sensitivity analysis were presented and 
+discussed with the subject matter experts described in Table 4. The experts confirmed
+ 
+that 
+the results generated by the framework were reasonable and consistent with what 
+wa
+s 
+expected in practice. They agreed that the framework solve
+d
+ 
+existing challenges with 
+lookahead scheduling that are not currently addressed by 
+current
+ 
+commercial sched
+uling 
+software
+,
+ 
+and that results generated by the proposed framework can be used to enhance 
+and further support existing decision
+-
+making. For example, in the unfavorable weather 
+conditions of the sensitivity analysis, the delay expected by the short
+-
+term w
+eather fore-
+cast could prompt practitioners to double the resources available by increasing the num-
+ber of shifts or working weekends during the short
+-
+term lookahead period to compensate 
+for the (almost 50%) loss in productivity. 
+ 
+To further enhance the bene
+fits of the method, the experts noted that, in its current 
+form, the framework was not easy
+-
+to
+-
+use
+—
+particularly by practitioners who may not be 
+familiar with simulation
+s
+. The development of a graphical user interface for the system 
+was recommended by the e
+xperts to facilitate application of the framework in industry.
+ 
+5. 
+Discussion
+ 
+To address these limitations, a combined discrete
+-
+event and continuous simulation 
+method that allows practitioners to more effectively assess and understand the impact of 
+short
+-
+te
+rm weather uncertainty on construction activities during lookahead scheduling 
+was developed and applied to a case study of a real onshore wind farm project. As ex-
+pected, favorable weather conditions experienced during the tested lookahead periods 
+resulted 
+in a negligible impact on the productivity of weather
+-
+sensitive activities (10% 
+reduction in planned productivity; Table 8), which translated into an overall project delay 
+of less than 1 day. The results of the case study, together with the validation expe
+riments, 
+demonstrated the ability of the proposed framework to address the four barriers limiting 
+the performance of existing methods. Specifically, the proposed framework was shown to 
+be capable of
+:
+ 
+(1) considering additional weather parameters, (2) consi
+dering all construc-
+tion activities and their criticality, (3) integrating short
+-
+term weather forecast data, and (4) 
+integrating as
+-
+built and progress information into the lookahead scheduling process. The 
+results of the sensitivity analysis, which demonstr
+ated a 50% reduction in productivity 
+(Table 10) as a result of poor weather conditions, confirmed the responsiveness of the pro-
+posed framework.
+ 
+This study has advanced the state
+-
+of
+-
+the
+-
+art by addressing four key research gaps
+, 
+which have
+ 
+limit
+ed
+ 
+the applic
+ation of existing methods to lookahead scheduling in wind 
+farm construction. First, the proposed method is capable of considering the impact of 
+three weather parameters (i.e., wind, precipitation, and temperature) on onshore wind 
+farm projects. This is in 
+contrast to the work of Atef et al. and Guo et al., which were 
+limited to wind speed [2,3]. Second, the proposed simulation model is capable of model-
+ing all construction activities of an onshore wind project. Conversely, the models designed 
+by Atef et al. 
+and Guo et al. remain
+ed
+ 
+limited to wind turbine construction [2,3]. Third, 
+the simulation model uses an innovative combined discrete
+-
+event simulation and contin-
+uous simulation approach to facilitate modeling of both non
+-
+sensitive and weather
+-
+sensi-
+tive acti
+vities of onshore wind projects. While a combined discrete
+-
+event/continuous sim-
+ulation approach 
+was
+ 
+used to model a variety of construction operations, such as pipeline 
+construction [15,
+60
+], tunneling construction [23], and building construction [
+61
+], this
+ 
+study represents the first application of this approach to model weather
+-
+sensitive con-
+struction activities in onshore wind projects. Fourth, the proposed framework allows the 
+integration of both short
+-
+term weather forecasts and as
+-
+built activity durations
+ 
+to enable 
+decision
+-
+support at a granular level. This is in contrast to previous studies by Guo et al. 
+and Zhou et al., which focused on the development of wind farm construction scheduling 
+at a master scheduling level [2,3]. Importantly, while the propose
+d simulation model 
+was
+ 
+developed for wind farm construction operations, the methodological approach used to 
+
+[PAGE 22]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+22
+ 
+of 
+28
+ 
+ 
+develop the simulation model (described in Section 3.2.1) can be applied to other project 
+types.
+ 
+Proactive scheduling approaches for offshore wind f
+arms 
+were
+ 
+also explored. 
+Kerkhove and Vanhoucke 
+[
+62
+]
+ 
+proposed a mathematical optimization model for proactive 
+scheduling of offshore wind projects subject to weather conditions. Similar to previous 
+studies summarized in Table 1, the model proposed by Kerkh
+ove and Vanhoucke 
+[
+62
+]
+ 
+ma
+de
+ 
+use of a Markovian weather generator model that relie
+d
+ 
+on historical data of 
+weather parameters, focuse
+d
+ 
+only on the planning phase of offshore wind farm projects, 
+and consider
+ed
+ 
+only two weather parameters (i.e., wave height and average wind speed). 
+ 
+A comparison of the 
+proposed framework with previous models developed to assess 
+the impact of weather condit
+ions on 
+the 
+productivity of different types of construction 
+projects is summarized in Table 11.
+ 
+Table 11. 
+Comparison of proposed framework with previous studies.
+ 
+Item
+ 
+Research Study
+ 
+[17]
+ 
+[13]
+ 
+[2]
+ 
+[38]
+ 
+[14]
+ 
+[16]
+ 
+[24]
+ 
+[39]
+ 
+[40]
+ 
+[3]
+ 
+[
+23
+]
+ 
+[
+41
+]
+ 
+[29]
+ 
+[25]
+ 
+[15]
+ 
+[
+42
+]
+ 
+Current 
+Study
+ 
+Reliance on historical 
+weather data 
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+✔
+ 
+x
+ 
+Flexibility of the 
+method to analyze ad-
+ditional weather pa-
+rameters during execu-
+tion
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+✔
+ 
+Consideration of as
+-
+built and 
+progress in-
+formation
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+✔
+ 
+Consideration of short
+-
+term weather forecasts
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+x
+ 
+✔
+ 
+5.1. 
+Practical and Managerial Implications
+ 
+While methods designed to consider the impact of historical weather data during the 
+planning stages of construction 
+have been
+ 
+developed (as detailed in Table 1), the impact 
+of short
+-
+term fluctuations in weather conditions on productivity 
+were 
+not addressed
+ 
+in 
+previous studies. Indeed, current commercial scheduling software, such as Primavera and 
+Microsoft Project [
+59
+], lack the capability to consider the impact of short
+-
+term weather on 
+productivity. Consequently, construction companies often use an intuitiv
+e, subjective ap-
+proach to consider the impact of weather during lookahead scheduling, which often re-
+sults in the development of unrealistic lookahead schedules and the inability to identify 
+and implement timely corrective actions to mitigate potential weat
+her
+-
+related delays.
+ 
+This study aimed to improve lookahead scheduling practices through a simulation
+-
+based approach that is capable of considering short
+-
+term weather information along with 
+as
+-
+built information. This study demonstrated the practicality and b
+enefits of the pro-
+posed approach. Specifically, the simulation
+-
+based approach was capable of generating a 
+variety of results that can be used to support decision
+-
+making in practice by:
+ 
+(1)
+ 
+O
+btaining the expected productivity (Figure
+s
+ 
+7a
+ 
+and
+ 
+8a) and duration (F
+igure
+s
+ 
+7b
+ 
+and 
+8b) of weather
+-
+sensitive activities based on short
+-
+term weather forecasts, thereby 
+increasing the representativeness of lookahead schedules over existing methods. 
+With a more representative prediction of activity durations, practitioners are 
+able to 
+allocate resources (e.g., labor, material, and equipment) to activities that may be ex-
+periencing unexpected delays in productivity. For example, if a simulated activity 
+duration is delayed by 4 days due to unfavorable weather, the project team may 
+choose to proactively extend working days to include weekends during the 
+lookahead period. Or, if the weather is forecasted to cause work stoppages during 
+
+[PAGE 23]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+23
+ 
+of 
+28
+ 
+ 
+the second week of the lookahead period, practitioners may choose to proactively 
+double the number of
+ 
+shifts during the first week when weather conditions are ex-
+pected to be favorable. Targeted actions such as these not only keep the project on 
+schedule
+,
+ 
+but may also prevent irreversible delays that can lead to disputes.
+ 
+(2)
+ 
+Obtaining probabilistic completion
+ 
+times (Figure
+s
+ 
+9b
+ 
+and
+ 
+10b) of individual activities 
+based on short
+-
+term weather forecasts. By obtaining a probabilistic completion time, 
+the project team is able to make more informed decisions about what types of correc-
+tive actions they can
+—
+and are inter
+ested in
+—
+pursuing. For example, if a weather
+-
+sensitive activity has a high likelihood of being delayed due to unfavorable weather, 
+the project team may decide to postpone delivery of material for subsequent activities 
+to avoid crowding the worksite.
+ 
+(3)
+ 
+Obtain
+ing 
+a 
+probabilistic completion duration of the entire project (Figure 11) in con-
+sideration of as
+-
+built and short
+-
+term weather forecasts. The impact of lookahead 
+weather delays on the overall project schedule will depend on the total float of the 
+affected a
+ctivities and whether or not the activities are on the critical path. Delay of 
+certain activities may result in a considerable delay of the overall project, while others 
+may not affect project duration at all. The ability to easily and quickly quantify the
+ 
+impact of weather
+-
+related activity delays in a specific lookahead period on the overall 
+project duration will help the project team determine the amount of mitigation effort 
+that should be expended
+ 
+to resolve the delay. For example, a delay in the pouring
+ 
+of 
+the concrete foundations for multiple turbines may result in the same activity
+-
+level 
+delay as a weather
+-
+related delay in installation of the substation drainage. However, 
+a delay in pouring concrete foundations may have a tremendous impact on subse-
+quen
+t activities (and material deliveries) that depend on the completion of the foun-
+dation to begin. In contrast, delays in drainage installation for the substation will not 
+impact other activities, 
+thereby 
+minimally impacting overall project duration. The 
+eff
+ort expended by the project team to mitigate each delay, therefore, will vary tre-
+mendously (Table
+s
+ 
+8
+ 
+and
+ 
+10).
+ 
+(4)
+ 
+Obtaining confidence levels for completing the project within a specific duration 
+(Figure 11). Due to the consideration of stochastic activity dur
+ation
+s
+,
+ 
+together with 
+short
+-
+term weather forecast impact, outputs of the framework are stochastic and rep-
+resented by a probability distribution. The probabilistic nature of the outputs pro-
+vides practitioners with more insightful information, allowing the p
+roject team to 
+base their decision on their 
+desired
+ 
+level of confidence.
+ 
+Using the outputs of the proposed approach, practitioners can proactively schedule 
+their construction tasks in response to 
+a 
+weather
+-
+related impact on activity and project 
+durations, 
+thereby enhancing construction progress, reducing weather delays and related 
+claims, and improving the likelihood of project success. While the motivation for adopting 
+enhanced control and monitoring strategies is often the avoidance of unexpected delays 
+a
+nd costs, the implementation of effective project control strategies can enable practition-
+ers to capitalize on potential opportunities that may otherwise go unnoticed. Using the 
+proposed framework, the impact of favorable weather conditions (e.g.,
+ 
+a
+ 
+warmer
+ 
+than av-
+erage lookahead period) that result in increased productivity can be easily quantified and 
+identified. It is anticipated that the timely access of such information
+—
+made possible by 
+the proposed framework
+—
+may allow project managers to better plan co
+nstruction activ-
+ities and the delivery of needed materials to capitalize on accelerated schedules, allowing 
+for a 
+shortening of overall project durations.
+ 
+The findings of this study have highlighted several key recommendations for 
+practi-
+tioners performing lookahead scheduling in onshore wind farm construction:
+ 
+(1)
+ 
+Uncertainty arising from weather risk must be quantified as thoroughly and accu-
+rately as possible to maximize the likelihood of completing the project within the 
+duration defi
+ned in the project contract.
+ 
+
+[PAGE 24]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+24
+ 
+of 
+28
+ 
+ 
+(2)
+ 
+It is recommended to begin construction activities during a period characterized by 
+favorable weather conditions to minimize the impact of weather on the productivity 
+of activities early in the project, thereby reducing the num
+ber of subsequent activities 
+impacted by early weather
+-
+related delays.
+ 
+(3)
+ 
+The impact of adverse weather should be integrated with project lookahead sched-
+uling to more accurately predict the productivity of individual activities and the en-
+tire project. 
+ 
+(4)
+ 
+Simula
+tion
+-
+based approaches provide a better understanding and evaluation of 
+weather impacts on individual activities and the entire project. 
+Moreover
+, simula-
+tion
+-
+based approaches have the capability to consider stochastic duration of activities 
+(as opposed to d
+eterministic durations), allowing these systems to model other vari-
+ables (in addition to weather) and allowing practitioners to choose their desired level 
+of confidence when making decisions.
+ 
+(5)
+ 
+The proposed simulation
+-
+based approach allows practitioners to m
+ore quantita-
+tively, rapidly, and easily assess the mitigation effort required to adjust the project 
+schedule.
+ 
+5.2. 
+Limitations
+ 
+A few limitations of this study should be considered prior to applying the proposed 
+framework. First, triangular distributions an
+d Dark Sky API were used because of their 
+simplicity and for illustrative purposes. While more sophisticated methods capable of en-
+hancing input modeling of activity durations and weather forecasting should be explored 
+and applied, methods for improving inp
+ut modeling 
+was
+ 
+beyond the scope of this study. 
+Second, because of the novelty of wind farm construction, few historical projects were 
+available for review. While the model is intended to be universal, innovations in wind 
+farm construction practices or org
+anization
+-
+specific differences may exist. It is recom-
+mended that practitioners thoroughly review the WBS and if
+-
+then rules to ensure con-
+sistency with their operations and modify the WBS and if
+-
+then rules to suit their specific 
+needs as required. Finally, w
+hile the functionality of the model was demonstrated using 
+a real 40
+ 
+MW onshore wind project, favorable weather parameters at the start of construc-
+tion resulted in a negligible impact on activity and project durations, limiting the ability 
+of the authors t
+o compare model
+-
+derived outputs with real results under more unfavora-
+ble (i.e., extreme) conditions. Nevertheless, the sensitivity of the model to unfavorable 
+weather conditions was demonstrated through a sensitivity analysis, where unfavorable 
+weather con
+ditions resulted in notable and expected activity and project
+-
+level delays.
+ 
+5.3. 
+Future Work
+ 
+Given the limited availability of historical data in wind farm construction, research, 
+such as the study presented here, would greatly benefit from the implementat
+ion of data 
+collection strategies designed to quantitatively derive relationships between weather con-
+ditions and productivity. These strategies would not only improve the accuracy of the 
+productivity
+-
+weather relationship
+,
+ 
+but would also provide the opportu
+nity for future re-
+search in this area to be compared to historical outcomes of real projects, thereby improv-
+ing validation of future models and increasing practitioner confidence. 
+Additionally, fu-
+ture work should explore the integration of emerging project
+ 
+monitoring technologies and 
+tools, such as sensors, GPS, and RFID, to enhance the capture of as
+-
+built data for improved 
+accuracy of output results. 
+Future research should also focus on modeling the effect of 
+extreme weather events, such as lightning, and 
+how these rare, yet intense, occurrences 
+affect project schedules
+. Finally, as proposed by the subject matter experts, future work 
+should also focus on the development of a graphical user interface that would facilitate 
+implementation of the method by user
+s with limited simulation knowledge. Development 
+of a graphical user interface would also reduce the effort required to code the model for 
+large and complex projects.
+ 
+
+[PAGE 25]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+25
+ 
+of 
+28
+ 
+ 
+6. 
+Conclusions
+ 
+Adverse weather is one of the most critical and challenging schedule
+-
+rela
+ted risk fac-
+tors in wind farm construction due to the wind
+-
+prone locations of these projects. Weather
+-
+related 
+delays in wind farm construction must be monitored as accurately as possible, as 
+predictable weather conditions are not entitled to time extension
+s in construction con-
+tracts. Current methods, however, only account for weather during the early scheduling 
+stages, using historical weather data to estimate the impact of weather on project duration. 
+However, a method capable of considering variability in
+ 
+short
+-
+term weather forecasts for 
+lookahead scheduling during the execution phase of wind farm construction projects had 
+yet to be developed. In this study, a combined discrete
+-
+event and continuous simulation 
+model was proposed with the aim of fulfilling t
+his need by developing a practical estima-
+tion method for predicting the impact of short
+-
+term weather forecasts on activity dura-
+tions and project schedules during project execution. By addressing existing research 
+gaps, the proposed approach was able to int
+egrate short
+-
+term weather forecasts and as
+-
+built data to generate outputs that are logical and capable of providing much needed de-
+cision
+-
+support to practitioners. The method proposed facilitates the ability of practitioners 
+to monitor adverse weather impac
+ts on project durations in the time
+-
+frame required to 
+exert effective correct actions capable of proactively mitigating weather
+-
+induced delays 
+and subsequent related claims.
+ 
+Supplementary Material
+s: 
+The following are available online at 
+www.mdpi.com/arti-
+cle/10.3390/su131810060/s1
+. 
+Table S1: Characteristics of historical onshore wind farm projects, Table 
+S2: Weather parameter values for update periods 1 and 2; Figure S1: Effect of temperature on con-
+struction productivity base
+d on results from Moselhi and Kahn [
+26
+], Figure S2: Effect of precipita-
+tion on construction productivity based on 
+results from Larsson and Rudberg [
+25
+], Figure S3: Effect 
+of wind speed on construction productivity of crane based on results from Guo, Chen, 
+and Chui [2],
+ 
+and
+ 
+Figure S4: Snapshot of simulation model in 
+Simphony.NET
+.
+ 
+Author Contribution
+s: 
+Conceptualization, E
+.
+M
+.
+; 
+d
+ata curation, E
+.
+M
+.
+, P
+.
+J
+.
+,
+ 
+and A
+.
+C
+.
+; 
+f
+ormal analysis, 
+E
+.
+M
+.
+; 
+f
+unding acquisition, S
+.
+A
+.
+; 
+m
+ethodology, E
+.
+M
+.
+; 
+p
+roject 
+administration, S
+.
+A
+.
+; 
+s
+oftware, E
+.
+M
+.
+; 
+s
+u-
+pervision, S
+.
+A
+.
+; 
+w
+riting
+—
+original draft, E
+.
+M
+.
+; 
+w
+riting
+—
+review 
+and
+ 
+editing, P
+.
+J
+.
+, A
+.
+C
+.
+,
+ 
+and S
+.
+A
+.
+ 
+All 
+authors have read and agreed to the published version of the manuscript.
+ 
+Funding:
+ 
+This study 
+was 
+supported by Future Energy Systems research as part of the Canada First 
+Research Excellence Fund (CFREF FES
+-
+T11
+-
+P01)
+.
+ 
+Institutional Review Board Statement
+:
+ 
+Not applicable
+.
+ 
+Informed Consent Statement:
+ 
+Not applicable
+.
+ 
+Data Availability Statement: 
+All data used in the study were provided by a third party. Direct 
+requests for these materials may be made to the provider indicated in the Acknowledgments. Mod-
+els a
+nd code that support the findings of this study are available from the corresponding author 
+upon request and with permission from the partner indicated in the Acknowledgements.
+ 
+Acknowledgments:
+ 
+The authors would like to thank DNV Energy Systems Canada Inc.
+ 
+for provid-
+ing data and support. The
+ 
+authors would also like to acknowledge Catherine Pretzlaw for her assis-
+tance with manuscript editing and composition.
+ 
+Conflicts of Interest: 
+The authors declare no conflict of interest.
+ 
+References
+ 
+1.
+ 
+Jaganmohan, M. Onshore
+ 
+Wind Energy Capacity Worldwide
+.
+ 
+2019
+.
+ 
+Available online: https://www.statista.com/statis-
+tics/476306/global
+-
+capacity
+-
+of
+-
+onshore
+-
+wind
+-
+energy/ (accessed on 10 March 2021).
+ 
+2.
+ 
+Guo, S.
+-
+J.; Chen, J.
+-
+H.; Chiu, C.
+-
+H. Fuzzy duration forecast model for wind turbine con
+struction project subject to the impact of 
+wind uncertainty. 
+Autom. 
+Constr. 
+2017
+, 
+81
+, 401
+–
+410
+, https://doi.org/10.1016/j.autcon.2017.03.009.
+ 
+3.
+ 
+Atef, D.; Osman, H.; Ibrahim, M.; Nassar, K. A Simulation
+-
+Based Planning System for Wind Turbine 
+Construction. In Proceedings
+ 
+of the 2010 Winter Simulation Conference, Baltimore, MD, USA, 5
+–
+8 December 2010; pp. 3283
+–
+3294.
+ 
+4.
+ 
+Prpich, G.; Darabkhani, H.G.; Oakey, J.; Pollard, S. 
+An Investigation into Future Energy System Risks: An Industry Perspective
+; 
+Cra
+nfield UK Energy Research Center: Cranfield, UK, 2014.
+ 
+
+[PAGE 26]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+26
+ 
+of 
+28
+ 
+ 
+5.
+ 
+Kostka, G.; Anzinger, N. Offshore Wind Power Expansion in Germany: Scale patterns, and causes of time delays and cost over-
+runs. In 
+Large Infrastructure Projects in Germany: Between Ambition and Realiti
+es
+; Kostka, G., Fiedler, J., Eds.; Springer International 
+Publishing: Cham, 
+Switzerland, 
+2016; pp. 147
+–
+189
+,
+ 
+ISBN 978
+-
+3
+-
+319
+-
+29233
+-
+5.
+ 
+6.
+ 
+Mohamed, E.; Seresht, N.G.; Hague, S.; Chehouri, A.; AbouRizk, S.M. Domain
+-
+Specific Risk Assessment Using Integrated Simula-
+t
+ion:
+ 
+A Case Study of an Onshore Wind Project. 
+Can. J. Civ. Eng.
+ 
+2021
+, doi:10.1139/cjce
+-
+2021
+-
+0099.
+ 
+7.
+ 
+Hinze, J.; Couey, J. Weather in Construction Contracts. 
+J. Constr. Eng. Manag.
+ 
+1989
+, 
+115
+, 270
+–
+283
+, 
+https://doi.org/10.1061/(asce)0733
+-
+9364(1989)115:2(270).
+ 
+8.
+ 
+So
+ng, L.; Eldin, N.N. Adaptive real
+-
+time tracking and simulation of heavy construction operations for look
+-
+ahead scheduling. 
+Autom. Constr.
+ 
+2012
+, 
+27
+, 32
+–
+39
+, https://doi.org/10.1016/j.autcon.2012.05.007.
+ 
+9.
+ 
+Azimi, R.; Lee, S.; AbouRizk, S.M. Intelligent Look
+-
+Ahe
+ad Scheduling for Structural Steel Fabrication Projects. 
+Int. J. Adv. Softw.
+ 
+2011
+, 
+4
+, 207
+–
+230.
+ 
+10.
+ 
+Song, L.; Cooper, C.; Lee, S.
+-
+H. Real
+-
+Time Simulation for Look
+-
+Ahead Scheduling of Heavy Construction Projects. In Proceedings
+ 
+of the Construction Research Congr
+ess
+,
+ 
+Seattle, 
+WA
+, 
+USA
+, 
+5 
+April 2009; pp. 1318
+–
+1327.
+ 
+11.
+ 
+Ballard, G. Lookahead Planning: The Missing Link in Production Control. In Proceedings of the 5th Annual Conference of the 
+International Group for Lean Construction
+,
+ 
+Gold Coast, Australia, 
+16 
+July
+ 
+1997; pp. 13
+–
+26.
+ 
+12.
+ 
+Chen, Q.; Adey, B.T.; Haas, C.; Hall, D.M. Using look
+-
+ahead plans to improve material flow processes on construction projects 
+when using BIM and RFID technologies. 
+Constr. 
+Innov. 
+2020
+, 
+20
+, 471
+–
+508
+, https://d
+oi.org/10.1108/ci
+-
+11
+-
+2019
+-
+0133.
+ 
+13.
+ 
+Pan, N.
+-
+F. Assessment of productivity and duration of highway construction activities subject to impact of rain. 
+Expert Syst. 
+Appl.
+ 
+2005
+, 
+28
+, 313
+–
+326
+, https://doi.org/10.1016/j.eswa.2004.10.011.
+ 
+14.
+ 
+El
+-
+Rayes, K.; Moselhi, O. Imp
+act of Rainfall on the Productivity of Highway Construction. 
+J. Constr. Eng. Manag.
+ 
+2001
+, 
+127
+, 125
+–
+131
+,
+ 
+https://doi.org/10.1061/(asce)0733
+-
+9364(2001)127:2(125).
+ 
+15.
+ 
+Shahin, A.; Abourizk, S.M.; Mohamed, Y. Modeling Weather
+-
+Sensitive Construction Activity Using 
+Simulation. 
+J. Constr. Eng. 
+Manag.
+ 
+2011
+, 
+137
+, 238
+–
+246
+, https://doi.org/10.1061/(asce)co.1943
+-
+7862.0000258.
+ 
+16.
+ 
+Apipattanavis, S.; Sabol, K.; Molenaar, K.R.; Rajagopalan, B.; Xi, Y.; Blackard, B.; Patil, S. Integrated Framework for Quant
+ifying 
+and Predicting We
+ather
+-
+Related Highway Construction Delays. 
+J. Constr. Eng. Manag.
+ 
+2010
+, 
+136
+, 1160
+–
+1168
+, 
+https://doi.org/10.1061/(asce)co.1943
+-
+7862.0000199.
+ 
+17.
+ 
+Guo, S.
+-
+J. Computer
+-
+Aided Project Duration Forecasting Subjected to the Impact of Rain. 
+Comput. Civ. Infrastruct. Eng.
+ 
+2000
+, 
+15
+, 
+67
+–
+74
+, https://doi.org/10.1111/0885
+-
+9507.00172.
+ 
+18.
+ 
+Nguyen, L.D.; Kneppers, J.; De Soto, B.G.; Ibbs, W. Analysis of Adverse Weather
+ 
+for Excusable Delays. 
+J. Constr. Eng. Manag.
+ 
+2010
+, 
+136
+, 1258
+–
+1267
+, https://doi.org/10.1061/(asce)co.1943
+-
+7862.0000242.
+ 
+19.
+ 
+Semple, C.; Hartman, F.T.; Jergeas
+, G. Construction Claims and Disputes: Causes and Cost/Time Overruns. 
+J. Constr. Eng. 
+Manag.
+ 
+1994
+, 
+120
+, 785
+–
+795
+, https://doi.org/10.1061/(asce)0733
+-
+9364(1994)120:4(785).
+ 
+20.
+ 
+Sweis, G.J. Factors Affecting Time Overruns in Public Construction Projects: The Case 
+of Jordan. 
+Int. J. Bus. Manag.
+ 
+2013
+, 
+8
+, 120, 
+https://doi.org/10.5539/ijbm.v8n23p120.
+ 
+21.
+ 
+Schuldt, S.; Nicholson, M.; Adams, Y.; Delorit, J. Weather
+-
+Related Construction Delays in a Changing Climate: A Systematic 
+State
+-
+of
+-
+the
+-
+Art Review. 
+Sustainability
+ 
+2021
+, 
+13
+, 2861
+, https://doi.org/10.3390/su13052861.
+ 
+22.
+ 
+Ibbs, W.; Kang, J.M. Weather
+-
+Related Delay Provisions in Public Transportation Construction Contracts. 
+J. Leg. Aff. Disput. 
+Resolut. Eng. Constr.
+ 
+2018
+, 
+10
+, 04518009
+, https://doi.org/10.1061/(asce)la.1943
+-
+4170.000
+0259.
+ 
+23.
+ 
+Shahin, A.; AbouRizk, S.; Mohamed, Y.; Fernando, S. Simulation modeling of weather
+-
+sensitive tunnelling construction activities
+ 
+subject to cold weather. 
+Can. J. Civ. Eng.
+ 
+2014
+, 
+41
+, 48
+–
+55
+, https://doi.org/10.1139/cjce
+-
+2013
+-
+0087.
+ 
+24.
+ 
+Ballesteros
+-
+Pérez, P.;
+ 
+Rojas
+-
+Céspedes, Y.A.; Hughes, W.; Kabiri, S.; Pellicer, E.; Mora
+-
+Melià, D.; Del Campo
+-
+Hitschfeld, M.L. 
+Weather
+-
+wise: A weather
+-
+aware planning tool for improving construction productivity and dealing with claims. 
+Autom. Constr.
+ 
+20
+17
+, 
+84
+, 81
+–
+95
+, https://doi
+.org/10.1016/j.autcon.2017.08.022.
+ 
+25.
+ 
+Larsson, R.; Rudberg, M. Impact of Weather Conditions on In Situ Concrete Wall Operations Using a Simulation
+-
+Based Approach.
+ 
+J. Constr. Eng. Manag.
+ 
+2019
+, 
+145
+, 05019009
+, https
+://doi.org/10.1061/(asce)co.1943
+-
+7862.0001662.
+ 
+26.
+ 
+Moselhi, O.; Khan, Z. Analysis of labour productivity of formwork operations in building construction. 
+Constr. Innov.
+ 
+2010
+, 
+10
+, 
+286
+–
+303
+, https://doi.org/10.1108/14714171011060088.
+ 
+27.
+ 
+Thomas, H.R.; Ellis, R.D. Fun
+damental Principles of Weather Mitigation. 
+Pr
+act
+. Period. Struct. Des. Constr.
+ 
+2009
+, 
+14
+, 29
+–
+35
+, 
+https://doi.org/10.1061/(asce)1084
+-
+0680(2009)14:1(29).
+ 
+28.
+ 
+Al
+-
+Alawi, M.; Bouferguene, A.; Mohamed, Y. Non
+-
+parametric weather generator for modelling construction op
+erations: Comparison
+ 
+with the parametric approach and evaluation of construction
+-
+based impacts. 
+Autom. Constr.
+ 
+2017
+, 
+75
+, 108
+–
+126
+, 
+https://doi.org/10.1016/j.autcon.2016.11.014.
+ 
+29.
+ 
+Jung, M.; Park, M.; Lee, H.
+-
+S.; Kim, H. Weather
+-
+Delay Simulation Model Based on 
+Vertical Weather Profile for High
+-
+Rise Building 
+Construction. 
+J. Constr. Eng. Manag.
+ 
+2016
+, 
+142
+, 04016007
+, https
+://doi.org/10.1061/(asce)co.1943
+-
+7862.0001109.
+ 
+30.
+ 
+Alvanchi, A.; JavadiAghdam, S. Job site weather 
+index: An indicator
+ 
+for open environment construct
+ion projects. 
+Constr. Innov.
+ 
+2019
+, 
+19
+, 110
+–
+124
+, https://doi.org/10.1108/ci
+-
+12
+-
+2017
+-
+0097.
+ 
+31.
+ 
+Project Management Institute
+.
+ 
+A 
+Guide to the Project Management Body of Knowledge (PMBOK
+®
+ 
+Guide)
+,
+ 
+4th 
+ed
+.; Project Manage-
+ment Institute: Newtown Square, P
+A
+,
+ 
+USA,
+ 
+2008; ISBN 978
+-
+1
+-
+933890
+-
+51
+-
+7.
+ 
+32.
+ 
+Hazır, 
+Ö
+. A review of analytical models, approaches and decision support tools in project monitoring and control. 
+Int. J. Proj. 
+Manag.
+ 
+2015
+, 
+33
+, 808
+–
+815
+, https://doi.org/10.1016/j.ijproman.2014.09.005.
+ 
+
+[PAGE 27]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+27
+ 
+of 
+28
+ 
+ 
+33.
+ 
+Montes
+-
+Guerra, M.I.; Gi
+mena, F.N.; Pérez
+-
+Ezcurdia, M.A.; Díez
+-
+Silva, H.M. The Influence of Monitoring and Control on Project 
+Management Success. 
+Int. J. Constr. Proj. Manag.
+ 
+2014
+, 
+6
+, 163
+–
+184
+.
+ 
+34.
+ 
+Rozenes, S.; Vitner, G.; Spraggett, S. Project Control: Literature Review. 
+Proj. Manag.
+ 
+J.
+ 
+2006
+, 
+37
+, 5
+–
+14
+, 
+https://doi.org/10.1177/875697280603700402.
+ 
+35.
+ 
+Isaac, S.; Navon, R. Can project monitoring and control be fully automated? 
+Constr. Manag. Econ.
+ 
+2013
+, 
+32
+, 495
+–
+505
+, 
+https://doi.org/10.1080/01446193.2013.795653.
+ 
+36.
+ 
+Petrov, I.; Hakimov, A. Digita
+l Technologies in Construction Monitoring and Construction Control. 
+IOP Conf. Ser. Mater. Sci. 
+Eng. 
+2019
+, 
+497
+, 012016.
+ 
+37.
+ 
+Azimi, R.; Lee, S.; AbouRizk, S.M.; Alvanchi, A. A framework for an automated and integrated project monitoring and control 
+system for st
+eel fabrication projects. 
+Autom. Constr.
+ 
+2011
+, 
+20
+, 88
+–
+97
+, https://doi.org/10.1016/j.autcon.2010.07.001.
+ 
+38.
+ 
+Zhou, Y.; Miao, J.; Yan, B.; Zhang, Z. Stochastic resource
+-
+constrained project scheduling problem with time varying weather 
+conditions and an improved e
+stimation of distribution algorithm. 
+Comput. Ind. Eng.
+ 
+2021
+, 
+157
+, 107322
+,
+ 
+https://doi.org/10.1016/j.cie.2021.107322.
+ 
+39.
+ 
+Ballesteros
+-
+Pérez, P.; Smith, S.T.; Lloyd
+-
+Papworth, J.G.; Cooke, P. Incorporating the effect of weather in construction scheduling 
+and management with sine wave 
+curves: Application in the
+ 
+United Kingdom. 
+Constr. Manag. Econ.
+ 
+2018
+, 
+36
+, 666
+–
+682
+, 
+https://doi.
+org/10.1080/01446193.2018.1478109.
+ 
+40.
+ 
+Ballesteros
+-
+Pérez, P.; Del Campo
+-
+Hitschfeld, M.L.; González
+-
+Naranjo, M.A.; González
+-
+Cruz, M.C. Climate and construction 
+delays: Case study in
+ 
+Chile. 
+Eng. Constr. Arch. Manag.
+ 
+2015
+, 
+22
+, 596
+–
+621
+, https://doi.org/10.1108/eca
+m
+-
+02
+-
+2015
+-
+0024.
+ 
+41.
+ 
+Zhang, J.; Zhong, D.; Wu, B.; Lv, F.; Cui, B. Earth Dam Construction Simulation Considering Stochastic Rainfall Impact. 
+Comput. 
+Civ. Infrastruct. Eng.
+ 
+2017
+, 
+33
+, 459
+–
+480
+, https://doi.org/10.1111/mice.12337.
+ 
+42.
+ 
+Marzoughi, F.; Arthanari, T.; Aska
+rany, D. A decision support framework for estimating project duration under the impact of 
+weather. 
+Autom. Constr.
+ 
+2018
+, 
+87
+, 287
+–
+296
+, https://doi.org/10.1016/j.autcon.2017.11.001.
+ 
+43.
+ 
+Mailier, P.J. Can we trust long
+-
+range weather forecasts? In 
+Management of Wea
+ther and Climate Risk in the Energy Industry
+; Troccoli, A.,
+ 
+Ed.; Springer Netherlands: Dordrecht, 
+The Netherlands, 
+2010; pp. 227
+–
+239.
+ 
+44.
+ 
+Abourizk, S. Role of Simulation in Construction Engineering and Management. 
+J. Constr. Eng. Manag.
+ 
+2010
+, 
+136
+, 1140
+–
+1153
+, 
+h
+ttps://doi.org/10.1061/(asce)co.1943
+-
+7862.0000220.
+ 
+45.
+ 
+Zankoul, E.; Khoury, H. Modeling, Animating, and Optimizing On
+-
+Shore Wind Farm Construction Operations. 
+J. Comput. Civ. 
+Eng.
+ 
+2016
+, 
+30
+, 05016001
+, https://
+doi.org/10.1061/(asce)cp.1943
+-
+5487.0000567.
+ 
+46.
+ 
+Ahuja, H.N.; Dozzi, S.P.; Abourizk, S.M. 
+Project Management: Techniques in Planning and Controlling Construction Projects
+; John 
+Wiley & Sons
+:
+ 
+New York, NY, USA
+, 
+1994
+.
+ 
+47.
+ 
+Mohamed, E.; Gerami Seresht, N.; Hague, S.; A
+bouRizk, S. Simulation
+-
+Based Approach for Risk Assessment in Onshore Wind 
+Farm Construction Projects. In Proceedings of the 9th Asia
+-
+Pacific International Symposium on Advanced Reliability and 
+Maintenance Modelling
+,
+ 
+Vancouver, BC, Canada, 
+20
+–
+23 
+August 2020.
+ 
+48.
+ 
+Hao, Y.; Kedir, N.S.; Gerami Seresht, N.; Pedrycz, W.; Fayek, A.R. Consensus Building in Group Decision
+-
+Making for the Risk 
+Assessment of Wind Farm Projects. In Proceedings of the 2019 IEEE International Conferenc
+e on Fuzzy Systems (FUZZ
+-
+IEEE)
+, 
+New Orleans, LA, USA, 23
+–
+26 
+June 2019; pp. 1
+–
+7.
+ 
+49.
+ 
+Banks, J. Introduction to Simulation. In Proceedings of the 2000 Winter simulation conference proceedings (Cat. No. 
+00CH37165)
+, 
+Orlando, FL, USA, 10
+–
+13 December
+ 
+2000; Vol
+ume
+ 
+1,
+ 
+pp. 9
+–
+16.
+ 
+50.
+ 
+Dark Sky API
+—
+Weather Forecast Dark Sky
+.
+ 
+Available online: https://darksky.net/dev (accessed on 26 January 2021).
+ 
+51.
+ 
+Moret, Y.; Einstein, H.H. Construction Cost and Duration Uncertainty Model: Application to High
+-
+Speed Rail Line Project. 
+J. 
+Constr. 
+Eng. Manag.
+ 
+2016
+, 
+142
+, 05016010
+, https://doi.org/10.1061/(asce)co.1943
+-
+7862.0001161.
+ 
+52.
+ 
+Hulett, D.T. 
+Practical Schedule Risk Analysis
+; Gower Publishing
+, Ltd.: 
+Surry
+, 
+UK
+, 2009; ISBN 978
+-
+0
+-
+566
+-
+08790
+-
+5.
+ 
+53.
+ 
+Khadem, M.M.R.K.; Piya, S.; Shamsuzzoha, A. Quantitative ri
+sk management in 
+gas injection 
+project: A case
+ 
+study from Oman 
+oil and gas industry. 
+J. Ind. Eng. Int.
+ 
+2017
+, 
+14
+, 637
+–
+654
+, https://doi.org/10.1007/s40092
+-
+017
+-
+0237
+-
+3.
+ 
+54.
+ 
+Hajjar, D.; AbouRizk, S. 
+Simphony: An environment
+ 
+for building special purpose construction
+ 
+simulation tools.
+ 
+In Proceedings 
+of the 31st Conference on Winter Simulation: Simulation
+—
+A Bridge to the Future, Phoenix, AZ, USA, 5
+–
+8 December 1999
+;
+ 
+https://doi.org/10.1109/wsc.1999.816811.
+ 
+55.
+ 
+Hajjar, D.; Abourizk, S.M. Unified Modeling Methodology for Cons
+truction Simulation. 
+J. Constr. Eng. Manag.
+ 
+2002
+, 
+128
+, 174
+–
+185
+,
+ 
+https://doi.org/10.1061/(asce)0733
+-
+9364(2002)128:2(174).
+ 
+56.
+ 
+Dawood, N. Estimating project and activity 
+duration: A risk management
+ 
+approach using network analysis. 
+Constr. Manag. 
+Econ.
+ 
+1998
+, 
+16
+, 41
+–
+48
+, https://doi.org/10.1080/014461998372574.
+ 
+57.
+ 
+Lee, D.
+-
+E.; Arditi, D.; Lee, D.
+-
+E. Automated Statistical Analysis in Stochastic Project Scheduling Simulation. 
+J. Constr. Eng. 
+Manag.
+ 
+2006
+, 
+132
+, 268
+–
+277
+, https://doi.org/10.1061/(asce)0733
+-
+9364(2006)132:3(268).
+ 
+58.
+ 
+Sargent, R.G. Verification and validation of simulation models. 
+J. Simul.
+ 
+2013
+, 
+7
+, 12
+–
+24
+, https://doi.org/10.1057/jos.2012.20.
+ 
+59.
+ 
+Microsoft Project
+. 
+Project Management Software
+. 
+Available onl
+ine: https://www.microsoft.com/en
+-
+ca/microsoft
+-
+365/pro-
+ject/project
+-
+management
+-
+software (accessed on 19 April 2021).
+ 
+60.
+ 
+Shi, J.; Abourizk, S. Continuous and combined event
+-
+process models for simulating pipeline construction. 
+Constr. Manag. Econ.
+ 
+1998
+, 
+16
+, 489
+–
+498
+, https://doi.org/10.1080/014461998372268.
+ 
+ 
+ 
+
+[PAGE 28]
+Sustainability
+ 
+2021
+,
+ 
+131
+, 60
+ 
+28
+ 
+of 
+28
+ 
+ 
+61.
+ 
+A
+bourizk, S.M.; Wales, R.J. Combined Discrete
+-
+Event/Continuous Simulation for Project Planning. 
+J. Constr. Eng. Manag.
+ 
+1997
+, 
+123
+, 11
+–
+20
+, https://doi.org/10.1061/(asce)0733
+-
+9364(1997)123:1(11).
+ 
+62.
+ 
+Kerkhove, L.
+-
+P.; 
+Vanhoucke, M. Optimised scheduling for weather sensitive offshore construction projects. 
+Omega
+ 
+2017
+, 
+66
+, 58
+–
+78
+,
+ 
+https://doi.org/10.1016/j.omega.2016.01.011.
+ 
+### weatherwise_author.pdf pages=39
+
+[PAGE 1]
+ 
+Document downloaded from: 
+ 
+This paper must be cited as:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The final publication is available at 
+ 
+ 
+Copyright 
+ 
+Additional Information 
+ 
+https://doi.org/10.1016/j.autcon.2017.08.022
+http://hdl.handle.net/10251/99758
+Elsevier
+Ballesteros Pérez, P.; Rojas-Céspedes, YA.; Hughes, W.; Kabiri, S.; Pellicer, E.; Mora-
+Meliá, D.; Del Campo-Hitschfeld, ML. (2017). Weather-wise: A weather-aware planning tool
+for improving construction productivity and dealing with claims. Automation in Construction.
+84:81-95. doi:10.1016/j.autcon.2017.08.022
+
+[PAGE 2]
+Weather-wise: A weather-aware planning tool for improving construction 
+productivity and dealing with claims 
+Authors: 
+Ballesteros-Pérez, Pablo a ; Rojas-Céspedes, Yonatan Alexis b ; Hughes, Will c ;  
+Kabiri, Shabnam d ; Pellicer, Eugenio e ; Mora-Melià, Daniel. f; del Campo-Hitschfeld, Maria Luisa g 
+ 
+a Lecturer 
+School of Construction Management and Engineering 
+Whiteknights, Reading RG6 6AW 
+United Kingdom 
+Email: .ballesteros@reading.ac.; @hotmail.com 
+Phone: +44 (0) 118 378 7186   Fax: +44 (0) 118 931 3856 
+Corresponding author 
+ 
+b Construction engineer 
+Facultad de Ingeniería. Universidad de Talca 
+Camino los Niches, km 1. Curicó (Chile) 
+Tel.: (+56) 984 330 846 
+Email: .y@gmail.com 
+ 
+c Professor 
+School of Construction Management and Engineering 
+Whiteknights, Reading RG6 6AW 
+United Kingdom 
+Phone: +44 (0) 118 378 7175   Fax: +44 (0) 118 931 3856 
+E-mail: w.p.hughes@reading.ac.uk 
+ 
+d Lecturer 
+School of Construction Management and Engineering 
+Whiteknights, Reading RG6 6AW 
+United Kingdom 
+Phone: +44 (0) 118 378 6038   Fax: +44 (0) 118 931 3856 
+E-mail: s.kabiri@reading.ac.uk 
+ 
+
+[PAGE 3]
+e Associate Professor 
+Civil Engineer, M.Sc., Ph.D.  
+School of Civil Engineering. Universitat Politècnica de València 
+Camino de Vera s/n, 46022, Valencia, Spain 
+Phone: +34 963 879 562 Fax: +34 963 877 569 
+E-mail: pellicer@upv.es 
+ 
+f Assistant Professor 
+Dpto. de Ingeniería y Gestión de la Construcción 
+Facultad de Ingeniería. Universidad de Talca 
+Camino los Niches, km 1. Curicó (Chile) 
+Phone.: (+56) 75 2201786  Fax: (+56) 75 325958 
+E-mail: @utalca. 
+ 
+g Assistant Professor 
+Centro de Sistemas de Ingeniería KIPUS 
+Facultad de Ingeniería. Universidad de Talca 
+Camino los Niches, km 1. Curicó (Chile) 
+Phone.: (+56) 75 2201767  Fax: (+56) 75 325958 
+E-mail: @utalca.; @kipus. 
+
+[PAGE 4]
+Weather -wise: A weather- aware planning tool for improving construction 1 
+productivity and dealing with claims  2 
+ 3 
+Abstract 4 
+The influence of unforeseen, extreme weather in construction works usually impacts 5 
+productivity, causes significant project delays and constitutes a frequent source of 6 
+contractor’s claims . However, construction practitioners cannot count on sound 7 
+methods for mediating when weather -related claims arise, nor harnessing the 8 
+influence of weather variability in construction projects.  Building on the few most 9 
+recent quantitative studies identifying those key weather agents and levels of 10 
+intensity that affect some standard building construction activities, a new stochastic 11 
+model that processes and replicates the spatio -temporal variability of com bined 12 
+weather variables is proposed. This model can help anticipate weather-related project 13 
+duration variability; improving construction productivity by selecting the best project 14 
+start date; and objectively evaluating weather -related claims. A t wo-building 15 
+construction case stud y using different Spanish locations  is used to demonstrate the 16 
+model. This show that ignoring the influence of weather can lead to project durations 17 
+of 5-20% longer than planned. 18 
+ 19 
+Keywords: Building; Productivity; Weather; Climate; Claims; Delays. 20 
+21 
+1 
+
+[PAGE 5]
+1. Introduction 22 
+Construction projects consist of numerous technological operations  that can 23 
+generally be structured in multiple alternative ways. The work breakdown structure 24 
+(WBS) and the activity precedence relationships have a big impact on the actual 25 
+project duration. However, the sensitivity of technological operations to adverse 26 
+(local) weather conditions is also frequently recognised as one of the factors causing 27 
+noticeable project delays, cost overruns, and contractual claims [1]. 28 
+According to Mentis [2], projects may take significantly longer, cost more and 29 
+foster a larger number of conflicts partly when threat identification is inaccurate, its 30 
+scope is too narrow  or its assessment is not satisfactorily incorporated  into the 31 
+project contract, planning and execution stages. Overall, the lesson from  Mentis, 32 
+involving construction projects from several developing countries , is that “almost by 33 
+definition, what is poorly known is likely to cause problems”. M aybe not that 34 
+surprisingly though, adverse weather conditions stand out as one of the most 35 
+recurrent threats in half of the projects discussed in his analysis. 36 
+The presence of unfavourable and unpredicted weather conditions can only have 37 
+two possible outcomes  from the execution point of view . The first is work that is 38 
+suspended until the adverse weather subsides (prolongation). The second is the need 39 
+to apply extra costly measures to counteract the influence of the weather and 40 
+continue carrying out the works  (disruption). Either outcome irremediably leads to 41 
+extra time, the need for more resources (lower productivity)  and, eventually, 42 
+financial losses.  Any of these consequences  may cause disputes among the 43 
+contractor and the client because, eventually, someone has to pay. 44 
+Accordingly, the influence of weather in construction projects is recognised by 45 
+both researchers [3 –5] and practitioners  [6,7] but with two very different interests 46 
+and motivations. Researchers are mostly focused on work that systematically 47 
+addresses the influence of poor weather conditions in  planning project execution or 48 
+2 
+
+[PAGE 6]
+modelling building performance  (e.g. [4,8–12]). P ractitioners mostly focus on 49 
+issuing recommendations for preparing weather -proof construction systems [7] or 50 
+drawing up contracts that can deal with  weather-related and delay -related claims  51 
+[6,13]. In both cases, despite the different aims of each group , it is clear that regular 52 
+practice has subdivided the weather  into two categories : foreseeable and 53 
+unforeseeable. 54 
+Foreseeable, or just “normal” weather can be relatively easil y inferred from 55 
+historical weather data  [5], which is  typically processed as a monthly average of 56 
+severe weather days. This can be used to anticipate the average number of days in 57 
+which a specific construction activity cannot be carried out [14]. 58 
+Ideally, the effects of normal weather on construction works should be routinely 59 
+taken into account. Ballesteros-Pérez et al. [15] have shown that, unfortunately, and 60 
+despite its inherent simplicity, few projects  take account of the weather factor 61 
+systematically in the planning and execution stages. There are two reasons for this:  62 
+compressed tender periods and availability of data for a specific site. Tender periods 63 
+are frequently too short, as disc ussed by Hughes et al. [16]. Moreover, a lot of 64 
+information needed for preparing a bid is simply missing  at th at stage. Thus,  65 
+estimating and planning may be far less reliable and organized than it should be . 66 
+This can be exacerbated by the, sometimes, large differences between the weather on 67 
+a specific site and the weather at the nearest meteorological station. However, even if 68 
+normal weather data were regularly used, three problems  arise. First, the weather 69 
+involves the confluence  of m ultiple phenomena  (wind, rain, heat, etc .) and those 70 
+phenomena, contrary to expect ations, do not involve a clear correlation of 71 
+occurrence with each other . This will be  proven later in this paper . Second, each 72 
+weather agent has variability, and that variability has been addressed by very few 73 
+studies [4], generally combining only up to two or three phenomena (see Table 1) . 74 
+Third, weather data are generally measured at a ground level, probably quite far 75 
+3 
+
+[PAGE 7]
+away from where the construction works will be located  [14], and, perhaps, with a 76 
+different topography [17]. 77 
+Concerning unforeseeable or abnormal weather, it is , paradoxically, brought up 78 
+more frequently in the daily practice of  projects, as most construction contracts 79 
+usually include clauses stating that the contractor may be entitled to a time extension 80 
+or cost compensation due to the occurrence of unusual severe weather  conditions 81 
+[18–20]. Yet, the proble m is that normal weather conditions , or rather their 82 
+interaction in relation to productivity decrease , are not properly known or registered 83 
+somewhere (e.g. in the contract itself). Hence, how is it possible to compare a severe 84 
+weather episode or its effects versus an inexistent baseline? In other words, how is it 85 
+possible to state that something is  abnormal when normal weather is neglected by 86 
+default? 87 
+The aim of this study is to tackle preconceptions  about weather-related 88 
+uncertainty. This will be achi eved by developing a holistic model that enables 89 
+practitioners to use weather data for  forecasting project durations , improving  90 
+construction productivity and the settlement of contract claims. A case study is 91 
+carried out involving the construction of two different buildings  in different Spanish 92 
+locations. This enables several applications of this model  to be developed for 93 
+progressively dealing with three aspects: normal weather, its multivariate statistical 94 
+variability, and distinguishing exceptional from non-exceptional weather . Such 95 
+applications allow the reduction of weather-related uncertainty at the planning and 96 
+construction stages. They also provide an objective and independent  estimate as to 97 
+how exceptional the weather conditions were at the construction stage. Hence, i n 98 
+general, the model will allow working ‘weather- wise’, that is, in favour of the 99 
+weather, instead of against it. 100 
+ 101 
+4 
+
+[PAGE 8]
+2. Literature review 102 
+2.1 Weather and claims 103 
+The risks of weather -related delays are generally dealt with in contracts through 104 
+provisions such as weather, default,  and force majeure clauses [19]. However, f rom 105 
+the standpoint of the contractor, the effect of weather in construction works is 106 
+materialised in two ways: work stoppage or productivity loss [14] . Severe weather 107 
+conditions impact any construction work that is either totally or partially carried out 108 
+outdoors because either the equipment cannot work properly, the quality of the 109 
+materials is deteriorated, or workers’ health and safety is threatened [21]. Regardless 110 
+of the reason, the conse quence is a financial loss that must be borne by either the 111 
+contractor, the client or both. 112 
+From the client’s perspective, t he initial effects of weather issues are mostly 113 
+connected to project (time) delays [19,22]. Only if the contractor tries to mitigate 114 
+weather-related losses at the expense of the client, or if due to an  inauguration delay 115 
+the client misses a business opportunity (e.g., the timely exploitation of a n 116 
+infrastructure), will the extreme weather also entail financial losses for the client 117 
+[23]. Unfortunately, the weather impact is almost always associated with negative 118 
+effects for these two key stakeholders . It is no surprise that many regulations and 119 
+codes of practice have tried to address the effect of weather on construction works  120 
+but , so far, with not much success [15]. 121 
+The common problem with most contracts is that they are qualitative, too generic 122 
+and/or not conveniently updated (e.g. [24–30]). Yet contractors need to know how 123 
+the weather will  impact their construction work, and both the contractor and the 124 
+client require “clear and specific ” weather-related clauses in the construction 125 
+contract in order to mediate between the ir interests. The challenge s to reach these 126 
+objectives are manifold. First, it is necessary to objectively identify which weather 127 
+variables are relevant. Second, which are the intensities (threshold values) beyond 128 
+5 
+
+[PAGE 9]
+which some construction activities will be affected  and even to what extent they 129 
+might be affected . Third, which party/parties are to assume the consequences 130 
+(financial losses) if a severe weather episode happens.  The first two challenges have 131 
+not yet been solved by the research community [19]. The third challenge, which is 132 
+the one reflected in contracts and connected to practitioners’ interests, remains loose 133 
+and unclear  [31]. Overall, t he three have  become  a recurrent source of conflict 134 
+[32,33]. 135 
+An alternative approach to dealing with these issues is to exclude any clause that 136 
+deals with weather -related delays. In such cases, there are no excusable  delays 137 
+relating to weather. This would mean that all weather-related delays are treated just 138 
+as a consequence of the contractor’s mismanagement , lack of foresight  or irregular 139 
+work processes [19] . The downside of this approach is that the consequences are 140 
+always absorbed by one side, the contractor, and since this part y also has leverage in 141 
+other contract aspects [3], in the persistent absence of shar ed responsibilities, legal 142 
+claims and disputes are likely to arise and escalate [34]. 143 
+ 144 
+2.2 Weather and productivity 145 
+Extremely adverse weather conditions are frequently  identified as one of the top 146 
+causes producing project delays  and waste of resources (e.g. [2,3,32,33,35]). As can 147 
+be easily deduced, a project delay i s the result of a temporary work stoppage or a 148 
+performance decline at some point ; both of which could be labelled as lower -than-149 
+expected productivity. 150 
+The real problem becomes more evident when one tries to establish a quantitative 151 
+relationship between specific weather variables, their levels of intensity and their 152 
+corresponding impacts on productivity. As stated earlier, this is the real source of 153 
+conflict because the same level of intensity (for example 10  mm of precipitation  or 154 
+high/low temperatures) can cause very different effects depending on several aspects 155 
+6 
+
+[PAGE 10]
+such as the nature of the project, contractor’s equipment, soil materials, geotechnical 156 
+conditions, landscape topography, intensities of other concomitant weather agents , 157 
+even the country in which the project is being built. Indeed, construction workers 158 
+exhibit very different temperature tolerance depending on their country of origin. In 159 
+addition, it is important to consider  the contractor’s anticipation of the weather and 160 
+whether any specific approaches were implemented beforehand to mitigate the 161 
+impact of the weather. 162 
+Due to the wide range of factors when trying to establish measurable 163 
+relationships between intensities and consequences of weather agents, very few 164 
+quantitative rese arch studies have addressed these specific shortcomings. In this 165 
+regard, Table 1 identif ies and summarises the most significant “quantitative” works 166 
+by including their scope ( nature of works), the construction activities discussed , and 167 
+the specific weather agents that were analysed. 168 
+<Insert Table 1 here> 169 
+As shown in Table 1, although the weather factor is recognised as having a 170 
+significant influence on construction work, quantitative s tudies connecting the 171 
+intensities of weather agents with construction act ivities are rather scarce and , 172 
+mostly, less than ten years old.  To sum it up, the situation is that quantitative 173 
+research has merely scratched the surface of the tripartite weather-productivity-delay 174 
+issue [35]. Most national regulations and contracts  are too vague or just not 175 
+quantitative enough to allow their application. Yet, the weather problem in 176 
+construction projects is a real and pressing matter due to its high -frequency and 177 
+severe financial implications.  178 
+ 179 
+3. Materials and methods 180 
+3.1. Methodology outline 181 
+7 
+
+[PAGE 11]
+In the next subsections a model is developed. The purpose is to enable weather 182 
+data to be used for forecasting project durations , improve construction productivity, 183 
+and settle contract claims. 184 
+First, the kind of weather that impacts some standard and typical  construction 185 
+operations is identified. Identifying the corresponding intensities of relevant weather 186 
+variables and analysing the historical weather information makes it possible to define 187 
+the likelihood of performing those standard construction ope rations. This probability 188 
+is expressed as a proportion of workable days per month and labelled climatic 189 
+reduction coefficients (CRCs). 190 
+Second, the spatial and seasonal variation of th e CRCs  are analysed in the 191 
+peninsular region of Spain for certain typical construction operations : earthworks, 192 
+formworks, concrete, steelworks, scaffolding, outdoor paintings, and asphalt 193 
+pavements. 194 
+Third, the kind of weather analysis that is usually performed , with an average 195 
+(deterministic) approach, is revisited. However, this time with a stochastic approach. 196 
+This stochastic treatment of the weather allow s the calculation of a probability 197 
+distribution curve f or any construction project duration. It also enables the 198 
+determination of , among other things, the optimum start date so that the overall 199 
+project duration is minimised. 200 
+Fourth, a case study involving the construction of two buildings in different cities 201 
+of Spain is developed. This case exemplifies how the decision about where and when 202 
+a project is carried out entails significant financial implications. 203 
+Fifth, it is argued that a slightly adjusted model may be used retrospectively as a 204 
+tool for mediating in weather -related disputes between the contractor and the project 205 
+owner. 206 
+ 207 
+3.2. Measuring the weather-related productivity impact 208 
+8 
+
+[PAGE 12]
+Previous quantitative studies have measur ed some of the impacts of weather 209 
+variables and intensities on the execution of specific construction activities. As there 210 
+are several different studies, some  simplifications are necessary . This is mainly  211 
+related to merging and homogenising expressions and thresholds from those studies 212 
+in Table 1 to enable modelling productivity impacts on some significant construction 213 
+activities, as shown in Table 2. 214 
+<Insert Table 2 here> 215 
+Overall, Table 2 is divided in two major vertical blocks: raw climatic coefficients 216 
+(RCC)1 and construction activities.  The first column of  the RCC block (named 217 
+“Monthly days without…”) contains the main weather variables, along with the most 218 
+commonly agre ed thresholds or level s of intensity from the literature.  The second 219 
+column (“Mathematical expressions”) shows the way that each weather variable has 220 
+been translated into a coefficient 
+i
+xC  that reflects the proportion of “workable days” 221 
+in a scale from 0 to 1. The superscript i= 1, 2, 3 …  12 denotes the month of the year, 222 
+whereas the subscript x  = t, p1, p10, p30, w, s, e  denotes the specific weather 223 
+variable and/or its intensity. Equations (1) to (7) specify how the seven most relevant 224 
+i
+xC  RCCs are calculated for each month of the year and for a particular location 225 
+where there is at least one nearby meteorological station. 226 
+However, as expected, not all of the weather variables (now converted into 227 
+RCCs) affect all of the construction activities. In this regard, only the cells populated 228 
+with references from the last seven columns to the right make explicit the connection 229 
+between specific RCCs and their impact on each of the construction activities ( E, F, 230 
+C, T, S, O and P). Most of these references are taken from studies previously 231 
+reflected in Table 1 , along with a sample of construction regulations from three 232 
+1 We are following Ballesteros -Pérez et al. ’s [15] notation. According to th ose authors, naming 
+coefficients as “Climat ic” instead of as “Weather” is pertinent since  the calculated coefficients are 
+representative of a broader area and approximately stable during a particular period of the year. 
+9 
+                                                 
+
+[PAGE 13]
+countries included as representative examples in Table 2 . In the absence of a single 233 
+intensity agreement among cited sources, either average values were  adopted (e.g., 234 
+the wind speed at 55 Km/h) or several  steps of  intensities considered (e.g., the 235 
+precipitation with intensities of 1, 10 and 30 mm). 236 
+By establishing the connection of the RCCs  to some standard construc tion 237 
+activities, the CRC s from the row at the bottom of the table is straightforward . 238 
+Equations 8 to 14 demonstrate how a composite productivity coefficient, calculated 239 
+as the product of two to four RCCs, represents the proportion of workable days (on a 240 
+0-to-1 scale) in month i  for each of the seven construction activities considered : 241 
+earthworks, formworks, concrete, steelworks, scaffolding, outdoor paintings and 242 
+asphalt pavements (EPiP, FPiP, CPiP, TPiP, SPiP, OPiP and PPiP, respectively). 243 
+Two major simplifications are assumed. First, only weather influence on 244 
+technological operations have been considered ; that is, no influence on workers’ 245 
+labour productivity (mostly due to high temperature and humidity levels  [49]) is 246 
+included in the analysis. For example, a temperature of 24ºC is  considered very high 247 
+in northern (colder) countries, whereas it is considered optimal in southern (warmer) 248 
+countries. Therefore, more research is needed to adapt or calibrate this dimension . 249 
+This is beyond the scope of the present study. Second, although the generic 250 
+mathematical expression of CRC s in equations 8 to 14 seem quite intuitive (the 251 
+simple product of RCC s), it is worth checking whether a high covariance between 252 
+the variables from a RCC might affect (or exaggerate) the CRC values. In this 253 
+regard, Table 3 reflects the auxiliary calculations of covariances among the seven 254 
+RCCs from Table 2 in four locations of Spain with different climatic conditions 255 
+(Valencia, Zaragoza, Madrid and La Coruña). The four covariance matrices indicate 256 
+how the covariances (values outside the diagonals) are very small in general. This 257 
+agrees with previous studies and other models which neglect this same effect [50]  258 
+and makes our second simplification perfectly tenable. 259 
+10 
+
+[PAGE 14]
+<Insert Table 3 here> 260 
+ 261 
+3.3. Monthly and annual average Climatic Reduction Coefficient (CRC) values 262 
+So far, very simple calculations have been developed in order to identify the 263 
+“average” or “normal” weather conditions that might affect some typical 264 
+construction works. The way they can be implemented in practice simply consists of 265 
+calculating the RCC values (equations 1 to 7) from the most recent years  and then 266 
+take their respective averages to calculate each of the CRC values (with equations 8 267 
+to 14). 268 
+As an example, Figures 1 and 2 represent the average monthly and annual data 269 
+for two of the seven CRC values . These Figures present data from all the peninsular 270 
+province capital cities in Spain with at least one weather station. The complete set of 271 
+six CRCs used for the two -building building case study  can be accessed as 272 
+supplemental online material . In these calculations, the average values of the RCC 273 
+made use of the last 30 years of weather data from the peninsular Spanish weather 274 
+stations. 275 
+<Insert Figure 1 here> 276 
+<Insert Figure 2 here> 277 
+A first reading of Figure 1 immediately provides some interesting patterns. 278 
+Earthworks activities are not sensitive to  the average Spanish weather since most of 279 
+the CRC values (which denote the proportion of workable days per month/year)  are 280 
+close to 1 (cells mostly green). The opposite could be said about  Outdoor Painting 281 
+activities in Figure 2 ; the predominant orange an d even red colours highlight much 282 
+lower values. 283 
+As might be expected, summer months (June  to September) generally have the 284 
+highest CRC values, but the location effect is much more important. C ities like 285 
+Córdoba and Jaén (Andalusia) allow very good working conditions , on average and 286 
+11 
+
+[PAGE 15]
+throughout the year ; whereas other cities have the opposite,  such as San Sebastián 287 
+(Basque Country). 288 
+One of the limitations of Figures 1 and 2  is that they must be developed for 289 
+single specific map locations. Arguably, many buildings  or infrastructures  will, 290 
+probably, be built within a close radius of one of these urban centres, but there will 291 
+always be others significantly far from them. Therefore, a spatial extrapolation is 292 
+necessary to obtain the CRC values where no weather stations are close or data is 293 
+unavailable. This is exactly what Figure 3 shows for the annual CRC values of the 294 
+same two CRC coefficients represented in Figures 1 and 2 . Again, the complete set 295 
+of annual maps ( E, F, C, T, S, P ) can be found as s upplemental online material . By 296 
+observing the maps represented in Figure 3, it is easy to see how cities that were 297 
+mentioned above (Córdoba, Jaén and San Sebastián) are located in areas where the 298 
+climatic conditions are very favourable or unfavourable, respectively. 299 
+<Insert Figure 3 here> 300 
+Again, these maps  have some obvious limitations. The first is that, as can be 301 
+anticipated, one map is needed per construction activity and per month. Figure 3 has 302 
+only represented the annual average of the monthly maps but, obviously, as more 303 
+activities are considered, more maps would be needed. Although elaboration of these 304 
+maps can be made with software like Surfer P
+®
+P or ArcGISP
+®
+P, a multi-layer digital map 305 
+representation would be preferred over working with multiple paper-printed maps. 306 
+The second limitation is that no topography conditions (like the altitude) ha ve 307 
+been considered, since this would have required the application of more complex 308 
+algorithms for adjust ing the spatial variation of the CRC values. Fortunately, in 309 
+countries such Spain where the number of weather stations is abundant and very well 310 
+dispersed all over the country, the massive number of data points means that this 311 
+analytical simplification is not that crucial. However, it is recognised that, for special 312 
+projects like high- rise buildings [14]  or those with isolated locations and difficult 313 
+12 
+
+[PAGE 16]
+access, these maps would not provide reliable values and the only option would be to 314 
+resort to more precise  on-site weather station  measurements (set up preferably at 315 
+least a couple of years before commencing the project). Many observers may object 316 
+to the expense of monitoring the weather for two years prior to construction, but the 317 
+expense is dwarfed by the expense of delayed completion, litigation o r other losses 318 
+following from inadequate data. 319 
+ 320 
+3.4. Modelling stochastic weather variability 321 
+The understanding brought about by considering weather date, CRCs and RCCs 322 
+is useful in considering the impact of adverse weather on construction activities. It is 323 
+clear from the foregoing that weather affects various tasks in different ways. One 324 
+important factor is that not all kinds of weather occur simultaneously. When one or 325 
+two variables become abnormally high, progress will be affected. This  will cause a 326 
+real productivity loss and a  potential element of dispute between the contractor and 327 
+the project client. The question is whether weather events with a positive effect 328 
+might compensate those with negative effects. Current analytical approaches would 329 
+not help either the contractor or the client to answer such a question. But, based on 330 
+the approach provided in this study, an objective answer could be provided. More 331 
+specifically, if  all the RCCs  are treated as stochastic variables, instead of average 332 
+values, the overall effect of the weather conditions during the construction phase  333 
+could be determined.  334 
+Many recent studies have addressed multiple ways of generating stochastic 335 
+weather data for use in operations research and management science [50]. However, 336 
+applications within the  construction environment count among the most numerous  337 
+[14,37,51]. These provide a basis for extending the analytical model proposed so far. 338 
+Generating stochastic weather values is quite simple whenever  the covariance 339 
+among different weather variables is not considered ( a simplification that was shown 340 
+13 
+
+[PAGE 17]
+in Table 3 to be tenable in this case study). Basically, previous calculations required 341 
+that the RCC values are calculated for each month and year of the historical weather 342 
+data before taking their average . B ut, if RCC standard deviation values are also 343 
+calculated along with their averages (mean values) for the N years of analysis, fitting 344 
+a Beta distribution to the monthly RCC values of each weather variable would be  345 
+straightforward using the method of moments. 346 
+As supplemental online material, the third set of figures shows these calculations 347 
+for the same four cities (by columns) that were selected as examples in Table  3 when 348 
+calculating the covariance matrices. The RCC values of the 30 years have not been 349 
+included for the sake of brevity, but indication of the number of values years ( N), the 350 
+mean and s tandard deviation of the N  RCC values, as well as the α and β shape 351 
+parameter values for the Beta distributions,  representing the monthly RCC values 352 
+variability, have been stated for each of the seven RCC s. The last row from each of 353 
+the Tables from the seven RCC s reflects the Kolmogorov-Smirnov D statistic which 354 
+corresponds to the maximum deviation observed between the actual data and the 355 
+Beta distributions fitted to each month of the year per RCC series of N  values. From 356 
+the tables at the bottom, it is easy to check that these D  values are “without 357 
+exception” below the critical K -S’s values for three levels of significance (α=1%, 358 
+5% and 10%). 359 
+Having verified that the Beta di stribution has a good fit with historical RCC 360 
+values, the next step is to use this distribution for generating stochastic values by 361 
+Monte Carlo simulations , while modelling the climatic trends from previous years. 362 
+Essentially, once the Beta α and β parameters are calculated for each month and  for 363 
+each type of RCC, one iteration (one artificial year) will produce a series of twelve 364 
+CRC values. With these values known, it will be possible to calculate the monthly EPiP, 365 
+FPiP, CPiP, TPiP, SPiP, OPiP and PPiP values of that artificial year by just applying equations 8 to 14. Now, it 366 
+only remains to apply several thousand of these stochastic values to a particular 367 
+14 
+
+[PAGE 18]
+schedule to measure the potential productivity losses and project delay s as a 368 
+consequence of the changing weather.  369 
+ 370 
+3.5. Case study: construction of two buildings 371 
+To explain the issues more fully, a case study applying the method developed so 372 
+far is present ed. Namely, the case study comprises the construction of a five -storey 373 
+building with two options concerning the structure: Reinforced Concrete (RC 374 
+building) and Steel Structure (SS building). Figure 4 represents the main activities of 375 
+these two alternative buildings ( Gantt charts can be found as s upplemental online 376 
+material as the fourth set of Figures) . The project duration is 108 working days for 377 
+the RC building (left) and 95 working days for the SS building (right). 378 
+<Insert Figure 4 here> 379 
+From left to right, the table columns of Figure 4 represent the activities: identifier 380 
+(ID), units, description, quantities (Q), performance or expected productivity (P), 381 
+duration (as Q/P), a rounded- up duration of the latter column values for the sake of 382 
+simplicity, details of the technological activity  precedences, the zone where each 383 
+activity is performed (outdoor  = influenced by the weather, indoor  = not influenced 384 
+by the weather), and the specific CRC to which each activity is assimilated (outdoor 385 
+activities only). 386 
+Despite the authors ’ acknowledgement that these two buildings  represent just a 387 
+simplification of the large number  of activities that a ny real building involves, this 388 
+case study allow s a fair representation of the method proposed. In real -life settings, 389 
+therefore, the only difference would be the allocation of CRC coefficients to a longer 390 
+list of activities. 391 
+ 392 
+15 
+
+[PAGE 19]
+4. Results 393 
+Figure 5 and 6, respectively, represent the average durations tha t both the RC 394 
+building and the SS building would have had if they had been built in each of the 395 
+Spanish capitals of province , depending also on the date ( season) the projects  had 396 
+started, but only considering the “average” weather conditions. Namely, the duration 397 
+of each activity is calculated as its original duration divided by its respective CRC , 398 
+which changes according to the month(s) in which the activity is executed. Overall, 399 
+in the absence of any weather consideration, the RC building required 108 working 400 
+days, whereas the SS building required 95 working days. However, the real durations 401 
+when taking the weather into account are invariantly longer. 402 
+<Insert Figure 5 here> 403 
+<Insert Figure 6 here> 404 
+Although these projects are relatively short in time (around 5 months) and 405 
+despite only outdoor activities are exposed to the weather, projects starting in July 406 
+(summer season) have the shortest project durations on average (greener cells). 407 
+Conversely, projects starting in January (winter) and October (autumn) evidence the 408 
+longest durations. Cities like Córdoba and Jaén have shorter project durations (as the 409 
+weather was b etter in those locations), whereas San Sebastián has the longest 410 
+durations (due to its significantly worse weather conditions). 411 
+The four last columns and rows (headed with blue-shaded colour) to the right and 412 
+bottom, respectively,  of each Figure 5 and 6 denote the maximum and minimum 413 
+project durations (by rows and columns ). They are expressed in working days and in 414 
+percentage compared to the Baseline duration of each type of building. 415 
+In short, information processed as in Figures 5 and 6 constitutes a pow erful 416 
+planning tool. First, it anticipates how much extra time (on average) a project will 417 
+take. Second, it helps in making the decision about “when” it would be be st to start 418 
+the project execution so that the duration (and also the costs) are minimised. 419 
+16 
+
+[PAGE 20]
+Additionally, as Figure 5 and 6 also show, although project locations in real-life 420 
+cannot be easily changed , a modified project start date may offer a significant 421 
+potential for productivity improvement. As it is evidenced from the above examples, 422 
+in which half of the activities are not even influenced by the weather, a difference of 423 
+5% to 20% in project duration would be a reasonable expectation, most of the time.  424 
+Finally, i t is worth noting that, so far, it has been assumed that both the 425 
+contractor and the project owner are dealing with ready-designed buildings. In these 426 
+cases, the project schedule can be elaborated in advance. Hence, the activity 427 
+durations can be closely anticipated as a function of their future calendar execution 428 
+times. However, in those cases where the project schedule might not follow a 429 
+standard order of execution (e.g., fast tracking) and/or when  the project design and 430 
+specifications might not be clear from the outset (e.g., design-  build contracts), 431 
+numerous schedule variations (even s cope variations) might take  place. In these 432 
+cases, it would be difficult to have access to reliable  duration estimates at the early 433 
+stages of the project . Obviously, all these aspects might limit the model accuracy 434 
+when anticipating the future likely proje ct duration and its optimum start date. 435 
+However, and maybe paradoxically, this limitation does not affect the capability of 436 
+the model in mediating conflicts arising from weather-related contractual claims. 437 
+ 438 
+5. Discussion 439 
+This section will be mostly devoted to the discussion of  why (and how) it is 440 
+possible to know whether a contractor has experienced a project delay as a 441 
+consequence of the weather or of something else, and how to use the time deviation 442 
+to state whether the contractor is entitled to compensation. The answer to this  443 
+question is also applicable to the “average” weather conditions by which the project 444 
+durations from Figures 5 and 6 have been derived. However, (stochastically) variable 445 
+weather conditions will also be considered in this case. This paper promised, as a by-446 
+17 
+
+[PAGE 21]
+product of the main model, to offer a method for mediating in weather -related 447 
+construction claims . To do so, the model should be applied following the steps 448 
+described below. 449 
+First, the contractor should register when all th e activities in the construction site 450 
+are executed (start and end dates)  and their precedence relationships (which ones 451 
+have had to finish before the subsequent activities could start). T his ‘as- built’ 452 
+schedule (e.g. Gantt chart) will act as the ‘baseline’ document between the contractor 453 
+and the project owner . To avoid ambiguities , it is advisable that the Work 454 
+Breakdown Structure (WBS) resemble the budget items against which the progress is 455 
+reported and billed. The advantage of this approach is that by est ablishing a coherent 456 
+correspondence between progress and payments, both parties are invited to share the 457 
+same progress information regarding the actual execution. 458 
+Second, on sharing a common as-built schedule, both parties should agree on the 459 
+specific CRC to be allocated to each activity (whenever it is exposed to the weather). 460 
+In short, this is exactly what was represented in Figure 4, but instead of doing this 461 
+allocation ex-ante, in this occasion the allocation  can also be done ex- post, that is, 462 
+retrospectively (when the works have partially or totally finished). 463 
+Third, monthly RCC values (by equations 1 to 7) for  calculating the monthly 464 
+CRC values (by equations 8 to 14) , from as many recent years as possible prior to 465 
+the project start date, have to be calculated. Also, the monthly RCC and CRC values 466 
+during project execution  have to be calculated  separately, preferably via an on- site 467 
+weather station for more accurate results.  Then, for the pre -execution period, either 468 
+take the CRC monthly averages or go a little further and fit the Beta distributions 469 
+described earlier. 470 
+Fourth, using the steps above, the actual duration of each activity is multiplied by 471 
+its actual CRC. Since the CRC values are between 0 and 1, the result of th is 472 
+multiplication will b e shorter activity durations. In other words, the fourth step will 473 
+18 
+
+[PAGE 22]
+result in obtaining the original ‘planned’ activity durations before the weather 474 
+influenced those activities. These ‘planned’ durations will be shorter than the ‘actual’ 475 
+durations, except for non- weather-sensitive activities which will be the same ( CRC 476 
+values equal to 1for all months). 477 
+Fifth, now that the original planned project schedule has been inferred from the  478 
+as-built schedule by means of the actual CRC multiplications, it is possible to  479 
+calculate how long that original planned schedule would have taken to complete (or 480 
+to reach the current progress stage) , if the weather conditions had been like those in 481 
+the years before the project started. For that, it is only necessary  to ‘divide’ each 482 
+activity duration by its respective (average or Beta -distributed stochastic) CRC 483 
+value, as gathered before the project execution period. If the resulting overall project 484 
+duration is longer than the as-built schedule, then the contractor has suffered weather 485 
+conditions more adverse than the historical average. Conversely, if the as -built 486 
+schedule duration is shorter, then that means that the contractor has enjoyed better -487 
+than-average weather conditions and would not be entitle d to this kind of 488 
+compensation. Of course, this analysis can be focussed,  not only on  the whole 489 
+project duration, but also on the circumstances of a single activity or a subset of 490 
+activities. 491 
+If the contractor and project client want to be more precise, for example, because 492 
+they agreed that only exceptionally severe weather conditions ( e.g. top 10% severe 493 
+weather conditions) would lead to economic compensation for the contractor, they 494 
+would need to resort to fully  stochastic weather analysis. The underlying philosophy 495 
+would be exactly the same as for the average weather analysis  though. However, 496 
+instead of working with “average” historical CRC values, a Monte Carlo simulation 497 
+would be needed to generate multiple artificial years (each with a series of random 498 
+CRC values calculated from the original Beta- distributed RCC values). By 499 
+performing 10,000 simulations (iterations), sufficient potential project durations 500 
+19 
+
+[PAGE 23]
+would be obtained, or dered and assigned a probability as in Figure 7.  The closer as-501 
+built project duration was to a probability of zero, the more severe the weather 502 
+conditions suffered; the closer to one (100%), the more lenient the weather was. 503 
+<Insert Figure 7 here> 504 
+Figure 7 represents the probability distributions obtained for the RC building 505 
+(left) and the SS building ( right). Coloured curves represent the project duration 506 
+probability curves depending on when the project might start. Also, a fit to Fréchet 507 
+distributions is provided for the sake of additional future statistical modelling. In this 508 
+case, the Fréchet distribution, also known as inverse Weibull distribution, constitutes 509 
+a logical candidate as it is an Extreme Value distribution for modelling maxima of 510 
+events. Par ticularly, this distribution, along with the Gumbel distribution, are 511 
+common alternatives when dealing with Stochastic Network Analysis (SNA)  [52], 512 
+that is, when calculating the total project duration of schedules whose activities have 513 
+variable durations, such as in this case study. More simulation results and 514 
+comparisons can be found as supplemental online material (fifth set of figures).  515 
+ 516 
+6. Conclusions 517 
+Project delays and cost overruns attributed to  the weather are numerous in 518 
+construction projects and this is reflected in the construction literature. However, few 519 
+studies have addressed how to quantify (versus just stating or proving its connection) 520 
+the precise extent to which weather variables and/or their intensities influence 521 
+construction activities. Consequently, productivity forecasts are difficult to make and 522 
+construction contracts that normally include weather-related clauses cannot count on 523 
+objective approaches for their fair enforcement. 524 
+In this paper, multiple contributions towards improving the current situation have 525 
+been presented. First, the most representative and recent research addressing the 526 
+specific influences of weather on construction works were identified. Drawing on 527 
+20 
+
+[PAGE 24]
+them, a series of coefficients were developed which help to anticipate weather-528 
+related productivity losses and activity duration extensions. Second, an approach was 529 
+proposed to extrapolate coefficients in a wider geographic location  with no weather 530 
+data. Third, building on the above outcomes, a case study was presented, which 531 
+demonstrated how much longer a building project can take as a consequence of 532 
+location and project start  date. Fourth, guidance was provided to generate stochastic 533 
+Beta-distributed monthly and annual weather coefficients so that the weather 534 
+conditions experienced over recent years can be modelled and reproduced during the 535 
+execution stage. Fifth, a method for estimating the approximate percentile to which 536 
+the real project duration corresponds  in relation to the weather  has also been 537 
+proposed. Overall, the proposed model offers great advantages for anticipating 538 
+weather-related productivi ty losses at the planning stage. Furthermore, during the 539 
+construction phase, this method can be used to determine whether the weather 540 
+conditions really entitled the contractor to compensation.  541 
+However, despite the simplicity and practicability  of the model , there are some 542 
+limitations. The covariances between the climatic coefficients that affect the 543 
+productivity and the human dimension being affected by extreme weather events  544 
+were not considered. In addition, topo graphy considerations (e.g., the altitude) have 545 
+been omitted for the sake of simplicity of the model . This w as however, partially 546 
+compensated by having a dense grid of available weather data. Finally, in those types 547 
+of contract in which the project schedule needs to be fast tracked and/ or the schedule 548 
+itself cannot be easily anticipated from the outset, the ability of the proposed method 549 
+for providing accurate activity duration extensions and overall project duration 550 
+forecasts, as well as optimum start dates, may be limited.  In spite of these 551 
+limitations, the beauty of the proposed method relies on its mathematical simplicity, 552 
+its wide applicability and for being the first in its kind to address the long- enduring 553 
+problem of the weather-related claims in construction works. 554 
+21 
+
+[PAGE 25]
+ 555 
+Acknowledgements 556 
+This research was supported by the CIOB Bowen Jenkins Legacy Research Fund 557 
+at the University of Reading (H5405400). 558 
+ 559 
+References  560 
+[1] A. Orangi, E. Palaneeswaran, J. Wilson, Exploring Delays in Victoria -Based 561 
+Astralian Pipeline Projects, Procedia Eng. 14  (2011) 874–881. 562 
+doi:10.1016/j.proeng.2011.07.111. 563 
+[2] M. Mentis, Managing project risks and uncertainties, For. Ecosyst. 2 (2015). 564 
+doi:10.1186/s40663-014-0026-z. 565 
+[3] M. Głuszak, A. Les̈ niak, Construction Delays in Clients Opinion - Multivariate 566 
+Statistical Analysis, Procedia Eng. 123 (2015) 182–189. 567 
+doi:10.1016/j.proeng.2015.10.075. 568 
+[4] S.H. Kim, G. Augenbroe, Using the National Digital Forecast Database for 569 
+model-based building controls, Autom. Constr. 27 (2012) 170–182. 570 
+doi:10.1016/j.autcon.2012.05.012. 571 
+[5] W. Tian, P. De Wilde, Uncertainty and sensitivity analysis of building 572 
+performance using probabilistic climate projections: A UK case study, Autom. 573 
+Constr. 20 (2011) 1096–1109. doi:10.1016/j.autcon.2011.04.011. 574 
+[6] E. Palaneeswaran, M.M. Kumaraswamy, An integrated decision support system 575 
+for dealing with time extension entitlements, Autom. Constr. 17 (2008) 425 –576 
+438. doi:10.1016/j.autcon.2007.08.002. 577 
+[7] H. Tanijiri, B. Ishiguro, T. Arai, R. Yoshitake, M. Kato, Y. Morishima, N. 578 
+Takasaki, Development of a utomated weather-unaffected building construction 579 
+system, Autom. Constr. 6 (1997) 215–227. doi:10.1016/S0926- 5805(97)00005-580 
+8. 581 
+[8] United States Army Construction Engineers Research Laboratory  582 
+(USACERL,). Contract Duration Estimation System., 1999. 583 
+[9] D. T horpe, E.P. Karan, Method for calculating schedule delay considering 584 
+weather conditions, in: Proc. 24th Annu. ARCOM Conf. 13 Sept. 2008, Cardiff, 585 
+UK, 2008: pp. 809–818. 586 
+[10] M.H. Jang, Y.S. Yoon, S.W. Suh, S.J. Ko, Method of Using Weather 587 
+Information for Support to Manage Building Construction Projects (ASCE), in: 588 
+22 
+
+[PAGE 26]
+AEI 2008 Build. Integr. Solut., 2008: p. M. Ettouney (Ed.), ASCE, pp. 1–10. 589 
+doi:http://dx.doi.org/10.1061/41002(328)38. 590 
+[11] A. Shahin, S.M. AbouRizk, Y. Mohamed, Modeling Weather -Sensitive 591 
+Construction Activity Using Simulation, J. Constr. Eng. Manag. 137 (2011) 592 
+238–246. doi:10.1061/(ASCE)CO.1943-7862.0000258. 593 
+[12] M. Rogalska, A. Czarnigowska, Z. Hejducki, T.O. Nahurny, Methods of 594 
+estimation of building processes duration including weather risk f actors (in 595 
+Polish), Build. Rev. 1 (2006) 37–42. 596 
+[13] The Society of Construction La w. The Society of Construction Law Delay and 597 
+Disruption Protocol, 2nd ed., Wantage, Oxforshire, England, 2002. 598 
+https://www.scl.org.uk/sites/default/files/SCL Delay and Disru ption Protocol -  599 
+subject to Rider 1.pdf. 600 
+[14] M. Jung, M. Park, H.- S. Lee, H. Kim, Weather -Delay Simulation Model Based 601 
+on Vertical Weather Profile for High -Rise Building Construction, J. Constr. 602 
+Eng. Manag. (2016) 4016007. doi:10.1061/(ASCE)CO.1943-7862.0001109. 603 
+[15] P. Ballesteros- pérez, M.L. Campo- hitschfeld, M.A. González -naranjo, M.C. 604 
+González-cruz, Climate and construction delays: case study in Chile, Eng. 605 
+Constr. Archit. Manag. 22 (2015) 596–621. doi:10.1108/ECAM-02-2015-0024. 606 
+[16] W. Hughes, P. Hill ebrandt, D.G. Greenwood, W.E.K. Kwawu, Procurement in 607 
+the Construction Industry: the Impact and Cost of Alternative Market and 608 
+Supply Processes, London, 2006. doi:10.4324/9780203968734. 609 
+[17] J. Büdel, Büdel, J. 1982: Climatic geomorphology. Princeton: Princeton 610 
+University Press. (Translation of Klima -geomorphologie, Berlin- Stuttgart: 611 
+Gebrüder Borntraeger, 1977.), Prog. Phys. Geogr. 30 (2006) 99–103. 612 
+doi:http://dx.doi.org/10.1191/0309133306pp473xx. 613 
+[18] O. Moselhi, K. El -Rayes, Analyzing weather -related construction claims, Cost 614 
+Eng. 44 (2002) 12–19. 615 
+[19] L.D. Nguyen, J. Kneppers, B. García de Soto, W. Ibbs, Analysis of Adverse 616 
+Weather for Excusable Delays, J. Constr. Eng. Manag. 136 (2010) 1258–1267. 617 
+doi:10.1061/(ASCE)CO.1943-7862.0000242. 618 
+[20] K. El-Rayes, O. Moselhi, Impact of Rainfall on the Productivity of Highway 619 
+Construction, J. Constr. Eng. Manag. 127 (2001) 125–131. 620 
+doi:10.1061/(ASCE)0733-9364(2001)127:2(125). 621 
+[21] J. Irizarry, K.L. Simonsen, D.M. Abraham, Effect of Safety and Environmental 622 
+Variables on Task Durations in Steel Erection, J. Constr. Eng. Manag. 131 623 
+23 
+
+[PAGE 27]
+(2005) 1310–1319. doi:10.1061/(ASCE)0733-9364(2005)131:12(1310). 624 
+[22] K. Yogeswaran, M.M. Kumaraswamy, D.R.A. Miller, Claims for extensions of 625 
+time in civil engineering projects, Con str. Manag. Econ. 16 (1998) 283–293. 626 
+doi:10.1080/014461998372312. 627 
+[23] T.J. Trauner, W.A. Manginelli, J.S. Lowe, M.F. Nagata, B.J. Furniss, 628 
+Construction Delays, Understanding Them Clearly, Analyzing Them Correctly., 629 
+2009. 630 
+[24] American Concrete Institute ( ACI). ACI, Manual of Concrete Practice, part 1, 631 
+(1985) Detroit, Michigan, United States. 632 
+[25] Ministerio de Obras Públicas  (MOP), Dirección General de Carreteras. Datos 633 
+climáticos para Carreteras, (1964) Madrid, Spain 1964 (in Spanish). 634 
+[26] National Cooperative Highway Research Program  (NCHRP), Effect of weather 635 
+on highway construction, (1978) NC HRP Synthesis 47, Transp. Research 636 
+Board. 637 
+[27] United states Army Corp of Engineers ( USACE), Construction time extensions 638 
+for weather, (1989) U.S. Army Corps Engineers. CEMP–CP Regulation No.4. 639 
+[28] Ministerio de Obras Públicas y Dirección de Vialidad , Manual de Carretera, 640 
+Volumen 3: Instrucciones y Criterios de diseño, (2008) Santiago, Chile (in 641 
+Spanish). 642 
+[29] Instituto Nacional de Seguridad e Higiene en el Tr abajo (INSHT), NTP 701: 643 
+Tower cranes. Safety recommendations (in Spanish), (2000). 644 
+[30] Instituto Nacional de Seguridad e Higiene en el Trabajo ( INSHT), NTP 670: 645 
+Scaffolds for construction works (II): set up and use (in Spanish), (2004). 646 
+[31] S. Apipattanavis, K. Sabol, K.R. Molenaar, B. Rajagopalan, Y. Xi, B. Blackard, 647 
+S. Patil, Integrated Framework for Quantifying and Predicting Weather -Related 648 
+Highway Construction Delays, J. Constr. Eng. Manag. 136 (2010) 1160–1168. 649 
+doi:10.1061/(ASCE)CO.1943-7862.0000199. 650 
+[32] N. Hamzah, M.A. Khoiry, I. Arshad, N.M. Tawil, A.I. Che Ani, Cause of 651 
+Construction Delay -  Theoretical Framework, Procedia Eng. 20 (2011) 490–652 
+495. doi:10.1016/j.proeng.2011.11.192. 653 
+[33] M.M. Kumaraswamy, Conflicts, claims and disputes in construction, Eng. 654 
+Constr. Archit. Manag. 4 (1997) 95–111. doi:10.1108/eb021042. 655 
+[34] M.R. Finke, Weather -related delays on government contracts, in: AACE Int. 656 
+Trans. Annu. Meet. Assoc. Adv. Cost Eng. Int., 1990: p. Morgantown, WV. 657 
+[35] P. González, V. González, K. Molena ar, F. Orozco, Analysis of Causes of 658 
+24 
+
+[PAGE 28]
+Delay and Time Performance in Construction Projects, J. Constr. Eng. Manag. 659 
+140 (2014) 4013027. doi:10.1061/(ASCE)CO.1943-7862.0000721. 660 
+[36] H.R. Thomas, D.R. Riley, V.E. Sanvido, Loss of Labor Productivity due to 661 
+Delivery Methods and Weather, J. Constr. Eng. Manag. 125 (1999) 39–46. 662 
+doi:10.1061/(ASCE)0733-9364(1999)125:1(39). 663 
+[37] M. David, L. Adelard, P. Lauret, F. Garde, A method to generate Typical 664 
+Meteorological Years from raw hourly climatic databases, Build. Envir on. 45 665 
+(2010) 1722–1732. doi:10.1016/j.buildenv.2010.01.025. 666 
+[38] G. Duffy, A. Woldesenbet, “David” Hyung Seok Jeong, G.D. Oberlender, 667 
+Advanced linear scheduling program with varying production rates for pipeline 668 
+construction projects, Autom. Constr. 27 (2012) 99–110. 669 
+doi:10.1016/j.autcon.2012.05.014. 670 
+[39] M. Dytczak, G. Ginda, N. Szklennik, T. Wojtkiewicz, Weather Influence -671 
+Aware Robust Construction Project Structure, Procedia Eng. 57 (2013) 244 –672 
+253. doi:10.1016/j.proeng.2013.04.034. 673 
+[40] P. Chinowsky, A . Schweikert, N. Strzepek, K. Manahan, K. Strzepek, C.A. 674 
+Schlosser, Climate change adaptation advantage for African road infrastructure, 675 
+Clim. Change. 117 (2013) 345–361. doi:10.1007/s10584-012-0536-z. 676 
+[41] M. Marzouk, A. Hamdy, Quantifying weather impact on formwork shuttering 677 
+and removal operation using system dynamics, KSCE J. Civ. Eng. 17 (2013) 678 
+620–626. doi:10.1007/s12205-013-0301-5. 679 
+[42] Y. Shan, P.M. Goodrum, Integration of Building Information Modeling and 680 
+Critical Path Method Schedules to Simulate the Impact of Temperature and 681 
+Humidity at the Project Level, Buildings. 4 (2014) 295–319. 682 
+doi:10.3390/buildings4030295. 683 
+[43] M.N. Alshebani, G. Wedawatta, Making the Construction Industry Resilient to 684 
+Extreme Weather: Lessons from Construction in Hot Wea ther Conditions, 685 
+Procedia Econ.Finan. 18 (2014) 635–642. doi:10.1016/S2212- 5671(14)00985-686 
+X. 687 
+[44] A. Shahin, S.M. AbouRizk, Y. Mohamed, S. Fernando, Simulation modeling of 688 
+weather-sensitive tunnelling construction activities subject to cold weather, 689 
+Can. J. Civ. Eng. 41 (2014) 48–55. doi:10.1139/cjce-2013-0087. 690 
+[45] X. Li, K.H. Chow, Y. Zhu, Y. Lin, Evaluating the impacts of high- temperature 691 
+outdoor working environments on construction labor productivity in China: A 692 
+case study of rebar workers, Build. Environ. 95 (2016) 42–52. 693 
+25 
+
+[PAGE 29]
+doi:10.1016/j.buildenv.2015.09.005. 694 
+[46] P. Jimenez, G. A., F. Morán, Hormigón armado, Madrid, 2001. 695 
+[47] Norma Chilena Oficial Nc. 2437 NCh, Grúas Torre. Condiciones de Operación, 696 
+(1999) Instituto Nacional de Normalización. Santiago, Chile (in Spanish). 697 
+[48] Ministerio de Fomento de España, EHE 08, Instrucción Española de hormigón 698 
+estructural (2008) (in Spanish). 699 
+[49] W. Yi, A.P.C. Chan, X. Wang, J. Wang, Development of an early -warning 700 
+system for site work in hot and humid environments:  A case study, Autom. 701 
+Constr. 62 (2016) 101–113. doi:10.1016/j.autcon.2015.11.003. 702 
+[50] E. Regnier, Doing something about the weather, Omega. 36 (2008) 22–32. 703 
+doi:10.1016/j.omega.2005.07.011. 704 
+[51] L. Guan, Preparation of future weather data to study the im pact of climate 705 
+change on buildings, Build. Environ. 44 (2009) 793–800. 706 
+doi:10.1016/j.buildenv.2008.05.021. 707 
+[52] P. Ballesteros-Pérez, M-PERT. A manual project duration estimation technique 708 
+for teaching scheduling basics, J. Constr. Eng. Manag. In press (2017). 709 
+doi:10.1061/(ASCE)CO.1943-7862.0001358. 710 
+26 
+
+[PAGE 30]
+ 
+Reference Construction work (Sub) activities Weather agents 
+(Thomas et al., 1999) [36] (Steel) Buildings Steel structure delivery and erection 
+activities Temperature and Snow 
+(El-Rayes and Moselhi, 2001) [20] Highways Earthworks, Base courses, Drainage 
+layers and Paving Precipitation 
+(Jang et al., 2008) [10] Buildings Generic Temperature and Precipitation 
+(Thorpe and Karan, 2008) [9] Buildings 
+Clearing and grubbing, Excavation, 
+Foundations, Structural erection, Floors, 
+interiors, roofs and HVAC. 
+Temperature, Snow, Humidity 
+and Precipitation 
+(Apipattanavis et al., 2010) [31] Highways Concrete and Asphalt paving, Structures, 
+Excavations and Grading 
+Precipitation, Air and soil 
+Temperature, and Wind 
+(David et al., 2010) [37] Buildings Generic Solar radiation, Temperature, 
+Humidity, Wind 
+(Shahin et al., 2011) [11] Pipelines 
+Clearing and grading, Trenching, 
+Bedding, Pipe-fusing, Laying-in, Hydro 
+testing, Compaction and Backfilling 
+(Air and soil) Temperature, 
+Wind, Humidity and 
+Precipitation 
+(Duffy et al, 2012) [38] Pipelines 
+Grading, stringing, bending, welding, 
+trenching, coating, lower-in, backfill, 
+cleanup 
+Temperature, Wind , 
+Precipitation 
+(Dytczak et al., 2013) [39] Buildings Generic Temperature and wind 
+(Chinowsky et al., 2013) [40] Roads Generic Temperature and Precipitation 
+(Marzouk and Hamdy, 2013) [41] Buildings Formwork Precipitation and Temperature 
+(Shan and Goodrum, 2014) [42] Buildings Steel structure Temperature and Humidity 
+(Alshebani and Wedawatta, 2014) [43] Any Concretes, equipment-related and 
+workers’ productivity in general (Hot) temperature 
+(González et al., 2014) [35] Buildings (RC) structures and Finishings (e.g., 
+partition walls, windows, and doors) Not specified 
+(Shahin et al., 2014) [44] Tunnelling All tunnelling process, hoisting and 
+muck car cleaning 
+(Air and Soil) Temperature 
+and Wind 
+(Ballesteros-pérez et al., 2015) [15] Bridges Earthworks, Formworks, Concrete and 
+Asphalt pavings 
+Temperature, Precipitation, 
+wind and electrical storms 
+(Jung et al., 2016) [14] (High-rise) Buildings Generic + core wall, steel frame, deck 
+plate, RC, curtain wall 
+Solar radiation, Temperature, 
+Wind, Dew point temperature 
+and Precipitation 
+(Li et al., 2016) [45] (RC) Buildings Steel reinforced bars (Hot) temperature 
+Table 1. Sample of recent publications dealing with the effect of weather in construction works 
+
+[PAGE 31]
+Raw Climatic Coefficients (RCC) ▼ Construction activities considered ▼ 
+Monthly days without… Mathematical expressions Earthworks 
+(E) 
+Formworks 
+(F) 
+Concrete 
+(C) 
+Steelworks 
+(T) 
+Scaffolding 
+(S) 
+Outdoor paintings 
+(O) 
+Asphalt Pavements 
+(P) 
+…temperatures below  0ºC 
+( i
+tC ) i of month Total days
+0ºCres  temperatunth i withDays of moCi
+t
+≤−=1  (1)   [9,15,24,26,27,44] [9,27,36]   [15,25–28] 
+…precipitation above 1 mm  
+( i
+pC 1 ) i of month Total days
+mmtions  precipitanth i withDays of moCi
+p
+111
+≥−=  (2)      [9,12] [15,25,28] 
+…precipitation above 10 mm  
+( i
+pC 10 ) i of month Total days
+mmtions  precipitanth i withDays of moCi
+p
+10110
+≥−=  (3) [15,25,26,31,44]  [15,25,26,46]     
+…precipitation above 30 mm  
+( i
+pC 30 ) i of month Total days
+mmtions  precipitanth i withDays of moCi
+p
+30130
+≥−=  (4)    [9,15]    
+…wind speed above 55 km/h  
+( i
+wC ) i of month Total days
+hkmspeed  windnth i withDays of moCi
+w
+/55 1 ≥−=  (5)  [12,15,19,27,29,41,
+47] [19,27,48] [15,19,27] [12,19,27,30] [19,27]  
+…snow precipitation  
+( i
+sC ) i of month Total days
+ionprecipitat snownth i withDays of moCi
+s
+ 1−=  (6) [9,11,20,44]  [9,20,24]  [9,30] [9,30] [20,25,28] 
+…electrical storm  
+( i
+eC ) i of month Total days
+storml electricanth i withDays of moCi
+e
+ 1−=   (7)  [15,30]  [12,15] [12,30]   
+ Climatic Reduction Coefficients (CRC) ► 
+i
+s
+i
+p
+i CCE ×= 10
+ 
+ 
+ 
+(8) 
+i
+e
+i
+w
+i CCF ×=  
+ 
+(9) 
+i
+s
+i
+w
+i
+p
+i
+t
+i
+CC
+CCC
+××
+××= 10  
+ 
+(10) 
+i
+e
+i
+w
+i
+p
+i
+t
+i
+CC
+CCT
+××
+××= 30  
+ 
+(11) 
+i
+e
+i
+s
+i
+w
+i CCCS ××=  
+ 
+(12) 
+i
+s
+i
+w
+i
+p
+i CCCO ××= 1  
+ 
+(13) 
+i
+s
+i
+p
+i
+t
+i CCCP ××= 1  
+ 
+(14) 
+Table 2. Monthly Climatic Reduction Coefficient calculations from the monthly Raw Climatic Coefficient values with bibliographic references 
+
+[PAGE 32]
+Valencia  Zaragoza 
+RCC         RCC        
+ 0.000 0.000 0.000 0.000 0.000 0.000 0.000   0.007 -0.001 0.000 0.000 0.000 0.000 0.000 
+ 0.000 0.007 - - 0.000 0.000 -   -0.001 0.008 - - -0.001 0.000 - 
+ 0.000 - 0.002 - 0.000 0.000 -   0.000 - 0.001 - 0.000 0.000 - 
+ 0.000 - - 0.000 0.000 - 0.000   0.000 - - 0.000 0.000 - 0.000 
+ 0.000 0.000 0.000 0.000 0.003 0.000 0.000   0.000 -0.001 0.000 0.000 0.017 0.000 -0.001 
+ 0.000 0.000 0.000 - 0.000 0.000 0.000   0.000 0.000 0.000 - 0.000 0.000 0.000 
+ 0.000 - - 0.000 0.000 0.000 0.002   0.000 - - 0.000 -0.001 0.000 0.002 
+                 
+Madrid  La Coruña 
+RCC         RCC        
+ 0.005 -0.001 0.000 0.000 0.000 0.001 0.000   0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+ -0.001 0.012 - - 0.001 0.000 -   0.000 0.023 - - 0.009 0.000 - 
+ 0.000 - 0.002 - 0.000 0.000 -   0.000 - 0.005 - 0.004 0.000 - 
+ 0.000 - - 0.000 0.000 - 0.000   0.000 - - 0.000 0.000 - 0.000 
+ 0.000 0.001 0.000 0.000 0.002 0.000 0.000   0.000 0.009 0.004 0.000 0.013 0.000 0.001 
+ 0.001 0.000 0.000 - 0.000 0.001 0.000   0.000 0.000 0.000 - 0.000 0.000 0.000 
+ 0.000 - - 0.000 0.000 0.000 0.002   0.000 - - 0.000 0.001 0.000 0.002 
+Note: diagonal cells represent the variances, cells with “-“ represent combinations of RCC not used. 
+Table 3. Covariance matrices among the RCC variables for four specific Spanish locations 
+
+[PAGE 33]
+ 
+ 
+ 
+Note: values closer to 1.00 represented in green. Lower values progressively represented in yellow and lowest in red. 
+Figure 1. Annual and monthly Earthworks average CRC values of Spanish peninsular capital of province cities. 
+Region 
+Province capital Earthworks (E) 
+(Spain) Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Annual 
+Galicia 
+La Coruña 0,88 0,90 0,93 0,92 0,93 0,95 0,97 0,97 0,93 0,86 0,83 0,85 0,91 
+Lugo 0,83 0,84 0,90 0,88 0,92 0,94 0,97 0,96 0,92 0,85 0,81 0,82 0,89 
+Orense 0,88 0,91 0,94 0,92 0,94 0,96 0,98 0,98 0,95 0,88 0,87 0,86 0,92 
+Pontevedra 0,78 0,82 0,86 0,82 0,87 0,92 0,95 0,94 0,89 0,77 0,76 0,77 0,85 
+Asturias Oviedo 0,87 0,86 0,89 0,89 0,92 0,94 0,96 0,95 0,93 0,90 0,86 0,89 0,91 
+Cantabria Santander 0,87 0,89 0,90 0,88 0,92 0,94 0,95 0,93 0,91 0,88 0,82 0,86 0,90 
+País Vasco 
+Vitoria 0,87 0,88 0,91 0,90 0,93 0,95 0,96 0,95 0,95 0,91 0,87 0,88 0,91 
+San Sebastián 0,81 0,80 0,86 0,84 0,88 0,92 0,91 0,89 0,87 0,83 0,78 0,81 0,85 
+Bilbao 0,85 0,86 0,89 0,88 0,92 0,94 0,96 0,94 0,93 0,88 0,81 0,86 0,89 
+Navarra Pamplona 0,89 0,87 0,90 0,90 0,95 0,95 0,96 0,97 0,95 0,93 0,90 0,89 0,92 
+La Rioja Logroño 0,93 0,94 0,96 0,95 0,96 0,96 0,97 0,98 0,97 0,96 0,96 0,94 0,96 
+Castilla y León 
+Ávila 0,84 0,83 0,91 0,91 0,94 0,97 0,99 0,98 0,98 0,94 0,89 0,86 0,92 
+Burgos 0,82 0,84 0,89 0,88 0,93 0,95 0,98 0,98 0,97 0,94 0,88 0,83 0,91 
+León 0,83 0,87 0,92 0,93 0,94 0,97 0,98 0,98 0,96 0,94 0,91 0,86 0,92 
+Palencia 0,85 0,89 0,93 0,92 0,94 0,97 0,98 0,98 0,97 0,93 0,90 0,88 0,93 
+Salamanca 0,93 0,92 0,97 0,95 0,95 0,97 0,99 0,99 0,97 0,95 0,94 0,92 0,96 
+Segovia 0,97 0,87 0,92 0,92 0,93 0,95 0,99 0,98 0,98 0,94 0,90 0,90 0,94 
+Soria 0,81 0,79 0,88 0,86 0,92 0,95 0,97 0,97 0,96 0,94 0,88 0,83 0,90 
+Valladolid 0,87 0,91 0,96 0,93 0,95 0,97 0,99 0,98 0,97 0,94 0,92 0,90 0,94 
+Zamora 0,93 0,94 0,98 0,95 0,97 0,98 0,99 0,99 0,97 0,95 0,94 0,92 0,96 
+Aragón 
+Huesca 0,94 0,94 0,96 0,93 0,95 0,97 0,98 0,97 0,95 0,94 0,95 0,94 0,95 
+Teruel 0,90 0,90 0,92 0,92 0,94 0,96 0,97 0,97 0,96 0,96 0,95 0,93 0,94 
+Zaragoza 0,96 0,96 0,98 0,96 0,96 0,97 0,99 0,99 0,97 0,97 0,97 0,97 0,97 
+Cataluña 
+Barcelona 0,95 0,95 0,96 0,96 0,96 0,97 0,98 0,94 0,92 0,92 0,94 0,96 0,95 
+Gerona 0,93 0,94 0,95 0,93 0,93 0,93 0,96 0,96 0,93 0,92 0,94 0,94 0,94 
+Lérida 0,96 0,98 0,97 0,97 0,95 0,97 0,99 0,98 0,96 0,95 0,97 0,98 0,97 
+Tarragona 0,96 0,96 0,97 0,96 0,95 0,98 0,99 0,96 0,93 0,93 0,95 0,96 0,96 
+Madrid Madrid 0,94 0,92 0,97 0,94 0,95 0,98 0,99 0,99 0,98 0,93 0,93 0,92 0,95 
+Extremadura 
+Cáceres 0,93 0,95 0,96 0,95 0,95 0,98 0,99 0,99 0,97 0,91 0,90 0,91 0,95 
+Badajoz 0,94 0,94 0,97 0,95 0,97 0,99 1,00 1,00 0,98 0,93 0,93 0,92 0,96 
+Castilla-La Mancha 
+Albacete 0,96 0,93 0,95 0,96 0,96 0,97 0,99 0,99 0,97 0,96 0,95 0,95 0,96 
+Ciudad Real 0,94 0,94 0,97 0,95 0,97 0,98 0,99 1,00 0,98 0,94 0,96 0,93 0,96 
+Cuenca 0,89 0,89 0,93 0,92 0,94 0,95 0,99 0,98 0,95 0,93 0,92 0,91 0,93 
+Guadalajara 0,95 0,93 0,97 0,94 0,95 0,97 0,99 1,00 0,97 0,92 0,95 0,93 0,95 
+Toledo 0,96 0,96 0,97 0,96 0,96 0,98 0,99 0,99 0,98 0,95 0,96 0,96 0,97 
+Valencia 
+Alicante 0,98 0,98 0,98 0,97 0,98 0,99 1,00 0,99 0,96 0,96 0,96 0,98 0,98 
+Castellón 0,96 0,97 0,97 0,96 0,96 0,98 0,99 0,98 0,93 0,94 0,95 0,96 0,96 
+Valencia 0,97 0,96 0,97 0,96 0,96 0,99 0,99 0,98 0,94 0,95 0,95 0,95 0,96 
+Andalucía 
+Almería 0,98 0,98 0,98 0,99 0,99 1,00 1,00 1,00 0,99 0,98 0,97 0,97 0,98 
+Cádiz 0,92 0,93 0,96 0,95 0,98 0,99 1,00 1,00 0,97 0,93 0,90 0,90 0,95 
+Córdoba 0,92 0,94 0,95 0,94 0,96 0,99 1,00 0,99 0,96 0,91 0,92 0,88 0,95 
+Granada 0,93 0,95 0,97 0,97 0,97 0,99 1,00 1,00 0,98 0,95 0,93 0,94 0,97 
+Huelva 0,93 0,95 0,97 0,95 0,97 1,00 1,00 1,00 0,98 0,92 0,92 0,90 0,96 
+Jaén 0,92 0,92 0,94 0,95 0,96 0,98 1,00 0,99 0,97 0,95 0,93 0,92 0,95 
+Málaga 0,93 0,95 0,95 0,95 0,98 0,99 1,00 0,99 0,98 0,94 0,92 0,90 0,96 
+Sevilla 0,92 0,95 0,96 0,94 0,97 0,99 1,00 0,99 0,97 0,93 0,91 0,88 0,95 
+Murcia Murcia 0,97 0,98 0,97 0,98 0,97 0,99 1,00 0,99 0,97 0,96 0,97 0,97 0,98 
+ 
+
+[PAGE 34]
+ 
+ 
+Note: values closer to 1.00 represented in green. Lower values progressively represented in yellow and lowest in red. 
+Figure 2. Annual and monthly Outdoor Paintings average CRC values of Spanish peninsular capital of province cities. 
+Region 
+Province capital Outdoor painting (P) 
+(Spain) Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Annual 
+Galicia 
+La Coruña 0,39 0,40 0,48 0,41 0,54 0,70 0,79 0,78 0,68 0,48 0,39 0,37 0,53 
+Lugo 0,52 0,50 0,57 0,49 0,60 0,78 0,85 0,82 0,71 0,53 0,49 0,54 0,61 
+Orense 0,64 0,66 0,71 0,62 0,68 0,84 0,90 0,89 0,81 0,66 0,64 0,62 0,72 
+Pontevedra 0,54 0,55 0,60 0,50 0,60 0,75 0,83 0,82 0,71 0,56 0,53 0,49 0,62 
+Asturias Oviedo 0,51 0,48 0,53 0,49 0,55 0,70 0,73 0,72 0,69 0,56 0,49 0,49 0,58 
+Cantabria Santander 0,41 0,42 0,52 0,46 0,58 0,71 0,73 0,73 0,63 0,49 0,38 0,42 0,53 
+País Vasco 
+Vitoria 0,52 0,53 0,59 0,53 0,61 0,73 0,76 0,75 0,72 0,60 0,55 0,53 0,61 
+San Sebastián 0,28 0,30 0,35 0,34 0,45 0,57 0,61 0,58 0,52 0,37 0,30 0,30 0,41 
+Bilbao 0,44 0,46 0,52 0,48 0,60 0,73 0,75 0,71 0,68 0,55 0,47 0,46 0,57 
+Navarra Pamplona 0,59 0,56 0,59 0,55 0,64 0,76 0,78 0,78 0,75 0,64 0,59 0,58 0,65 
+La Rioja Logroño 0,68 0,67 0,72 0,63 0,67 0,77 0,82 0,84 0,82 0,72 0,70 0,68 0,73 
+Castilla y León 
+Ávila 0,64 0,63 0,73 0,65 0,67 0,84 0,94 0,92 0,85 0,72 0,65 0,63 0,74 
+Burgos 0,54 0,54 0,60 0,52 0,58 0,71 0,77 0,78 0,73 0,61 0,55 0,51 0,62 
+León 0,57 0,60 0,66 0,59 0,63 0,78 0,84 0,86 0,80 0,66 0,65 0,60 0,68 
+Palencia 0,60 0,61 0,69 0,60 0,65 0,77 0,83 0,84 0,78 0,67 0,63 0,60 0,69 
+Salamanca 0,67 0,65 0,71 0,62 0,64 0,81 0,89 0,89 0,81 0,68 0,68 0,63 0,72 
+Segovia 0,67 0,60 0,65 0,60 0,59 0,84 0,91 0,82 0,78 0,71 0,68 0,57 0,70 
+Soria 0,55 0,53 0,63 0,57 0,63 0,77 0,83 0,83 0,79 0,69 0,62 0,57 0,67 
+Valladolid 0,65 0,66 0,74 0,64 0,69 0,80 0,87 0,88 0,81 0,71 0,68 0,65 0,73 
+Zamora 0,72 0,74 0,79 0,73 0,74 0,86 0,92 0,91 0,84 0,74 0,72 0,71 0,78 
+Aragón 
+Huesca 0,61 0,61 0,66 0,59 0,62 0,69 0,90 0,89 0,85 0,79 0,62 0,65 0,71 
+Teruel 0,81 0,81 0,82 0,75 0,75 0,80 0,91 0,88 0,83 0,79 0,83 0,76 0,81 
+Zaragoza 0,64 0,60 0,60 0,58 0,62 0,70 0,72 0,77 0,76 0,69 0,66 0,65 0,67 
+Cataluña 
+Barcelona 0,83 0,79 0,79 0,75 0,81 0,87 0,93 0,83 0,80 0,76 0,78 0,80 0,81 
+Gerona 0,80 0,79 0,79 0,73 0,76 0,82 0,89 0,82 0,77 0,78 0,80 0,82 0,80 
+Lérida 0,75 0,75 0,74 0,67 0,76 0,81 0,88 0,87 0,81 0,80 0,77 0,78 0,78 
+Tarragona 0,68 0,87 0,72 0,70 0,83 0,90 0,94 0,88 0,83 0,81 0,74 0,87 0,81 
+Madrid Madrid 0,74 0,72 0,80 0,70 0,73 0,86 0,95 0,91 0,87 0,75 0,76 0,72 0,79 
+Extremadura 
+Cáceres 0,68 0,68 0,76 0,67 0,73 0,87 0,93 0,93 0,84 0,68 0,66 0,64 0,75 
+Badajoz 0,72 0,73 0,77 0,70 0,77 0,90 0,97 0,96 0,87 0,73 0,72 0,68 0,79 
+Castilla-La Mancha 
+Albacete 0,84 0,79 0,83 0,80 0,81 0,89 0,97 0,95 0,88 0,83 0,82 0,82 0,85 
+Ciudad Real 0,78 0,74 0,82 0,72 0,78 0,87 0,96 0,95 0,87 0,79 0,77 0,73 0,82 
+Cuenca 0,69 0,69 0,75 0,66 0,70 0,80 0,91 0,87 0,82 0,71 0,71 0,67 0,75 
+Guadalajara 0,78 0,76 0,84 0,73 0,76 0,87 0,94 1,00 0,87 0,74 0,81 0,78 0,82 
+Toledo 0,74 0,71 0,75 0,66 0,71 0,82 0,90 0,89 0,86 0,73 0,73 0,71 0,77 
+Valencia 
+Alicante 0,84 0,85 0,83 0,83 0,85 0,93 0,98 0,96 0,88 0,85 0,84 0,84 0,87 
+Castellón 0,80 0,81 0,82 0,78 0,83 0,90 0,94 0,91 0,81 0,81 0,83 0,79 0,84 
+Valencia 0,76 0,77 0,81 0,77 0,83 0,90 0,96 0,91 0,82 0,80 0,80 0,78 0,82 
+Andalucía 
+Almería 0,75 0,71 0,70 0,65 0,70 0,77 0,83 0,87 0,83 0,79 0,75 0,75 0,76 
+Cádiz 0,65 0,60 0,66 0,67 0,75 0,81 0,84 0,88 0,80 0,70 0,63 0,60 0,72 
+Córdoba 0,76 0,78 0,84 0,78 0,84 0,95 0,99 0,98 0,89 0,78 0,80 0,74 0,85 
+Granada 0,76 0,73 0,80 0,75 0,82 0,91 0,96 0,94 0,88 0,81 0,74 0,71 0,82 
+Huelva 0,71 0,75 0,81 0,73 0,86 0,95 0,99 0,97 0,90 0,74 0,73 0,69 0,82 
+Jaén 0,78 0,77 0,83 0,77 0,82 0,93 0,99 0,98 0,91 0,81 0,77 0,75 0,84 
+Málaga 0,63 0,68 0,74 0,75 0,82 0,94 0,98 0,96 0,90 0,80 0,68 0,61 0,79 
+Sevilla 0,72 0,72 0,78 0,70 0,82 0,92 0,96 0,96 0,89 0,74 0,73 0,68 0,80 
+Murcia Murcia 0,82 0,83 0,84 0,83 0,85 0,91 0,97 0,96 0,89 0,86 0,84 0,84 0,87 
+ 
+
+[PAGE 35]
+ 
+ 
+ 
+Earthworks (E) 
+  
+  
+ 
+ 
+ 
+ 
+ 
+  
+  
+Outdoor paintings (P) 
+ 
+Figure 3. Sample of Earthworks and Outdoor Painting annual CRC values maps 
+
+[PAGE 36]
+ 
+* Assimilated to Earthworks CRC ** Assimilated to Scaffolding CRC *** Assimilated to Formworks CRC 
+ 
+Figure 4. 5-storey Reinforced Concrete (left) and Steel Structure (right) building project activities 
+5-storey reinforced concrete (RC) building
+Activity Quantity (Q) Performance (P) Duration (Q/P) Real Duration (RD) Predecessor Zone CRC
+(description) (# units) (# units/ day) (exact # days) (rounded-up/down days) (ID+relation+lag) (Outdoor/Indoor) (identification)
+1. Structural works
+1.1 gl Site marking (*) 1 1.00 1.00 1 St ar t Out door E
+1.2 m3 Excavations 117 20.00 5.85 6 1.1FS Out door E
+1.3 m3 Lean concrete 40 40.00 1.00 1 1.2FS Out door C
+1.4 kg Reinforcing steel 27000 720.00 37.50 38 1.3FS Out door T
+1.5 m3 Concrete (foundations) 59 35.00 1.69 2 1.4S S +5% Out door C
+1.6 m2 Formw orks 2800 85.00 32.94 33 1.5FS Out door F
+1.7 m3 Structural concrete 307 10.00 30.70 31 1.6S S +10% Out door C
+1.8 m2 Roof (**) 360 18.00 20.00 20 1.7FS Out door S
+1.9 m2 Scaffolding 1200 80.00 15.00 15 1.7FS Out door S
+2. Finishings
+2.1 m2 Outdoor paint coating 764 40.00 19.10 19 1.9S S +25% Out door O
+2.2 m2 Plastering 1665 50.00 33.30 33 1.7FS Indoor -
+2.3 gl Doors and windows installation 1 0.05 20.00 20 2.4FS Indoor -
+2.4 m2 Partitions and cladding 1280 38.00 33.68 34 1.7FS Indoor -
+2.5 m2 Indoor paint coating 2300 70.00 32.86 33 2.4S S +20% Indoor -
+2.6 m2 Suspended ceilings 1150 35.00 32.86 33 2.5S S +20% Indoor -
+2.7 m2 Floors 1150 35.00 32.86 33 2.6S S +20% Indoor -
+2.8 gl Moldings 1 0.05 20.00 20 2.7S S +50% Indoor -
+2.9 gl Other minor finishings 1 0.05 20.00 20 2.8S S +20% Indoor -
+3. Installations
+3.1 gl Electrical works 1 0.05 20.00 20 2.7S S +30% Indoor -
+3.2 gl Furnishing and fixture installation 1 0.05 20.00 20 2.7S S +30% Indoor -
+3.3 gl Plumbing domiciliary works 1 0.02 50.00 50 1.3FS Indoor -
+ID Unit
+ 
+ 
+    
+     
+      
+  
+  
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+  
+   
+  
+  
+ 
+  
+ 
+ 
+   
+   
+ 
+5-storey reinforced concret   
+     
+      
+1. Structural works
+1.1 gl Site marki  
+1.2 m3 Excavatio
+1.3 m3 Lean conc
+1.4 kg Reinforcin  
+1.5 m3 Concrete (
+1.6 m2 Formwork
+1.7 m3 St ruct ural 
+1.8 m2 Roof (**)
+1.9 m2 Scaffoldin
+2. Finishings
+2.1 m2 Out door p  
+2.2 m2 Plastering
+2.3 gl Doors and  
+2.4 m2 Partitions  
+2.5 m2 Indoor pai  
+2.6 m2 Suspended 
+2.7 m2 Floors
+2.8 gl Moldings
+2.9 gl Other min  
+3. Installations
+3.1 gl Electrical 
+3.2 gl Furnishing   
+3.3 gl P lumbing  
+ID Unit
+ 
+ 
+    
+     
+      
+  
+  
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+  
+   
+  
+  
+ 
+  
+ 
+ 
+   
+   
+ 
+
+[PAGE 37]
+ 
+Note: Lowest durations represented in green. Highest durations represented in red. Medium durations in yellow/orange. 
+Figure 5. Calculations of the average 5-storey Reinforced Concrete (RC) building project duration extension in Spain. 
+ 
+Baseline without climate: 108 working days 
+Region Province capital 
+(Spain) 
+RC building Duration Extension 
+Project start date Max Min Max Min 
+January 1st April 1st July 1st October 1st (days) (days) (%) (%) 
+Galicia 
+La Coruña 129 120 112 134 134 112 24 4 
+Lugo 121 115 111 120 121 111 12 3 
+Orense 114 112 110 115 115 110 6 2 
+Pontevedra 121 116 110 123 123 110 14 2 
+Asturias Oviedo 126 117 112 123 126 112 17 4 
+Cantabria Santander 131 119 113 137 137 113 27 5 
+País Vasco 
+Vitoria 126 118 113 124 126 113 17 5 
+San Sebastián 152 127 126 163 163 126 51 17 
+Bilbao 129 118 113 128 129 113 19 5 
+Navarra Pamplona 123 117 113 119 123 113 14 5 
+La Rioja Logroño 118 115 112 114 118 112 9 4 
+Castilla y León 
+Ávila 126 113 110 119 126 110 17 2 
+Burgos 130 121 114 127 130 114 20 6 
+León 124 116 112 117 124 112 15 4 
+Palencia 123 117 112 118 123 112 14 4 
+Salamanca 121 116 111 117 121 111 12 3 
+Segovia 121 116 112 113 121 112 12 4 
+Soria 130 116 112 120 130 112 20 4 
+Valladolid 120 114 111 116 120 111 11 3 
+Zamora 114 111 110 113 114 110 6 2 
+Aragón 
+Huesca 125 123 110 118 125 110 16 2 
+Teruel 120 112 110 113 120 110 11 2 
+Zaragoza 128 123 119 119 128 119 19 10 
+Cataluña 
+Barcelona 113 112 112 114 114 112 6 4 
+Gerona 113 112 111 113 113 111 5 3 
+Lérida 118 115 112 114 118 112 9 4 
+Tarragona 115 112 110 114 115 110 6 2 
+Madrid Madrid 114 112 110 113 114 110 6 2 
+Extremadura 
+Cáceres 116 114 111 118 118 111 9 3 
+Badajoz 114 112 110 114 114 110 6 2 
+Castilla-La Mancha 
+Albacete 112 110 109 110 112 109 4 1 
+Ciudad Real 111 111 110 110 111 110 3 2 
+Cuenca 120 114 111 114 120 111 11 3 
+Guadalajara 114 111 108 113 114 108 6 0 
+Toledo 115 115 111 114 115 111 6 3 
+Valencia 
+Alicante 111 110 108 111 111 108 3 0 
+Castellón 113 111 110 112 113 110 5 2 
+Valencia 114 111 110 113 114 110 6 2 
+Andalucía 
+Almería 119 123 114 116 123 114 14 6 
+Cádiz 123 117 114 122 123 114 14 6 
+Córdoba 111 110 108 112 112 108 4 0 
+Granada 115 111 110 113 115 110 6 2 
+Huelva 113 111 109 116 116 109 7 1 
+Jaén 112 109 108 110 112 108 4 0 
+Málaga 120 113 109 119 120 109 11 1 
+Sevilla 116 114 109 117 117 109 8 1 
+Murcia Murcia 112 111 110 111 112 110 4 2 
+Duration 
+Max. (days) 152 127 126 163 163       
+Min. (days) 111 109 108 110   108     
+Extension 
+Max. (%) 41 18 17 51     51   
+Min. (%) 3 1 0 2       0 
+ 
+
+[PAGE 38]
+ 
+ 
+Note: Lowest durations represented in green. Highest durations represented in red. Medium durations in yellow/orange. 
+Figure 6. Calculations of the average 5-storey Steel Structure (SS) building project duration extension in Spain. 
+Baseline without climate: 95 working days 
+Region Province capital 
+(Spain) 
+SS building Duration Extension 
+Project start date Max Min Max Min 
+January 1st April 1st July 1st October 1st (days) (days) (%) (%) 
+Galicia 
+La Coruña 108 104 96 109 109 96 15 1 
+Lugo 103 99 96 101 103 96 8 1 
+Orense 98 97 95 98 98 95 3 0 
+Pontevedra 103 100 96 103 103 96 8 1 
+Asturias Oviedo 106 103 96 102 106 96 12 1 
+Cantabria Santander 109 102 97 111 111 97 17 2 
+País Vasco 
+Vitoria 107 103 97 105 107 97 13 2 
+San Sebastián 123 109 103 125 125 103 32 8 
+Bilbao 107 103 97 107 107 97 13 2 
+Navarra Pamplona 104 102 99 101 104 99 9 4 
+La Rioja Logroño 100 100 97 97 100 97 5 2 
+Castilla y León 
+Ávila 107 98 95 99 107 95 13 0 
+Burgos 109 104 99 103 109 99 15 4 
+León 105 101 96 98 105 96 11 1 
+Palencia 105 102 96 99 105 96 11 1 
+Salamanca 103 101 96 98 103 96 8 1 
+Segovia 102 102 96 97 102 96 7 1 
+Soria 109 102 96 99 109 96 15 1 
+Valladolid 103 98 96 98 103 96 8 1 
+Zamora 98 96 95 97 98 95 3 0 
+Aragón 
+Huesca 106 103 95 99 106 95 12 0 
+Teruel 103 97 95 96 103 95 8 0 
+Zaragoza 106 104 101 102 106 101 12 6 
+Cataluña 
+Barcelona 97 97 96 98 98 96 3 1 
+Gerona 97 96 96 98 98 96 3 1 
+Lérida 100 99 96 97 100 96 5 1 
+Tarragona 98 97 96 99 99 96 4 1 
+Madrid Madrid 98 97 95 97 98 95 3 0 
+Extremadura 
+Cáceres 99 98 96 100 100 96 5 1 
+Badajoz 97 97 95 97 97 95 2 0 
+Castilla-La Mancha 
+Albacete 97 96 95 96 97 95 2 0 
+Ciudad Real 97 96 95 96 97 95 2 0 
+Cuenca 102 98 96 97 102 96 7 1 
+Guadalajara 99 96 95 97 99 95 4 0 
+Toledo 98 100 96 97 100 96 5 1 
+Valencia 
+Alicante 96 96 95 96 96 95 1 0 
+Castellón 97 96 95 96 97 95 2 0 
+Valencia 97 96 95 97 97 95 2 0 
+Andalucía 
+Almería 102 104 97 98 104 97 9 2 
+Cádiz 104 99 97 103 104 97 9 2 
+Córdoba 97 96 95 97 97 95 2 0 
+Granada 98 96 96 97 98 96 3 1 
+Huelva 97 96 95 98 98 95 3 0 
+Jaén 97 96 95 96 97 95 2 0 
+Málaga 103 97 95 99 103 95 8 0 
+Sevilla 99 98 95 99 99 95 4 0 
+Murcia Murcia 96 96 95 96 96 95 1 0 
+Duration 
+Max. (days) 123 109 103 125 125       
+Min. (days) 96 96 95 96   95     
+Extension 
+Max. (%) 29 15 8 32     32   
+Min. (%) 1 1 0 1       0 
+ 
+
+[PAGE 39]
+ 
+City RC building 
+(Baseline without climate 108 working days) 
+SS building 
+(Baseline without climate 95 working days) 
+Valencia 
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+90 100 110 120 130 140 150 160
+Probability
+Project duration (days)  
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+90 100 110 120 130 140 150 160
+Probability
+Project duration (days)  
+Zaragoza 
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+90 100 110 120 130 140 150 160
+Probability
+Project duration (days)  
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+90 100 110 120 130 140 150 160
+Probability
+Project duration (days)  
+Madrid 
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+90 100 110 120 130 140 150 160
+Probability
+Project duration (days)  
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+90 100 110 120 130 140 150 160 170 180
+Probability
+Project duration (days)  
+La Coruña 
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+90 100 110 120 130 140 150 160
+Probability
+Project duration (days)  
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+90 100 110 120 130 140 150 160 170 180
+Probability
+Project duration (days)  
+  
+Project Start date: January 1st April 1st July 1st October 1st Fréchet fit  
+ 
+ 
+Figure 7. Concrete (RC) and Steel structure (SS) building actual values and stochastic simulations 

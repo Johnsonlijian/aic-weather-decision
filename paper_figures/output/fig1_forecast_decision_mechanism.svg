@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1180" height="720" viewBox="0 0 1180 720">
+<defs>
+</defs>
+<rect x="50" y="78" width="520" height="250" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" />
+<text x="72" y="108" font-size="14.5" fill="#1d4ed8" font-family="Helvetica, Arial, sans-serif" font-weight="bold">1  TODAY: the forecast says light wind</text>
+<rect x="112" y="156" width="116" height="80" rx="9" fill="white" stroke="#1d4ed8" stroke-width="2.2" />
+<path d="M130,172 L154,172" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M186,172 L210,172" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M130,182 L154,182" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M186,182 L210,182" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M130,192 L154,192" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M186,192 L210,192" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<text x="170" y="222" font-size="16" fill="#1d4ed8" font-family="Helvetica, Arial, sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="central">9 m/s</text>
+<path d="M236,196 L302,196" stroke="#52606d" stroke-width="2.4" />
+<path d="M302,196 L291.7846890086584,200.08012516354282 L291.7846890086584,191.91987483645718 Z" fill="#52606d" />
+<path d="M370,230.0 L370,162.0" stroke="#1d4ed8" stroke-width="3.0" />
+<path d="M364.0,230.0 L376.0,230.0" stroke="#1d4ed8" stroke-width="3.0" />
+<path d="M370,162.0 L400.0,158.0" stroke="#1d4ed8" stroke-width="3.0" />
+<path d="M370,170.0 L356.0,160.0" stroke="#1d4ed8" stroke-width="1.6" />
+<path d="M390.0,158.0 L390.0,186.0" stroke="#1d4ed8" stroke-width="1.5" />
+<rect x="385.0" y="186.0" width="10.0" height="12.0" fill="none" stroke="#1d4ed8" stroke-width="1.5" />
+<text x="370" y="264" font-size="13" fill="#1d4ed8" font-family="Helvetica, Arial, sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="central">work starts</text>
+<text x="72" y="310" font-size="11.5" fill="#1e293b" font-family="Helvetica, Arial, sans-serif">raw rule: 9 &lt; 12  -&gt;  go.  Looks safe.</text>
+<rect x="610" y="78" width="520" height="250" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" />
+<text x="632" y="108" font-size="14.5" fill="#c53030" font-family="Helvetica, Arial, sans-serif" font-weight="bold">2  BUT the window really hits 14 m/s</text>
+<rect x="672" y="156" width="116" height="80" rx="9" fill="white" stroke="#1d4ed8" stroke-width="2.2" />
+<path d="M690,172 L714,172" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M746,172 L770,172" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M690,182 L714,182" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M746,182 L770,182" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M690,192 L714,192" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M746,192 L770,192" stroke="#1d4ed8" stroke-width="1.6" stroke-opacity="0.55" />
+<text x="730" y="222" font-size="16" fill="#1d4ed8" font-family="Helvetica, Arial, sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="central">9 m/s</text>
+<path d="M852.0,168.0 L888.0,182.0" stroke="#c53030" stroke-width="2.6" />
+<path d="M888.0,182.0 L877.0004563242521,182.10019443754828 L879.9581085453927,174.49480301175808 Z" fill="#c53030" />
+<path d="M852.0,190.0 L888.0,204.0" stroke="#c53030" stroke-width="2.6" />
+<path d="M888.0,204.0 L877.0004563242521,204.10019443754828 L879.9581085453927,196.49480301175808 Z" fill="#c53030" />
+<path d="M852.0,212.0 L888.0,226.0" stroke="#c53030" stroke-width="2.6" />
+<path d="M888.0,226.0 L877.0004563242521,226.10019443754828 L879.9581085453927,218.49480301175808 Z" fill="#c53030" />
+<text x="878" y="264" font-size="13" fill="#c53030" font-family="Helvetica, Arial, sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="central">actual 14 m/s</text>
+<path d="M1010,228.3 L1010,163.7" stroke="#52606d" stroke-width="2.8499999999999996" />
+<path d="M1004.3,228.3 L1015.7,228.3" stroke="#52606d" stroke-width="2.8499999999999996" />
+<path d="M1010,163.7 L1038.5,159.9" stroke="#52606d" stroke-width="2.8499999999999996" />
+<path d="M1010,171.3 L996.7,161.8" stroke="#52606d" stroke-width="1.52" />
+<path d="M1029.0,159.9 L1029.0,186.5" stroke="#52606d" stroke-width="1.4249999999999998" />
+<rect x="1024.25" y="186.5" width="9.5" height="11.399999999999999" fill="none" stroke="#52606d" stroke-width="1.4249999999999998" />
+<circle cx="1040" cy="152" r="13" fill="#c53030" />
+<text x="1040" y="157" font-size="16" fill="white" font-family="Helvetica, Arial, sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="central">!</text>
+<text x="632" y="310" font-size="11.5" fill="#c53030" font-family="Helvetica, Arial, sans-serif">the lift is interrupted mid-window: unsafe, rework, delay.</text>
+<rect x="50" y="362" width="520" height="250" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" />
+<text x="72" y="392" font-size="14.5" fill="#b45309" font-family="Helvetica, Arial, sans-serif" font-weight="bold">3  OR the forecast says strong wind</text>
+<rect x="112" y="440" width="116" height="80" rx="9" fill="white" stroke="#b45309" stroke-width="2.2" />
+<path d="M130,456 L154,456" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M186,456 L210,456" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M130,466 L154,466" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M186,466 L210,466" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M130,476 L154,476" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M186,476 L210,476" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<text x="170" y="506" font-size="16" fill="#b45309" font-family="Helvetica, Arial, sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="central">13 m/s</text>
+<path d="M236,480 L302,480" stroke="#52606d" stroke-width="2.4" />
+<path d="M302,480 L291.7846890086584,484.0801251635428 L291.7846890086584,475.9198748364572 Z" fill="#52606d" />
+<path d="M370,514.0 L370,446.0" stroke="#52606d" stroke-width="3.0" />
+<path d="M364.0,514.0 L376.0,514.0" stroke="#52606d" stroke-width="3.0" />
+<path d="M370,446.0 L400.0,442.0" stroke="#52606d" stroke-width="3.0" />
+<path d="M370,454.0 L356.0,444.0" stroke="#52606d" stroke-width="1.6" />
+<path d="M390.0,442.0 L390.0,470.0" stroke="#52606d" stroke-width="1.5" />
+<rect x="385.0" y="470.0" width="10.0" height="12.0" fill="none" stroke="#52606d" stroke-width="1.5" />
+<text x="400.0" y="474.0" font-size="11.0" fill="#52606d" font-family="Helvetica, Arial, sans-serif" font-style="italic">zz</text>
+<text x="370" y="548" font-size="13" fill="#b45309" font-family="Helvetica, Arial, sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="central">stopped all day</text>
+<text x="72" y="594" font-size="11.5" fill="#b45309" font-family="Helvetica, Arial, sans-serif">the window stayed calm: a wasted day, no safety gain.</text>
+<rect x="610" y="362" width="520" height="250" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" />
+<text x="632" y="392" font-size="14.5" fill="#2f855a" font-family="Helvetica, Arial, sans-serif" font-weight="bold">4  THIS PAPER: convert it to an event probability first</text>
+<rect x="648" y="434" width="116" height="80" rx="9" fill="white" stroke="#b45309" stroke-width="2.2" />
+<path d="M666,450 L690,450" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M722,450 L746,450" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M666,460 L690,460" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M722,460 L746,460" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M666,470 L690,470" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<path d="M722,470 L746,470" stroke="#b45309" stroke-width="1.6" stroke-opacity="0.55" />
+<text x="706" y="500" font-size="16" fill="#b45309" font-family="Helvetica, Arial, sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="central">13 m/s</text>
+<path d="M768,474 L806,474" stroke="#2f855a" stroke-width="2.4" />
+<path d="M806,474 L795.7846890086583,478.0801251635428 L795.7846890086583,469.9198748364572 Z" fill="#2f855a" />
+<rect x="825.0" y="461.0" width="170" height="26" rx="6" fill="white" stroke="#52606d" stroke-width="1.4" />
+<rect x="825.0" y="461.0" width="83.65334594466776" height="26" rx="6" fill="#2f855a" />
+<path d="M927.0,455.0 L927.0,493.0" stroke="#1e293b" stroke-width="1.6" stroke-dasharray="4 3" />
+<text x="933.0" y="451.0" font-size="10" fill="#1e293b" font-family="Helvetica, Arial, sans-serif">C/L</text>
+<text x="910" y="507.0" font-size="12.5" fill="#2f855a" font-family="Helvetica, Arial, sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="central">P(exceedance) = 0.49</text>
+<path d="M1002,474 L1038,474" stroke="#2f855a" stroke-width="2.4" />
+<path d="M1038,474 L1027.7846890086585,478.0801251635428 L1027.7846890086585,469.9198748364572 Z" fill="#2f855a" />
+<path d="M1072,495.5 L1072,444.5" stroke="#2f855a" stroke-width="2.25" />
+<path d="M1067.5,495.5 L1076.5,495.5" stroke="#2f855a" stroke-width="2.25" />
+<path d="M1072,444.5 L1094.5,441.5" stroke="#2f855a" stroke-width="2.25" />
+<path d="M1072,450.5 L1061.5,443.0" stroke="#2f855a" stroke-width="1.2000000000000002" />
+<path d="M1087.0,441.5 L1087.0,462.5" stroke="#2f855a" stroke-width="1.125" />
+<rect x="1083.25" y="462.5" width="7.5" height="9.0" fill="none" stroke="#2f855a" stroke-width="1.125" />
+<text x="910" y="540" font-size="10.5" fill="#6b46c1" font-family="Helvetica, Arial, sans-serif" font-weight="normal" text-anchor="middle" dominant-baseline="central">cost-loss ratio C/L = 0.60  (site choice)</text>
+<text x="910" y="558" font-size="10" fill="#52606d" font-family="Helvetica, Arial, sans-serif" font-weight="normal" text-anchor="middle" dominant-baseline="central">fitted on 2021-2023 data only</text>
+<text x="1072" y="540" font-size="11.5" fill="#2f855a" font-family="Helvetica, Arial, sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="central">decide by risk</text>
+<text x="632" y="594" font-size="11.5" fill="#2f855a" font-family="Helvetica, Arial, sans-serif">the same forecast becomes a calibrated risk the site can set.</text>
+<rect x="50" y="634" width="1080" height="40" rx="9" fill="#eef7f0" stroke="#2f855a" stroke-width="1.4" />
+<text x="590.0" y="660" font-size="14" fill="#2f855a" font-family="Helvetica, Arial, sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="central">Two ways to read one forecast:  compare values (1-3)   vs   estimate the event probability (4).</text>
+</svg>

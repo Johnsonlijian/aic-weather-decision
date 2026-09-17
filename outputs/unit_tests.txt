@@ -1,0 +1,47 @@
+test_event_labels_match_independent_one_slot_window_contract (test_calibration_contract.CalibrationContractTests.test_event_labels_match_independent_one_slot_window_contract) ... ok
+test_earliest_policy_is_transparent_baseline (test_controller.ControllerTests.test_earliest_policy_is_transparent_baseline) ... ok
+test_hidden_truth_does_not_change_current_action (test_controller.ControllerTests.test_hidden_truth_does_not_change_current_action) ... ok
+test_missing_forecast_rejected (test_controller.ControllerTests.test_missing_forecast_rejected) ... ok
+test_outside_visible_forecast_is_not_used (test_controller.ControllerTests.test_outside_visible_forecast_is_not_used) ... ok
+test_precedence_excludes_successor_until_done (test_controller.ControllerTests.test_precedence_excludes_successor_until_done) ... ok
+test_risk_aware_uses_visible_forecast_snapshot (test_controller.ControllerTests.test_risk_aware_uses_visible_forecast_snapshot) ... ok
+test_current_interval_max_not_available (test_core.AvailabilityTests.test_current_interval_max_not_available) ... ok
+test_future_forecast_not_selected (test_core.AvailabilityTests.test_future_forecast_not_selected) ... ok
+test_hindcast_not_operational (test_core.AvailabilityTests.test_hindcast_not_operational) ... ok
+test_naive_timezone_rejected (test_core.AvailabilityTests.test_naive_timezone_rejected) ... ok
+test_cycle (test_core.SchedulingTests.test_cycle) ... ok
+test_no_window (test_core.SchedulingTests.test_no_window) ... ok
+test_optimum (test_core.SchedulingTests.test_optimum) ... ok
+test_precedence_detected (test_core.SchedulingTests.test_precedence_detected) ... ok
+test_resource_detected (test_core.SchedulingTests.test_resource_detected) ... ok
+test_bad_duration (test_core.WindowTests.test_bad_duration) ... ok
+test_bad_thresholds (test_core.WindowTests.test_bad_thresholds) ... ok
+test_contiguous (test_core.WindowTests.test_contiguous) ... ok
+test_failure_dominates_unknown (test_core.WindowTests.test_failure_dominates_unknown) ... ok
+test_fragmented (test_core.WindowTests.test_fragmented) ... ok
+test_missing_is_not_calm (test_core.WindowTests.test_missing_is_not_calm) ... ok
+test_no_restart_at_continuation_limit (test_core.WindowTests.test_no_restart_at_continuation_limit) ... ok
+test_scenario_missing_rejected (test_core.WindowTests.test_scenario_missing_rejected) ... ok
+test_short_horizon (test_core.WindowTests.test_short_horizon) ... ok
+test_single_slot (test_core.WindowTests.test_single_slot) ... ok
+test_start_vs_continue (test_core.WindowTests.test_start_vs_continue) ... ok
+test_threshold_equality (test_core.WindowTests.test_threshold_equality) ... ok
+test_asymmetric_continuation_rule_differs_from_symmetric_planning (test_episode_engine.EpisodeEngineTests.test_asymmetric_continuation_rule_differs_from_symmetric_planning) ... ok
+test_breach_stops_episode_and_retains_cutoff_loss (test_episode_engine.EpisodeEngineTests.test_breach_stops_episode_and_retains_cutoff_loss) ... ok
+test_forecast_is_unavailable_until_available_hour (test_episode_engine.EpisodeEngineTests.test_forecast_is_unavailable_until_available_hour) ... ok
+test_hidden_future_truth_cannot_change_first_decision (test_episode_engine.EpisodeEngineTests.test_hidden_future_truth_cannot_change_first_decision) ... ok
+test_missing_active_weather_is_unresolved (test_episode_engine.EpisodeEngineTests.test_missing_active_weather_is_unresolved) ... ok
+test_operational_replay_rejects_constructed_forecasts (test_episode_engine.EpisodeEngineTests.test_operational_replay_rejects_constructed_forecasts) ... ok
+test_resource_capacity_is_reserved_across_active_tasks (test_episode_engine.EpisodeEngineTests.test_resource_capacity_is_reserved_across_active_tasks) ... ok
+test_html_rejected (test_inputs.InputTests.test_html_rejected) ... ok
+test_missing_preserved (test_inputs.InputTests.test_missing_preserved) ... ok
+test_request_stamp_hour24_is_interval_end (test_inputs.InputTests.test_request_stamp_hour24_is_interval_end) ... ok
+test_restrict_rows_keeps_inclusive_interval_and_station (test_inputs.InputTests.test_restrict_rows_keeps_inclusive_interval_and_station) ... ok
+test_restrict_rows_rejects_duplicate_station_hour (test_inputs.InputTests.test_restrict_rows_rejects_duplicate_station_hour) ... ok
+test_restrict_rows_rejects_empty_requested_interval (test_inputs.InputTests.test_restrict_rows_rejects_empty_requested_interval) ... ok
+test_units_and_hour24 (test_inputs.InputTests.test_units_and_hour24) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.044s
+
+OK

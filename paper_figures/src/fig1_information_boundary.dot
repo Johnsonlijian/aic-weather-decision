@@ -1,0 +1,29 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", pad="0.15", nodesep="0.25", ranksep="0.38", splines=polyline, fontname="Arial", fontsize=12,
+    label="Realised weather is read only after current starts have been recorded.", labelloc=b];
+  node [shape=box, style="rounded,filled", fontname="Arial", fontsize=12, margin="0.14,0.10", color="#334155", penwidth=1.2];
+  edge [fontname="Arial", fontsize=10, color="#475569", arrowsize=0.7, penwidth=1.1];
+
+  subgraph cluster_visible {
+    label="Available at decision time";
+    color="#93C5FD"; penwidth=1.5; style="rounded,dashed"; fontsize=12;
+    forecast [label="Forecast snapshot\nissue and availability", fillcolor="#DBEAFE"];
+    state [label="Completed / active tasks\nprecedence and capacity", fillcolor="#DBEAFE"];
+    constraints [label="Operation contract\nstart / continuation rules", fillcolor="#DBEAFE"];
+  }
+
+  controller [label="Choose and record starts\nresource-feasible policy", fillcolor="#FEF3C7", color="#B45309", penwidth=1.8];
+
+  subgraph cluster_evaluator {
+    label="Independent evaluator";
+    color="#C4B5FD"; penwidth=1.5; style="rounded,dashed"; fontsize=12;
+    truth [label="Realised interval weather\nheld outside the controller", fillcolor="#EDE9FE", color="#6D28D9"];
+    status [label="Evaluate execution\ncomplete / unresolved / censored\nretain common cutoff loss", fillcolor="#F1F5F9"];
+  }
+
+  forecast -> controller;
+  state -> controller;
+  constraints -> controller;
+  controller -> status [label="commit"];
+  truth -> status [label="after action"];
+}

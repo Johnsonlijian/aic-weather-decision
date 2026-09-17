@@ -1,0 +1,14 @@
+{
+  "source_type": "constructed_not_observed",
+  "first_law_one_hour_admissibility": [
+    0.5,
+    0.5
+  ],
+  "second_law_one_hour_admissibility": [
+    0.5,
+    0.5
+  ],
+  "first_law_two_hour_window_probability": 0.5,
+  "second_law_two_hour_window_probability": 0.0,
+  "independence_product_in_both": 0.25
+}

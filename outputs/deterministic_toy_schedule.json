@@ -1,0 +1,13 @@
+{
+  "status": "optimal",
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "solver": "SciPy-HiGHS",
+  "starts": {
+    "prepare": 0,
+    "lift_A": 8,
+    "lift_B": 6,
+    "finish": 11
+  },
+  "makespan": 13,
+  "mip_gap": 0.0
+}

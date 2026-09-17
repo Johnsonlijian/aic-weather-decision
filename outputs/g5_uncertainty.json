@@ -1,0 +1,71 @@
+{
+  "limit": 12.0,
+  "test_rows": 47322,
+  "test_positives": 9518,
+  "block_days": 7.0,
+  "draws": 2000,
+  "window_hours": 12,
+  "skill_vs_climatology": {
+    "estimate": 0.412072608446413,
+    "ci_low": 0.34915356335149234,
+    "ci_high": 0.4740329991826605,
+    "blocks": 38,
+    "draws": 2000
+  },
+  "skill_vs_raw_threshold": {
+    "estimate": 0.31563881829015594,
+    "ci_low": 0.27790892512460075,
+    "ci_high": 0.3600870053623244,
+    "blocks": 38,
+    "draws": 2000
+  },
+  "miss_rate": {
+    "estimate": 0.38316873292708553,
+    "ci_low": 0.30044264726598413,
+    "ci_high": 0.48735675400893863,
+    "blocks": 37,
+    "draws": 2000
+  },
+  "false_alarm_rate": {
+    "estimate": 0.08001798751454872,
+    "ci_low": 0.054497460082911404,
+    "ci_high": 0.1131620573890626,
+    "blocks": 38,
+    "draws": 2000
+  },
+  "transfer_median_station_bootstrap": {
+    "estimate": 0.3718599751572459,
+    "ci_low": 0.348596489402637,
+    "ci_high": 0.3950212197791171,
+    "stations": 45,
+    "draws": 2000,
+    "negative_stations": 2
+  },
+  "episodes": {
+    "9": {
+      "positives": 22305,
+      "episodes": 11,
+      "positives_per_episode": 2027.7
+    },
+    "12": {
+      "positives": 9518,
+      "episodes": 37,
+      "positives_per_episode": 257.2
+    },
+    "13": {
+      "positives": 6858,
+      "episodes": 40,
+      "positives_per_episode": 171.4
+    },
+    "16.5": {
+      "positives": 2406,
+      "episodes": 32,
+      "positives_per_episode": 75.2
+    },
+    "20": {
+      "positives": 509,
+      "episodes": 18,
+      "positives_per_episode": 28.3
+    }
+  }
+}

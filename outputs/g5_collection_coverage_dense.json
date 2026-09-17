@@ -1,0 +1,298 @@
+{
+  "manifest": "outputs/gfs_gust_manifest_dense.jsonl",
+  "lead_grid": [
+    3,
+    9,
+    15,
+    21
+  ],
+  "cycles": [
+    "00",
+    "12"
+  ],
+  "issue_dates": 1583,
+  "run_cycles": 12558,
+  "by_month": {
+    "2021-06": {
+      "days_present": 30,
+      "days_complete": 30,
+      "days_in_month": 30
+    },
+    "2021-07": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31
+    },
+    "2021-08": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31
+    },
+    "2021-09": {
+      "days_present": 30,
+      "days_complete": 30,
+      "days_in_month": 30
+    },
+    "2021-10": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31
+    },
+    "2021-11": {
+      "days_present": 30,
+      "days_complete": 30,
+      "days_in_month": 30
+    },
+    "2021-12": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31
+    },
+    "2022-01": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31
+    },
+    "2022-02": {
+      "days_present": 28,
+      "days_complete": 28,
+      "days_in_month": 28
+    },
+    "2022-03": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31
+    },
+    "2022-04": {
+      "days_present": 30,
+      "days_complete": 30,
+      "days_in_month": 30
+    },
+    "2022-05": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31
+    },
+    "2022-06": {
+      "days_present": 30,
+      "days_complete": 30,
+      "days_in_month": 30
+    },
+    "2022-07": {
+      "days_present": 31,
+      "days_complete": 25,
+      "days_in_month": 31
+    },
+    "2022-08": {
+      "days_present": 31,
+      "days_complete": 22,
+      "days_in_month": 31
+    },
+    "2022-09": {
+      "days_present": 30,
+      "days_complete": 27,
+      "days_in_month": 30
+    },
+    "2022-10": {
+      "days_present": 31,
+      "days_complete": 25,
+      "days_in_month": 31
+    },
+    "2022-11": {
+      "days_present": 30,
+      "days_complete": 26,
+      "days_in_month": 30
+    },
+    "2022-12": {
+      "days_present": 31,
+      "days_complete": 27,
+      "days_in_month": 31
+    },
+    "2023-01": {
+      "days_present": 31,
+      "days_complete": 23,
+      "days_in_month": 31
+    },
+    "2023-02": {
+      "days_present": 28,
+      "days_complete": 25,
+      "days_in_month": 28
+    },
+    "2023-03": {
+      "days_present": 31,
+      "days_complete": 28,
+      "days_in_month": 31
+    },
+    "2023-04": {
+      "days_present": 30,
+      "days_complete": 27,
+      "days_in_month": 30
+    },
+    "2023-05": {
+      "days_present": 31,
+      "days_complete": 29,
+      "days_in_month": 31
+    },
+    "2023-06": {
+      "days_present": 30,
+      "days_complete": 30,
+      "days_in_month": 30
+    },
+    "2023-07": {
+      "days_present": 31,
+      "days_complete": 28,
+      "days_in_month": 31
+    },
+    "2023-08": {
+      "days_present": 31,
+      "days_complete": 28,
+      "days_in_month": 31
+    },
+    "2023-09": {
+      "days_present": 30,
+      "days_complete": 28,
+      "days_in_month": 30
+    },
+    "2023-10": {
+      "days_present": 31,
+      "days_complete": 29,
+      "days_in_month": 31
+    },
+    "2023-11": {
+      "days_present": 30,
+      "days_complete": 28,
+      "days_in_month": 30
+    },
+    "2023-12": {
+      "days_present": 31,
+      "days_complete": 25,
+      "days_in_month": 31
+    },
+    "2024-01": {
+      "days_present": 31,
+      "days_complete": 29,
+      "days_in_month": 31
+    },
+    "2024-02": {
+      "days_present": 29,
+      "days_complete": 27,
+      "days_in_month": 29
+    },
+    "2024-03": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31
+    },
+    "2024-04": {
+      "days_present": 30,
+      "days_complete": 28,
+      "days_in_month": 30
+    },
+    "2024-05": {
+      "days_present": 31,
+      "days_complete": 29,
+      "days_in_month": 31
+    },
+    "2024-06": {
+      "days_present": 30,
+      "days_complete": 27,
+      "days_in_month": 30
+    },
+    "2024-07": {
+      "days_present": 31,
+      "days_complete": 29,
+      "days_in_month": 31
+    },
+    "2024-08": {
+      "days_present": 31,
+      "days_complete": 31,
+      "days_in_month": 31
+    },
+    "2024-09": {
+      "days_present": 30,
+      "days_complete": 28,
+      "days_in_month": 30
+    },
+    "2024-10": {
+      "days_present": 31,
+      "days_complete": 30,
+      "days_in_month": 31
+    },
+    "2024-11": {
+      "days_present": 30,
+      "days_complete": 28,
+      "days_in_month": 30
+    },
+    "2024-12": {
+      "days_present": 31,
+      "days_complete": 30,
+      "days_in_month": 31
+    },
+    "2025-01": {
+      "days_present": 31,
+      "days_complete": 30,
+      "days_in_month": 31
+    },
+    "2025-02": {
+      "days_present": 28,
+      "days_complete": 27,
+      "days_in_month": 28
+    },
+    "2025-03": {
+      "days_present": 31,
+      "days_complete": 28,
+      "days_in_month": 31
+    },
+    "2025-04": {
+      "days_present": 30,
+      "days_complete": 27,
+      "days_in_month": 30
+    },
+    "2025-05": {
+      "days_present": 31,
+      "days_complete": 30,
+      "days_in_month": 31
+    },
+    "2025-06": {
+      "days_present": 30,
+      "days_complete": 29,
+      "days_in_month": 30
+    },
+    "2025-07": {
+      "days_present": 31,
+      "days_complete": 30,
+      "days_in_month": 31
+    },
+    "2025-08": {
+      "days_present": 31,
+      "days_complete": 30,
+      "days_in_month": 31
+    },
+    "2025-09": {
+      "days_present": 30,
+      "days_complete": 30,
+      "days_in_month": 30
+    }
+  },
+  "complete_months": [
+    "2021-06",
+    "2021-07",
+    "2021-08",
+    "2021-09",
+    "2021-10",
+    "2021-11",
+    "2021-12",
+    "2022-01",
+    "2022-02",
+    "2022-03",
+    "2022-04",
+    "2022-05",
+    "2022-06",
+    "2023-06",
+    "2024-03",
+    "2024-08",
+    "2025-09"
+  ],
+  "first_date": "2021-06-01",
+  "last_date": "2025-09-30"
+}

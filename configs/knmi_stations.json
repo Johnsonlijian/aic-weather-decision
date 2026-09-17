@@ -1,0 +1,26 @@
+{
+  "purpose": "Fixed station set for the GFS-GUST / KNMI wind decision study.",
+  "selection_rule": "The three KNMI stations already retrieved in the study seed set (coastal/airport/inland spread across the Netherlands). No station was added or dropped after seeing any result.",
+  "coordinate_source": "Coordinates must be verified against the official KNMI station table before a manuscript claim uses them; the values below are the ones used by the existing pilot pipeline and are flagged until verified.",
+  "coordinate_status": "PENDING_OFFICIAL_CONFIRMATION",
+  "stations": [
+    {
+      "station_id": "240",
+      "name": "Schiphol (airport, coastal-influenced)",
+      "latitude": 52.3,
+      "longitude": 4.79
+    },
+    {
+      "station_id": "260",
+      "name": "De Bilt (inland)",
+      "latitude": 52.1,
+      "longitude": 5.18
+    },
+    {
+      "station_id": "344",
+      "name": "Rotterdam (urban port)",
+      "latitude": 51.89,
+      "longitude": 4.31
+    }
+  ]
+}

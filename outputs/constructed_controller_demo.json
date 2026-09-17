@@ -1,0 +1,12 @@
+{
+  "source_type": "constructed_controller_smoke_only",
+  "nonanticipative_visible_snapshot_check": "PASS",
+  "rows": 4,
+  "policies": [
+    "earliest",
+    "risk_aware"
+  ],
+  "hidden_truth_is_evaluator_only": true,
+  "empirical_weather_rows": 0,
+  "empirical_project_files": 0
+}

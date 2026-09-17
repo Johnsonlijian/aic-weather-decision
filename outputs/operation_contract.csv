@@ -1,0 +1,5 @@
+operation_id,weather_variable,unit,start_limit,continuation_limit,duration,source_id,source_locator,evidence_status,implementation_use
+HS2_launch_girder_segment,gust wind,m/s,11.1,20.0,NOT_ESTABLISHED,S05,HS2 web paragraphs 66-70,documented case-specific limits; duration and restart/anchor response incomplete,threshold fixture only; never infer production duration
+toy_sensitive_activity,gust wind,m/s,11.1,20.0,2 abstract slots,S05,thresholds copied from documented case for software test,constructed fixture; abstract duration is not HS2 evidence,engine test only; never use as HS2 production evidence
+KNMI_truth_series,FX past-hour maximum,m/s,NOT_APPLICABLE,NOT_APPLICABLE,1 hour observation,S07,KNMI hourly archive definitions and downloaded metadata,measurement semantics documented; no construction operation contract,truth-side calibration/probe input only
+GFS_predictor,GUST instantaneous,m/s,NOT_APPLICABLE,NOT_APPLICABLE,6 hour lead probe,S08;S09,GFS field metadata and one archived GRIB2 run,forecast field retrieved; mapping to FX and operational availability not yet closed,predictor input only; calibration required before dispatch evaluation

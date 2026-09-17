@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-09-15T08:52:35.575709+00:00",
+  "source_package": "spatialrisk",
+  "source_version": "0.8.2",
+  "tarball_url": "https://cran.r-project.org/src/contrib/spatialrisk_0.8.2.tar.gz",
+  "tarball_sha256": "a2710ab1384e5e7c3967f885f2fa717ff238136122e35c453ffb70ffcfb9c394",
+  "extracted": "data/knmi_stations.rda",
+  "csv": "sources\\raw\\knmi_stations\\knmi_stations.csv",
+  "r_stdout": "50 stations written\nstation,city,lon,lat,altitude,X,Y",
+  "why_this_source": "KNMI's own station-list file returns HTTP 403 to programmatic clients; this published CRAN data set carries the KNMI station table and is fetched from CRAN with a recorded hash."
+}

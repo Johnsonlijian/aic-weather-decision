@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "source_type": "constructed_verification_only",
+  "enumerated_weather_paths": 6561,
+  "duration_variants_per_path": 4,
+  "vector_reference_comparisons": 26244,
+  "comparison_failures": 0,
+  "observed_weather_used_in_this_demo": false,
+  "project_network_type": "constructed",
+  "report_scope": "constructed kernel only; does not overwrite live project status",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "platform": "Windows",
+  "toy_scheduler_status": "optimal",
+  "toy_makespan": 13
+}

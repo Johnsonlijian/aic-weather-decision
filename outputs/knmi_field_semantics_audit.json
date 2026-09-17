@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-09-16T05:01:27.098803+00:00",
+  "raw_files": 230,
+  "csv_files_rewritten": 230,
+  "rows": 1743216,
+  "R_occurrence_values": {
+    "0": 752787,
+    "1": 192898
+  },
+  "R_is_binary_flag": true,
+  "RH_amount_mm_distinct": 0,
+  "RH_amount_mm_min": null,
+  "RH_amount_mm_max": null,
+  "RH_trace_hours": 0,
+  "RH_other_negative_codes": {},
+  "DR_hours_distinct": 0,
+  "DR_hours_min": null,
+  "DR_hours_max": null,
+  "note": "R is a 0/1 occurrence flag; the previous R/10 'millimetre' total was not an amount. RH is 0.1 mm with -1 meaning trace. DR is 0.1 h."
+}
