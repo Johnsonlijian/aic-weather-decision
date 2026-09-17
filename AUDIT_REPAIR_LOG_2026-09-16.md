@@ -1007,3 +1007,93 @@ normalisation denominator disclosed under the paired-comparison table is smalles
 | Tables / figures / references | 8 / 4 / 29, all cited in order |
 | Final package | `AiC_submission_package_2026-09-17.zip`, 170 files, 1.38 MB |
 | Human-only remaining | ORCID; Elsevier declaration tool; Editorial Manager; Zenodo token rotation |
+
+---
+
+# Round 12 — an external review, checked claim by claim
+
+An external reviewer returned a detailed critique. Its central judgements — that the paper's
+substance is real but its presentation is poor, that the negative result is the contribution,
+and that the prose is dense and heavily hedged — are fair and are not disputed here. Its
+specific defect list, however, mixed real defects with claims that do not survive checking
+against the current build, so each was tested rather than accepted.
+
+## What did not hold
+
+| Claim | Finding |
+|---|---|
+| Table 5 has a caption but no table body, making §3.6 unverifiable | **False.** The table renders on page 11 with all 28 cells and their intervals. The claim comes from text extraction, where the caption lands at a page break. |
+| Figure 3's caption reads "igure 3", missing the F | **False.** No occurrence of "igure" in the source or the PDF. |
+| Table 4 uses commas as decimal separators ("0,617", "0,605") | **False.** Every `d,ddd` in the PDF is a thousands separator (1,150 / 14,456 / 281,997). No comma decimals exist. |
+| Line numbers are mixed into the body text | **False as a defect.** The PDF carries margin line numbers because the journal requires them; they interleave with the text on extraction, which is what the reviewer's tool saw. |
+| "all four decide on the: whether to take…" is ungrammatical | **False.** The sentence reads "all four decide one thing: whether to take a protective planning action". |
+| Figure 4 has only a caption; the image may be missing | **False.** All four figures are embedded as vector Form XObjects on pages 4, 7, 9 and 10. `pdfimages` and pypdf's `.images` both report zero because they count raster images only, and these are vector PDFs. `verify_submission_package.py` now counts XObjects of either subtype, so a figure can no longer be captioned, cited and listed while missing from the render. |
+| "No single machine class or jurisdiction supplies more than three" contradicts the citations | **Ambiguous, not false.** China supplies three *distinct* limits (9.0, 12.0, 13.0 m/s); the review counted listed items, which double-counts 12.0 and includes a manufacturer manual. The sentence now names the three limits and says the 20.0 m/s figure is a manual for one crane model, so the count cannot be misread. |
+
+## What was real, and is fixed
+
+**The sampling section contradicted itself and described a sample it no longer used.** It
+called the 283,668 paired epochs "a superset of the study's own held-out split" and also said
+"these months fall inside the model-fitting period". Both cannot hold: the fitting period ends
+in December 2023 and the held-out months are in 2025. The epoch tables settle it — the
+sampling table is a strict superset of the study's table (all 281,997 epochs, including the
+47,322 held out), and it spans **every month from 2021-06 to 2025-09**, 52 contiguous months,
+of which 21 fall outside the fitting period. The section also still described "a contiguous
+annual cycle in 2021-2022 plus four further months spread across 2023 to 2025", which was
+true of an earlier, smaller pull and is not true of the 283,668-epoch sample.
+
+The paragraph now states the real coverage, says the sample contains the study's whole table
+plus 1,671 epochs the denser pull resolves and the 6-hourly one does not, and describes the
+internal split by its boundary (the 38,291 epochs before 2022) rather than as "the earliest".
+Five checks hold this: month coverage against the epoch tables, the superset arithmetic
+against the artifact, and the absence of both stale phrasings.
+
+**Version narration in the post-sample section.** The text referred to "an earlier two-month
+and then five-month version of this test", which is process history rather than science. The
+substantive point is kept and the narration dropped: restricting the same test to
+October-February gives an event rate of 0.296 against 0.246 for the full eleven months and
+0.260 in the fitting period. Those three numbers were recomputed from the current tables
+rather than carried over from the superseded run.
+
+**Template-shaped prose and meta-commentary.** The research questions are now prose rather
+than `(RQ1)/(RQ2)/(RQ3)` labels; "That measurement is the object of this paper" and "The
+honest summary of the engineering layer is that" are replaced by direct statements. The
+epistemic caveats the review grouped with these — "no detectable difference", "not something
+this design can establish", "descriptive only" — are kept, because removing them would
+overclaim rather than improve the prose.
+
+**The precipitation paragraph read as residue from another study.** The paper studies wind,
+yet §2.2 explained at length that KNMI's `R` is an occurrence flag rather than an amount. The
+field semantics matter, since misreading them corrupts any reuse of the parse, so the detail
+is kept but now says why it is there and states plainly that only gust and mean wind enter
+the results.
+
+**A dense sentence the review quoted.** The monotonicity result — the paper's one theoretical
+point — was written as "the action set induced by $f(m) \geq r$ is an upper-level set of $m$".
+It now leads with the consequence in planning terms: protecting when the calibrated
+probability exceeds a ratio is the same as protecting when the forecast gust exceeds some
+speed, so calibration can move the cut and smooth it but cannot invent a decision the raw
+threshold could not already make. The subset statement and the strict-monotonicity condition
+are unchanged.
+
+## Not done, and why
+
+- **Whole-manuscript readability rewrite.** The review is right that the prose is dense and
+  that terms such as moving-block bootstrap, upper-level set and relative economic value are
+  not buffered for a construction readership. One sentence was rewritten as a demonstration;
+  a full pass is a separate piece of work and was not attempted here.
+- **"Promote the monotonicity theorem to the contribution."** An earlier review asked for
+  this and it remains outstanding by choice: the paper's contribution is the empirical
+  separation and the null result, and elevating a one-line structural property to headline
+  status would overstate it.
+
+## State after round 12
+
+| Item | State |
+|---|---|
+| Unit tests | 113 passing |
+| Internal consistency | **101** checks passing |
+| Package verification | **58** checks passing, including a real XeLaTeX compile and figure embedding |
+| Independent recomputation | 13 of 13 headline numbers reproduced by a separate estimator |
+| External review, concrete claims | 7 checked and not reproduced; 6 real items fixed |
+| Human-only remaining | ORCID; Elsevier declaration tool; Editorial Manager; Zenodo token rotation |

@@ -440,7 +440,7 @@ check("denser sampling reduces the fixed limit's miss rate",
       and abs(det6["miss_rate"] - 0.283) < 0.005 and abs(det3["miss_rate"] - 0.212) < 0.005,
       f"{det6['miss_rate']:.3f} -> {det3['miss_rate']:.3f}")
 check("the sampling experiment is described as paired and not held out",
-      "controlled mechanism experiment and not a held-out evaluation" in text
+      "controlled mechanism experiment rather than an independent held-out evaluation" in text
       and samp["paired_epochs"] == 283668,
       f"{samp['paired_epochs']:,} paired epochs")
 check("the sampling section is present with its table",
@@ -450,6 +450,36 @@ check("the detector cut is scored by TSS, not by a degenerate criterion",
       abs(samp["best_tuned_threshold"]["6-hourly"]["evaluate_tss"] - 0.633) < 0.005
       and abs(samp["best_tuned_threshold"]["3-hourly"]["evaluate_tss"] - 0.650) < 0.005,
       "TSS reported")
+
+# The section used to describe its sample as "a contiguous annual cycle in 2021-2022 plus
+# four further months spread across 2023 to 2025" and to place those months "inside the
+# model-fitting period", while also calling the sample a superset of the study's held-out
+# split. Both cannot hold: the tables cover every month from 2021-06 to 2025-09, which
+# includes the held-out 2025 months. Verify the coverage against the epoch tables and
+# require the text to match it.
+_samp3 = pd.read_csv(ROOT / "outputs" / "epochs_samp3.csv", usecols=["epoch", "station_id"])
+_main = frame[["epoch", "station_id"]]
+_s_months = pd.to_datetime(_samp3["epoch"], utc=True, format="mixed").dt.to_period("M")
+_m_months = pd.to_datetime(_main["epoch"], utc=True, format="mixed").dt.to_period("M")
+_all_months = sorted(set(_s_months.unique()) | set(_m_months.unique()))
+check("the sampling table covers the study's whole month span, contiguously",
+      sorted(set(_s_months.unique())) == _all_months
+      and len(_all_months) == (_all_months[-1] - _all_months[0]).n + 1,
+      f"{len(set(_s_months.unique()))} months, {_all_months[0]}..{_all_months[-1]}")
+check("the sampling sample is stated as a superset of the study's own table",
+      "contains all 281,997 epochs" in text
+      and f"plus {samp['paired_epochs'] - len(_main):,}" in text,
+      f"{samp['paired_epochs']:,} - {len(_main):,} = {samp['paired_epochs'] - len(_main):,} extra")
+check("the sampling section no longer places its months inside the fitting period",
+      "fall inside the model-fitting period" not in text
+      and "contiguous annual cycle in 2021-2022" not in text,
+      "stale sample description removed")
+check("the sampling section states that the sample overlaps the held-out months",
+      "including the held-out months" in text, "overlap disclosed")
+check("the internal split is described by its boundary, not by 'earliest'",
+      f"tunes the cut on the {samp['tune_rows']:,} epochs before 2022" in text
+      and samp["tune_rows"] + samp["evaluate_rows"] == samp["paired_epochs"],
+      f"{samp['tune_rows']:,} + {samp['evaluate_rows']:,} = {samp['paired_epochs']:,}")
 check("the manuscript no longer says the experiment was not executed",
       "we have not executed it" not in text, "claim updated")
 

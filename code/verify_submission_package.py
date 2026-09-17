@@ -124,6 +124,32 @@ def main() -> int:
     for name in ("Manuscript_AiC.tex", "Manuscript_AiC.md"):
         check(f"the packaged {name} exists", (pkg / "Manuscript" / name).exists())
 
+    # ---------- 2b. the figures are actually embedded in the rendered PDF ----------
+    # A figure can be captioned, cited and shipped as a file yet still be missing from the
+    # render. The figures are vector PDFs, so they arrive as Form XObjects, not as raster
+    # images: `pdfimages` and pypdf's .images both report zero for this document, which is
+    # why the check counts XObjects of either subtype.
+    try:
+        from pypdf import PdfReader
+        reader = PdfReader(pkg / "Manuscript" / "Manuscript_AiC.pdf")
+        embedded = 0
+        for page in reader.pages:
+            res = page.get("/Resources")
+            xo = res.get("/XObject") if res else None
+            if xo is None:
+                continue
+            for v in xo.get_object().values():
+                if v.get_object().get("/Subtype") in ("/Form", "/Image"):
+                    embedded += 1
+        n_figs = len(re.findall(r"\\includegraphics", (pkg / "Manuscript" / "Manuscript_AiC.tex")
+                                .read_text(encoding="utf-8")))
+        check("every included figure is embedded in the rendered PDF",
+              embedded == n_figs and embedded > 0,
+              f"{embedded} embedded XObjects vs {n_figs} includegraphics")
+    except ImportError:
+        check("pypdf available for the figure-embedding check", False,
+              "install pypdf to enable this check")
+
     # ---------- 3. figures match the manuscript ----------
     md = (ROOT / "manuscript" / "Manuscript_AiC_WORKING_DRAFT.md").read_text(encoding="utf-8")
     stems = list(dict.fromkeys(re.findall(r"\]\([^)]*?/([A-Za-z0-9_]+)\.pdf\)", md)))
