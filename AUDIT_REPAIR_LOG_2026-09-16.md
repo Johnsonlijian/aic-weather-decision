@@ -907,3 +907,88 @@ the deposit, since the journal expects shared data to be cited in the reference 
 > is therefore a faithful snapshot of the pre-publication state; this section records what
 > happened next. The archive is deliberately not rebuilt, so the deposit continues to match
 > the frozen build byte for byte.
+
+---
+
+# Round 11 — the submission package, and four defects it exposed
+
+Building the final package against the journal's own requirements turned up four things
+that reading the manuscript alone had not.
+
+## S1. Three of the four figures were never cited in the text
+
+Only Fig. 2 had an in-text callout. Figs 1, 3 and 4 were included and captioned but never
+cited, which the journal checks. They now have substantive callouts: Fig. 1 where the
+operation contract is set out, Fig. 3 in the paired comparison (noting that it shows the
+full swept grid rather than the five reported ratios), and Fig. 4 before the replay figure.
+The consistency check now requires every figure to be cited and the citations to run in
+figure order.
+
+## S2. The tables were numbered in the wrong order
+
+The manuscript cited its tables as **6, 1, 3, 4, 5, 7, 8, 2**: the work-package table was
+forward-referenced from the Methods before Table 1, and the positioning table sat last in
+the Discussion. The numbering was shifted to 1..8 in citation order by a single-pass
+substitution (a cyclic shift applied any other way would cascade), with the pre-state
+asserted so the transform cannot run twice. A check now enforces citation order and
+gap-free captions.
+
+## S3. Two tables reported one quantity two ways, and the text explained it wrongly
+
+A reviewer had flagged that the 4 h row of the latency table (0.615 / 0.617 / 0.529)
+disagreed with the 12 m/s row of the peak-REV table (0.616 / 0.618 / 0.530). Both were
+faithful to their own artefacts; the defect was the claim that the 4 h column "reproduces
+the primary analysis exactly, epoch for epoch". It does not: holding the window gates common
+across the four latency rules admits **47,431** epochs against the primary split's
+**47,322**, and that 109-epoch difference moves every peak by at most 0.0013. The text and
+the table caption now state the sample difference and call the agreement close rather than
+exact. `code/check_latency_consistency.py` prints both samples and both peak sets, and three
+checks guard the wording.
+
+## S4. Ten references rendered as "(n.d.)"
+
+Five of them state their year in the source itself and now carry it: GB 5144-**2006**,
+JGJ 196-**2010**, JGJ 33-**2012**, GB 55034-**2022** (the year is part of the standard's
+designation) and the WMO CIMO Guide (the cited path is the 2018 preliminary edition). The
+remaining five genuinely carry no date — two are continuously updated data services, for
+which "n.d." with an access date is correct, and three are undated documents. The manuscript
+also now says that the four Chinese standards are cited from publicly posted copies, and the
+conclusions no longer reuse the results section's sentence verbatim.
+
+## S5. The package builder was describing a different revision
+
+`code/build_submission_package.py` still wrote "[Repository DOI / URL to be inserted after
+deposit.]", claimed Highlights of up to 125 characters (the journal's limit is 85, and two
+bullets exceeded it), reported "22 references" against the actual 29, and "74/74 checks"
+against the actual 94. It also shipped the wrong figure set — an uncited risk-efficiency
+figure as `Figure_3`, and not the cited replay figure at all — and its `.tex` pointed at
+`../paper_figures/output/`, which does not exist inside a package, so the editable source
+could not be compiled by an editor.
+
+The builder is rewritten: counts are measured from the packaged artefacts at build time, the
+figure numbering is read from the manuscript's own inclusion order, the `.tex` figure paths
+are retargeted to the packaged names, and the build refuses to complete unless the deposit
+DOI is present in both the manuscript and `CITATION.cff`. The stale
+`Declarations_text_drafts.md` (which still carried the DOI placeholder) and the internal
+hostile review are no longer shipped.
+
+`code/verify_submission_package.py` checks the built package as the author will hand it
+over: manifest integrity, that the packaged PDF is byte-identical to the current render,
+that the figure set matches the manuscript figure for figure, that each declaration exists
+in both formats, that no superseded number or placeholder survives, and — with `--compile` —
+that the packaged `.tex` actually compiles with XeLaTeX **in a throwaway copy** and comes out
+at the same page count as the shipped PDF. That last check is run in a copy because an
+earlier version of it compiled in place, overwriting the packaged PDF and breaking the
+manifest.
+
+## State after round 11
+
+| Item | State |
+|---|---|
+| Unit tests | 113 passing |
+| Internal consistency | **94** checks passing |
+| Package verification | **57** checks passing, including a real XeLaTeX compile (19 pages) |
+| Independent recomputation | 13 of 13 headline numbers reproduced by a separate estimator |
+| Tables / figures / references | 8 / 4 / 29, all cited in order |
+| Final package | `AiC_submission_package_2026-09-17.zip`, 170 files, 1.38 MB |
+| Human-only remaining | ORCID; Elsevier declaration tool; Editorial Manager; Zenodo token rotation |

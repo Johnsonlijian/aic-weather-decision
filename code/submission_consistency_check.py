@@ -256,6 +256,25 @@ check("manuscript reports no detectable difference rather than equivalence",
 check("manuscript no longer claims a uniform re-tuning gain",
       all(tok not in text for tok in ("0.45-0.53", "0.54-0.84")),
       "peak-based gain claim removed")
+
+# ---------- 9d. the peak-REV table and the latency table must not report one quantity two ways ----------
+# The latency rebuild is not the primary sample: holding the window gates common across the
+# four rules admits 109 more epochs, so the 4 h row's peaks differ from the peak-REV table's
+# in the third decimal. The text used to claim the 4 h column "reproduces the primary
+# analysis exactly, epoch for epoch", which made the two tables look contradictory
+# (0.530 vs 0.529). After the 2026-09-17 renumbering these are Table 3 and Table 4.
+_lat = json.loads((ROOT / "outputs" / "g5_latency_sensitivity.json").read_text(encoding="utf-8"))
+_row4 = next(r for r in _lat["rows"] if r["latency_hours"] == 4)
+_primary_n = replay["test_epochs"]
+check("the latency rebuild's sample is disclosed when it differs from the primary split",
+      (_row4["test_epochs"] == _primary_n)
+      or ("47,431" in text and "47,322" in text),
+      f"4 h {_row4['test_epochs']:,} vs primary {_primary_n:,}")
+check("no claim that the latency column reproduces the primary split epoch for epoch",
+      "reproduces the primary analysis exactly" not in text,
+      "exactness claim removed")
+check("the peak-REV/latency agreement is stated as close, not exact",
+      "within 0.0013" in text, "tolerance stated")
 check("paired fixed-limit penalty is quoted per ratio",
       "-0.913" in text and "+0.0525" in text, "paired penalties present")
 check("rare-event clustering is reported",
@@ -297,7 +316,7 @@ check("every parametric controller is tuned on CAL and fixed for TEST",
       and wp["tuned_parameters"]["base"]["no_weather"] is None,
       f"base {wp['tuned_parameters']['base']}")
 base = wp["test"]["base"]
-check("work-package costs quoted in Table 6 match the artefact",
+check("work-package costs quoted in Table 5 match the artefact",
       abs(base["cost"]["operating_limit"] - 2.634) < 0.01
       and abs(base["cost"]["calibrated"] - 2.793) < 0.01
       and abs(base["cost"]["no_weather"] - 4.124) < 0.01,
@@ -307,12 +326,12 @@ check("the manuscript reports the operating limit's advantage with its interval 
       "lowest mean cost in" in text and "overlaps the calibrated rule" in text,
       "interval overlap stated for the base scenario")
 wp_table = json.loads((ROOT / "outputs" / "g5_work_package_table.json").read_text(encoding="utf-8"))
-check("Table 6 carries sample size, units and intervals",
+check("Table 5 carries sample size, units and intervals",
       wp_table["packages_per_scenario"] == 765
       and wp_table["stations"] == 45
       and "units of the exceedance loss" in wp_table["units"],
       f"{wp_table['packages_per_scenario']} packages, {wp_table['stations']} stations")
-check("every Table 6 cell has a bootstrap interval",
+check("every Table 5 cell has a bootstrap interval",
       all(set(v) == {"mean", "ci_low", "ci_high"}
           for scen in wp_table["table"].values() for v in scen.values()),
       "intervals present for all 28 cells")
@@ -393,7 +412,7 @@ check("the sampling experiment is described as paired and not held out",
       f"{samp['paired_epochs']:,} paired epochs")
 check("the sampling section is present with its table",
       "Isolating one cause: the forecast's sampling interval" in text
-      and "Table 8" in text, "section 3.9 present")
+      and "Table 7. Effect of forecast sampling density" in text, "section 3.9 present")
 check("the detector cut is scored by TSS, not by a degenerate criterion",
       abs(samp["best_tuned_threshold"]["6-hourly"]["evaluate_tss"] - 0.633) < 0.005
       and abs(samp["best_tuned_threshold"]["3-hourly"]["evaluate_tss"] - 0.650) < 0.005,
@@ -436,6 +455,43 @@ check("no superseded number or claim survives in the text", not stale_hits,
 figs = re.findall(r"\]\(([^)]+\.pdf)\)", text)
 missing = [f for f in figs if not (MD.parent / f).resolve().exists()]
 check("every referenced figure exists", not missing, f"missing: {missing or 'none'}")
+
+# Every figure must be cited in the text, and the citations must run in figure order -
+# Elsevier checks both. The manuscript previously carried four figures with a callout for
+# only Fig. 2, so Figs 1, 3 and 4 would have reached the reviewer uncited.
+callouts = [(m.start(), int(m.group(1))) for m in re.finditer(r"Fig\.\s*(\d+)", text)]
+cited_nums = {n for _, n in callouts}
+check("every figure is cited in the text",
+      cited_nums >= set(range(1, len(figs) + 1)),
+      f"{len(figs)} figures, cited: {sorted(cited_nums)}")
+first_seen, order_ok = [], True
+for n in range(1, len(figs) + 1):
+    positions = [pos for pos, num in callouts if num == n]
+    if not positions:
+        order_ok = False
+        break
+    first_seen.append(min(positions))
+check("figures are cited in order of first appearance",
+      order_ok and first_seen == sorted(first_seen),
+      f"first-citation order: {[n for _, n in sorted(zip(first_seen, range(1, len(first_seen) + 1)))]}")
+
+# Tables must be numbered in citation order too. Before 2026-09-17 the manuscript cited
+# Table 6 from the Methods ahead of Table 1 and cited the positioning table (Table 2) last
+# of all, so a reviewer met the tables as 6, 1, 3, 4, 5, 7, 8, 2; the numbering was shifted
+# to 1..8 in citation order.
+table_mentions = [(m.start(), int(m.group(1))) for m in re.finditer(r"Table\s+(\d+)", text)]
+table_captions = [int(m.group(1)) for m in re.finditer(r"^Table\s+(\d+)\.", text, re.M)]
+first_seen_t: list[int] = []
+for _, n in table_mentions:
+    if n not in first_seen_t:
+        first_seen_t.append(n)
+n_tables = len(table_captions)
+check("tables are cited in order of first appearance",
+      first_seen_t == list(range(1, n_tables + 1)),
+      f"first-citation order: {first_seen_t}")
+check("table captions are numbered 1..n without gaps",
+      sorted(table_captions) == list(range(1, n_tables + 1)),
+      f"{n_tables} captions: {sorted(table_captions)}")
 
 failed = [c for c in checks if not c[1]]
 print(f"\n{len(checks) - len(failed)}/{len(checks)} checks passed")
