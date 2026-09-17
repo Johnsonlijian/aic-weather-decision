@@ -786,3 +786,82 @@ A stale clause was also removed from the sampling section: it had said the dense
 improvement "survives tuning the cut", which was true of the 65,206-epoch version but
 is contradicted by the 283,668-epoch version, where the tuned-cut miss rate barely
 moves. The section now states the substitution interpretation consistently.
+
+> **Superseded.** The five-month window and its pooled skill of -0.508 reported in this
+> section were produced before the row-alignment defect in B1 was found. The defect
+> inverted the sign of the out-of-sample skill. The live result is the eleven-month
+> window of B2, **+0.383 [+0.320, +0.447]**, with positive skill in every month. The
+> section is kept as a record of what the artefact looked like, not as a current result.
+
+---
+
+# Round 9 — deposit integrity, and the ratio grid the paper never stated
+
+Three defects were found while preparing the Zenodo deposit. Two are in the manuscript,
+one is in the deposit tooling itself.
+
+## Z1. The deposit tool's `--dry-run` performed a real deposit
+
+`submission/release/deposit_to_zenodo.py` referenced `args.dry_run` only *after* it had
+created a deposition, uploaded the 24 MB archive and written the metadata; the script had
+no argument parser at all, so the flag was silently ignored and a rehearsal deposited for
+real. A draft was left on Zenodo with a pre-reserved DOI.
+
+The rewrite inverts the dangerous default: staging is now the default action and the
+irreversible step requires an explicit `--publish`, `--deposition-id` finishes a draft an
+earlier run left behind without re-uploading, `--dry-run` makes **no request at all**, and
+`--publish` refuses unless the checksum of the staged file matches the local archive.
+`tests/test_deposit_guard.py` (9 tests) holds each of those in place by recording every
+request the tool would send; on the old script the dry-run test fails immediately because
+the tool wrote to the network.
+
+## Z2. The relative-value grid was overstated, and the reviewer was right about the extreme
+
+Section 2.4 said the cost-loss ratio "is swept over $0 < r < 1$". The artefact sweeps 40
+log-spaced ratios from 0.01 to 0.99 and the paired comparison reports **five** of them.
+The old sentence therefore claimed more than the paper shows, and it left the "131% of the
+climatology-to-perfect range" figure unreproducible from the text.
+
+Worse, the reviewer's challenge — "the fixed rule reaches -30.85 at r = 0.99" — is real
+but is not an economic finding. Relative value divides by `min(r, s) - r * s`, which is
+`s(1-r)` above the event rate and vanishes as `r -> 1`; at the 12 m/s limit and s = 0.201
+the denominator is 0.0020 at `r = 0.99` and 0.0080 at `r = 0.01`, so both ends of the grid
+are ratios of two near-zero expenses. `code/check_rev_conditioning.py` reports this, and
+the extremes are -30.85 and -8.63 respectively. The five reported ratios have denominators
+of 0.040 to 0.480 and are unaffected.
+
+The response is therefore neither of the reviewer's two options: the grid is now stated,
+the five paired ratios are named, the normalisation is disclosed as ill-conditioned at the
+ends, and the extremes are **not** quoted as findings. The figure caption also gains the
+second excursion — the curve leaves the panel at the high end too, which the caption
+previously explained only for the low end.
+
+## Z3. The archive shipped tests it could not run
+
+Two tests reached the release archive without the files they read:
+`test_deposit_guard.py` tested a script the archive deliberately omits, and
+`test_rev_conditioning.py` read an economic-value artefact that was not on the include
+list. Both would have handed a reader a suite that errors. The deposit test is now
+excluded from the archive, the artefact is included, the two tests that read the
+manuscript's prose skip when it is not redistributed, and
+`submission/release/verify_release_archive.py` extracts the built archive and runs its own
+suite there, so the package is tested as it will be received. Result: 104 tests, OK, two
+skipped by design.
+
+A related defect was in the checker rather than the package: `submission_consistency_check.py`
+allowed Highlights bullets of up to 125 characters. Elsevier's limit is 85 including
+spaces, and two bullets were over it. The limit is corrected, and three further checks
+were added so the bullets cannot state the paired null more strongly than the paper does
+("adds nothing" asserts zero; the design supports "not detectably different") and cannot
+quote a relative value without the cost ratio it belongs to.
+
+## State after round 9
+
+| Item | State |
+|---|---|
+| Unit tests | 113 passing (104 in the shipped archive, 2 skipped by design) |
+| Internal consistency | **83** checks passing |
+| Independent recomputation | 13 of 13 headline numbers reproduced by a separate estimator |
+| Archive self-test | extracted copy runs its own suite clean |
+| Zenodo | draft staged, file checksum verified against the local build, **not published** |
+| Post-sample validation | eleven months, frozen model, both null results replicate |

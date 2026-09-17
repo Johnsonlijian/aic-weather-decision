@@ -47,7 +47,18 @@ check("abstract <= 150 words", len(abstract.split()) <= 150, f"{len(abstract.spl
 hl_path = ROOT / "submission" / "Highlights.txt"
 hl = [l.strip() for l in hl_path.read_text(encoding="utf-8").splitlines() if l.strip()]
 check("highlights count 3-5", 3 <= len(hl) <= 5, f"{len(hl)} bullets")
-check("highlights <= 125 chars", all(len(l) <= 125 for l in hl), f"max {max(len(l) for l in hl)}")
+# Elsevier's Highlights specification is 85 characters per bullet including spaces. An
+# earlier version of this check allowed 125, which let two over-length bullets through.
+check("highlights <= 85 chars", all(len(l) <= 85 for l in hl), f"max {max(len(l) for l in hl)}")
+# The bullets must not be stronger than the paper. "adds nothing over" asserts a
+# difference of zero; the paired design supports only "not detectably different".
+check("highlights do not overstate the paired null",
+      not any(re.search(r"adds nothing|no benefit|useless", l, re.I) for l in hl),
+      "no stronger-than-manuscript null wording")
+# A relative value is only interpretable next to the ratio it belongs to.
+check("highlights scope the relative value with its cost ratio",
+      not any(re.search(r"-0\.9\d", l) and "C/L" not in l for l in hl),
+      "relative value carries its ratio")
 
 # ---------- 3. citations ----------
 # A citation is a bare @key or [@key]; an address is word@domain, so requiring
@@ -126,6 +137,29 @@ check("critical probability equals C/L (expense-optimal rule)",
 check("cost-loss ratio swept only over 0 < C/L < 1",
       all(0 < c["cost_loss_ratio"] < 1 for row in rev for c in row["curve"]),
       "grid inside (0,1)")
+# The grid is 40 log-spaced ratios, but the paired comparison reports five of them. Saying
+# only "swept over 0 < r < 1" overstated what is reported and left the "131% of the range"
+# figure unreproducible from the text.
+grid = sorted({c["cost_loss_ratio"] for row in rev for c in row["curve"]})
+check("the swept ratio grid is disclosed with its size and bounds",
+      "40-point log-spaced grid" in text and f"{grid[0]:.2f} to {grid[-1]:.2f}" in text,
+      f"grid {len(grid)} points {grid[0]:.3f}..{grid[-1]:.3f}")
+check("the five reported paired ratios are named in the methods",
+      all(f"{r:g}" in text for r in (0.05, 0.1, 0.2, 0.4, 0.6)) and "five pre-declared" in text,
+      "paired ratios named")
+# REV divides by min(r,s) - r*s, which is s*(1-r) once r > s and so vanishes as r -> 1.
+# The artifact's -30.85 at r = 0.99 is that division, not an economic result; the text has
+# to say so, because the curve in the figure leaves the panel at that end too.
+_rate = json.loads((ROOT / "outputs" / "g5_replay_v3.json").read_text(encoding="utf-8"))
+_s = _rate["test_positives"] / _rate["test_epochs"]
+_ill = [c["cost_loss_ratio"] for row in rev for c in row["curve"]
+        if min(c["cost_loss_ratio"], _s) - c["cost_loss_ratio"] * _s < 0.02]
+check("the relative-value normalisation is disclosed as ill-conditioned at the grid ends",
+      bool(_ill) and "denominator" in text and "vanishes" in text,
+      f"{len(_ill)} grid points below the 0.02 denominator floor")
+check("the manuscript does not quote the ill-conditioned extreme as a finding",
+      "-30.85" not in text and "-8.63" not in text,
+      "extremes not quoted")
 
 # ---------- 8. spatial transfer and decision-value transfer ----------
 sp = json.loads((ROOT / "outputs" / "g5_spatial_transfer_12ms.json").read_text(encoding="utf-8"))
