@@ -93,3 +93,28 @@ outputs/gates/raw/
 # Superseded pilot dataset: the three-station phase, kept locally for provenance only.
 outputs/decision_dataset.csv
 outputs/decision_dataset_*.csv
+# --- Public repository boundary -------------------------------------------------
+# The manuscript is under submission: its source, PDF and generated LaTeX stay private
+# until acceptance. The verified bibliography is kept because it is a reproducibility
+# asset in its own right.
+manuscript/*.md
+manuscript/*.tex
+manuscript/*.pdf
+manuscript/build.ps1
+manuscript/qa/
+!manuscript/references.json
+!manuscript/elsevier-with-titles.csl
+
+# Review and internal-process material.
+Hostile_Review_*.md
+progress_checkpoint_*.md
+PACKAGE_SCOPE.md
+MANIFEST_SHA256*.txt
+README_先读�?md
+protocol/
+rounds/
+logs/
+
+# Shell and editor history
+.Rhistory
+.RData
