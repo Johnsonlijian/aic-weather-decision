@@ -251,9 +251,23 @@ check("work-package costs quoted in Table 6 match the artefact",
       and abs(base["cost"]["no_weather"] - 4.124) < 0.01,
       f"limit {base['cost']['operating_limit']:.3f}, cal {base['cost']['calibrated']:.3f}, "
       f"none {base['cost']['no_weather']:.3f}")
-check("the manuscript reports the operating limit winning in two scenarios",
-      "best rule tested" in text and "2.634" in text and "2.470" in text,
-      "scenario-dependent ordering reported")
+check("the manuscript reports the operating limit's advantage with its interval caveat",
+      "lowest mean cost in" in text and "overlaps the calibrated rule" in text,
+      "interval overlap stated for the base scenario")
+wp_table = json.loads((ROOT / "outputs" / "g5_work_package_table.json").read_text(encoding="utf-8"))
+check("Table 6 carries sample size, units and intervals",
+      wp_table["packages_per_scenario"] == 765
+      and wp_table["stations"] == 45
+      and "units of the exceedance loss" in wp_table["units"],
+      f"{wp_table['packages_per_scenario']} packages, {wp_table['stations']} stations")
+check("every Table 6 cell has a bootstrap interval",
+      all(set(v) == {"mean", "ci_low", "ci_high"}
+          for scen in wp_table["table"].values() for v in scen.values()),
+      "intervals present for all 28 cells")
+check("the work-package model is described before the results",
+      "## Work-package model" in text
+      and text.index("## Work-package model") < text.index("# Results"),
+      "Section 2.5 present")
 check("the no-weather baseline winning under weak weather impact is reported",
       "1.102 against 1.140" in text, "adverse case reported")
 check("the schedule-optimal ratio is reported as more permissive than the block-level one",

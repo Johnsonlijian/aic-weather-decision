@@ -1,0 +1,167 @@
+{
+  "packages_per_scenario": 765,
+  "stations": 45,
+  "units": "cost in units of the exceedance loss L (mismatch_cost = 1.0 in the base scenario)",
+  "bootstrap": {
+    "unit": "package (station x 30-day window)",
+    "paired_across_controllers": true,
+    "draws": 2000
+  },
+  "table": {
+    "base": {
+      "calibrated": {
+        "mean": 2.793241830065359,
+        "ci_low": 2.556818627450987,
+        "ci_high": 3.043606862745105
+      },
+      "calibrated_by_lead": {
+        "mean": 2.7246274509803925,
+        "ci_low": 2.5037091503268,
+        "ci_high": 2.966154575163407
+      },
+      "calibrated_rolling_free": {
+        "mean": 2.6644836601307196,
+        "ci_low": 2.4412633986928154,
+        "ci_high": 2.904106209150333
+      },
+      "calibrated_static": {
+        "mean": 3.8814901960784316,
+        "ci_low": 3.45139607843138,
+        "ci_high": 4.366275490196085
+      },
+      "no_weather": {
+        "mean": 4.124039215686275,
+        "ci_low": 3.6430127450980483,
+        "ci_high": 4.640197058823532
+      },
+      "operating_limit": {
+        "mean": 2.6342483660130718,
+        "ci_low": 2.4399767973856226,
+        "ci_high": 2.844910130718958
+      },
+      "tuned_threshold": {
+        "mean": 3.1907450980392165,
+        "ci_low": 2.8812934640522965,
+        "ci_high": 3.52285065359478
+      }
+    },
+    "slack_resources": {
+      "calibrated": {
+        "mean": 2.850967320261439,
+        "ci_low": 2.6200683006535628,
+        "ci_high": 3.0998895424836266
+      },
+      "calibrated_by_lead": {
+        "mean": 2.756496732026144,
+        "ci_low": 2.5390385620914775,
+        "ci_high": 2.9901669934640185
+      },
+      "calibrated_rolling_free": {
+        "mean": 2.7222091503267984,
+        "ci_low": 2.5070637254901627,
+        "ci_high": 2.9623035947712064
+      },
+      "calibrated_static": {
+        "mean": 3.659320261437909,
+        "ci_low": 3.256930718954212,
+        "ci_high": 4.067862091503234
+      },
+      "no_weather": {
+        "mean": 4.249437908496732,
+        "ci_low": 3.759718954248326,
+        "ci_high": 4.753664052287549
+      },
+      "operating_limit": {
+        "mean": 2.4702614379084973,
+        "ci_low": 2.294946078431346,
+        "ci_high": 2.649522875816961
+      },
+      "tuned_threshold": {
+        "mean": 2.737084967320262,
+        "ci_low": 2.5240186274509484,
+        "ci_high": 2.9676624183006197
+      }
+    },
+    "high_adjustment_cost": {
+      "calibrated": {
+        "mean": 5.05124183006536,
+        "ci_low": 4.459799346405242,
+        "ci_high": 5.724337254901967
+      },
+      "calibrated_by_lead": {
+        "mean": 5.073647058823529,
+        "ci_low": 4.486357516339881,
+        "ci_high": 5.753617320261447
+      },
+      "calibrated_rolling_free": {
+        "mean": 3.3069673202614385,
+        "ci_low": 3.011461437908504,
+        "ci_high": 3.631785947712427
+      },
+      "calibrated_static": {
+        "mean": 4.731777777777778,
+        "ci_low": 4.185491830065366,
+        "ci_high": 5.358277124183016
+      },
+      "no_weather": {
+        "mean": 5.393973856209151,
+        "ci_low": 4.744941176470597,
+        "ci_high": 6.151612091503272
+      },
+      "operating_limit": {
+        "mean": 6.632287581699347,
+        "ci_low": 5.984482352941182,
+        "ci_high": 7.268175163398699
+      },
+      "tuned_threshold": {
+        "mean": 5.078980392156863,
+        "ci_low": 4.486860457516349,
+        "ci_high": 5.751583660130729
+      }
+    },
+    "weak_weather_impact": {
+      "calibrated": {
+        "mean": 1.140418300653595,
+        "ci_low": 1.1182718954248376,
+        "ci_high": 1.1672477124183012
+      },
+      "calibrated_by_lead": {
+        "mean": 1.142248366013072,
+        "ci_low": 1.119579738562093,
+        "ci_high": 1.169412418300654
+      },
+      "calibrated_rolling_free": {
+        "mean": 1.0802875816993467,
+        "ci_low": 1.0680222222222233,
+        "ci_high": 1.0943823529411782
+      },
+      "calibrated_static": {
+        "mean": 1.1019607843137258,
+        "ci_low": 1.0870849673202632,
+        "ci_high": 1.1186954248366023
+      },
+      "no_weather": {
+        "mean": 1.1015947712418304,
+        "ci_low": 1.0867424836601323,
+        "ci_high": 1.1186457516339883
+      },
+      "operating_limit": {
+        "mean": 1.682248366013072,
+        "ci_low": 1.5556039215686273,
+        "ci_high": 1.8182529411764687
+      },
+      "tuned_threshold": {
+        "mean": 1.107529411764706,
+        "ci_low": 1.0913183006535956,
+        "ci_high": 1.1258830065359489
+      }
+    }
+  },
+  "package_definition": {
+    "tasks": 10,
+    "block_hours": 12,
+    "blocks_per_package": 60,
+    "horizon_days": 30,
+    "deadlines": "no-weather baseline schedule x 1.5"
+  }
+}
