@@ -38,17 +38,20 @@ shutil_which = shutil.which
 # the audit log quotes the old working title, and the figure map names the uncited figure it
 # is excluding. Placeholders are checked everywhere.
 FORBIDDEN_EVERYWHERE = {
-    "to be inserted": "an unfilled DOI placeholder",
     "submission_package_AiC_2026-09-16": "an older package name",
 }
 FORBIDDEN_IN_SUBMISSION_TEXT = {
+    "to be inserted": "an unfilled DOI placeholder",
     "125 chars": "the old, too-loose Highlights limit",
     "22 references": "the pre-audit reference count",
     "74/74": "the pre-audit check count",
     "Resolvability of weather-sensitive": "the project's working title",
     "reproduces the primary analysis exactly": "the withdrawn epoch-for-epoch claim",
 }
-# records, not submission prose: they may quote superseded text on purpose
+# records, not submission prose: they may quote superseded text on purpose. The audit log
+# quotes the old DOI placeholder and the old working title precisely to document that both
+# were removed, so a placeholder inside a record is evidence of the fix rather than a defect.
+# The submission-facing documents are still checked for it directly.
 RECORD_PATHS = ("Reproducibility/AUDIT_REPAIR_LOG", "Figures/FIGURE_MAP.md",
                 "Reproducibility/manuscript_numbers")
 SCAN_SUFFIXES = {".md", ".txt", ".tex", ".json", ".cff", ".csv"}
@@ -199,6 +202,20 @@ def main() -> int:
                 hits.setdefault(f"{token} ({why})", []).append(rel)
     check("no superseded number, old package name or placeholder survives",
           not hits, "; ".join(f"{k}: {v[:2]}" for k, v in hits.items()) or "none")
+
+    # a placeholder can hide in a submission-facing document even when the records are clean
+    submission_files = [pkg / "Title_page.md", pkg / "SUBMISSION_CHECKLIST.md",
+                        pkg / "README_PACKAGE.md", pkg / "Cover_letter.md"]
+    submission_files += list((pkg / "Declarations").glob("*.md"))
+    submission_files += list((pkg / "Highlights").glob("*.txt"))
+    submission_files += list((pkg / "Manuscript").glob("Manuscript_AiC.*"))
+    leftover = []
+    for p in submission_files:
+        if p.exists() and re.search(r"to be inserted|\[insert|TODO|TBD|XXX",
+                                    p.read_text(encoding="utf-8", errors="ignore")):
+            leftover.append(p.relative_to(pkg).as_posix())
+    check("no submission-facing document carries a placeholder or TODO", not leftover,
+          f"{leftover or 'none'}")
 
     # ---------- 6b. the packaged LaTeX source must compile where it sits ----------
     tex_path = pkg / "Manuscript" / "Manuscript_AiC.tex"

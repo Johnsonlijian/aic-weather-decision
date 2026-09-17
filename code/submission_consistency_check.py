@@ -148,6 +148,39 @@ check("documented limit costs value (peak REV 0.45-0.53)",
       and abs(max(peaks[t]["fixed_raw"] for t in peaks) - 0.530) < 0.01,
       f"{[round(peaks[t]['fixed_raw'], 3) for t in sorted(peaks)]}")
 check("manuscript quotes the paired fixed-limit penalties", "-0.913" in text, "penalty quoted")
+
+# The peak-REV table now states the ratio at which each peak is attained, so a reader can
+# situate the maxima instead of seeing three bare numbers. Verify that column against the
+# artifact rather than trusting it.
+peak_ratios = {}
+for row in rev:
+    peak_ratios[row["threshold"]] = {
+        rule: max(row["curve"], key=lambda c: c["rules"][rule]["relative_economic_value"]
+                  if c["rules"][rule]["relative_economic_value"]
+                  == c["rules"][rule]["relative_economic_value"] else float("-inf")
+                  )["cost_loss_ratio"]
+        for rule in ("calibrated", "tuned_raw", "fixed_raw")}
+_peak_tbl = re.findall(
+    r"^\|\s*(\d+\.\d)\s*\|\s*([\d.]+)\s*\|\s*([\d.]+)\s*\|\s*([\d.]+)\s*\|"
+    r"\s*([\d.]+)\s*/\s*([\d.]+)\s*/\s*([\d.]+)\s*\|", text, re.M)
+check("the peak-REV table carries a peak-ratio column for every limit",
+      len(_peak_tbl) == 5, f"{len(_peak_tbl)} rows with peak ratios")
+if len(_peak_tbl) == 5:
+    bad = []
+    for limit, cal, tuned, fixed, r_cal, r_tuned, r_fixed in _peak_tbl:
+        t = float(limit)
+        want = peak_ratios.get(t)
+        if want is None:
+            bad.append(f"{limit}: no artifact row")
+            continue
+        for stated, rule in ((r_cal, "calibrated"), (r_tuned, "tuned_raw"), (r_fixed, "fixed_raw")):
+            if abs(float(stated) - round(want[rule], 2)) > 0.005:
+                bad.append(f"{limit} {rule}: table {stated} vs artifact {want[rule]:.4f}")
+        for stated, rule in ((cal, "calibrated"), (tuned, "tuned_raw"), (fixed, "fixed_raw")):
+            if abs(float(stated) - round(peaks[t][rule], 3)) > 0.0005:
+                bad.append(f"{limit} {rule} peak: table {stated} vs artifact {peaks[t][rule]:.4f}")
+    check("the peak-REV table's values and peak ratios match the artifact", not bad,
+          "; ".join(bad[:4]) or "all five rows agree")
 check("critical probability equals C/L (expense-optimal rule)",
       all(abs(c["critical_prob"] - c["cost_loss_ratio"]) < 1e-12
           for row in rev for c in row["curve"]),

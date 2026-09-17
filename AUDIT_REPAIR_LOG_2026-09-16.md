@@ -981,6 +981,21 @@ at the same page count as the shipped PDF. That last check is run in a copy beca
 earlier version of it compiled in place, overwriting the packaged PDF and breaking the
 manifest.
 
+## S6. The paper's central table could be misread
+
+A reviewer had flagged that the "Relative value: calibrated / tuned / fixed" cell of the
+paired comparison wrapped so that the third number sat alone on the next line, directly
+under the calibrated column, where it reads as *calibrated = -0.913*. Re-rendering the PDF
+confirmed it: the row for `C/L = 0.05` printed `+0.401 / +0.393` and then `-0.913` on its
+own line beneath the calibrated value.
+
+The column is now split into three, each with its own header — **Calibrated REV / Tuned
+REV / Operating-limit REV** — so `-0.913` sits under the operating-limit heading even when
+the row wraps. The peak-REV table also gains the ratio at which each peak is attained, which
+the reviewer asked for, verified against the artefact by a new check: at the 20 m/s limit the
+peaks sit at the bottom of the grid, which the caption now says, since that is where the
+normalisation denominator disclosed under the paired-comparison table is smallest.
+
 ## State after round 11
 
 | Item | State |
