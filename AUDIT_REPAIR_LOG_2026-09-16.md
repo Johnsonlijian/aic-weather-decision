@@ -1097,3 +1097,85 @@ are unchanged.
 | Independent recomputation | 13 of 13 headline numbers reproduced by a separate estimator |
 | External review, concrete claims | 7 checked and not reproduced; 6 real items fixed |
 | Human-only remaining | ORCID; Elsevier declaration tool; Editorial Manager; Zenodo token rotation |
+
+---
+
+# Round 13 — the full readability pass, and a second stale description found by it
+
+Round 12 left the whole-manuscript readability rewrite undone. This round does it, measured
+rather than asserted.
+
+## The pass
+
+The manuscript was 7,219 words in 231 sentences, averaging 31.2 words per sentence, with 23%
+of sentences over 40 words and 9.5% over 50. The concrete targets were the long sentences, the
+jargon the review named, and the punctuation density.
+
+| Measure | Before | After |
+|---|---:|---:|
+| Mean sentence length | 31.2 words | **26.9** |
+| Sentences over 40 words | 54 (23.4%) | **38 (14.1%)** |
+| Sentences over 50 words | 22 (9.5%) | **7 (2.6%)** |
+| Sentences over 60 words | 9 (3.9%) | **5 (1.9%)** |
+| Em dashes | 44 | 37 |
+| Semicolons | 65 | 58 |
+
+The named jargon is now glossed at first use, in one paragraph in §2.4, in the terms a planner
+would use: **Brier skill** as improvement over always quoting the long-run event rate;
+**relative economic value** as money on a scale where 0 is ignoring the forecast and 1 is a
+perfect one, so negative means the rule costs more than doing nothing; and the
+**moving-block bootstrap** as re-sampling the record in seven-day chunks, and moving each
+station's chunks together, so that neighbouring sites sampling the same weather are not
+counted as separate confirmation.
+
+The longest sentences were split rather than trimmed: the 106-word sentence describing the UK
+guidance became six, the 70-word cost-loss sentence three, and the two 60-word sentences in
+the work-package and latency sections were separated at their clauses. The monotonicity
+sentence rewritten in round 12 stands.
+
+Every number was held: a snapshot of all 756 numeric tokens taken before the pass shows
+**none removed**, with six added — the two scale endpoints in the new gloss paragraph, a
+repeated `[@cpatin110]` citation where a sentence was split, and `52` / `35` / `92,574` in the
+correction below, taken from the coverage artifact.
+
+## What the pass found
+
+Writing out the sampling section plainly exposed a **second** stale description that round 12
+had missed, in the paragraph immediately after the one it fixed. That paragraph still said the
+dense months "are a patchwork of 17 complete months rather than a continuous record, so
+although they span four years the evaluation set is not a sample of every month in that span;
+they also lie inside the model-fitting period."
+
+Checking the coverage artifact settles it. The denser pull spans 2021-06 to 2025-09, 52 months,
+but is complete in only **17** of them — a contiguous 2021-06..2022-06 plus 2023-06, 2024-03,
+2024-08 and 2025-09 — so 92,574 of the 283,936 rows sit in fully dense months. Three claims
+therefore had to change:
+
+- "17 complete months" is **correct** and is kept, now with the denominator (17 of 52) and the
+  row count, so a reader can see how much of the record is at full strength;
+- "the evaluation set is not a sample of every month in that span" is **wrong** — the paired
+  table covers all 52 months, contiguously, which is what the round-12 check verifies;
+- "they also lie inside the model-fitting period" is **wrong** — 2024-03, 2024-08 and 2025-09
+  are all outside it, so the phrasing was stale from a smaller earlier pull.
+
+`code/check_latency_consistency.py` was not the right home for this, so the coverage facts are
+now asserted directly: the paired table's month span is checked contiguous against the epoch
+tables, and the section must state the superset arithmetic.
+
+## Also repaired
+
+One check was brittle rather than the prose being wrong: "the operating-limit pool names its
+machine classes" matched `Tower-crane documents supply` case-sensitively, so it failed when
+the rewrite legitimately moved that phrase to the start of a sentence. The check is now
+case-insensitive, since its intent is that the provenance is stated, not where.
+
+## State after round 13
+
+| Item | State |
+|---|---|
+| Unit tests | 113 passing |
+| Internal consistency | **101** checks passing |
+| Package verification | **58** checks passing |
+| Numeric integrity | 756 baseline tokens, none removed |
+| Readability | mean sentence 31.2 -> 26.9 words; over-50-word sentences 22 -> 7 |
+| Human-only remaining | ORCID; Elsevier declaration tool; Editorial Manager; Zenodo token rotation |

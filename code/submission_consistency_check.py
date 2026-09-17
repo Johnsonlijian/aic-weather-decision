@@ -325,9 +325,10 @@ check("event renamed as a station-defined exceedance",
 check("operating limit is held fixed and only the trigger is selected",
       "holds the operating limit fixed" in text, "scope boundary stated")
 check("the operating-limit pool names its machine classes",
-      "Tower-crane documents supply" in text
-      and "mobile-crane industry guidance supplies 16.5" in text
-      and "No single machine class or jurisdiction supplies more than three" in text,
+      # case-insensitive: the phrase legitimately moves to the start of a sentence
+      "tower-crane documents supply" in text.lower()
+      and "mobile-crane industry guidance supplies 16.5" in text.lower()
+      and "no single machine class or jurisdiction supplies more than three" in text.lower(),
       "machine-class provenance stated")
 check("the removed opening claim is gone",
       "stops when the forecast says the wind will be strong" not in text,
@@ -480,6 +481,24 @@ check("the internal split is described by its boundary, not by 'earliest'",
       f"tunes the cut on the {samp['tune_rows']:,} epochs before 2022" in text
       and samp["tune_rows"] + samp["evaluate_rows"] == samp["paired_epochs"],
       f"{samp['tune_rows']:,} + {samp['evaluate_rows']:,} = {samp['paired_epochs']:,}")
+
+# The denser pull spans the same 52 months but is complete in only 17 of them. The paragraph
+# after the one fixed in round 12 described this as a patchwork of 17 months and then drew two
+# wrong conclusions from it - that the evaluation set misses months in the span, and that the
+# dense months lie inside the fitting period. Assert the coverage from the artifact and require
+# the text to state the denominator.
+_cov = json.loads((ROOT / "outputs" / "g5_collection_coverage_dense.json").read_text(encoding="utf-8"))
+_complete = _cov["complete_months"]
+check("the dense pull's completeness is stated with its denominator",
+      f"{len(_complete)} of the {len(_all_months)} months" in text,
+      f"{len(_complete)} complete of {len(_all_months)} covered")
+check("the dense pull is not described as continuous, nor the sample as missing months",
+      "patchwork of 17 complete months" not in text
+      and "is not a sample of every month in that span" not in text,
+      "stale completeness description removed")
+check("the dense months are not placed inside the fitting period",
+      "they also lie inside the model-fitting period" not in text,
+      f"{len([m for m in _complete if m > '2023-12'])} complete months fall outside it")
 check("the manuscript no longer says the experiment was not executed",
       "we have not executed it" not in text, "claim updated")
 
