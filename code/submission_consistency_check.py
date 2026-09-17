@@ -33,6 +33,10 @@ def check(name: str, ok: bool, detail: str) -> None:
 
 
 text = MD.read_text(encoding="utf-8")
+# Citation keys are scanned in the body only: the YAML front matter carries the
+# corresponding author's e-mail address, and an address like name@example.edu matches
+# the citation pattern and would be reported as an undefined reference.
+body = text.split("\n---\n", 2)[-1] if text.startswith("---") else text
 
 # ---------- 1. abstract ----------
 abstract = re.sub(r"# Abstract\s*\{-\}\s*", "",
@@ -46,7 +50,7 @@ check("highlights count 3-5", 3 <= len(hl) <= 5, f"{len(hl)} bullets")
 check("highlights <= 125 chars", all(len(l) <= 125 for l in hl), f"max {max(len(l) for l in hl)}")
 
 # ---------- 3. citations ----------
-cited = set(re.findall(r"@([A-Za-z][A-Za-z0-9_]*)", text))
+cited = set(re.findall(r"@([A-Za-z][A-Za-z0-9_]*)", body))
 refs = {e["id"] for e in json.loads((ROOT / "manuscript" / "references.json").read_text(encoding="utf-8"))}
 check("all cited keys defined", cited <= refs, f"missing: {sorted(cited - refs) or 'none'}")
 check("no orphan references", not (refs - cited), f"unused: {sorted(refs - cited) or 'none'}")

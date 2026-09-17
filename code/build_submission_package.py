@@ -21,9 +21,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PKG = ROOT / "submission_package_AiC_2026-09-16"
 
-TITLE = ("A documented wind limit is not a decision threshold: detector failure and "
-         "threshold re-tuning in five years of as-issued gust forecasts for crane operations")
+TITLE = ("Separating operating wind limits from forecast-action thresholds in "
+         "construction planning")
 AUTHOR = "Lijian Ren"
+EMAIL = "renlijian@imut.edu.cn"
 AFFILIATION = "Inner Mongolia University of Technology, Hohhot, Inner Mongolia, China"
 
 CREDIT = """Lijian Ren: Conceptualization; Methodology; Software; Validation; Formal analysis;
@@ -142,7 +143,7 @@ def main() -> None:
 
 **Corresponding author:** {AUTHOR}
 
-**Corresponding author e-mail:** [TO CONFIRM BY AUTHOR - required on the title page and published]
+**Corresponding author e-mail:** {EMAIL}
 
 **Article type:** Original research paper
 
@@ -180,6 +181,19 @@ funding, generative-AI use, data availability).
         src = ROOT / "outputs" / extra
         if src.exists():
             shutil.copy2(src, PKG / "Reproducibility" / extra)
+    # the submission-facing documents prepared on 2026-09-16
+    for rel, dest in (("submission/cover_letter_AiC_2026-09-16.pdf", "Cover_letter.pdf"),
+                      ("submission/cover_letter_AiC_2026-09-16.md", "Cover_letter.md"),
+                      ("submission/declarations_AiC_2026-09-16.md", "Declarations_text_drafts.md"),
+                      ("submission/SUPERSEDED_conference_route.md", "Superseded_conference_route.md"),
+                      ("submission/release/README_RELEASE.md", "Release_README.md"),
+                      ("outputs/g5_independent_recomputation.json",
+                       "Reproducibility/g5_independent_recomputation.json"),
+                      ("code/verify_independent.py", "Reproducibility/code/verify_independent.py")):
+        src = ROOT / rel
+        if src.exists():
+            shutil.copy2(src, PKG / dest)
+
     repair_log = ROOT / "AUDIT_REPAIR_LOG_2026-09-16.md"
     if repair_log.exists():
         shutil.copy2(repair_log, PKG / "Reproducibility" / repair_log.name)
@@ -215,7 +229,7 @@ author (see outputs/gates/G6_live_2026_reverification.md).
 | 13 | Funding statement in the prescribed format | DONE | Declarations/Funding_statement.md/.docx |
 | 14 | Generative-AI declaration before the references | DONE | in manuscript + Declarations/Declaration_of_generative_AI_use.md/.docx |
 | 15 | Data availability statement (Option C) | PARTIAL | Declarations/Data_availability_statement.md; repository deposit is a human-only step |
-| 16 | Title page with names, affiliation, corresponding author e-mail | PARTIAL | Title_page.md; corresponding e-mail is human-only |
+| 16 | Title page with names, affiliation, corresponding author e-mail | DONE | Title_page.md (renlijian@imut.edu.cn) |
 | 17 | References numbered in citation order, complete data | DONE | 22 references, all cited, all DOI/URL verified |
 | 18 | Graphical abstract (optional) | NOT DONE | optional; Fig. 1 is designed to work as one if needed |
 | 19 | Cover letter | NOT REQUIRED | the live guide does not ask for one |
@@ -223,7 +237,7 @@ author (see outputs/gates/G6_live_2026_reverification.md).
 
 ## Consistency verification
 
-`code/submission_consistency_check.py` passes 31/31 checks, covering: abstract
+`code/submission_consistency_check.py` passes 74/74 checks and `code/verify_independent.py` reproduces 13/13 headline numbers with an independently implemented estimator. The consistency checks cover: abstract
 length, highlight limits, citation/definition closure, Table 1 recomputation,
 Brier-skill ranges, REV peaks, the Fig. 1 probability value, the mean-wind
 sensitivity counts, the manifest-derived dataset counts, the epoch-table sizes,
