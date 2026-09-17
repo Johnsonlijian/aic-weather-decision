@@ -50,7 +50,9 @@ check("highlights count 3-5", 3 <= len(hl) <= 5, f"{len(hl)} bullets")
 check("highlights <= 125 chars", all(len(l) <= 125 for l in hl), f"max {max(len(l) for l in hl)}")
 
 # ---------- 3. citations ----------
-cited = set(re.findall(r"@([A-Za-z][A-Za-z0-9_]*)", body))
+# A citation is a bare @key or [@key]; an address is word@domain, so requiring
+# that the @ is not preceded by a word character or dot excludes e-mail addresses.
+cited = set(re.findall(r"(?<![\w.])@([A-Za-z][A-Za-z0-9_]*)", body))
 refs = {e["id"] for e in json.loads((ROOT / "manuscript" / "references.json").read_text(encoding="utf-8"))}
 check("all cited keys defined", cited <= refs, f"missing: {sorted(cited - refs) or 'none'}")
 check("no orphan references", not (refs - cited), f"unused: {sorted(refs - cited) or 'none'}")
