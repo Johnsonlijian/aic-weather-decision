@@ -85,3 +85,11 @@ zenodo_token*
 Thumbs.db
 desktop.ini
 *_Conflict*
+# Captured third-party web pages (journal guides, publisher pages, Wayback snapshots).
+# They are working evidence for the journal-requirements gate: useful locally, not ours
+# to redistribute, and not part of a reproducibility package.
+outputs/gates/raw/
+
+# Superseded pilot dataset: the three-station phase, kept locally for provenance only.
+outputs/decision_dataset.csv
+outputs/decision_dataset_*.csv
