@@ -43,6 +43,24 @@ abstract = re.sub(r"# Abstract\s*\{-\}\s*", "",
                   text[text.index("# Abstract"):text.index("**Keywords:**")]).strip()
 check("abstract <= 150 words", len(abstract.split()) <= 150, f"{len(abstract.split())} words")
 
+# ---------- 1b. citation metadata ----------
+# CITATION.cff ships in both the public repository and the release archive, so a title
+# there that drifts from the manuscript publishes a citation for a paper that does not
+# exist. An earlier version still carried the project's working title and an empty DOI
+# while the manuscript had been retitled, and nothing checked it.
+_cff_path = ROOT / "CITATION.cff"
+_cff_raw = _cff_path.read_text(encoding="utf-8")
+_title_line = next((l for l in text.splitlines() if l.startswith("title:")), "")
+ms_title = _title_line.split(":", 1)[1].strip().strip('"') if _title_line else ""
+check("CITATION.cff exists", _cff_path.exists(), "citation file present")
+check("CITATION.cff title matches the manuscript title",
+      bool(ms_title) and f'title: "{ms_title}"' in _cff_raw,
+      f"manuscript: {ms_title[:60]!r}")
+check("CITATION.cff carries no empty DOI placeholder",
+      not re.search(r'value:\s*""', _cff_raw), "doi populated")
+check("CITATION.cff points at the repository it is published in",
+      "github.com/Johnsonlijian/aic-weather-decision" in _cff_raw, "repository-code set")
+
 # ---------- 2. highlights ----------
 hl_path = ROOT / "submission" / "Highlights.txt"
 hl = [l.strip() for l in hl_path.read_text(encoding="utf-8").splitlines() if l.strip()]

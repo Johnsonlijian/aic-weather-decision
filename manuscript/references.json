@@ -1,5 +1,29 @@
 [
   {
+    "id": "ren2026deposit",
+    "type": "dataset",
+    "title": "Reproducibility package: Separating operating wind limits from forecast-action thresholds in construction planning",
+    "author": [
+      {
+        "family": "Ren",
+        "given": "Lijian"
+      }
+    ],
+    "publisher": "Zenodo",
+    "DOI": "10.5281/zenodo.22803783",
+    "URL": "https://doi.org/10.5281/zenodo.22803783",
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          17
+        ]
+      ]
+    },
+    "version": "1.0"
+  },
+  {
     "id": "weatherwise",
     "type": "article-journal",
     "title": "Weather-wise: A weather-aware planning tool for improving construction productivity and dealing with claims",

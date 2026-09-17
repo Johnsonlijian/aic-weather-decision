@@ -1,29 +1,37 @@
 cff-version: 1.2.0
 message: "If you use this software or the associated dataset, please cite it as below."
-title: "Resolvability of weather-sensitive construction windows under latency-audited, non-anticipative forecast replay"
+title: "Separating operating wind limits from forecast-action thresholds in construction planning"
 type: software
 authors:
   - family-names: Ren
     given-names: Lijian
     affiliation: Inner Mongolia University of Technology
-    orcid: ""
 identifiers:
   - type: doi
-    value: ""
+    value: "10.5281/zenodo.22803783"
+    description: "Zenodo deposit of the reproducibility package"
 repository-code: "https://github.com/Johnsonlijian/aic-weather-decision"
+url: "https://zenodo.org/records/22803783"
 license: MIT
 keywords:
   - construction scheduling
   - weather windows
   - forecast calibration
-  - forecast availability
-  - decision value
-  - resource constraints
-date-released: "2026-09-15"
+  - cost-loss decision model
+  - decision thresholds
+  - reproducibility
+date-released: "2026-09-17"
 abstract: >-
-  A latency-audited, non-anticipative replay benchmark that measures whether the
-  decision-relevant weather-sensitive construction window is resolvable from
-  archived as-issued NOAA GFS surface-gust forecasts paired with KNMI station
-  observations (2021-2025). The package fits decision-aligned block-window
-  calibrators, reports Brier skill and relative economic value, and runs a lift
-  campaign comparing blind, raw-threshold, climatology and calibrated rules.
+  Separates two objects usually conflated in wind-sensitive construction planning: the
+  operating limit of an activity, which is a property of the equipment and the operation,
+  and the forecast-action trigger, which is a planning rule that depends on forecast
+  uncertainty and on the cost of a delayed or cancelled window. Replays archived as-issued
+  NOAA GFS surface-gust forecasts against KNMI station observations over 45 stations and
+  five years (281,997 decision epochs), with a declared publication-latency rule sampled
+  from archive timestamps. The fixed deterministic trigger misses 31-54% of station-defined
+  exceedance events; fitting the exceedance probability repairs the Brier skill (+0.27 to
+  +0.41 held out) but, paired on identical epochs at matched cost ratios, is not detectably
+  different in decision value from an independently tuned raw threshold. Both null results
+  replicate in an eleven-month post-sample replay with the model, threshold and limit
+  frozen. Costs are model expenses in units of the loss L; no project-level saving is
+  measured or claimed.

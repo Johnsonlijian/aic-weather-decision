@@ -865,3 +865,45 @@ quote a relative value without the cost ratio it belongs to.
 | Archive self-test | extracted copy runs its own suite clean |
 | Zenodo | draft staged, file checksum verified against the local build, **not published** |
 | Post-sample validation | eleven months, frozen model, both null results replicate |
+
+---
+
+# Round 10 — the deposit is published, and the citation metadata was stale
+
+## Z4. `CITATION.cff` carried the project's working title
+
+The deposit description, the manuscript and the citation file disagreed. `CITATION.cff`
+still carried the title the project used before the paper was reframed —
+"Resolvability of weather-sensitive construction windows under latency-audited,
+non-anticipative forecast replay" — with an empty `identifiers.value` and an abstract
+written for the earlier framing. It ships in both the public repository and the release
+archive, so publishing it would have deposited a citation for a paper that does not exist.
+
+The file is rewritten to the manuscript's title, the abstract is rewritten to the current
+findings, and the DOI is populated. Because a published Zenodo file cannot be replaced,
+this had to be fixed *before* publishing rather than after, which is why the archive was
+rebuilt and re-uploaded to the still-unpublished draft first.
+
+Four checks were added to `submission_consistency_check.py` so the citation file cannot
+drift again: it must exist, its title must equal the manuscript's title, it must carry no
+empty `value: ""` placeholder, and it must point at the repository it is published in.
+Nothing had been checking it, which is why a stale title survived nine rounds.
+
+## Z5. Publication record
+
+The deposit is published as **https://doi.org/10.5281/zenodo.22803783** (Zenodo record
+22803783, MIT licence, single file `aic_weather_decision_release.zip`, 134 files,
+24,645,914 bytes, MD5 `84ebb090e81f17bcd4bd1249d5744de9`). The published checksum was
+compared against the local archive after publication and matches, so the DOI provably
+resolves to the audited build.
+
+The DOI is back-filled into the manuscript's data and code availability statement, the
+cover letter, and `CITATION.cff`; the manuscript now also carries a `dataset` reference to
+the deposit, since the journal expects shared data to be cited in the reference list.
+
+> **Note on this file inside the archive.** The archive's copy of this log ends at the
+> Round 9 table above, which records the deposit as *staged, not published*, because that
+> was its state when the archive was built and its checksum frozen. The published artefact
+> is therefore a faithful snapshot of the pre-publication state; this section records what
+> happened next. The archive is deliberately not rebuilt, so the deposit continues to match
+> the frozen build byte for byte.
