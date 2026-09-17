@@ -45,7 +45,8 @@
     "DOI": "10.1016/j.autcon.2017.08.022",
     "URL": "https://doi.org/10.1016/j.autcon.2017.08.022",
     "volume": "84",
-    "page": "81-95"
+    "page": "81-95",
+    "container-title-short": "Autom. Constr."
   },
   {
     "id": "kerkhove2017",
@@ -73,7 +74,8 @@
     "DOI": "10.1016/j.omega.2016.01.011",
     "URL": "https://doi.org/10.1016/j.omega.2016.01.011",
     "volume": "66",
-    "page": "58-78"
+    "page": "58-78",
+    "container-title-short": "Omega"
   },
   {
     "id": "zhou2021",
@@ -97,7 +99,7 @@
         "given": "Zhisheng"
       }
     ],
-    "container-title": "Computers &amp; Industrial Engineering",
+    "container-title": "Computers & Industrial Engineering",
     "issued": {
       "date-parts": [
         [
@@ -109,7 +111,8 @@
     "DOI": "10.1016/j.cie.2021.107322",
     "URL": "https://doi.org/10.1016/j.cie.2021.107322",
     "volume": "157",
-    "page": "107322"
+    "page": "107322",
+    "container-title-short": "Comput. Ind. Eng."
   },
   {
     "id": "elmachtoub2022",
@@ -138,7 +141,8 @@
     "URL": "https://doi.org/10.1287/mnsc.2020.3922",
     "volume": "68",
     "issue": "1",
-    "page": "9-26"
+    "page": "9-26",
+    "container-title-short": "Manag. Sci."
   },
   {
     "id": "knmi",
@@ -201,7 +205,8 @@
     "DOI": "10.1175/1520-0493(1977)105<0803:TVOCCA>2.0.CO;2",
     "URL": "https://doi.org/10.1175/1520-0493(1977)105<0803:TVOCCA>2.0.CO;2",
     "volume": "105",
-    "page": "803-816"
+    "page": "803-816",
+    "container-title-short": "Mon. Weather Rev."
   },
   {
     "id": "murphy1993",
@@ -224,7 +229,8 @@
     "DOI": "10.1175/1520-0434(1993)008<0281:WIAGFA>2.0.CO;2",
     "URL": "https://doi.org/10.1175/1520-0434(1993)008<0281:WIAGFA>2.0.CO;2",
     "volume": "8",
-    "page": "281-293"
+    "page": "281-293",
+    "container-title-short": "Weather Forecast."
   },
   {
     "id": "thompson1952",
@@ -247,7 +253,8 @@
     "DOI": "10.1175/1520-0477-33.6.223",
     "URL": "https://doi.org/10.1175/1520-0477-33.6.223",
     "volume": "33",
-    "page": "223-226"
+    "page": "223-226",
+    "container-title-short": "Bull. Am. Meteorol. Soc."
   },
   {
     "id": "richardson2000",
@@ -270,7 +277,8 @@
     "DOI": "10.1002/qj.49712656313",
     "URL": "https://doi.org/10.1002/qj.49712656313",
     "volume": "126",
-    "page": "649-667"
+    "page": "649-667",
+    "container-title-short": "Q. J. R. Meteorol. Soc."
   },
   {
     "id": "zhu2002",
@@ -309,7 +317,8 @@
     "DOI": "10.1175/1520-0477(2002)083<0073:TEVOEB>2.3.CO;2",
     "URL": "https://doi.org/10.1175/1520-0477(2002)083<0073:TEVOEB>2.3.CO;2",
     "volume": "83",
-    "page": "73-83"
+    "page": "73-83",
+    "container-title-short": "Bull. Am. Meteorol. Soc."
   },
   {
     "id": "doskeland2023",
@@ -340,7 +349,8 @@
     "DOI": "10.1016/j.oceaneng.2023.115896",
     "URL": "https://doi.org/10.1016/j.oceaneng.2023.115896",
     "volume": "287",
-    "page": "115896"
+    "page": "115896",
+    "container-title-short": "Ocean Eng."
   },
   {
     "id": "tinoco2019",
@@ -556,7 +566,8 @@
     "DOI": "10.1016/j.oceaneng.2024.117027",
     "URL": "https://doi.org/10.1016/j.oceaneng.2024.117027",
     "volume": "297",
-    "page": "117027"
+    "page": "117027",
+    "container-title-short": "Ocean Eng."
   },
   {
     "id": "augustyn2025app",
@@ -586,7 +597,8 @@
     "URL": "https://doi.org/10.3390/app15094683",
     "volume": "15",
     "issue": "9",
-    "page": "4683"
+    "page": "4683",
+    "container-title-short": "Appl. Sci."
   },
   {
     "id": "li2023jmse",
@@ -632,7 +644,8 @@
     "URL": "https://doi.org/10.3390/jmse11040803",
     "volume": "11",
     "issue": "4",
-    "page": "803"
+    "page": "803",
+    "container-title-short": "J. Mar. Sci. Eng."
   },
   {
     "id": "jafarpour2023marstruc",
@@ -660,7 +673,8 @@
     "DOI": "10.1016/j.marstruc.2023.103483",
     "URL": "https://doi.org/10.1016/j.marstruc.2023.103483",
     "volume": "92",
-    "page": "103483"
+    "page": "103483",
+    "container-title-short": "Mar. Struct."
   },
   {
     "id": "wu2021marstruc",
@@ -688,7 +702,8 @@
     "DOI": "10.1016/j.marstruc.2021.103050",
     "URL": "https://doi.org/10.1016/j.marstruc.2021.103050",
     "volume": "79",
-    "page": "103050"
+    "page": "103050",
+    "container-title-short": "Mar. Struct."
   },
   {
     "id": "schulz2022mwr",
@@ -717,7 +732,8 @@
     "URL": "https://doi.org/10.1175/mwr-d-21-0150.1",
     "volume": "150",
     "issue": "1",
-    "page": "235-257"
+    "page": "235-257",
+    "container-title-short": "Mon. Weather Rev."
   },
   {
     "id": "cpatin110",
